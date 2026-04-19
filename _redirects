@@ -1,3 +1,1 @@
-/privacy             https://app.privify.co.uk/privacy           301
-/terms               https://app.privify.co.uk/terms             301
-/acceptable-use      https://app.privify.co.uk/acceptable-use    301
+# Legal pages are served as static HTML files (terms.html, privacy.html, acceptable-use.html)
