@@ -111,9 +111,8 @@ h2 em{font-style:normal;color:var(--green)}
 /* ── USE CASES ── */
 .uses{background:var(--white)}
 .use-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;margin-top:3rem}
-.use-card{background:var(--bg);border:1.5px solid var(--border);border-radius:var(--radius);padding:1.75rem;display:flex;gap:1.1rem;align-items:flex-start;transition:border-color .2s,background .2s}
+.use-card{background:var(--bg);border:1.5px solid var(--border);border-radius:var(--radius);padding:1.75rem;transition:border-color .2s,background .2s}
 .use-card:hover{border-color:var(--green-border);background:var(--green-light)}
-.use-icon{font-size:1.6rem;flex-shrink:0;margin-top:2px}
 .use-card h3{font-size:1rem;font-weight:700;margin-bottom:0.35rem;letter-spacing:-0.02em}
 .use-card p{font-size:0.875rem;color:var(--ink2);line-height:1.65}
 .use-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:0.75rem}
@@ -332,19 +331,25 @@ footer{background:var(--ink);padding:3.5rem 2rem 2rem}
     <p class="section-sub">One number, three ways to receive — pick what works for you.</p>
     <div class="feat-grid">
       <div class="feat-card">
-        <div class="feat-icon">📧</div>
+        <div class="feat-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#1a6b4a" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="16" height="13" rx="2"/><path d="M2 7l8 5 8-5"/></svg>
+        </div>
         <h3>Email forwarding</h3>
         <p>Every SMS is forwarded to your email the moment it arrives — clearly formatted with who sent it and the full message. Works with Gmail, Outlook, Apple Mail, or any email address.</p>
         <div class="feat-note">No extra apps. No accounts to link. Just your inbox.</div>
       </div>
       <div class="feat-card">
-        <div class="feat-icon">💬</div>
+        <div class="feat-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#1a6b4a" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h16a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H6l-4 3V4a1 1 0 0 1 1-1z"/></svg>
+        </div>
         <h3>Online SMS inbox</h3>
         <p>Every message is stored in your Privify dashboard so you can check back any time. Search your history, see who's texted your number, and manage everything in one place.</p>
         <div class="feat-note">90 days of message history included.</div>
       </div>
       <div class="feat-card">
-        <div class="feat-icon">🎙️</div>
+        <div class="feat-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#1a6b4a" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="1" width="6" height="10" rx="3"/><path d="M3 10a7 7 0 0 0 14 0"/><line x1="10" y1="17" x2="10" y2="19"/><line x1="7" y1="19" x2="13" y2="19"/></svg>
+        </div>
         <h3>Voicemail to email</h3>
         <p>When someone calls your Privify number, the call goes straight to voicemail. The recording is emailed to you as an audio file — you won't miss anything without answering.</p>
         <div class="feat-note">Calls go to voicemail automatically. No live answering.</div>
@@ -361,63 +366,48 @@ footer{background:var(--ink);padding:3.5rem 2rem 2rem}
     <p class="section-sub">Privify gives you a number to use in its place — wherever you're not sure how yours will be used.</p>
     <div class="use-grid">
       <div class="use-card">
-        <div class="use-icon">🔁</div>
-        <div>
-          <h3>Changing your number?</h3>
-          <p>Port your old number to Privify and never miss a text or call to it again. Banks, HMRC, and every account tied to your old number will keep working — without you lifting a finger.</p>
-          <div class="use-tags">
-            <span class="use-tag">Bank OTPs</span>
-            <span class="use-tag">HMRC access</span>
-            <span class="use-tag">Amazon · PayPal · eBay</span>
-          </div>
+        <h3>Changing your number?</h3>
+        <p>Port your old number to Privify and never miss a text or call to it again. Banks, HMRC, and every account tied to your old number will keep working — without you lifting a finger.</p>
+        <div class="use-tags">
+          <span class="use-tag">Bank OTPs</span>
+          <span class="use-tag">HMRC access</span>
+          <span class="use-tag">Amazon · PayPal · eBay</span>
         </div>
       </div>
       <div class="use-card">
-        <div class="use-icon">💼</div>
-        <div>
-          <h3>Work &amp; freelancing</h3>
-          <p>Give clients a number without handing out your personal mobile. A clean boundary between work and the rest of your life.</p>
-          <div class="use-tags">
-            <span class="use-tag">Client contact</span>
-            <span class="use-tag">Business listings</span>
-            <span class="use-tag">Sole trader use</span>
-          </div>
+        <h3>Work &amp; freelancing</h3>
+        <p>Give clients a number without handing out your personal mobile. A clean boundary between work and the rest of your life.</p>
+        <div class="use-tags">
+          <span class="use-tag">Client contact</span>
+          <span class="use-tag">Business listings</span>
+          <span class="use-tag">Sole trader use</span>
         </div>
       </div>
       <div class="use-card">
-        <div class="use-icon">✈️</div>
-        <div>
-          <h3>Living abroad</h3>
-          <p>Left the UK but still have accounts that need a UK number? Keep a Privify number and your UK services keep working — wherever you are.</p>
-          <div class="use-tags">
-            <span class="use-tag">UK bank accounts</span>
-            <span class="use-tag">HMRC from abroad</span>
-            <span class="use-tag">UK subscriptions</span>
-          </div>
+        <h3>Living abroad</h3>
+        <p>Left the UK but still have accounts that need a UK number? Keep a Privify number and your UK services keep working — wherever you are.</p>
+        <div class="use-tags">
+          <span class="use-tag">UK bank accounts</span>
+          <span class="use-tag">HMRC from abroad</span>
+          <span class="use-tag">UK subscriptions</span>
         </div>
       </div>
       <div class="use-card">
-        <div class="use-icon">🛒</div>
-        <div>
-          <h3>Sign-ups &amp; one-offs</h3>
-          <p>Not every service deserves your real number. Use Privify for anything where you're not sure how the number will be used.</p>
-          <div class="use-tags">
-            <span class="use-tag">Free trials</span>
-            <span class="use-tag">Likely-to-spam services</span>
-            <span class="use-tag">Marketplace listings</span>
-          </div>
+        <h3>Sign-ups &amp; one-offs</h3>
+        <p>Not every service deserves your real number. Use Privify for anything where you're not sure how the number will be used.</p>
+        <div class="use-tags">
+          <span class="use-tag">Free trials</span>
+          <span class="use-tag">Likely-to-spam services</span>
+          <span class="use-tag">Marketplace listings</span>
         </div>
       </div>
       <div class="use-card">
-        <div class="use-icon">🔒</div>
-        <div>
-          <h3>General privacy</h3>
-          <p>Your mobile number is tied to your identity, your accounts, and your history. Every time you share it, you give someone a thread that connects to all of it.</p>
-          <div class="use-tags">
-            <span class="use-tag">Stop unsolicited calls</span>
-            <span class="use-tag">Control who has your number</span>
-            <span class="use-tag">Peace of mind</span>
-          </div>
+        <h3>General privacy</h3>
+        <p>Your mobile number is tied to your identity, your accounts, and your history. Every time you share it, you give someone a thread that connects to all of it.</p>
+        <div class="use-tags">
+          <span class="use-tag">Stop unsolicited calls</span>
+          <span class="use-tag">Control who has your number</span>
+          <span class="use-tag">Peace of mind</span>
         </div>
       </div>
     </div>
@@ -483,7 +473,7 @@ footer{background:var(--ink);padding:3.5rem 2rem 2rem}
     <h2>Simple, honest pricing.</h2>
     <p class="section-sub">One plan. Everything included. No per-message charges, no hidden fees.</p>
     <div class="price-card">
-      <span class="price-tag">✦ Everything included</span>
+      <span class="price-tag">Everything included</span>
       <div class="price-amount"><sup>£</sup>5.99</div>
       <div class="price-period">per month · cancel any time</div>
       <div class="price-setup">+ <strong>£12 one-time setup fee</strong> when your number is activated</div>
