@@ -277,12 +277,6 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
 .foot-legal a{font-size:.77rem;color:rgba(255,255,255,.35);transition:color .15s}
 .foot-legal a:hover{color:rgba(255,255,255,.75)}
 
-/* WORD CYCLING */
-.cycle-wrap{display:inline-block;position:relative;overflow:hidden;vertical-align:bottom;min-width:9ch}
-.cycle-wrap .cycle-word{display:block;position:absolute;top:0;left:0;opacity:0;transform:translateY(100%);transition:opacity .45s cubic-bezier(.4,0,.2,1),transform .45s cubic-bezier(.4,0,.2,1);color:var(--green);white-space:nowrap}
-.cycle-wrap .cycle-word.active{opacity:1;transform:translateY(0);position:relative}
-.cycle-wrap .cycle-word.exit{opacity:0;transform:translateY(-100%);position:absolute}
-
 /* SCROLL REVEAL */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .6s cubic-bezier(.4,0,.2,1),transform .6s cubic-bezier(.4,0,.2,1)}
 .reveal.in{opacity:1;transform:none}
@@ -352,7 +346,7 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
   <div class="hero-inner">
     <div class="hero-l">
       <div class="pill"><span class="pill-dot"></span>Genuine UK numbers · EU hosted · No SIM</div>
-      <h1>A UK number that forwards<br/>everything. <span class="hi cycle-wrap" id="cycler"><span class="cycle-word active">Reveals nothing.</span><span class="cycle-word">Exposes nothing.</span><span class="cycle-word">Shares nothing.</span><span class="cycle-word">Gives nothing away.</span></span></h1>
+      <h1>Real UK number.<br/><span class="hi">Total privacy.</span></h1>
       <p class="sub">Get a UK mobile number to use in place of your real one. Every text and voicemail forwarded to your email instantly — your data stays in the EU, never shared, never sold.</p>
       <div class="btns">
         <a href="https://app.privify.co.uk/sign-up" class="btn-g">Get your private number →</a>
@@ -870,23 +864,6 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
 </footer>
 
 <script>
-/* ── WORD CYCLER ── */
-(function(){
-  const wrap = document.getElementById('cycler');
-  if(!wrap) return;
-  const words = wrap.querySelectorAll('.cycle-word');
-  let cur = 0;
-  setInterval(function(){
-    const next = (cur + 1) % words.length;
-    words[cur].classList.remove('active');
-    words[cur].classList.add('exit');
-    const exiting = words[cur];
-    setTimeout(function(){ exiting.classList.remove('exit'); }, 500);
-    words[next].classList.add('active');
-    cur = next;
-  }, 2800);
-})();
-
 /* ── SCROLL REVEAL ── */
 (function(){
   const els = document.querySelectorAll('.reveal,.reveal-l,.reveal-r');
