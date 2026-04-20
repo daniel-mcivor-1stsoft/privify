@@ -5,3 +5,10 @@
 /.env.*       /404  404
 
 # Legal pages are served as static HTML files (terms.html, privacy.html, acceptable-use.html)
+
+# Blog clean URLs (no .html extension)
+/blog                                           /blog/index.html                                200
+/blog/uk-virtual-mobile-number-no-sim           /blog/uk-virtual-mobile-number-no-sim.html      200
+/blog/how-to-get-pac-code-uk                    /blog/how-to-get-pac-code-uk.html               200
+/blog/protect-your-number-facebook-marketplace  /blog/protect-your-number-facebook-marketplace.html  200
+/blog/second-uk-mobile-number                   /blog/second-uk-mobile-number.html              200

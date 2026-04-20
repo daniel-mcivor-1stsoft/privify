@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>How to get a PAC code in the UK — Privify</title>
+<meta name="description" content="Your PAC code lets you keep your number when switching networks. Here's exactly how to get one, how long it lasts, and what happens when you use it."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --white:#ffffff;--off:#f6f6f6;--ink:#141414;--ink2:#575757;--ink3:#9a9a9a;
+  --green:#1a6b4a;--green-dark:#145539;--green-tint:#eef7f2;--green-border:#b8d9c8;
+  --border:#e6e6e6;--font:'Inter',sans-serif;--mono:'DM Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--white);color:var(--ink);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:9px;font-size:1.1rem;font-weight:800;color:var(--ink);letter-spacing:-0.03em}
+.logo-mark{width:26px;height:26px;background:var(--green);border-radius:6px;display:flex;align-items:center;justify-content:center}
+.logo-mark svg{display:block;width:13px;height:13px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.nav-r{display:flex;align-items:center;gap:0.2rem}
+.nav-r a{font-size:0.875rem;font-weight:500;color:var(--ink2);padding:0.4rem 0.8rem;border-radius:7px;transition:background .12s,color .12s}
+.nav-r a:hover{background:var(--off);color:var(--ink)}
+.nav-btn{background:var(--green)!important;color:#fff!important;font-weight:600!important}
+.nav-btn:hover{background:var(--green-dark)!important}
+.article-hero{padding:7.5rem 2.5rem 3rem;max-width:740px;margin:0 auto}
+.breadcrumb{display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;color:var(--ink3);font-family:var(--mono);margin-bottom:1.5rem}
+.breadcrumb a{color:var(--green)}
+.breadcrumb span{color:var(--border)}
+.article-cat{font-size:0.65rem;font-weight:700;color:var(--green);letter-spacing:.12em;text-transform:uppercase;font-family:var(--mono);margin-bottom:0.85rem}
+.article-hero h1{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:900;letter-spacing:-0.04em;line-height:1.1;margin-bottom:1rem}
+.article-meta{display:flex;align-items:center;gap:1rem;font-size:0.78rem;color:var(--ink3);font-family:var(--mono);padding-top:1rem;border-top:1px solid var(--border)}
+.article-body{max-width:740px;margin:0 auto;padding:2.5rem 2.5rem 5rem}
+.article-body h2{font-size:1.35rem;font-weight:800;letter-spacing:-0.03em;margin:2.25rem 0 0.75rem;color:var(--ink)}
+.article-body h3{font-size:1.05rem;font-weight:700;margin:1.75rem 0 0.5rem;color:var(--ink)}
+.article-body p{font-size:0.95rem;color:var(--ink2);line-height:1.85;margin-bottom:1rem}
+.article-body ul,.article-body ol{margin:0.5rem 0 1rem 1.5rem;display:flex;flex-direction:column;gap:0.4rem}
+.article-body li{font-size:0.95rem;color:var(--ink2);line-height:1.75}
+.article-body strong{color:var(--ink);font-weight:600}
+.article-body a{color:var(--green);text-decoration:underline;text-underline-offset:3px}
+.callout{background:var(--green-tint);border:1px solid var(--green-border);border-radius:10px;padding:1.25rem 1.5rem;margin:1.75rem 0}
+.callout p{color:var(--ink);margin:0;font-size:0.9rem;line-height:1.75}
+.callout strong{color:var(--green)}
+.highlight-box{background:var(--off);border:1px solid var(--border);border-radius:10px;padding:1.5rem;margin:1.75rem 0}
+.highlight-box .pac-number{font-size:2rem;font-weight:900;font-family:var(--mono);color:var(--green);letter-spacing:.05em;display:block;margin-bottom:0.4rem}
+.highlight-box p{font-size:0.85rem;color:var(--ink2);margin:0;line-height:1.6}
+.steps-list{display:flex;flex-direction:column;gap:0;margin:1.25rem 0}
+.step-item{display:grid;grid-template-columns:48px 1fr;padding:1.25rem 0;border-bottom:1px solid var(--border)}
+.step-item:last-child{border-bottom:none}
+.step-num{width:32px;height:32px;background:var(--green);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.72rem;font-weight:700;font-family:var(--mono);flex-shrink:0;margin-top:3px}
+.step-item h3{font-size:0.95rem;font-weight:700;margin:0 0 0.3rem;color:var(--ink)}
+.step-item p{font-size:0.875rem;color:var(--ink2);line-height:1.72;margin:0}
+.article-cta{background:var(--green);border-radius:14px;padding:2.5rem;margin:3rem 0 0;text-align:center}
+.article-cta h2{font-size:1.5rem;font-weight:800;color:#fff;letter-spacing:-0.03em;margin-bottom:0.5rem}
+.article-cta p{color:rgba(255,255,255,.7);font-size:0.9rem;margin-bottom:1.5rem}
+.btn-w{display:inline-block;background:#fff;color:var(--green);padding:0.8rem 1.9rem;border-radius:8px;font-weight:700;font-size:0.9rem;transition:opacity .12s}
+.btn-w:hover{opacity:.9}
+footer{background:#141414;padding:3rem 2.5rem 2rem}
+.foot-inner{max-width:1060px;margin:0 auto}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.foot-bottom p{font-size:0.74rem;color:rgba(255,255,255,.25)}
+.foot-legal{display:flex;gap:1.5rem}
+.foot-legal a{font-size:0.74rem;color:rgba(255,255,255,.25);transition:color .12s}
+.foot-legal a:hover{color:rgba(255,255,255,.6)}
+@media(max-width:700px){
+  nav{padding:0 1.25rem}
+  .nav-r a:not(.nav-btn){display:none}
+  .article-hero,.article-body{padding-left:1.25rem;padding-right:1.25rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">
+    <div class="logo-mark">
+      <svg viewBox="0 0 16 18"><rect x="2" y="7" width="12" height="10" rx="2.5"/><path d="M5 7V5.5a3 3 0 0 1 6 0V7"/></svg>
+    </div>
+    Privify
+  </a>
+  <div class="nav-r">
+    <a href="/#features">Features</a>
+    <a href="/#uses">Use cases</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/blog">Blog</a>
+    <a href="https://app.privify.co.uk/sign-in">Log in</a>
+    <a href="https://app.privify.co.uk/sign-up" class="nav-btn">Get started →</a>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="breadcrumb">
+    <a href="/blog">Blog</a>
+    <span>/</span>
+    <span>How-to</span>
+  </div>
+  <div class="article-cat">How-to</div>
+  <h1>How to get a PAC code in the UK (and what to do with it)</h1>
+  <div class="article-meta">
+    <span>April 2026</span>
+    <span>·</span>
+    <span>4 min read</span>
+  </div>
+</div>
+
+<div class="article-body">
+
+  <p>If you want to keep your phone number when switching networks — or move it to a virtual number service like Privify — you'll need a PAC code. This guide covers exactly what a PAC code is, how to get one in seconds, and what happens after you use it.</p>
+
+  <h2>What is a PAC code?</h2>
+
+  <p>PAC stands for <strong>Porting Authorisation Code</strong>. It's a nine-character code — usually three letters followed by six digits — that your current network gives you to authorise the transfer of your number to a new provider.</p>
+
+  <p>Think of it as a one-time unlock code for your number. Once the new provider has it, they can pull your number across from your old network. Your number stays exactly the same — same digits, same format. Only the network behind it changes.</p>
+
+  <h2>How to get your PAC code</h2>
+
+  <p>Ofcom rules require every UK network to give you your PAC code immediately and for free. The easiest method is text:</p>
+
+  <div class="highlight-box">
+    <span class="pac-number">Text PAC to 65075</span>
+    <p>Send from the number you want to port. You'll receive your PAC code by text within seconds — along with your contract end date and any early termination charges, if applicable.</p>
+  </div>
+
+  <p>The text to 65075 is free from all UK networks. You don't need to call customer service, you don't need to explain why you're leaving, and they can't refuse or delay.</p>
+
+  <p>You can also call your network or use their app or website — but texting 65075 is fastest and gives you a written record of the code.</p>
+
+  <h2>What does a PAC code look like?</h2>
+
+  <p>A PAC code is always nine characters: three capital letters followed by six digits. For example: <strong style="font-family:var(--mono);letter-spacing:.05em">PAC123456</strong> or <strong style="font-family:var(--mono);letter-spacing:.05em">ABC987654</strong>.</p>
+
+  <p>Make a note of it when it arrives. You'll need to give it to your new provider before it expires.</p>
+
+  <h2>How long does a PAC code last?</h2>
+
+  <p>PAC codes are valid for <strong>30 days</strong> from the date you receive them. If you don't use it within that time, it expires and you'll need to request a new one.</p>
+
+  <p>There's no limit on how many times you can request a PAC code, and it's always free.</p>
+
+  <div class="callout">
+    <p><strong>Note:</strong> Requesting a PAC code does not commit you to switching. You only leave your current network when your new provider actually processes the port — usually 24–48 hours after you give them the code. If you request a code and change your mind, just let it expire and nothing happens.</p>
+  </div>
+
+  <h2>What happens when you use your PAC code</h2>
+
+  <div class="steps-list">
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div>
+        <h3>You give the code to your new provider</h3>
+        <p>Your new provider — whether that's a new network or a service like Privify — submits a port request to your old network using your PAC code.</p>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div>
+        <h3>Your old network releases the number</h3>
+        <p>By law, your old network must process the port within one business day. In practice it's usually completed overnight.</p>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div>
+        <h3>The number switches over</h3>
+        <p>Your old SIM stops working for that number. Any SMS or calls to that number are now handled by your new provider. There's typically a short window (a few hours at most) where the number is in transition.</p>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div>
+        <h3>You receive confirmation</h3>
+        <p>Your new provider will confirm the port is complete. If you're porting to Privify, you'll receive an email the moment it's done, and your number appears live in your dashboard.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>Will I lose service during the port?</h2>
+
+  <p>Yes, briefly. There's typically a short period — sometimes as little as a few minutes, sometimes a few hours — where your old SIM has stopped working but the new service hasn't fully activated yet. This is normal and unavoidable.</p>
+
+  <p>For most porting scenarios, this gap is small enough that it doesn't matter. If you're porting to a virtual number service like Privify (rather than a new SIM), the disruption is less of an issue because you're not relying on a handset staying active.</p>
+
+  <h2>What about early termination charges?</h2>
+
+  <p>The PAC code itself is free and using it doesn't cost anything extra. But if you're still in contract with your current network, they may charge an early termination fee — this is whatever your contract says, not a porting fee. The text reply to 65075 will tell you exactly what that amount is before you commit to anything.</p>
+
+  <h2>Can I port any UK mobile number?</h2>
+
+  <p>Almost any UK mobile number starting with 07 can be ported. There are a few exceptions — some business accounts or corporate SIMs have restrictions — but for personal numbers, porting is always available.</p>
+
+  <p>Landline numbers (01, 02) can also be ported, but the process is slightly different and isn't covered by the text-to-65075 method.</p>
+
+  <h2>Porting your number to Privify</h2>
+
+  <p>If you want to keep your existing number but have it managed virtually — so you can receive texts anywhere without a physical SIM — Privify supports inbound porting.</p>
+
+  <p>Once you're signed up, you can submit a port request from your dashboard. You'll need your number and your PAC code. We handle the rest with your current network, and you'll receive email updates as it progresses. Most ports complete within 24 hours.</p>
+
+  <div class="article-cta">
+    <h2>Keep your number, ditch the SIM</h2>
+    <p>Port your existing UK number to Privify and receive every text by email — from anywhere in the world.</p>
+    <a href="https://app.privify.co.uk/sign-up" class="btn-w">Get started →</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-bottom">
+      <p>&copy; 2026 Privify. All rights reserved.</p>
+      <div class="foot-legal">
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/blog">Blog</a>
+        <a href="mailto:support@privify.co.uk">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

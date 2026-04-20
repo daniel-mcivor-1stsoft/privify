@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Blog — Privify</title>
+<meta name="description" content="Guides, tips and advice on protecting your phone number, UK number porting, and staying private online."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --white:#ffffff;--off:#f6f6f6;--ink:#141414;--ink2:#575757;--ink3:#9a9a9a;
+  --green:#1a6b4a;--green-dark:#145539;--green-tint:#eef7f2;--green-border:#b8d9c8;
+  --border:#e6e6e6;--font:'Inter',sans-serif;--mono:'DM Mono',monospace;--r:10px;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--white);color:var(--ink);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:9px;font-size:1.1rem;font-weight:800;color:var(--ink);letter-spacing:-0.03em}
+.logo-mark{width:26px;height:26px;background:var(--green);border-radius:6px;display:flex;align-items:center;justify-content:center}
+.logo-mark svg{display:block;width:13px;height:13px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.nav-r{display:flex;align-items:center;gap:0.2rem}
+.nav-r a{font-size:0.875rem;font-weight:500;color:var(--ink2);padding:0.4rem 0.8rem;border-radius:7px;transition:background .12s,color .12s}
+.nav-r a:hover{background:var(--off);color:var(--ink)}
+.nav-btn{background:var(--green)!important;color:#fff!important;font-weight:600!important}
+.nav-btn:hover{background:var(--green-dark)!important}
+.page-header{padding:7.5rem 2.5rem 3.5rem;text-align:center;background:var(--white)}
+.tag{font-size:0.7rem;font-weight:700;color:var(--green);letter-spacing:.12em;text-transform:uppercase;font-family:var(--mono);margin-bottom:0.85rem}
+.page-header h1{font-size:clamp(2rem,4vw,3rem);font-weight:900;letter-spacing:-0.04em;line-height:1.1;margin-bottom:0.75rem}
+.page-header p{font-size:1rem;color:var(--ink2);max-width:420px;margin:0 auto}
+.blog-section{padding:2rem 2.5rem 5.5rem}
+.wrap{max-width:960px;margin:0 auto}
+.blog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+.blog-card{border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:box-shadow .15s,transform .15s;display:flex;flex-direction:column}
+.blog-card:hover{box-shadow:0 6px 24px rgba(0,0,0,.08);transform:translateY(-2px)}
+.blog-card-img{height:180px;background:var(--green-tint);display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--green-border);padding:2rem}
+.blog-card-img svg{width:52px;height:52px;stroke:var(--green);stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.blog-card-body{padding:1.5rem;flex:1;display:flex;flex-direction:column}
+.blog-meta{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.85rem}
+.blog-cat{font-size:0.65rem;font-weight:700;color:var(--green);letter-spacing:.1em;text-transform:uppercase;font-family:var(--mono)}
+.blog-date{font-size:0.72rem;color:var(--ink3);font-family:var(--mono)}
+.blog-read{font-size:0.72rem;color:var(--ink3);font-family:var(--mono)}
+.blog-card h2{font-size:1.05rem;font-weight:700;letter-spacing:-0.02em;line-height:1.3;margin-bottom:0.5rem;color:var(--ink)}
+.blog-card p{font-size:0.85rem;color:var(--ink2);line-height:1.72;flex:1}
+.blog-card-link{display:inline-flex;align-items:center;gap:5px;margin-top:1.1rem;font-size:0.82rem;font-weight:600;color:var(--green)}
+footer{background:#141414;padding:3.5rem 2.5rem 2rem}
+.foot-inner{max-width:1060px;margin:0 auto}
+.foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.foot-brand .logo{color:#fff;margin-bottom:0.8rem}
+.foot-brand .logo-mark{background:rgba(255,255,255,.1)}
+.foot-brand p{font-size:0.8rem;color:rgba(255,255,255,.35);line-height:1.75;max-width:210px}
+.foot-col h4{font-size:0.66rem;font-weight:700;color:rgba(255,255,255,.3);margin-bottom:1rem;letter-spacing:.1em;text-transform:uppercase}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:0.6rem}
+.foot-col a{font-size:0.8rem;color:rgba(255,255,255,.45);transition:color .12s}
+.foot-col a:hover{color:#fff}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.foot-bottom p{font-size:0.74rem;color:rgba(255,255,255,.25)}
+.foot-legal{display:flex;gap:1.5rem}
+.foot-legal a{font-size:0.74rem;color:rgba(255,255,255,.25);transition:color .12s}
+.foot-legal a:hover{color:rgba(255,255,255,.6)}
+@media(max-width:700px){
+  nav{padding:0 1.25rem}
+  .nav-r a:not(.nav-btn){display:none}
+  .blog-grid{grid-template-columns:1fr}
+  .blog-section{padding:1.5rem 1.25rem 4rem}
+  .page-header{padding:6rem 1.25rem 2.5rem}
+  .foot-top{grid-template-columns:1fr 1fr;gap:2rem}
+  .foot-brand{grid-column:1/-1}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">
+    <div class="logo-mark">
+      <svg viewBox="0 0 16 18"><rect x="2" y="7" width="12" height="10" rx="2.5"/><path d="M5 7V5.5a3 3 0 0 1 6 0V7"/></svg>
+    </div>
+    Privify
+  </a>
+  <div class="nav-r">
+    <a href="/#features">Features</a>
+    <a href="/#uses">Use cases</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/blog">Blog</a>
+    <a href="https://app.privify.co.uk/sign-in">Log in</a>
+    <a href="https://app.privify.co.uk/sign-up" class="nav-btn">Get started →</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="tag">Privify Blog</div>
+  <h1>Guides &amp; Advice</h1>
+  <p>Practical articles on protecting your number, porting, and staying private online.</p>
+</div>
+
+<div class="blog-section">
+  <div class="wrap">
+    <div class="blog-grid">
+
+      <a href="/blog/uk-virtual-mobile-number-no-sim" class="blog-card">
+        <div class="blog-card-img">
+          <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/><circle cx="19" cy="5" r="3" style="stroke:#1a6b4a"/></svg>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-meta">
+            <span class="blog-cat">Guide</span>
+            <span class="blog-date">April 2026</span>
+            <span class="blog-read">5 min read</span>
+          </div>
+          <h2>How to get a UK mobile number without a SIM card</h2>
+          <p>You don't need a SIM, a contract, or a handset to have a working UK mobile number. Here's how virtual numbers work and when you'd want one.</p>
+          <span class="blog-card-link">Read article →</span>
+        </div>
+      </a>
+
+      <a href="/blog/how-to-get-pac-code-uk" class="blog-card">
+        <div class="blog-card-img">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.9 10.82a19.79 19.79 0 01-3.07-8.67A2 2 0 012.81 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.1 6.1l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-meta">
+            <span class="blog-cat">How-to</span>
+            <span class="blog-date">April 2026</span>
+            <span class="blog-read">4 min read</span>
+          </div>
+          <h2>How to get a PAC code in the UK (and what to do with it)</h2>
+          <p>Your PAC code lets you take your existing number to a new network — or to Privify. Here's exactly how to get one, how long it lasts, and what happens next.</p>
+          <span class="blog-card-link">Read article →</span>
+        </div>
+      </a>
+
+      <a href="/blog/protect-your-number-facebook-marketplace" class="blog-card">
+        <div class="blog-card-img">
+          <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-meta">
+            <span class="blog-cat">Privacy</span>
+            <span class="blog-date">April 2026</span>
+            <span class="blog-read">4 min read</span>
+          </div>
+          <h2>Selling on Facebook Marketplace or Gumtree? Don't use your real number</h2>
+          <p>Every person who messages you about a listing gets your real mobile number — permanently. Here's why that's a problem and what to use instead.</p>
+          <span class="blog-card-link">Read article →</span>
+        </div>
+      </a>
+
+      <a href="/blog/second-uk-mobile-number" class="blog-card">
+        <div class="blog-card-img">
+          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-meta">
+            <span class="blog-cat">Guide</span>
+            <span class="blog-date">April 2026</span>
+            <span class="blog-read">5 min read</span>
+          </div>
+          <h2>Do you need a second UK mobile number? Your options explained</h2>
+          <p>A second SIM, a dual-SIM phone, a VoIP number, or a virtual number — four different solutions for four different problems. Here's how to pick the right one.</p>
+          <span class="blog-card-link">Read article →</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="/" class="logo">
+          <div class="logo-mark">
+            <svg viewBox="0 0 16 18"><rect x="2" y="7" width="12" height="10" rx="2.5"/><path d="M5 7V5.5a3 3 0 0 1 6 0V7"/></svg>
+          </div>
+          Privify
+        </a>
+        <p>A private UK mobile number forwarded to your email. Protect your real number from day one.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="/#features">Features</a></li>
+          <li><a href="/#uses">Use cases</a></li>
+          <li><a href="/#pricing">Pricing</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/blog/uk-virtual-mobile-number-no-sim">Virtual numbers</a></li>
+          <li><a href="/blog/how-to-get-pac-code-uk">PAC codes</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacy">Privacy policy</a></li>
+          <li><a href="/terms">Terms of service</a></li>
+          <li><a href="/acceptable-use">Acceptable use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>&copy; 2026 Privify. All rights reserved.</p>
+      <div class="foot-legal">
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="mailto:support@privify.co.uk">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
