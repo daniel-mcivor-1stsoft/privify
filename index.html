@@ -101,6 +101,23 @@ h2 em{font-style:normal;color:var(--green)}
 .feat-card p{font-size:0.875rem;color:var(--ink2);line-height:1.72}
 .feat-note{font-size:0.74rem;color:var(--ink3);margin-top:0.6rem;padding-top:0.6rem;border-top:1px solid var(--border)}
 
+/* PRIVACY FIRST */
+.privacy-first{background:var(--ink)}
+.privacy-first .tag{color:var(--green-border)}
+.privacy-first h2{color:#fff}
+.privacy-first .sec-sub{color:rgba(255,255,255,.5)}
+.priv-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.07);border-radius:var(--r);overflow:hidden;margin-top:3rem}
+.priv-card{background:var(--ink);padding:2rem}
+.priv-icon{width:40px;height:40px;background:rgba(255,255,255,.06);border-radius:9px;display:flex;align-items:center;justify-content:center;margin-bottom:1.1rem}
+.priv-icon svg{display:block}
+.priv-card h3{font-size:1rem;font-weight:700;color:#fff;margin-bottom:0.4rem;letter-spacing:-0.02em}
+.priv-card p{font-size:0.875rem;color:rgba(255,255,255,.45);line-height:1.72}
+.priv-eu-bar{display:flex;align-items:center;gap:0.75rem;margin-top:3rem;padding:1.25rem 1.5rem;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:var(--r)}
+.priv-eu-flag{font-size:1.4rem;flex-shrink:0}
+.priv-eu-bar p{font-size:0.85rem;color:rgba(255,255,255,.5);line-height:1.6}
+.priv-eu-bar strong{color:rgba(255,255,255,.85)}
+@media(max-width:700px){.priv-grid{grid-template-columns:1fr}}
+
 /* USE CASES */
 .uses{background:var(--white)}
 .use-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin-top:3rem}
@@ -216,7 +233,7 @@ footer{background:#141414;padding:3.5rem 2.5rem 2rem}
   </a>
   <div class="nav-r">
     <a href="#features">Features</a>
-    <a href="#uses">Use cases</a>
+    <a href="#privacy">Privacy</a>
     <a href="#pricing">Pricing</a>
     <a href="#faq">FAQ</a>
     <a href="/blog">Blog</a>
@@ -228,9 +245,9 @@ footer{background:#141414;padding:3.5rem 2.5rem 2rem}
 <!-- HERO -->
 <div class="hero">
   <div class="hero-inner">
-    <div class="pill"><span class="pill-dot"></span>Genuine UK numbers · No SIM required</div>
+    <div class="pill"><span class="pill-dot"></span>Genuine UK numbers · EU hosted · No SIM required</div>
     <h1>Your real number<br/>is none of their<br/><span class="hi">business.</span></h1>
-    <p class="sub">Get a UK mobile number to use in place of your real one. Every text forwarded to your email the moment it arrives — no app, no SIM, no hassle.</p>
+    <p class="sub">Get a UK mobile number to use in place of your real one. Every text and voicemail forwarded to your email instantly — your data stays in the EU, never shared, never sold.</p>
     <div class="btns">
       <a href="https://app.privify.co.uk/sign-up" class="btn-g">Get your private number →</a>
       <a href="#features" class="btn-o">See how it works</a>
@@ -238,8 +255,8 @@ footer{background:#141414;padding:3.5rem 2.5rem 2rem}
     <div class="checks">
       <span class="check"><svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>Genuine UK 07 number</span>
       <span class="check"><svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>SMS &amp; voicemail to email</span>
-      <span class="check"><svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>No contracts</span>
-      <span class="check"><svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>Cancel any time</span>
+      <span class="check"><svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>EU hosted · GDPR compliant</span>
+      <span class="check"><svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>No contracts · cancel any time</span>
     </div>
   </div>
 </div>
@@ -301,6 +318,49 @@ footer{background:#141414;padding:3.5rem 2.5rem 2rem}
         <p>When someone calls your Privify number, the call goes straight to voicemail. The recording is emailed to you as an audio file — and automatically transcribed, so you can read the message without even pressing play.</p>
         <div class="feat-note">Transcription included. Calls go to voicemail automatically.</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRIVACY FIRST -->
+<section class="privacy-first" id="privacy">
+  <div class="wrap">
+    <div class="tag">Privacy &amp; data</div>
+    <h2>Private by design.<br/>Hosted in the <em>EU.</em></h2>
+    <p class="sec-sub">Every message, voicemail, and transcription is stored and processed on servers inside the European Union — and always will be.</p>
+    <div class="priv-grid">
+      <div class="priv-card">
+        <div class="priv-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2L3 5.5v4.5c0 4 3.1 7.7 7 8.5 3.9-.8 7-4.5 7-8.5V5.5L10 2z"/></svg>
+        </div>
+        <h3>EU-only infrastructure</h3>
+        <p>Your messages, voicemails, and transcriptions are stored and processed exclusively on servers within the European Union. Your data never crosses that boundary.</p>
+      </div>
+      <div class="priv-card">
+        <div class="priv-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="8"/><line x1="10" y1="6" x2="10" y2="10"/><line x1="10" y1="14" x2="10.01" y2="14"/></svg>
+        </div>
+        <h3>No tracking. No ads. No selling.</h3>
+        <p>We have no advertising business model. We don't profile you, track your behaviour, or sell your data to anyone — ever. Your data exists solely to deliver the service.</p>
+      </div>
+      <div class="priv-card">
+        <div class="priv-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="14" height="10" rx="2"/><path d="M7 8V6a3 3 0 016 0v2"/></svg>
+        </div>
+        <h3>Your identity stays separate</h3>
+        <p>The whole point of Privify is that the people who get your number can't trace it back to you. We apply that same thinking internally — we hold only what's needed to run the service.</p>
+      </div>
+      <div class="priv-card">
+        <div class="priv-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 17 6"/><path d="M16 6l-1 11a2 2 0 01-2 2H7a2 2 0 01-2-2L4 6"/><path d="M8 6V4a1 1 0 011-1h2a1 1 0 011 1v2"/></svg>
+        </div>
+        <h3>Delete any time, instantly</h3>
+        <p>Cancel and all your data is deleted — messages, voicemails, account details, everything. You can also delete individual messages from your inbox whenever you like.</p>
+      </div>
+    </div>
+    <div class="priv-eu-bar">
+      <div class="priv-eu-flag">🇪🇺</div>
+      <p><strong>Fully EU hosted.</strong> All infrastructure runs within the European Union. We comply with UK and EU GDPR. No data is processed by third-party AI services outside the EU — voicemail transcription runs on our own servers.</p>
     </div>
   </div>
 </section>
@@ -429,6 +489,7 @@ footer{background:#141414;padding:3.5rem 2.5rem 2rem}
         <li>Voicemail — recordings emailed to you</li>
         <li>Voicemail transcription — read it without pressing play</li>
         <li>Change forwarding email any time</li>
+        <li>EU-hosted infrastructure · GDPR compliant</li>
         <li>Support when you need it</li>
       </ul>
       <a href="https://app.privify.co.uk/sign-up" class="btn-g">Get started — £17.99 today →</a>
@@ -512,7 +573,7 @@ footer{background:#141414;padding:3.5rem 2.5rem 2rem}
 
       <details class="faq-item">
         <summary class="faq-q">Is my data private and secure? <span class="faq-icon">+</span></summary>
-        <div class="faq-a">All messages are stored securely. We comply with UK GDPR, don't sell your data, and don't serve ads. You can delete your account and all associated data at any time from your settings. See our <a href="/privacy">Privacy Policy</a> for full details.</div>
+        <div class="faq-a">All messages and voicemails are stored on servers within the European Union. We comply with UK and EU GDPR, don't sell your data, and don't serve ads. Voicemail transcription runs entirely on our own EU infrastructure — nothing is sent to OpenAI or any external AI service. You can delete your account and all associated data at any time from your settings. See our <a href="/privacy">Privacy Policy</a> for full details.</div>
       </details>
 
       <details class="faq-item">
@@ -553,9 +614,9 @@ footer{background:#141414;padding:3.5rem 2.5rem 2rem}
         <h4>Product</h4>
         <ul>
           <li><a href="#features">Features</a></li>
-          <li><a href="#uses">Use cases</a></li>
-          <li><a href="#how">How it works</a></li>
+          <li><a href="#privacy">Privacy &amp; EU hosting</a></li>
           <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#how">How it works</a></li>
           <li><a href="#porting">Port your number</a></li>
         </ul>
       </div>
