@@ -1,1 +1,7 @@
+# Block exposure of VCS and dev metadata
+/.git/*       /404  404
+/.git         /404  404
+/.env         /404  404
+/.env.*       /404  404
+
 # Legal pages are served as static HTML files (terms.html, privacy.html, acceptable-use.html)
