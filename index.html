@@ -306,17 +306,40 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
   .foot-brand{grid-column:1/-1}
   .trust-inner{grid-template-columns:1fr 1fr;gap:1.5rem}
 }
+@media(max-width:768px){
+  section{padding:4.5rem 1.5rem}
+  .cta{padding:4.5rem 1.5rem}
+  .hero{padding:6rem 1.5rem 3.5rem}
+  .trust-bar{padding:1.75rem 1.5rem}
+  footer{padding:3.5rem 1.5rem 2rem}
+  .foot-top{grid-template-columns:1fr;gap:2rem}
+  .foot-brand{grid-column:auto}
+  h2{font-size:1.9rem}
+}
 @media(max-width:640px){
   nav{padding:0 1.25rem;height:60px}
   .nav-r a:not(.nav-btn){display:none}
-  h1{font-size:2.4rem}
-  .hero{padding:6rem 1.25rem 4rem}
-  section{padding:5rem 1.25rem}
+  h1{font-size:2.1rem;letter-spacing:-0.04em}
+  .hero{padding:5rem 1.25rem 3rem}
+  section{padding:3.5rem 1.25rem}
+  .cta{padding:3.5rem 1.25rem}
+  .trust-bar{padding:1.5rem 1.25rem}
+  footer{padding:3rem 1.25rem 1.75rem}
+  .foot-top{grid-template-columns:1fr;gap:1.75rem}
+  .foot-brand{grid-column:auto}
+  .foot-bottom{flex-direction:column;align-items:flex-start;gap:.6rem}
   .bento,.use-grid{grid-template-columns:1fr}
   .b-hero,.b-wide,.b-small,.b-med{grid-column:span 1}
   .hero-l .btns{flex-direction:column;align-items:stretch}
   .btn-g,.btn-o{justify-content:center}
-  .trust-inner{grid-template-columns:1fr}
+  .trust-inner{grid-template-columns:1fr 1fr}
+  .bento-card{padding:1.5rem}
+  .price-card{padding:1.75rem}
+  .use-highlight{padding:1.5rem 1.5rem}
+  .priv-split{gap:2rem}
+  .pricing-wrap{gap:2rem}
+  h2{font-size:1.75rem}
+  .reveal-d1,.reveal-d2,.reveal-d3,.reveal-d4,.reveal-d5{transition-delay:0s}
 }
 </style>
 </head>
