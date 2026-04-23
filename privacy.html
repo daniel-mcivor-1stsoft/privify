@@ -62,7 +62,7 @@ footer a{color:var(--accent);text-decoration:none}
       <h2>2. What Data We Collect</h2>
       <div class="prose">
         <p>2.1. <strong>Account information:</strong> your email address, collected when you register. We use this to provide the service and send transactional communications.</p>
-        <p>2.2. <strong>Payment information:</strong> payment details are entered directly into Stripe's secure payment form. We never see or store your card number. We do hold your Stripe customer ID and subscription ID so we can manage your account.</p>
+        <p>2.2. <strong>Payment information:</strong> payment details are entered directly into our payment processor's secure form. We never see or store your card number. We hold a customer reference and subscription ID so we can manage your account.</p>
         <p>2.3. <strong>Your Privify number:</strong> the UK mobile number assigned to your account.</p>
         <p>2.4. <strong>Incoming messages:</strong> SMS messages received on your Privify number are stored in your account for 90 days. Voicemail recordings are stored as audio files and linked to your account.</p>
         <p>2.5. <strong>Forwarding email address:</strong> the email address you want messages forwarded to (defaults to your account email, can be changed in settings).</p>
@@ -79,7 +79,7 @@ footer a{color:var(--accent);text-decoration:none}
           <li>forwarding incoming SMS messages to your email;</li>
           <li>storing your message history in your account inbox;</li>
           <li>delivering voicemail recordings to your email;</li>
-          <li>processing and managing your subscription via Stripe;</li>
+          <li>processing and managing your subscription;</li>
           <li>sending transactional emails (payment confirmations, number activation, billing alerts).</li>
         </ul>
         <p>3.2. We do not use your data for marketing purposes, advertising, or profiling. We will never sell your personal data to third parties.</p>
@@ -91,7 +91,7 @@ footer a{color:var(--accent);text-decoration:none}
       <h2>4. Data Retention</h2>
       <div class="prose">
         <p>4.1. SMS messages and voicemails are automatically deleted 90 days after receipt.</p>
-        <p>4.2. When you delete your account, all messages, voicemails, and account data are deleted immediately. Your Stripe subscription is cancelled at the same time.</p>
+        <p>4.2. When you delete your account, all messages, voicemails, and account data are deleted immediately. Your subscription is cancelled at the same time.</p>
         <p>4.3. We may retain certain records for longer where required to comply with a legal obligation (for example, financial records for tax purposes).</p>
       </div>
     </section>
@@ -99,16 +99,10 @@ footer a{color:var(--accent);text-decoration:none}
     <section>
       <h2>5. Third Parties</h2>
       <div class="prose">
-        <p>5.1. We use a small number of trusted third-party services to operate Privify:</p>
-        <ul>
-          <li><strong>Clerk</strong> — handles authentication and account management. Your email address and session data are processed by Clerk. See <a href="https://clerk.com/privacy" target="_blank" rel="noopener noreferrer">clerk.com/privacy</a>.</li>
-          <li><strong>Stripe</strong> — processes all payments. Card details are entered directly on Stripe's hosted form and never transmitted to our servers. See <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer">stripe.com/privacy</a>.</li>
-          <li><strong>Cloudflare R2</strong> — stores voicemail audio files. Files are accessible only via time-limited signed URLs. See <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener noreferrer">cloudflare.com/privacypolicy</a>.</li>
-          <li><strong>Andrews &amp; Arnold (A&amp;A)</strong> — our UK telecoms provider, through whom your mobile number is provisioned and SMS messages are received.</li>
-          <li><strong>Email delivery provider</strong> — used to send forwarding emails and transactional notifications to you.</li>
-        </ul>
-        <p>5.2. Where these providers are based outside the UK, we ensure appropriate safeguards are in place (such as Standard Contractual Clauses) to protect your data in accordance with UK GDPR.</p>
-        <p>5.3. We will never share your personal data with any third party for marketing or commercial purposes.</p>
+        <p>5.1. We use a small number of trusted third-party services to operate Privify. These cover areas including authentication, payment processing, voicemail storage, telecoms, and email delivery.</p>
+        <p>5.2. Each provider is selected on the basis of their security and privacy standards. We share only the minimum data required for each service to function and do not permit any provider to use your data for their own purposes.</p>
+        <p>5.3. Where any provider is based outside the UK, we ensure appropriate safeguards are in place, such as Standard Contractual Clauses, to protect your data in accordance with UK GDPR.</p>
+        <p>5.4. We will never share your personal data with any third party for marketing or commercial purposes.</p>
       </div>
     </section>
 
