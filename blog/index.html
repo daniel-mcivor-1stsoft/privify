@@ -10,64 +10,78 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --white:#ffffff;--off:#f6f6f6;--ink:#141414;--ink2:#575757;--ink3:#9a9a9a;
-  --green:#1a6b4a;--green-dark:#145539;--green-tint:#eef7f2;--green-border:#b8d9c8;
-  --border:#e6e6e6;--font:'Inter',sans-serif;--mono:'DM Mono',monospace;--r:10px;
+  --white:#ffffff;--off:#f9fafb;--surface:#f3f4f6;
+  --ink:#0f172a;--ink2:#475569;--ink3:#94a3b8;
+  --green:#1a6b4a;--green-dark:#145539;--green-light:#22875e;
+  --green-tint:#f0fdf4;--green-tint2:#dcfce7;--green-border:#86efac;
+  --border:#e5e7eb;
+  --shadow-sm:0 1px 3px rgba(15,23,42,.06),0 1px 2px rgba(15,23,42,.04);
+  --shadow:0 4px 6px rgba(15,23,42,.04),0 10px 20px rgba(15,23,42,.05);
+  --shadow-green:0 10px 30px rgba(26,107,74,.15);
+  --font:'Inter',sans-serif;--mono:'DM Mono',monospace;
 }
 html{scroll-behavior:smooth}
 body{font-family:var(--font);background:var(--white);color:var(--ink);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
-.logo{display:flex;align-items:center;gap:9px;font-size:1.1rem;font-weight:800;color:var(--ink);letter-spacing:-0.03em}
-.logo-mark{width:26px;height:26px;background:var(--green);border-radius:6px;display:flex;align-items:center;justify-content:center}
-.logo-mark svg{display:block;width:13px;height:13px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.nav-r{display:flex;align-items:center;gap:0.2rem}
-.nav-r a{font-size:0.875rem;font-weight:500;color:var(--ink2);padding:0.4rem 0.8rem;border-radius:7px;transition:background .12s,color .12s}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;background:rgba(255,255,255,.85);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid rgba(15,23,42,.06)}
+.logo{display:flex;align-items:center;gap:10px;font-size:1.1rem;font-weight:800;color:var(--ink);letter-spacing:-0.03em}
+.logo-mark{width:32px;height:32px;background:linear-gradient(135deg,var(--green),var(--green-light));border-radius:9px;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-green)}
+.logo-mark svg{display:block;width:15px;height:15px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.nav-r{display:flex;align-items:center;gap:.25rem}
+.nav-r a{font-size:.875rem;font-weight:500;color:var(--ink2);padding:.5rem .9rem;border-radius:8px;transition:all .15s}
 .nav-r a:hover{background:var(--off);color:var(--ink)}
-.nav-btn{background:var(--green)!important;color:#fff!important;font-weight:600!important}
-.nav-btn:hover{background:var(--green-dark)!important}
-.page-header{padding:7.5rem 2.5rem 3.5rem;text-align:center;background:var(--white)}
-.tag{font-size:0.7rem;font-weight:700;color:var(--green);letter-spacing:.12em;text-transform:uppercase;font-family:var(--mono);margin-bottom:0.85rem}
-.page-header h1{font-size:clamp(2rem,4vw,3rem);font-weight:900;letter-spacing:-0.04em;line-height:1.1;margin-bottom:0.75rem}
+.nav-btn{background:var(--green)!important;color:#fff!important;font-weight:600!important;margin-left:.5rem;box-shadow:var(--shadow-green)!important}
+.nav-btn:hover{background:var(--green-dark)!important;transform:translateY(-1px)}
+.page-header{padding:8rem 2.5rem 3.5rem;text-align:center;background:var(--white)}
+.tag{font-size:.7rem;font-weight:700;color:var(--green);letter-spacing:.12em;text-transform:uppercase;font-family:var(--mono);background:var(--green-tint);border:1px solid var(--green-tint2);border-radius:100px;padding:.3rem .85rem;display:inline-block;margin-bottom:1rem}
+.page-header h1{font-size:clamp(2rem,4vw,3rem);font-weight:900;letter-spacing:-0.04em;line-height:1.1;margin-bottom:.75rem}
 .page-header p{font-size:1rem;color:var(--ink2);max-width:420px;margin:0 auto}
 .blog-section{padding:2rem 2.5rem 5.5rem}
 .wrap{max-width:960px;margin:0 auto}
 .blog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
-.blog-card{border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:box-shadow .15s,transform .15s;display:flex;flex-direction:column}
-.blog-card:hover{box-shadow:0 6px 24px rgba(0,0,0,.08);transform:translateY(-2px)}
-.blog-card-img{height:180px;background:var(--green-tint);display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--green-border);padding:2rem}
+.blog-card{border:1px solid var(--border);border-radius:18px;overflow:hidden;transition:box-shadow .2s,transform .2s;display:flex;flex-direction:column;background:var(--white)}
+.blog-card:hover{box-shadow:var(--shadow);transform:translateY(-3px);border-color:#cbd5e1}
+.blog-card-img{height:180px;background:var(--green-tint);display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--green-tint2);padding:2rem}
 .blog-card-img svg{width:52px;height:52px;stroke:var(--green);stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
 .blog-card-body{padding:1.5rem;flex:1;display:flex;flex-direction:column}
-.blog-meta{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.85rem}
-.blog-cat{font-size:0.65rem;font-weight:700;color:var(--green);letter-spacing:.1em;text-transform:uppercase;font-family:var(--mono)}
-.blog-date{font-size:0.72rem;color:var(--ink3);font-family:var(--mono)}
-.blog-read{font-size:0.72rem;color:var(--ink3);font-family:var(--mono)}
-.blog-card h2{font-size:1.05rem;font-weight:700;letter-spacing:-0.02em;line-height:1.3;margin-bottom:0.5rem;color:var(--ink)}
-.blog-card p{font-size:0.85rem;color:var(--ink2);line-height:1.72;flex:1}
-.blog-card-link{display:inline-flex;align-items:center;gap:5px;margin-top:1.1rem;font-size:0.82rem;font-weight:600;color:var(--green)}
-footer{background:#141414;padding:3.5rem 2.5rem 2rem}
-.foot-inner{max-width:1060px;margin:0 auto}
-.foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
-.foot-brand .logo{color:#fff;margin-bottom:0.8rem}
-.foot-brand .logo-mark{background:rgba(255,255,255,.1)}
-.foot-brand p{font-size:0.8rem;color:rgba(255,255,255,.35);line-height:1.75;max-width:210px}
-.foot-col h4{font-size:0.66rem;font-weight:700;color:rgba(255,255,255,.3);margin-bottom:1rem;letter-spacing:.1em;text-transform:uppercase}
-.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:0.6rem}
-.foot-col a{font-size:0.8rem;color:rgba(255,255,255,.45);transition:color .12s}
+.blog-meta{display:flex;align-items:center;gap:.75rem;margin-bottom:.85rem}
+.blog-cat{font-size:.65rem;font-weight:700;color:var(--green);letter-spacing:.1em;text-transform:uppercase;font-family:var(--mono)}
+.blog-date{font-size:.72rem;color:var(--ink3);font-family:var(--mono)}
+.blog-read{font-size:.72rem;color:var(--ink3);font-family:var(--mono)}
+.blog-card h2{font-size:1.05rem;font-weight:800;letter-spacing:-0.025em;line-height:1.3;margin-bottom:.5rem;color:var(--ink)}
+.blog-card p{font-size:.875rem;color:var(--ink2);line-height:1.75;flex:1}
+.blog-card-link{display:inline-flex;align-items:center;gap:5px;margin-top:1.1rem;font-size:.82rem;font-weight:600;color:var(--green)}
+/* footer */
+footer{background:#0d3d29;padding:4.5rem 2.5rem 2.25rem;color:#fff;position:relative;overflow:hidden}
+footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height:200%;background:radial-gradient(ellipse at center,rgba(34,135,94,.15),transparent 60%);pointer-events:none}
+.foot-inner{max-width:1200px;margin:0 auto;position:relative;z-index:1}
+.foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:4rem}
+.foot-brand .logo{color:#fff;margin-bottom:1.1rem}
+.foot-brand .logo-mark{background:rgba(255,255,255,.12);box-shadow:none}
+.foot-brand p{font-size:.85rem;color:rgba(255,255,255,.45);line-height:1.8;max-width:260px;margin-bottom:1.25rem}
+.foot-brand .eu-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);padding:.45rem .85rem;border-radius:100px;font-size:.75rem;color:rgba(255,255,255,.7);font-weight:600}
+.foot-col h4{font-size:.68rem;font-weight:700;color:rgba(255,255,255,.4);margin-bottom:1.2rem;letter-spacing:.14em;text-transform:uppercase}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:.7rem}
+.foot-col a{font-size:.85rem;color:rgba(255,255,255,.55);transition:color .15s}
 .foot-col a:hover{color:#fff}
-.foot-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-.foot-bottom p{font-size:0.74rem;color:rgba(255,255,255,.25)}
-.foot-legal{display:flex;gap:1.5rem}
-.foot-legal a{font-size:0.74rem;color:rgba(255,255,255,.25);transition:color .12s}
-.foot-legal a:hover{color:rgba(255,255,255,.6)}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:1.75rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.foot-bottom p{font-size:.77rem;color:rgba(255,255,255,.35)}
+.foot-legal{display:flex;gap:1.75rem}
+.foot-legal a{font-size:.77rem;color:rgba(255,255,255,.35);transition:color .15s}
+.foot-legal a:hover{color:rgba(255,255,255,.75)}
+@media(max-width:900px){
+  .foot-top{grid-template-columns:1fr 1fr;gap:2.5rem}
+  .foot-brand{grid-column:1/-1}
+}
 @media(max-width:700px){
-  nav{padding:0 1.25rem}
+  nav{padding:0 1.25rem;height:60px}
   .nav-r a:not(.nav-btn){display:none}
   .blog-grid{grid-template-columns:1fr}
   .blog-section{padding:1.5rem 1.25rem 4rem}
   .page-header{padding:6rem 1.25rem 2.5rem}
-  .foot-top{grid-template-columns:1fr 1fr;gap:2rem}
-  .foot-brand{grid-column:1/-1}
+  footer{padding:3rem 1.25rem 1.75rem}
+  .foot-top{grid-template-columns:1fr;gap:1.75rem}
+  .foot-brand{grid-column:auto}
 }
 </style>
 </head>
@@ -82,8 +96,9 @@ footer{background:#141414;padding:3.5rem 2.5rem 2rem}
   </a>
   <div class="nav-r">
     <a href="/#features">Features</a>
-    <a href="/#uses">Use cases</a>
+    <a href="/#privacy">Privacy</a>
     <a href="/#pricing">Pricing</a>
+    <a href="/#faq">FAQ</a>
     <a href="/blog">Blog</a>
     <a href="https://app.privify.co.uk/sign-in">Log in</a>
     <a href="https://app.privify.co.uk/sign-up" class="nav-btn">Get started →</a>
@@ -178,15 +193,17 @@ footer{background:#141414;padding:3.5rem 2.5rem 2rem}
           </div>
           Privify
         </a>
-        <p>A private UK mobile number forwarded to your email. Protect your real number from day one.</p>
+        <p>Keep your real number private. Get a UK number to hand out instead and every text goes straight to your email.</p>
+        <div class="eu-badge">🇪🇺 EU hosted. GDPR compliant.</div>
       </div>
       <div class="foot-col">
         <h4>Product</h4>
         <ul>
           <li><a href="/#features">Features</a></li>
-          <li><a href="/#uses">Use cases</a></li>
+          <li><a href="/#privacy">Privacy &amp; EU hosting</a></li>
           <li><a href="/#pricing">Pricing</a></li>
-          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="/#how">How it works</a></li>
+          <li><a href="/#porting">Port your number</a></li>
         </ul>
       </div>
       <div class="foot-col">
@@ -195,23 +212,25 @@ footer{background:#141414;padding:3.5rem 2.5rem 2rem}
           <li><a href="/blog">Blog</a></li>
           <li><a href="/blog/uk-virtual-mobile-number-no-sim">Virtual numbers</a></li>
           <li><a href="/blog/how-to-get-pac-code-uk">PAC codes</a></li>
+          <li><a href="https://app.privify.co.uk/sign-in">Log in</a></li>
+          <li><a href="https://app.privify.co.uk/sign-up">Sign up</a></li>
         </ul>
       </div>
       <div class="foot-col">
         <h4>Legal</h4>
         <ul>
-          <li><a href="/privacy">Privacy policy</a></li>
-          <li><a href="/terms">Terms of service</a></li>
-          <li><a href="/acceptable-use">Acceptable use</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms &amp; Conditions</a></li>
+          <li><a href="/acceptable-use">Acceptable Use</a></li>
         </ul>
       </div>
     </div>
     <div class="foot-bottom">
-      <p>&copy; 2026 Privify. All rights reserved.</p>
+      <p>© 2026 1st Soft Limited. Registered in England &amp; Wales.</p>
       <div class="foot-legal">
-        <a href="/privacy">Privacy</a>
         <a href="/terms">Terms</a>
-        <a href="mailto:support@privify.co.uk">Contact</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/acceptable-use">Acceptable Use</a>
       </div>
     </div>
   </div>
