@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Burner number vs virtual number — which one do you actually need? — Privify</title>
+<meta name="description" content="Burner SIMs and virtual numbers solve different problems. A clear UK comparison of the two — costs, privacy, use cases, and which to choose."/>
+<link rel="canonical" href="https://privify.co.uk/blog/burner-vs-virtual-number"/>
+<meta property="og:title" content="Burner number vs virtual number — UK comparison"/>
+<meta property="og:description" content="The honest difference between a burner SIM and a virtual UK number, and which one fits your situation."/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://privify.co.uk/blog/burner-vs-virtual-number"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --white:#ffffff;--off:#f9fafb;--surface:#f3f4f6;
+  --ink:#0f172a;--ink2:#475569;--ink3:#94a3b8;
+  --green:#1a6b4a;--green-dark:#145539;--green-light:#22875e;
+  --green-tint:#f0fdf4;--green-tint2:#dcfce7;--green-border:#86efac;
+  --border:#e5e7eb;
+  --shadow-sm:0 1px 3px rgba(15,23,42,.06),0 1px 2px rgba(15,23,42,.04);
+  --shadow:0 4px 6px rgba(15,23,42,.04),0 10px 20px rgba(15,23,42,.05);
+  --shadow-green:0 10px 30px rgba(26,107,74,.15);
+  --font:'Inter',sans-serif;--mono:'DM Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--white);color:var(--ink);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;background:rgba(255,255,255,.85);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid rgba(15,23,42,.06)}
+.logo{display:flex;align-items:center;gap:10px;font-size:1.1rem;font-weight:800;color:var(--ink);letter-spacing:-0.03em}
+.logo-mark{width:32px;height:32px;background:linear-gradient(135deg,var(--green),var(--green-light));border-radius:9px;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-green)}
+.logo-mark svg{display:block;width:15px;height:15px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.nav-r{display:flex;align-items:center;gap:.25rem}
+.nav-r a{font-size:.875rem;font-weight:500;color:var(--ink2);padding:.5rem .9rem;border-radius:8px;transition:all .15s}
+.nav-r a:hover{background:var(--off);color:var(--ink)}
+.nav-btn{background:var(--green)!important;color:#fff!important;font-weight:600!important;margin-left:.5rem;box-shadow:var(--shadow-green)!important}
+.nav-btn:hover{background:var(--green-dark)!important;transform:translateY(-1px)}
+.article-hero{padding:7.5rem 2.5rem 3rem;max-width:740px;margin:0 auto}
+.breadcrumb{display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;color:var(--ink3);font-family:var(--mono);margin-bottom:1.5rem}
+.breadcrumb a{color:var(--green)}
+.breadcrumb span{color:var(--border)}
+.article-cat{font-size:0.65rem;font-weight:700;color:var(--green);letter-spacing:.12em;text-transform:uppercase;font-family:var(--mono);margin-bottom:0.85rem}
+.article-hero h1{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:900;letter-spacing:-0.04em;line-height:1.1;margin-bottom:1rem}
+.article-meta{display:flex;align-items:center;gap:1rem;font-size:0.78rem;color:var(--ink3);font-family:var(--mono);padding-top:1rem;border-top:1px solid var(--border)}
+.article-body{max-width:740px;margin:0 auto;padding:2.5rem 2.5rem 5rem}
+.article-body h2{font-size:1.35rem;font-weight:800;letter-spacing:-0.03em;margin:2.25rem 0 0.75rem;color:var(--ink)}
+.article-body h3{font-size:1.05rem;font-weight:700;margin:1.75rem 0 0.5rem;color:var(--ink)}
+.article-body p{font-size:0.95rem;color:var(--ink2);line-height:1.85;margin-bottom:1rem}
+.article-body ul,.article-body ol{margin:0.5rem 0 1rem 1.5rem;display:flex;flex-direction:column;gap:0.4rem}
+.article-body li{font-size:0.95rem;color:var(--ink2);line-height:1.75}
+.article-body strong{color:var(--ink);font-weight:600}
+.article-body a{color:var(--green);text-decoration:underline;text-underline-offset:3px}
+.callout{background:var(--green-tint);border:1px solid var(--green-border);border-radius:10px;padding:1.25rem 1.5rem;margin:1.75rem 0}
+.callout p{color:var(--ink);margin:0;font-size:0.9rem;line-height:1.75}
+.callout strong{color:var(--green)}
+.comparison{border:1px solid var(--border);border-radius:10px;overflow:hidden;margin:1.75rem 0}
+.comparison-row{display:grid;grid-template-columns:1.2fr 1fr 1fr;border-bottom:1px solid var(--border)}
+.comparison-row:last-child{border-bottom:none}
+.comparison-row.head{background:var(--off)}
+.comparison-cell{padding:0.75rem 1rem;font-size:0.82rem;color:var(--ink2);border-right:1px solid var(--border)}
+.comparison-cell:last-child{border-right:none}
+.comparison-row.head .comparison-cell{font-weight:700;color:var(--ink);font-size:0.78rem}
+.tick{color:var(--green);font-weight:700}
+.cross{color:#c0392b}
+.article-cta{background:var(--green);border-radius:14px;padding:2.5rem;margin:3rem 0 0;text-align:center}
+.article-cta h2{font-size:1.5rem;font-weight:800;color:#fff;letter-spacing:-0.03em;margin-bottom:0.5rem}
+.article-cta p{color:rgba(255,255,255,.7);font-size:0.9rem;margin-bottom:1.5rem}
+.btn-w{display:inline-block;background:#fff;color:var(--green);padding:0.8rem 1.9rem;border-radius:8px;font-weight:700;font-size:0.9rem;transition:opacity .12s}
+.btn-w:hover{opacity:.9}
+footer{background:#0d3d29;padding:3rem 2.5rem 2.25rem;color:#fff;position:relative;overflow:hidden}
+.foot-inner{max-width:1060px;margin:0 auto;position:relative;z-index:1}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.foot-bottom p{font-size:.77rem;color:rgba(255,255,255,.35)}
+.foot-legal{display:flex;gap:1.75rem}
+.foot-legal a{font-size:.77rem;color:rgba(255,255,255,.35);transition:color .15s}
+.foot-legal a:hover{color:rgba(255,255,255,.75)}
+@media(max-width:700px){
+  nav{padding:0 1.25rem}
+  .nav-r a:not(.nav-btn){display:none}
+  .article-hero,.article-body{padding-left:1.25rem;padding-right:1.25rem}
+  .comparison-row{grid-template-columns:1fr 1fr}
+  .comparison-row .comparison-cell:first-child{display:none}
+  .comparison-row.head .comparison-cell:first-child{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">
+    <div class="logo-mark">
+      <svg viewBox="0 0 16 18"><rect x="2" y="7" width="12" height="10" rx="2.5"/><path d="M5 7V5.5a3 3 0 0 1 6 0V7"/></svg>
+    </div>
+    Privify
+  </a>
+  <div class="nav-r">
+    <a href="/#features">Features</a>
+    <a href="/#privacy">Privacy</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/#faq">FAQ</a>
+    <a href="/blog">Blog</a>
+    <a href="https://app.privify.co.uk/sign-in">Log in</a>
+    <a href="https://app.privify.co.uk/sign-up" class="nav-btn">Get started →</a>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="breadcrumb">
+    <a href="/blog">Blog</a>
+    <span>/</span>
+    <span>Comparison</span>
+  </div>
+  <div class="article-cat">Comparison</div>
+  <h1>Burner number vs virtual number — which one do you need?</h1>
+  <div class="article-meta">
+    <span>April 2026</span>
+    <span>·</span>
+    <span>5 min read</span>
+  </div>
+</div>
+
+<div class="article-body">
+
+  <p>"Burner number" and "virtual number" get used almost interchangeably online, but they're two different things. Knowing the difference helps you pick the right one for what you actually want to do.</p>
+
+  <p>This is the honest version. Both have legitimate uses. Both have downsides.</p>
+
+  <h2>What's a burner number?</h2>
+
+  <p>A burner number, in the original sense, is a phone number you use temporarily and then "burn" — discard, never use again. The term came from <strong>burner SIMs</strong>: cheap pay-as-you-go SIM cards bought for cash, used briefly, and thrown away. The Wire popularised the phrase.</p>
+
+  <p>In modern usage, "burner" has spread to cover any short-term, throwaway phone number. That includes:</p>
+
+  <ul>
+    <li>Pay-as-you-go SIM cards bought from a corner shop</li>
+    <li>Apps that give you a temporary number for a few days or a single message</li>
+    <li>Public free-SMS websites that anyone can use</li>
+  </ul>
+
+  <p>The defining property of a burner is that it's <strong>temporary by design</strong>. You don't keep it.</p>
+
+  <h2>What's a virtual number?</h2>
+
+  <p>A virtual number is a real phone number that doesn't sit on a SIM card. Instead, it lives on a cloud service that receives messages and calls on your behalf — typically forwarding them to your email or showing them in a private dashboard.</p>
+
+  <p>The key difference: virtual numbers are <strong>permanent by design</strong>. You sign up, you keep the number, and you use it as your dedicated "second number" for as long as you want — months, years, indefinitely.</p>
+
+  <p>You can read more in our guide on <a href="/blog/uk-virtual-mobile-number-no-sim">how UK virtual mobile numbers work without a SIM card</a>.</p>
+
+  <h2>Side by side</h2>
+
+  <div class="comparison">
+    <div class="comparison-row head">
+      <div class="comparison-cell">Property</div>
+      <div class="comparison-cell">Burner</div>
+      <div class="comparison-cell">Virtual</div>
+    </div>
+    <div class="comparison-row">
+      <div class="comparison-cell">Lifespan</div>
+      <div class="comparison-cell">Hours to weeks</div>
+      <div class="comparison-cell">As long as you keep it</div>
+    </div>
+    <div class="comparison-row">
+      <div class="comparison-cell">Hardware needed</div>
+      <div class="comparison-cell">SIM (and often a phone)</div>
+      <div class="comparison-cell">None</div>
+    </div>
+    <div class="comparison-row">
+      <div class="comparison-cell">Where messages arrive</div>
+      <div class="comparison-cell">On the SIM/phone</div>
+      <div class="comparison-cell">Email or dashboard</div>
+    </div>
+    <div class="comparison-row">
+      <div class="comparison-cell">Real UK 07 mobile?</div>
+      <div class="comparison-cell">Yes (if a UK SIM)</div>
+      <div class="comparison-cell">Yes (with a UK provider)</div>
+    </div>
+    <div class="comparison-row">
+      <div class="comparison-cell">Account recovery if lost</div>
+      <div class="comparison-cell">Difficult or impossible</div>
+      <div class="comparison-cell">You retain the number</div>
+    </div>
+    <div class="comparison-row">
+      <div class="comparison-cell">Privacy from purchase</div>
+      <div class="comparison-cell">Cash-bought SIM = anonymous</div>
+      <div class="comparison-cell">Linked to the account holder</div>
+    </div>
+    <div class="comparison-row">
+      <div class="comparison-cell">Typical cost</div>
+      <div class="comparison-cell">£5–£15 once</div>
+      <div class="comparison-cell">£5–£10 per month</div>
+    </div>
+  </div>
+
+  <h2>When a burner makes sense</h2>
+
+  <p>A genuine burner SIM is the right choice for a small set of situations:</p>
+
+  <ul>
+    <li><strong>Genuinely one-off use.</strong> A single sign-up, a single message, and you'll never need the number again.</li>
+    <li><strong>Cash anonymity.</strong> If you buy the SIM with cash from a shop, the number isn't linked to your name. (UK regulation may change this — there's been periodic talk of mandatory ID for SIM purchases.)</li>
+    <li><strong>Travel needs.</strong> A local-country PAYG SIM for short stays where data and a phone number are useful.</li>
+  </ul>
+
+  <p>The downsides are practical: you need a SIM tray, the SIM expires if you don't use it, you've got to physically have the phone with you, and once it's gone, anything tied to that number is gone too.</p>
+
+  <h2>When a virtual number makes sense</h2>
+
+  <p>A virtual UK number wins for almost everything that isn't truly throwaway:</p>
+
+  <ul>
+    <li><strong>A "second number" for sign-ups, deliveries, marketplaces.</strong> You keep it permanently. It's not for any one specific use — it's the number you give out in any situation where you don't want to give your real one.</li>
+    <li><strong>Receiving SMS for accounts you'll keep.</strong> Banks, marketplaces, online services, email accounts. If you'll need to sign in again next year, a burner is the wrong choice — you can't recover the number.</li>
+    <li><strong>Living abroad with UK-based accounts.</strong> See our guide to <a href="/blog/keep-uk-mobile-number-abroad">keeping your UK number when moving abroad</a>.</li>
+    <li><strong>Running a side business or freelance work.</strong> A separate number for invoices and clients without buying a second SIM and second phone.</li>
+    <li><strong>Selling on Vinted, Facebook Marketplace, Gumtree, eBay.</strong> See our guide on <a href="/blog/protect-your-number-facebook-marketplace">why your real number shouldn't be on marketplace listings</a>.</li>
+  </ul>
+
+  <p>The downside is the recurring cost. A virtual number is a small monthly subscription — but for most of the situations above, that's worth far more than its price in saved hassle and exposed data.</p>
+
+  <h2>The hybrid approach: virtual as your default, burner for one-offs</h2>
+
+  <p>The setup most people land on after thinking it through:</p>
+
+  <ul>
+    <li><strong>Real number</strong> — for family, close friends, your bank, your employer. Stays private.</li>
+    <li><strong>Virtual number</strong> — for everything you do online, sell, sign up to, or want to be reachable on. Permanent and disposable-if-you-need-to.</li>
+    <li><strong>Burner SIM</strong> — only if you genuinely need a one-off anonymous SIM for a specific situation, otherwise unused.</li>
+  </ul>
+
+  <p>That gives you a clean separation: people who genuinely need to reach you reach you on your real number. Everyone else lands on the virtual one. The burner is reserved for edge cases.</p>
+
+  <h2>Common confusions to clear up</h2>
+
+  <h3>"Burner apps" usually aren't burners</h3>
+  <p>Apps like Burner (the brand) and Hushed give you a number that you keep on a subscription — which makes them functionally a virtual number, not a burner in the classic sense. Most are also US-only, so they don't give you a UK 07 number that works for UK SMS verification.</p>
+
+  <h3>Virtual numbers can be "ditched" too</h3>
+  <p>If you give your virtual number out somewhere it starts attracting spam, you can drop it and get a new one without losing anything important — your real number is unaffected. So a virtual number gives you the throwaway option without committing to truly throwing it away.</p>
+
+  <h3>Public "free SMS" sites aren't safe burners</h3>
+  <p>Free public SMS sites are technically burners but with a critical flaw: anyone in the world can read your messages. Don't use them for anything that touches verification, accounts, or anything you care about. See our <a href="/blog/receive-sms-online-uk">guide to receiving SMS online</a>.</p>
+
+  <h2>Quick decision tree</h2>
+
+  <ul>
+    <li>Do you need the number for more than a single message? → Virtual</li>
+    <li>Do you need it for an account you'll log into again? → Virtual</li>
+    <li>Do you need to receive UK bank SMS? → Virtual (genuine UK 07)</li>
+    <li>Do you want it for a single anonymous interaction with cash? → Burner SIM</li>
+    <li>Are you abroad without a UK SIM? → Virtual</li>
+    <li>Are you selling on a UK marketplace? → Virtual</li>
+  </ul>
+
+  <p>Most paths lead to virtual. Burners survive as a niche tool for when you need genuine anonymity and zero history, but for the day-to-day "I want a second number that isn't my real one", a virtual number is the cleaner option.</p>
+
+  <div class="article-cta">
+    <h2>Get a real UK 07 second number</h2>
+    <p>Permanent, private, forwarded to your inbox. Drop it any time if it ever attracts spam.</p>
+    <a href="https://app.privify.co.uk/sign-up" class="btn-w">Get started →</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-bottom">
+      <p>&copy; 2026 Privify. All rights reserved.</p>
+      <div class="foot-legal">
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/blog">Blog</a>
+        <a href="mailto:support@privify.co.uk">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

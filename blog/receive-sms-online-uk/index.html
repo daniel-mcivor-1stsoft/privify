@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Receive SMS online (UK guide) — what works and what doesn't — Privify</title>
+<meta name="description" content="The UK guide to receiving SMS online — why public 'free SMS' sites don't work for verification codes, what does, and how to receive UK texts to your email."/>
+<link rel="canonical" href="https://privify.co.uk/blog/receive-sms-online-uk"/>
+<meta property="og:title" content="Receive SMS online — a UK guide"/>
+<meta property="og:description" content="What actually works for receiving UK SMS verification codes online — and what doesn't."/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://privify.co.uk/blog/receive-sms-online-uk"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --white:#ffffff;--off:#f9fafb;--surface:#f3f4f6;
+  --ink:#0f172a;--ink2:#475569;--ink3:#94a3b8;
+  --green:#1a6b4a;--green-dark:#145539;--green-light:#22875e;
+  --green-tint:#f0fdf4;--green-tint2:#dcfce7;--green-border:#86efac;
+  --border:#e5e7eb;
+  --shadow-sm:0 1px 3px rgba(15,23,42,.06),0 1px 2px rgba(15,23,42,.04);
+  --shadow:0 4px 6px rgba(15,23,42,.04),0 10px 20px rgba(15,23,42,.05);
+  --shadow-green:0 10px 30px rgba(26,107,74,.15);
+  --font:'Inter',sans-serif;--mono:'DM Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--white);color:var(--ink);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;background:rgba(255,255,255,.85);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid rgba(15,23,42,.06)}
+.logo{display:flex;align-items:center;gap:10px;font-size:1.1rem;font-weight:800;color:var(--ink);letter-spacing:-0.03em}
+.logo-mark{width:32px;height:32px;background:linear-gradient(135deg,var(--green),var(--green-light));border-radius:9px;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-green)}
+.logo-mark svg{display:block;width:15px;height:15px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.nav-r{display:flex;align-items:center;gap:.25rem}
+.nav-r a{font-size:.875rem;font-weight:500;color:var(--ink2);padding:.5rem .9rem;border-radius:8px;transition:all .15s}
+.nav-r a:hover{background:var(--off);color:var(--ink)}
+.nav-btn{background:var(--green)!important;color:#fff!important;font-weight:600!important;margin-left:.5rem;box-shadow:var(--shadow-green)!important}
+.nav-btn:hover{background:var(--green-dark)!important;transform:translateY(-1px)}
+.article-hero{padding:7.5rem 2.5rem 3rem;max-width:740px;margin:0 auto}
+.breadcrumb{display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;color:var(--ink3);font-family:var(--mono);margin-bottom:1.5rem}
+.breadcrumb a{color:var(--green)}
+.breadcrumb span{color:var(--border)}
+.article-cat{font-size:0.65rem;font-weight:700;color:var(--green);letter-spacing:.12em;text-transform:uppercase;font-family:var(--mono);margin-bottom:0.85rem}
+.article-hero h1{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:900;letter-spacing:-0.04em;line-height:1.1;margin-bottom:1rem}
+.article-meta{display:flex;align-items:center;gap:1rem;font-size:0.78rem;color:var(--ink3);font-family:var(--mono);padding-top:1rem;border-top:1px solid var(--border)}
+.article-body{max-width:740px;margin:0 auto;padding:2.5rem 2.5rem 5rem}
+.article-body h2{font-size:1.35rem;font-weight:800;letter-spacing:-0.03em;margin:2.25rem 0 0.75rem;color:var(--ink)}
+.article-body h3{font-size:1.05rem;font-weight:700;margin:1.75rem 0 0.5rem;color:var(--ink)}
+.article-body p{font-size:0.95rem;color:var(--ink2);line-height:1.85;margin-bottom:1rem}
+.article-body ul,.article-body ol{margin:0.5rem 0 1rem 1.5rem;display:flex;flex-direction:column;gap:0.4rem}
+.article-body li{font-size:0.95rem;color:var(--ink2);line-height:1.75}
+.article-body strong{color:var(--ink);font-weight:600}
+.article-body a{color:var(--green);text-decoration:underline;text-underline-offset:3px}
+.callout{background:var(--green-tint);border:1px solid var(--green-border);border-radius:10px;padding:1.25rem 1.5rem;margin:1.75rem 0}
+.callout p{color:var(--ink);margin:0;font-size:0.9rem;line-height:1.75}
+.callout strong{color:var(--green)}
+.warn{background:#fef3c7;border:1px solid #fcd34d;border-radius:10px;padding:1.25rem 1.5rem;margin:1.75rem 0}
+.warn p{color:#7c2d12;margin:0;font-size:0.9rem;line-height:1.75}
+.warn strong{color:#7c2d12}
+.article-cta{background:var(--green);border-radius:14px;padding:2.5rem;margin:3rem 0 0;text-align:center}
+.article-cta h2{font-size:1.5rem;font-weight:800;color:#fff;letter-spacing:-0.03em;margin-bottom:0.5rem}
+.article-cta p{color:rgba(255,255,255,.7);font-size:0.9rem;margin-bottom:1.5rem}
+.btn-w{display:inline-block;background:#fff;color:var(--green);padding:0.8rem 1.9rem;border-radius:8px;font-weight:700;font-size:0.9rem;transition:opacity .12s}
+.btn-w:hover{opacity:.9}
+footer{background:#0d3d29;padding:3rem 2.5rem 2.25rem;color:#fff;position:relative;overflow:hidden}
+.foot-inner{max-width:1060px;margin:0 auto;position:relative;z-index:1}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.foot-bottom p{font-size:.77rem;color:rgba(255,255,255,.35)}
+.foot-legal{display:flex;gap:1.75rem}
+.foot-legal a{font-size:.77rem;color:rgba(255,255,255,.35);transition:color .15s}
+.foot-legal a:hover{color:rgba(255,255,255,.75)}
+@media(max-width:700px){
+  nav{padding:0 1.25rem}
+  .nav-r a:not(.nav-btn){display:none}
+  .article-hero,.article-body{padding-left:1.25rem;padding-right:1.25rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">
+    <div class="logo-mark">
+      <svg viewBox="0 0 16 18"><rect x="2" y="7" width="12" height="10" rx="2.5"/><path d="M5 7V5.5a3 3 0 0 1 6 0V7"/></svg>
+    </div>
+    Privify
+  </a>
+  <div class="nav-r">
+    <a href="/#features">Features</a>
+    <a href="/#privacy">Privacy</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/#faq">FAQ</a>
+    <a href="/blog">Blog</a>
+    <a href="https://app.privify.co.uk/sign-in">Log in</a>
+    <a href="https://app.privify.co.uk/sign-up" class="nav-btn">Get started →</a>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="breadcrumb">
+    <a href="/blog">Blog</a>
+    <span>/</span>
+    <span>Guide</span>
+  </div>
+  <div class="article-cat">Guide</div>
+  <h1>Receive SMS online: a UK guide</h1>
+  <div class="article-meta">
+    <span>April 2026</span>
+    <span>·</span>
+    <span>6 min read</span>
+  </div>
+</div>
+
+<div class="article-body">
+
+  <p>"Receive SMS online" is a search that produces hundreds of results — and almost all of them are useless for what most people actually want to do.</p>
+
+  <p>If you're looking to receive UK text messages without using your phone — for verification codes, sign-ups, or privacy — this guide explains what actually works, what doesn't, and why.</p>
+
+  <h2>The free public SMS sites — why you shouldn't use them</h2>
+
+  <p>You've probably found websites offering "free public SMS numbers" that anyone can use to receive texts. They look convenient. They're also a terrible idea for almost everyone who finds them.</p>
+
+  <div class="warn">
+    <p><strong>Don't use public SMS sites for anything you care about.</strong> The numbers are shared by thousands of people. Anyone visiting the site can read every message sent to that number. That includes verification codes, password resets, and account confirmations.</p>
+  </div>
+
+  <p>Specifically:</p>
+
+  <ul>
+    <li><strong>Anyone can read your messages.</strong> The whole inbox is public — there's no login.</li>
+    <li><strong>Most major services blacklist them.</strong> Banks, social media, dating apps, crypto exchanges and government services keep lists of known public SMS numbers and refuse to send codes to them.</li>
+    <li><strong>The numbers get burned constantly.</strong> Even if a code does come through once, the number you used yesterday may be dead today.</li>
+    <li><strong>Account recovery becomes impossible.</strong> If you signed up to anything important using one of these numbers, you can't get back in if you lose your password — because anyone in the world can intercept the password reset SMS.</li>
+  </ul>
+
+  <p>Public SMS sites have a legitimate use case — quick throwaway sign-ups for things you genuinely don't care about — but they should never be used for anything tied to your identity, money, or important accounts.</p>
+
+  <h2>What actually works: a private virtual number</h2>
+
+  <p>What most people are searching for, when they search "receive SMS online", is really:</p>
+
+  <ul>
+    <li>A real UK mobile number</li>
+    <li>That only they can see messages on</li>
+    <li>Without needing a SIM card or extra phone</li>
+    <li>That delivers messages quickly and reliably</li>
+  </ul>
+
+  <p>That's a private virtual UK mobile number. It looks identical to a normal 07 number to anyone sending messages — because it <em>is</em> a normal 07 number — but it isn't tied to a SIM. The messages arrive in a private inbox or get forwarded to your email.</p>
+
+  <p>This works for SMS verification, banking, dating apps, and almost everything that asks for a UK mobile.</p>
+
+  <h2>What you can use a virtual UK number for</h2>
+
+  <h3>SMS verification codes</h3>
+  <p>2FA codes from banks, government services, marketplaces, social platforms, dating apps, and most online accounts. As long as the service accepts a UK mobile number, your virtual number receives the code exactly the same way a regular SIM would.</p>
+
+  <h3>Sign-ups where you don't want to give your real number</h3>
+  <p>Marketplace listings, free trials, retail loyalty cards, courier deliveries, restaurant bookings — anywhere they ask for a phone but you'd rather keep your real one private.</p>
+
+  <h3>Receiving SMS from abroad</h3>
+  <p>If you're outside the UK and need to receive a UK text — for example, a verification code from your UK bank — a virtual number can deliver it to your email anywhere in the world. See our guide on <a href="/blog/keep-uk-mobile-number-abroad">keeping your UK number when moving abroad</a>.</p>
+
+  <h3>Receiving SMS from people, not just services</h3>
+  <p>Personal messages work too. If you give someone a virtual number, they can text you and you read the message in your inbox — same as any other text. Most virtual services don't currently let you send replies, so it's strongest as an inbound-only number for sign-ups, verifications, and contact-from-strangers.</p>
+
+  <h2>What you can't reliably use a virtual number for</h2>
+
+  <p>To set expectations honestly:</p>
+
+  <ul>
+    <li><strong>Some banks block known virtual number ranges.</strong> Most major UK banks accept virtual numbers, but a small number of providers (especially newer challenger banks) have been known to flag them. Genuine UK 07 numbers from a regulated provider are far more accepted than international or VoIP numbers.</li>
+    <li><strong>Real-time SMS replies in conversation.</strong> Unless your provider supports outbound SMS, the number is best used for receiving rather than two-way chat.</li>
+    <li><strong>WhatsApp and similar messaging apps.</strong> WhatsApp generally allows virtual UK numbers for registration, but its rules change occasionally. Dedicated SIM-only services are required by some apps.</li>
+  </ul>
+
+  <h2>How a virtual UK number compares to alternatives</h2>
+
+  <h3>Burner SIMs</h3>
+  <p>A pay-as-you-go SIM you buy from a corner shop is a classic "throwaway" option. It works, but you have to physically own the SIM, swap it in and out of a phone, top it up, and remember when it expires. For one-off use it's fine. For ongoing use it's a hassle. See <a href="/blog/burner-vs-virtual-number">our comparison of burner numbers and virtual numbers</a>.</p>
+
+  <h3>Apps like Hushed, Burner, and MySudo</h3>
+  <p>These are mostly North American services. They give you US/Canadian numbers — which is fine for some purposes, but not for UK SMS verification. If a service expects a UK 07 number, a US number won't work.</p>
+
+  <h3>Google Voice</h3>
+  <p>Doesn't work in the UK. Google Voice is US-only.</p>
+
+  <h3>Skype Number</h3>
+  <p>Provides a UK landline-style number, not a mobile. UK banks and services that require a mobile (07) for SMS verification will often reject these.</p>
+
+  <h2>How to get a real UK virtual number</h2>
+
+  <p>The right service for online SMS depends on what you want from it. The basic checklist:</p>
+
+  <ol>
+    <li><strong>Genuine UK 07 number</strong> — not US, not VoIP-only, not non-geographic.</li>
+    <li><strong>Private inbox</strong> — only you see the messages.</li>
+    <li><strong>Email forwarding</strong> — so messages reach you wherever you are.</li>
+    <li><strong>Reliable delivery</strong> — messages arrive within seconds, not hours.</li>
+    <li><strong>UK provider</strong> — for GDPR coverage and proper UK regulation.</li>
+  </ol>
+
+  <p>Privify hits all of these. You get a real UK 07 mobile number, a private inbox in your dashboard, and every text forwarded to your email. The number is yours — not shared, not public, not recycled — for as long as you keep your subscription.</p>
+
+  <div class="callout">
+    <p><strong>One thing to check:</strong> If you're going to use a virtual number for banking or government SMS, sign up first with a low-stakes service to confirm SMS verification works for you. Most do, but it's worth a quick test before relying on it.</p>
+  </div>
+
+  <h2>The takeaway</h2>
+
+  <p>Receiving SMS online is genuinely useful — for privacy, for travel, for separating sign-ups from your real number — but the free public sites you'll find at the top of search results aren't the answer for anything you care about. Use a private virtual UK number, on a real UK provider, with delivery to your email. That's the only setup that works reliably for verifications, sign-ups, and accounts you actually want to keep access to.</p>
+
+  <div class="article-cta">
+    <h2>Receive UK SMS in your email</h2>
+    <p>A real UK 07 number, private to you, with every text forwarded to your inbox in seconds.</p>
+    <a href="https://app.privify.co.uk/sign-up" class="btn-w">Get started →</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-bottom">
+      <p>&copy; 2026 Privify. All rights reserved.</p>
+      <div class="foot-legal">
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/blog">Blog</a>
+        <a href="mailto:support@privify.co.uk">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
