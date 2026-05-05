@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Cookie Policy — Privify</title>
+<meta name="description" content="Privify's cookie policy. We use only strictly necessary cookies to keep you logged in — no advertising or tracking cookies, ever."/>
+<link rel="canonical" href="https://privify.co.uk/cookies"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#f8f8fc;
+  --card:#ffffff;
+  --ink:#0d0d18;
+  --ink2:#56566e;
+  --ink3:#9898b0;
+  --accent:#1a6b4a;
+  --border:rgba(13,13,24,0.09);
+  --font:'Outfit',sans-serif;
+}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);font-size:16px;line-height:1.6}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2.5rem;background:rgba(248,248,252,0.94);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.logo{font-size:1.1rem;font-weight:700;letter-spacing:-0.02em;text-decoration:none;color:var(--ink)}
+nav a.back{font-size:0.85rem;color:var(--ink2);text-decoration:none;transition:color .15s}
+nav a.back:hover{color:var(--ink)}
+.wrap{max-width:740px;margin:0 auto;padding:7rem 2.5rem 5rem}
+h1{font-size:2.2rem;font-weight:800;letter-spacing:-0.03em;margin-bottom:0.4rem}
+.updated{font-size:0.82rem;color:var(--ink3);margin-bottom:3rem}
+.sections{display:flex;flex-direction:column;gap:2.5rem}
+section h2{font-size:0.9rem;font-weight:700;padding-bottom:0.6rem;border-bottom:1px solid var(--border);margin-bottom:1rem;color:var(--ink)}
+.prose{display:flex;flex-direction:column;gap:0.75rem;font-size:0.875rem;color:var(--ink2);line-height:1.8}
+.prose ul{padding-left:1.4rem;display:flex;flex-direction:column;gap:0.35rem}
+.prose a{color:var(--accent);text-decoration:none}
+.prose a:hover{text-decoration:underline}
+.cookie-table{width:100%;border-collapse:collapse;font-size:0.82rem;color:var(--ink2);margin-top:0.5rem}
+.cookie-table th{text-align:left;font-weight:600;color:var(--ink);padding:0.6rem 0.75rem;border-bottom:2px solid var(--border);background:rgba(13,13,24,0.03)}
+.cookie-table td{padding:0.65rem 0.75rem;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.6}
+.cookie-table tr:last-child td{border-bottom:none}
+.tag{display:inline-block;font-size:0.72rem;font-weight:600;padding:0.15rem 0.5rem;border-radius:99px;letter-spacing:0.02em}
+.tag-necessary{background:rgba(26,107,74,0.1);color:#1a6b4a}
+footer{border-top:1px solid var(--border);padding:2rem 2.5rem;text-align:center;font-size:0.78rem;color:var(--ink3)}
+footer a{color:var(--accent);text-decoration:none}
+@media(max-width:600px){.wrap{padding:6rem 1.25rem 3rem}nav{padding:1rem 1.25rem}.cookie-table{font-size:0.78rem}.cookie-table th,.cookie-table td{padding:0.5rem 0.4rem}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="logo">Privify</a>
+  <a href="/" class="back">← Back to home</a>
+</nav>
+
+<div class="wrap">
+  <h1>Cookie Policy</h1>
+  <p class="updated">Last updated: 5 May 2026</p>
+
+  <div class="sections">
+
+    <section>
+      <h2>1. Our Approach to Cookies</h2>
+      <div class="prose">
+        <p>1.1. Privify is built on a privacy-first philosophy. We use the absolute minimum number of cookies necessary to make the service work.</p>
+        <p>1.2. We do <strong>not</strong> use advertising cookies, tracking cookies, or behavioural profiling of any kind.</p>
+        <p>1.3. Our marketing website (privify.co.uk) uses <strong>Cloudflare Web Analytics</strong> — a cookieless, privacy-preserving analytics tool that does not set any cookies or fingerprint your device.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. What Are Cookies</h2>
+      <div class="prose">
+        <p>2.1. Cookies are small text files that a website stores on your device when you visit. They are used to remember your preferences or keep you logged in between page loads.</p>
+        <p>2.2. Cookies can be <strong>session cookies</strong> (deleted when you close your browser) or <strong>persistent cookies</strong> (stored for a set period). They can also be set by the website you are visiting (<strong>first-party</strong>) or by third-party services embedded on that page (<strong>third-party</strong>).</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. Cookies We Use</h2>
+      <div class="prose">
+        <p>3.1. The Privify customer portal (app.privify.co.uk) uses strictly necessary cookies only. These cannot be disabled without breaking the service.</p>
+
+        <table class="cookie-table">
+          <thead>
+            <tr>
+              <th>Cookie</th>
+              <th>Set by</th>
+              <th>Purpose</th>
+              <th>Duration</th>
+              <th>Type</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>__session</code></td>
+              <td>Clerk (authentication)</td>
+              <td>Keeps you signed in to your Privify account. Without this cookie you would be logged out on every page load.</td>
+              <td>Session / up to 7 days</td>
+              <td><span class="tag tag-necessary">Strictly necessary</span></td>
+            </tr>
+            <tr>
+              <td><code>__client_uat</code></td>
+              <td>Clerk (authentication)</td>
+              <td>Verifies your session is still valid and refreshes your login token silently in the background.</td>
+              <td>Session</td>
+              <td><span class="tag tag-necessary">Strictly necessary</span></td>
+            </tr>
+            <tr>
+              <td>Stripe session cookies</td>
+              <td>Stripe (payments)</td>
+              <td>Used during the payment checkout flow to prevent fraud and maintain your basket state. Only active during checkout.</td>
+              <td>Session</td>
+              <td><span class="tag tag-necessary">Strictly necessary</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>3.2. The Privify marketing website (privify.co.uk) sets <strong>no cookies</strong> of its own. Cloudflare Web Analytics, which we use to understand aggregate traffic, operates entirely without cookies.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. Third-Party Services</h2>
+      <div class="prose">
+        <p>4.1. <strong>Clerk</strong> — our authentication provider — may set additional cookies for security purposes such as cross-site request forgery (CSRF) protection. These are strictly necessary for secure login. You can read Clerk's cookie policy at <a href="https://clerk.com/privacy" target="_blank" rel="noopener">clerk.com/privacy</a>.</p>
+        <p>4.2. <strong>Stripe</strong> — our payment processor — sets cookies during the checkout process to detect fraud and maintain payment session state. You can read Stripe's cookie policy at <a href="https://stripe.com/cookies-policy/legal" target="_blank" rel="noopener">stripe.com/cookies-policy/legal</a>.</p>
+        <p>4.3. We do not embed any social media widgets, advertising networks, or analytics scripts that set third-party cookies.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>5. How to Control Cookies</h2>
+      <div class="prose">
+        <p>5.1. You can control or delete cookies through your browser settings. The links below explain how to do this in the most common browsers:</p>
+        <ul>
+          <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Google Chrome</a></li>
+          <li><a href="https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop" target="_blank" rel="noopener">Mozilla Firefox</a></li>
+          <li><a href="https://support.apple.com/en-gb/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Apple Safari</a></li>
+          <li><a href="https://support.microsoft.com/en-us/windows/manage-cookies-in-microsoft-edge-168dab11-0753-043d-7c16-ede5947fc64d" target="_blank" rel="noopener">Microsoft Edge</a></li>
+        </ul>
+        <p>5.2. Please be aware that disabling cookies on the Privify portal (app.privify.co.uk) will prevent you from logging in, as our authentication system relies on session cookies to function.</p>
+        <p>5.3. Deleting cookies on the marketing website (privify.co.uk) will have no noticeable effect on your browsing experience, as we do not set any persistent cookies there.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>6. Do Not Track</h2>
+      <div class="prose">
+        <p>6.1. Some browsers send a "Do Not Track" (DNT) signal to websites. Because we do not track users for advertising or profiling purposes, this signal has no practical effect on how Privify operates — we behave the same way regardless.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>7. Changes to This Policy</h2>
+      <div class="prose">
+        <p>7.1. We may update this Cookie Policy from time to time. Any changes will be posted on this page with an updated "Last updated" date. As we use only strictly necessary cookies, we do not expect significant changes.</p>
+        <p>7.2. If you have any questions about our use of cookies, please contact us at <a href="mailto:support@privify.co.uk">support@privify.co.uk</a>.</p>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 1st Soft Limited. Registered in England &amp; Wales. &nbsp;·&nbsp; <a href="/privacy">Privacy Policy</a> &nbsp;·&nbsp; <a href="/terms">Terms &amp; Conditions</a> &nbsp;·&nbsp; <a href="/acceptable-use">Acceptable Use</a></p>
+</footer>
+</body>
+</html>
