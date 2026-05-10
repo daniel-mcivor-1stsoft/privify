@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>How email forwarding works — and why it matters for privacy — Privify</title>
+<meta name="description" content="Email forwarding sends messages from one address to another automatically. Here's how it works technically, the different types, and how it's used to protect your real inbox."/>
+<link rel="canonical" href="https://privify.co.uk/blog/how-email-forwarding-works"/>
+<meta property="og:title" content="How email forwarding works — and why it matters for privacy"/>
+<meta property="og:description" content="Email forwarding sends messages from one address to another automatically. Here's how it works and how to use it to protect your real inbox."/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://privify.co.uk/blog/how-email-forwarding-works"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --white:#ffffff;--off:#f9fafb;--surface:#f3f4f6;
+  --ink:#0f172a;--ink2:#475569;--ink3:#94a3b8;
+  --green:#1a6b4a;--green-dark:#145539;--green-light:#22875e;
+  --green-tint:#f0fdf4;--green-tint2:#dcfce7;--green-border:#86efac;
+  --border:#e5e7eb;
+  --shadow-sm:0 1px 3px rgba(15,23,42,.06),0 1px 2px rgba(15,23,42,.04);
+  --shadow:0 4px 6px rgba(15,23,42,.04),0 10px 20px rgba(15,23,42,.05);
+  --shadow-green:0 10px 30px rgba(26,107,74,.15);
+  --font:'Inter',sans-serif;--mono:'DM Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--white);color:var(--ink);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;background:rgba(255,255,255,.85);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid rgba(15,23,42,.06)}
+.logo{display:flex;align-items:center;gap:10px;font-size:1.1rem;font-weight:800;color:var(--ink);letter-spacing:-0.03em}
+.logo-mark{width:32px;height:32px;background:linear-gradient(135deg,var(--green),var(--green-light));border-radius:9px;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-green)}
+.logo-mark svg{display:block;width:15px;height:15px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.nav-r{display:flex;align-items:center;gap:.25rem}
+.nav-r a{font-size:.875rem;font-weight:500;color:var(--ink2);padding:.5rem .9rem;border-radius:8px;transition:all .15s}
+.nav-r a:hover{background:var(--off);color:var(--ink)}
+.nav-btn{background:var(--green)!important;color:#fff!important;font-weight:600!important;margin-left:.5rem;box-shadow:var(--shadow-green)!important}
+.nav-btn:hover{background:var(--green-dark)!important;transform:translateY(-1px)}
+.article-hero{padding:7.5rem 2.5rem 3rem;max-width:740px;margin:0 auto}
+.breadcrumb{display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;color:var(--ink3);font-family:var(--mono);margin-bottom:1.5rem}
+.breadcrumb a{color:var(--green)}
+.breadcrumb span{color:var(--border)}
+.article-cat{font-size:0.65rem;font-weight:700;color:var(--green);letter-spacing:.12em;text-transform:uppercase;font-family:var(--mono);margin-bottom:0.85rem}
+.article-hero h1{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:900;letter-spacing:-0.04em;line-height:1.1;margin-bottom:1rem}
+.article-meta{display:flex;align-items:center;gap:1rem;font-size:0.78rem;color:var(--ink3);font-family:var(--mono);padding-top:1rem;border-top:1px solid var(--border)}
+.article-body{max-width:740px;margin:0 auto;padding:2.5rem 2.5rem 5rem}
+.article-body h2{font-size:1.35rem;font-weight:800;letter-spacing:-0.03em;margin:2.25rem 0 0.75rem;color:var(--ink)}
+.article-body h3{font-size:1.05rem;font-weight:700;margin:1.75rem 0 0.5rem;color:var(--ink)}
+.article-body p{font-size:0.95rem;color:var(--ink2);line-height:1.85;margin-bottom:1rem}
+.article-body ul,.article-body ol{margin:0.5rem 0 1rem 1.5rem;display:flex;flex-direction:column;gap:0.4rem}
+.article-body li{font-size:0.95rem;color:var(--ink2);line-height:1.75}
+.article-body strong{color:var(--ink);font-weight:600}
+.article-body a{color:var(--green);text-decoration:underline;text-underline-offset:3px}
+.callout{background:var(--green-tint);border:1px solid var(--green-border);border-radius:10px;padding:1.25rem 1.5rem;margin:1.75rem 0}
+.callout p{color:var(--ink);margin:0;font-size:0.9rem;line-height:1.75}
+.callout strong{color:var(--green)}
+.article-cta{background:var(--green);border-radius:14px;padding:2.5rem;margin:3rem 0 0;text-align:center}
+.article-cta h2{font-size:1.5rem;font-weight:800;color:#fff;letter-spacing:-0.03em;margin-bottom:0.5rem}
+.article-cta p{color:rgba(255,255,255,.7);font-size:0.9rem;margin-bottom:1.5rem}
+.btn-w{display:inline-block;background:#fff;color:var(--green);padding:0.8rem 1.9rem;border-radius:8px;font-weight:700;font-size:0.9rem;transition:opacity .12s}
+.btn-w:hover{opacity:.9}
+footer{background:#0d3d29;padding:3rem 2.5rem 2.25rem;color:#fff}
+.foot-inner{max-width:1060px;margin:0 auto}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.foot-bottom p{font-size:.77rem;color:rgba(255,255,255,.35)}
+.foot-legal{display:flex;gap:1.75rem}
+.foot-legal a{font-size:.77rem;color:rgba(255,255,255,.35);transition:color .15s}
+.foot-legal a:hover{color:rgba(255,255,255,.75)}
+@media(max-width:700px){
+  nav{padding:0 1.25rem}
+  .nav-r a:not(.nav-btn){display:none}
+  .article-hero,.article-body{padding-left:1.25rem;padding-right:1.25rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">
+    <div class="logo-mark">
+      <svg viewBox="0 0 16 18"><rect x="2" y="7" width="12" height="10" rx="2.5"/><path d="M5 7V5.5a3 3 0 0 1 6 0V7"/></svg>
+    </div>
+    Privify
+  </a>
+  <div class="nav-r">
+    <a href="/#features">Features</a>
+    <a href="/#privacy">Privacy</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/#faq">FAQ</a>
+    <a href="/blog">Blog</a>
+    <a href="https://app.privify.co.uk/sign-in">Log in</a>
+    <a href="https://app.privify.co.uk/sign-up" class="nav-btn">Get started →</a>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="breadcrumb">
+    <a href="/blog">Blog</a>
+    <span>/</span>
+    <span>Guide</span>
+  </div>
+  <div class="article-cat">Guide</div>
+  <h1>How email forwarding works — and why it matters for privacy</h1>
+  <div class="article-meta">
+    <span>May 2026</span>
+    <span>·</span>
+    <span>5 min read</span>
+  </div>
+</div>
+
+<div class="article-body">
+
+  <p>Email forwarding is one of those things most people have heard of but rarely think about. It's simple in concept — email arrives at one address, gets redirected to another — but the detail of how it works, and the privacy implications, are worth understanding.</p>
+
+  <h2>The basics: what email forwarding does</h2>
+
+  <p>When email forwarding is set up on an address, any message that arrives there is automatically sent on to a second address. The original recipient address still receives the email, but it also triggers a copy being delivered elsewhere.</p>
+
+  <p>From the sender's point of view, nothing unusual happens. They sent an email to an address. It was delivered. They have no visibility into what happens next.</p>
+
+  <p>From the receiver's point of view, the email arrives in the destination inbox. Depending on how the forwarding is set up, it may arrive exactly as sent, or with some headers modified to show it came via a different address.</p>
+
+  <h2>How it works technically</h2>
+
+  <p>Email delivery uses a protocol called SMTP (Simple Mail Transfer Protocol). When a message is sent, it travels between mail servers — the sender's outgoing server hands it off to the recipient's incoming server, which accepts delivery and places it in the inbox.</p>
+
+  <p>Forwarding adds a step. When the receiving mail server accepts an email, instead of (or in addition to) placing it in the inbox, it issues a new SMTP delivery attempt to a different address. The forwarding server acts as an intermediary — it received the original, and now sends on a copy.</p>
+
+  <p>What happens to the headers — the metadata like From, To, Reply-To, and the routing trail — depends on the forwarding configuration:</p>
+
+  <ul>
+    <li><strong>Simple forwarding</strong> passes the original message mostly intact, with the recipient address changed to the destination. The From field still shows the original sender.</li>
+    <li><strong>Rewriting forwarding</strong> modifies some headers — for example, adding a note that it was forwarded via a particular address — to preserve deliverability and help spam filters understand the routing.</li>
+  </ul>
+
+  <h2>Types of email forwarding</h2>
+
+  <h3>Account-level forwarding</h3>
+
+  <p>Most email providers let you set up forwarding within your account settings. Gmail, Outlook, and most others offer this. You configure a destination address, and from that point on, every email that arrives in that account is forwarded on.</p>
+
+  <p>This is useful if you're moving providers, consolidating multiple accounts into one inbox, or just want a copy of everything landing somewhere else.</p>
+
+  <h3>Domain-level forwarding</h3>
+
+  <p>If you own a domain, you can set up forwarding rules at the domain level — so any email sent to any address at that domain is forwarded to a destination. This is often managed through your domain registrar or DNS provider.</p>
+
+  <p>Cloudflare, for example, offers email routing as part of its DNS management. You define rules: email sent to contact@yourdomain.com goes to your personal Gmail. Email sent to orders@yourdomain.com goes to a different address. It's flexible and free at the basic level.</p>
+
+  <h3>Alias-based forwarding</h3>
+
+  <p>This is the most privacy-oriented type. Instead of forwarding everything from a single account, you create individual aliases — each one a separate address that forwards to your real inbox. You control each alias individually: you can pause it, delete it, or let it run.</p>
+
+  <p>The key difference from account-level forwarding is granularity. You're not forwarding everything — you're creating specific, disposable addresses that each serve a particular purpose. When one gets spammed or compromised, you delete it without affecting anything else.</p>
+
+  <div class="callout">
+    <p><strong>This is how Privify's email aliases work.</strong> Each alias is an individual forwarding address. Emails arrive at the alias, get forwarded to your real inbox, and you see which alias they came through. Delete the alias and the forwarding stops — permanently.</p>
+  </div>
+
+  <h2>Does the original sender know their email was forwarded?</h2>
+
+  <p>No. There's nothing in the standard email protocols that notifies a sender when their message is forwarded. They sent an email, it was delivered, and that's all they see. Whether you read it in the original inbox, a forwarded inbox, or both — they have no way to tell.</p>
+
+  <p>This is fundamental to how forwarding-based privacy tools work. The alias address receives the email, forwards it to you, and the sender is never informed about either the forwarding or your real address.</p>
+
+  <h2>What about spam filters and deliverability?</h2>
+
+  <p>This is a practical concern with email forwarding. When an email is forwarded, it arrives at the destination inbox from the forwarding server — not from the original sender. Some spam filters flag this because the message appears to be coming from an unexpected source.</p>
+
+  <p>Well-configured forwarding services handle this through a standard called <strong>SRS (Sender Rewriting Scheme)</strong>, which rewrites the envelope sender address to preserve deliverability. Services designed for forwarding also implement <strong>DKIM</strong> and <strong>SPF</strong> correctly to avoid being flagged as suspicious.</p>
+
+  <p>In practice, forwarded emails from established providers arrive cleanly. Forwarding you set up yourself on a small domain may require some configuration to achieve the same result.</p>
+
+  <h2>Forwarding vs fetching: what's the difference?</h2>
+
+  <p>Some people consolidate email not through forwarding but through <strong>POP3 or IMAP fetching</strong> — where a destination inbox periodically connects to a source account and pulls down messages. This is different from forwarding.</p>
+
+  <p>Fetching is slower (messages only arrive when the fetch cycle runs, typically every few minutes), requires your destination provider to know the credentials for the source account, and works at the account level rather than the address level. Forwarding is real-time and requires no credential sharing.</p>
+
+  <p>For privacy use cases, forwarding is nearly always the right choice.</p>
+
+  <h2>Why email forwarding matters for privacy</h2>
+
+  <p>The privacy value of forwarding is straightforward: it lets you give out one address while receiving at another. The address you share publicly, or with a service you're not certain about, never has to be the same address tied to your identity, your recovery options, or your primary communications.</p>
+
+  <p>Combined with aliases — so each service gets a unique, purpose-built forwarding address — you also gain traceability. If a service leaks or sells your data and spam starts arriving, the alias it arrives on tells you exactly where the leak came from.</p>
+
+  <p>And critically: when you've had enough, you delete the alias. The forwarding stops. The sender — whether a legitimate company or a spammer — gets a bounce, and nothing reaches you again. You don't need to change your real address, notify anyone who has it legitimately, or manage any complex filters. One click, and it's done.</p>
+
+  <div class="callout">
+    <p><strong>Privify</strong> generates randomly assigned email aliases that forward straight to your existing inbox. No new accounts, no change to how you read email. Delete any alias instantly when you're done with it. <a href="https://app.privify.co.uk/sign-up">Get started from £2/month →</a></p>
+  </div>
+
+  <h2>SMS forwarding: the same idea, for your phone number</h2>
+
+  <p>The same principle applies to phone numbers. A virtual UK number receives texts and forwards them — as emails — to your real inbox. The sender has your Privify number; they don't have your real mobile. If the number starts receiving unwanted contacts, it can be replaced without affecting your actual phone.</p>
+
+  <p>Privify offers both: email aliases for your inbox, and a private UK number for SMS. Both forward to wherever you already receive messages. Neither requires anything to be installed or a new app to check.</p>
+
+  <div class="article-cta">
+    <h2>Private number and inbox, no extra apps</h2>
+    <p>Everything forwards straight to you. Your real details stay hidden.</p>
+    <a href="https://app.privify.co.uk/sign-up" class="btn-w">Get started →</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-bottom">
+      <p>© 2026 1st Soft Limited. Registered in England &amp; Wales.</p>
+      <div class="foot-legal">
+        <a href="/terms">Terms</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/acceptable-use">Acceptable Use</a>
+        <a href="/cookies">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
