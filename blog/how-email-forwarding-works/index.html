@@ -13,6 +13,11 @@
 <meta property="og:description" content="Email forwarding sends messages from one address to another automatically. Here's how it works and how to use it to protect your real inbox."/>
 <meta property="og:type" content="article"/>
 <meta property="og:url" content="https://privify.co.uk/blog/how-email-forwarding-works"/>
+<meta property="og:image" content="https://privify.co.uk/og.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://privify.co.uk/og.png"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 <style>
@@ -76,6 +81,43 @@ footer{background:#0d3d29;padding:3rem 2.5rem 2.25rem;color:#fff}
   .article-hero,.article-body{padding-left:1.25rem;padding-right:1.25rem}
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How email forwarding works — and why it matters for privacy",
+  "description": "Email forwarding sends messages from one address to another automatically. Here's how it works technically, the different types, and how it's used to protect your real inbox.",
+  "url": "https://privify.co.uk/blog/how-email-forwarding-works",
+  "datePublished": "2026-04-14",
+  "dateModified": "2026-05-14",
+  "author": {
+    "@type": "Organization",
+    "name": "Privify",
+    "url": "https://privify.co.uk"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Privify",
+    "url": "https://privify.co.uk",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://privify.co.uk/favicon.svg"
+    }
+  },
+  "image": "https://privify.co.uk/og.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Does the original sender know their email was forwarded?","acceptedAnswer":{"@type":"Answer","text":"No. There's nothing in the standard email protocols that notifies a sender when their message is forwarded. They sent an email, it was delivered, and that's all they see. Whether you read it in the original inbox, a forwarded inbox, or both — they have no way to tell."}},
+    {"@type":"Question","name":"What about spam filters and deliverability?","acceptedAnswer":{"@type":"Answer","text":"This is a practical concern with email forwarding. When an email is forwarded, it arrives at the destination inbox from the forwarding server — not from the original sender. Some spam filters flag this because the message appears to be coming from an unexpected source."}},
+    {"@type":"Question","name":"Forwarding vs fetching: what's the difference?","acceptedAnswer":{"@type":"Answer","text":"Some people consolidate email not through forwarding but through POP3 or IMAP fetching — where a destination inbox periodically connects to a source account and pulls down messages. This is different from forwarding."}}
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -212,6 +254,8 @@ footer{background:#0d3d29;padding:3rem 2.5rem 2.25rem;color:#fff}
 
 </div>
 
+
+<p class="related-note" style="font-size:0.875rem;color:var(--ink2);margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border)">Related: Read more about <a href="/blog/what-is-an-email-alias">email aliases</a> and <a href="/blog/how-to-stop-spam-emails-uk">stopping spam emails</a>.</p>
 <footer>
   <div class="foot-inner">
     <div class="foot-bottom">
