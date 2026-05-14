@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>UK Digital Identity: what the new framework means for your privacy — Privify</title>
+<meta name="description" content="The UK now has a legal framework for digital identity. Here's what the Data (Use and Access) Act means, how it affects your personal data, and what you can do to protect yourself."/>
+<link rel="canonical" href="https://privify.co.uk/blog/uk-digital-identity"/>
+<meta property="og:title" content="UK Digital Identity: what the new framework means for your privacy"/>
+<meta property="og:description" content="The UK now has a legal framework for digital identity. Here's what the Data (Use and Access) Act means, how it affects your personal data, and what you can do to protect yourself."/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://privify.co.uk/blog/uk-digital-identity"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --white:#ffffff;--off:#f9fafb;--surface:#f3f4f6;
+  --ink:#0f172a;--ink2:#475569;--ink3:#94a3b8;
+  --green:#1a6b4a;--green-dark:#145539;--green-light:#22875e;
+  --green-tint:#f0fdf4;--green-tint2:#dcfce7;--green-border:#86efac;
+  --border:#e5e7eb;
+  --shadow-sm:0 1px 3px rgba(15,23,42,.06),0 1px 2px rgba(15,23,42,.04);
+  --shadow:0 4px 6px rgba(15,23,42,.04),0 10px 20px rgba(15,23,42,.05);
+  --shadow-green:0 10px 30px rgba(26,107,74,.15);
+  --font:'Inter',sans-serif;--mono:'DM Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--white);color:var(--ink);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;background:rgba(255,255,255,.85);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid rgba(15,23,42,.06)}
+.logo{display:flex;align-items:center;gap:10px;font-size:1.1rem;font-weight:800;color:var(--ink);letter-spacing:-0.055em}
+.logo-mark{width:32px;height:32px;background:linear-gradient(135deg,var(--green),var(--green-light));border-radius:9px;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-green)}
+.logo-mark svg{display:block;width:22px;height:22px}
+.nav-r{display:flex;align-items:center;gap:.25rem}
+.nav-r a{font-size:.875rem;font-weight:500;color:var(--ink2);padding:.5rem .9rem;border-radius:8px;transition:all .15s}
+.nav-r a:hover{background:var(--off);color:var(--ink)}
+.nav-btn{background:var(--green)!important;color:#fff!important;font-weight:600!important;margin-left:.5rem;box-shadow:var(--shadow-green)!important}
+.nav-btn:hover{background:var(--green-dark)!important;transform:translateY(-1px)}
+.article-hero{padding:7.5rem 2.5rem 3rem;max-width:740px;margin:0 auto}
+.breadcrumb{display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;color:var(--ink3);font-family:var(--mono);margin-bottom:1.5rem}
+.breadcrumb a{color:var(--green)}
+.breadcrumb span{color:var(--border)}
+.article-cat{font-size:0.65rem;font-weight:700;color:var(--green);letter-spacing:.12em;text-transform:uppercase;font-family:var(--mono);margin-bottom:0.85rem}
+.article-hero h1{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:900;letter-spacing:-0.04em;line-height:1.1;margin-bottom:1rem}
+.article-meta{display:flex;align-items:center;gap:1rem;font-size:0.78rem;color:var(--ink3);font-family:var(--mono);padding-top:1rem;border-top:1px solid var(--border)}
+.article-body{max-width:740px;margin:0 auto;padding:2.5rem 2.5rem 5rem}
+.article-body h2{font-size:1.35rem;font-weight:800;letter-spacing:-0.03em;margin:2.25rem 0 0.75rem;color:var(--ink)}
+.article-body h3{font-size:1.05rem;font-weight:700;margin:1.75rem 0 0.5rem;color:var(--ink)}
+.article-body p{font-size:0.95rem;color:var(--ink2);line-height:1.85;margin-bottom:1rem}
+.article-body ul,.article-body ol{margin:0.5rem 0 1rem 1.5rem;display:flex;flex-direction:column;gap:0.4rem}
+.article-body li{font-size:0.95rem;color:var(--ink2);line-height:1.75}
+.article-body strong{color:var(--ink);font-weight:600}
+.article-body a{color:var(--green);text-decoration:underline;text-underline-offset:3px}
+.callout{background:var(--green-tint);border:1px solid var(--green-border);border-radius:10px;padding:1.25rem 1.5rem;margin:1.75rem 0}
+.callout p{color:var(--ink);margin:0;font-size:0.9rem;line-height:1.75}
+.callout strong{color:var(--green)}
+.callout-neutral{background:var(--off);border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;margin:1.75rem 0}
+.callout-neutral p{color:var(--ink2);margin:0;font-size:0.9rem;line-height:1.75}
+.callout-neutral strong{color:var(--ink)}
+.article-cta{background:var(--green);border-radius:14px;padding:2.5rem;margin:3rem 0 0;text-align:center}
+.article-cta h2{font-size:1.5rem;font-weight:800;color:#fff;letter-spacing:-0.03em;margin-bottom:0.5rem}
+.article-cta p{color:rgba(255,255,255,.7);font-size:0.9rem;margin-bottom:1.5rem}
+.btn-w{display:inline-block;background:#fff;color:var(--green);padding:0.8rem 1.9rem;border-radius:8px;font-weight:700;font-size:0.9rem;transition:opacity .12s}
+.btn-w:hover{opacity:.9}
+footer{background:#0d3d29;padding:3rem 2.5rem 2.25rem;color:#fff}
+.foot-inner{max-width:1060px;margin:0 auto}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.foot-bottom p{font-size:.77rem;color:rgba(255,255,255,.35)}
+.foot-legal{display:flex;gap:1.75rem}
+.foot-legal a{font-size:.77rem;color:rgba(255,255,255,.35);transition:color .15s}
+.foot-legal a:hover{color:rgba(255,255,255,.75)}
+@media(max-width:700px){
+  nav{padding:0 1.25rem}
+  .nav-r a:not(.nav-btn){display:none}
+  .article-hero,.article-body{padding-left:1.25rem;padding-right:1.25rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">
+    <div class="logo-mark">
+      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="7" width="10" height="10" rx="2.5" fill="white" fill-opacity=".35"/>
+        <rect x="9" y="3" width="10" height="10" rx="2.5" fill="white"/>
+      </svg>
+    </div>
+    privify
+  </a>
+  <div class="nav-r">
+    <a href="/#features">Features</a>
+    <a href="/#privacy">Privacy</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/#faq">FAQ</a>
+    <a href="/blog">Blog</a>
+    <a href="https://app.privify.co.uk/sign-in">Log in</a>
+    <a href="https://app.privify.co.uk/sign-up" class="nav-btn">Get started →</a>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="breadcrumb">
+    <a href="/blog">Blog</a>
+    <span>/</span>
+    <span>Identity</span>
+  </div>
+  <div class="article-cat">Identity</div>
+  <h1>UK digital identity: what the new framework means for your privacy</h1>
+  <div class="article-meta">
+    <span>May 2026</span>
+    <span>·</span>
+    <span>7 min read</span>
+  </div>
+</div>
+
+<div class="article-body">
+
+  <p>The UK now has a legal framework for digital identity. The Data (Use and Access) Act 2025 — passed after years of consultation — created a formal register of certified digital identity providers and set out rules for how your identity can be checked and shared online.</p>
+
+  <p>For most people, this is background noise. But it shouldn't be. The framework changes what your phone number and email address mean in a practical sense — and it has direct consequences for how you should think about sharing them.</p>
+
+  <h2>What is digital identity?</h2>
+
+  <p>Your digital identity is the collection of data points that, together, prove who you are online. It includes things like:</p>
+
+  <ul>
+    <li>Your name, date of birth, and address</li>
+    <li>Government-issued documents — passport, driving licence, national insurance number</li>
+    <li>Your phone number (used for identity verification and SMS codes)</li>
+    <li>Your email address (used for account recovery, verification, and communications)</li>
+    <li>Biometrics — face recognition data increasingly used to match you to documents</li>
+  </ul>
+
+  <p>Some of these are formally linked to your identity — your passport number is unique to you and issued by the state. Others are softer identifiers — your phone number and email address aren't government-issued, but they've become central to how services recognise and communicate with you.</p>
+
+  <p>The distinction matters. Soft identifiers are easier to change, but also easier to steal, replicate, or hand to the wrong person without realising the consequences.</p>
+
+  <h2>What the UK Digital Identity and Attributes Trust Framework actually is</h2>
+
+  <p>The UK Digital Identity and Attributes Trust Framework (DIATF) is the government's certification scheme for identity providers. An organisation that wants to verify identities on behalf of employers, landlords, or the government can apply to join the framework and be audited against a set of standards.</p>
+
+  <p>Once certified, these providers can issue digital identity checks that are legally equivalent to checking physical documents. A certified provider can confirm your Right to Work, Right to Rent, or criminal record history using digital checks rather than requiring you to hand over physical documents.</p>
+
+  <div class="callout-neutral">
+    <p><strong>Practical example:</strong> Under the framework, a landlord can use a certified digital identity service to confirm your identity and right to rent — without you having to physically present your passport. The provider does the check digitally, cryptographically confirms the result to the landlord, and your raw document data stays with the provider.</p>
+  </div>
+
+  <p>The goal is efficiency and fraud reduction. Physical document checks are slow, inconsistent, and easy to forge. A certified digital check is standardised, auditable, and harder to fake.</p>
+
+  <p>But the privacy implications are significant.</p>
+
+  <h2>Why this changes the stakes for your phone number and email address</h2>
+
+  <p>Under the Trust Framework, certified identity providers can verify attributes about you — your age, your nationality, your right to work — and share those as digital credentials with third parties. The framework is designed so that only the minimum necessary information is disclosed.</p>
+
+  <p>However, to do any of this, you first have to verify with a provider. And that verification process starts with the basics: your phone number and email address.</p>
+
+  <p>Your phone number and email are the anchors of your digital identity. They're the first thing you hand over when signing up to any service. They're how you receive verification codes. They're the recovery options on every account you own. If either is compromised, the attacker gains a foothold into every account tied to those identifiers.</p>
+
+  <p>As digital identity checks become more common in everyday life — renting a flat, taking a new job, opening a bank account — the importance of those anchors only grows. Your phone number and email address aren't just contact details. They're the keys to your digital identity infrastructure.</p>
+
+  <h2>The risk: what happens when those anchors are exposed</h2>
+
+  <p>When you hand your real phone number or email address to a third party, you lose control of it. They may:</p>
+
+  <ul>
+    <li>Sell it to marketing partners or data brokers</li>
+    <li>Suffer a data breach that exposes it to criminals</li>
+    <li>Use it to build a profile of you across their services</li>
+    <li>Pass it to a government regulator if required to do so</li>
+  </ul>
+
+  <p>Each exposure is a small erosion. But over time, as more organisations hold your real contact details, the attack surface grows. Credential stuffing attacks — where criminals take email addresses and leaked passwords and try them across hundreds of services — rely entirely on the fact that most people reuse the same email address everywhere.</p>
+
+  <p>SIM-swapping attacks, where criminals convince a mobile carrier to transfer your number to a SIM they control, are increasingly common. Once they have your number, they can intercept SMS verification codes and break into accounts that rely on them — including banking and identity services.</p>
+
+  <div class="callout">
+    <p><strong>The core problem:</strong> Your real phone number and email address are permanent. Once an attacker or a data broker has them, you can't take them back. The only way to limit exposure is to limit who gets them in the first place.</p>
+  </div>
+
+  <h2>What the framework gets right — and where the gaps are</h2>
+
+  <p>The Trust Framework does several things well. Certified providers are required to store minimum data, undergo regular audits, and give users access to and deletion rights over their data. The framework doesn't create a central government identity database — instead, it operates as a decentralised set of certified services.</p>
+
+  <p>But the framework applies only to certified providers. The thousands of websites, retailers, landlords, and employers who will <em>rely on</em> identity checks aren't necessarily subject to the same standards. Once a check is complete and a credential is issued, what the relying party does with it is governed by GDPR and their own policies — not the Trust Framework.</p>
+
+  <p>There's also a practical gap between formal identity infrastructure and everyday digital life. The Trust Framework covers formal checks — employment, tenancy, financial services. It doesn't cover the hundreds of smaller interactions where you hand over your phone number or email address: a restaurant's loyalty scheme, an online shop, a competition entry, a news site paywall. Those interactions remain as unregulated as ever.</p>
+
+  <p>The framework is a floor, not a ceiling. It protects identity checks in regulated contexts. Everything else is still up to you.</p>
+
+  <h2>What you can do</h2>
+
+  <h3>Understand what you're handing over</h3>
+
+  <p>Your real phone number and email address are identity anchors. Treat them accordingly. Give them to organisations you trust and intend to maintain a long-term relationship with. Don't hand them to every form, sign-up page, and loyalty scheme that asks.</p>
+
+  <h3>Use separate identifiers for lower-trust interactions</h3>
+
+  <p>For services where you need a working contact point but don't need it to be permanent or traceable, use a separate identifier. A virtual phone number can receive SMS verification codes, calls, and texts — but is disconnected from your real mobile account and can be discarded if it attracts unwanted contact.</p>
+
+  <p>An email alias works the same way. You give out a forwarding address that routes to your real inbox. The sender sees the alias. If it starts receiving spam or you want to cut off contact, you delete it — and all future emails to that address bounce.</p>
+
+  <h3>Think about account recovery paths</h3>
+
+  <p>Most people's real phone number is the recovery option for their email account, which is the recovery option for everything else. That chain is a single point of failure. If someone gets your real number through SIM-swapping or social engineering, they can work backwards through your entire digital life.</p>
+
+  <p>Using a separate, harder-to-discover number for account recovery — not one you've handed to fifty different services — tightens that chain considerably.</p>
+
+  <h3>Stay ahead of the shift</h3>
+
+  <p>The UK's digital identity framework is live, but it's early. Adoption will accelerate as more employers and landlords move to digital checks, more banks integrate certified verification, and the government expands use cases. The more central digital identity becomes to daily life, the more important it is that your identity anchors — your number and email — are protected.</p>
+
+  <div class="callout">
+    <p><strong>Privify</strong> gives you a UK virtual phone number and randomly generated email aliases that sit between you and the services you sign up to. Your real contact details stay private. Hand out a Privify number for verification, a Privify alias for sign-ups — and if anything goes wrong, delete it. <a href="https://app.privify.co.uk/sign-up">Get started from £2/month →</a></p>
+  </div>
+
+  <h2>The bottom line</h2>
+
+  <p>The UK's digital identity framework is a genuine step forward for security and convenience in formal identity checks. But it doesn't protect you from the everyday erosion of your identity anchors — the phone number and email address handed to hundreds of services over years of online activity.</p>
+
+  <p>As digital identity becomes more formally structured in the UK, the stakes attached to those anchors only increase. Protecting them now, before they become more central to your digital life, is the practical response to where things are heading.</p>
+
+  <p>Your digital identity is yours. The framework is a start — but what you do with your own contact details is still entirely up to you.</p>
+
+  <div class="article-cta">
+    <h2>Own your digital identity</h2>
+    <p>Get a UK virtual number and email aliases. Keep your real contact details private from day one.</p>
+    <a href="https://app.privify.co.uk/sign-up" class="btn-w">Get started — from £2/month →</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-bottom">
+      <p>© 2026 1st Soft Limited. Registered in England &amp; Wales.</p>
+      <div class="foot-legal">
+        <a href="/terms">Terms</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/acceptable-use">Acceptable Use</a>
+        <a href="/cookies">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
