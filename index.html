@@ -137,6 +137,7 @@ h2 em{font-style:normal;color:var(--green)}
 .bento-card:hover{box-shadow:var(--shadow);transform:translateY(-3px);border-color:#cbd5e1}
 .b-hero{grid-column:span 4;background:linear-gradient(135deg,var(--green-tint) 0%,var(--white) 70%);border-color:var(--green-tint2)}
 .b-small{grid-column:span 2}
+.b-half{grid-column:span 3}
 .b-wide{grid-column:span 4}
 .b-med{grid-column:span 2}
 .b-full{grid-column:span 6}
@@ -330,7 +331,7 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
   [style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important}
   .hero-r{max-width:480px;margin:0 auto;width:100%}
   .bento{grid-template-columns:repeat(2,1fr);grid-auto-rows:auto}
-  .b-hero,.b-wide,.b-small,.b-med,.b-full{grid-column:span 2;grid-row:auto}
+  .b-hero,.b-wide,.b-half,.b-small,.b-med,.b-full{grid-column:span 2;grid-row:auto}
   .use-grid{grid-template-columns:1fr 1fr}
   .faq-grid{grid-template-columns:1fr}
   .foot-top{grid-template-columns:1fr 1fr;gap:2.5rem}
@@ -362,7 +363,7 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
   .foot-bottom{flex-direction:column;align-items:flex-start;gap:.5rem}
   .bento,.use-grid{grid-template-columns:1fr}
   .bento{grid-auto-rows:auto}
-  .b-hero,.b-wide,.b-small,.b-med,.b-full{grid-column:span 1}
+  .b-hero,.b-wide,.b-half,.b-small,.b-med,.b-full{grid-column:span 1}
   .hero-l .btns{flex-direction:column;align-items:stretch}
   .btn-g,.btn-o{justify-content:center}
   .trust-inner{grid-template-columns:1fr 1fr}
@@ -574,22 +575,22 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
         <span class="bento-tag">Number porting available</span>
       </div>
 
-      <!-- Small card — voicemail -->
-      <div class="bento-card b-small reveal reveal-d3">
+      <!-- Half card — voicemail -->
+      <div class="bento-card b-half reveal reveal-d3">
         <h3>Voicemail to email</h3>
         <p>Callers hear voicemail as normal. You get the recording as an audio file forwarded to your inbox. Transcription to text is included on the Premium plan.</p>
         <span class="bento-tag">Recording by email</span>
       </div>
 
-      <!-- Identity Monitor card -->
-      <div class="bento-card b-small reveal">
+      <!-- Half card — identity monitor -->
+      <div class="bento-card b-half reveal">
         <h3>Identity Monitor</h3>
         <p>We monitor known data breaches and leaks. If your email address appears in a breach, you get an instant alert so you can act before the damage is done.</p>
         <span class="bento-tag">Instant breach alerts</span>
       </div>
 
-      <!-- Wide card — inbox -->
-      <div class="bento-card b-wide reveal reveal-d4">
+      <!-- Full card — inbox -->
+      <div class="bento-card b-full reveal reveal-d4">
         <h3>One dashboard for everything</h3>
         <p>All your SMS messages, email aliases, and voicemails in one place. Search 90 days of history, manage forwarding destinations, and see exactly which alias or number each message came in on.</p>
         <span class="bento-tag">90 days of history</span>
