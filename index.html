@@ -112,7 +112,7 @@ h1 .hi::after{content:'';position:absolute;left:0;right:0;bottom:.08em;height:.1
 
 /* TRUST BAR */
 .trust-bar{background:var(--off);padding:1.5rem 2.5rem;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.trust-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.trust-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
 .trust-item{display:flex;align-items:center;gap:.7rem}
 .trust-ico{width:36px;height:36px;background:var(--green-tint);border:1px solid var(--green-tint2);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .trust-ico svg{width:16px;height:16px;stroke:var(--green);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
@@ -417,13 +417,14 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
       <h1>Your digital identity.<br/><span class="hi">Your terms.</span></h1>
       <p class="sub">Your phone number and email address are your digital identity — given to hundreds of services, tracked, leaked, and sold. Privify gives you a private layer: email aliases and a real UK number that keep your actual details hidden.</p>
       <div class="btns">
-        <a href="https://app.privify.co.uk/sign-up" class="btn-g">Protect your identity →</a>
+        <a href="https://app.privify.co.uk/sign-up" class="btn-g">Start free trial →</a>
         <a href="#digital-identity" class="btn-o">Why it matters now</a>
       </div>
       <div class="checks">
         <span class="check"><svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>Private email aliases</span>
         <span class="check"><svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>Real UK 07 number</span>
         <span class="check"><svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>No contracts</span>
+        <span class="check"><svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>7-day free trial</span>
       </div>
     </div>
     <div class="hero-r">
@@ -503,9 +504,9 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
 
 <!-- TRUST BAR -->
 <div class="trust-bar">
-  <div class="trust-inner reveal">
+  <div class="trust-inner reveal" style="grid-template-columns:repeat(5,1fr)">
     <div class="trust-item">
-      <div class="trust-ico"><svg viewBox="0 0 20 20"><path d="M10 2L3 5.5v4.5c0 4 3.1 7.7 7 8.5 3.9-.8 7-4.5 7-8.5V5.5L10 2z"/></svg></div>
+      <div class="trust-ico"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="7"/><polyline points="7 10 9 12 13 8"/></svg></div>
       <div><div class="trust-t">EU Data Storage</div><div class="trust-s">Messages &amp; voicemails stored in the EU</div></div>
     </div>
     <div class="trust-item">
@@ -513,12 +514,16 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
       <div><div class="trust-t">GDPR Compliant</div><div class="trust-s">UK &amp; EU privacy laws</div></div>
     </div>
     <div class="trust-item">
-      <div class="trust-ico"><svg viewBox="0 0 20 20"><rect x="3" y="4" width="14" height="12" rx="2"/><path d="M3 7l7 4.5L17 7"/></svg></div>
+      <div class="trust-ico"><svg viewBox="0 0 20 20"><path d="M3 10h14M11 5l6 5-6 5"/></svg></div>
       <div><div class="trust-t">SMS &amp; alias forwarding</div><div class="trust-s">Every message in your inbox</div></div>
     </div>
     <div class="trust-item">
-      <div class="trust-ico"><svg viewBox="0 0 20 20"><path d="M3 6l7 5 7-5M5 16h10a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/><path d="M8 11l-2 2m6-2l2 2"/></svg></div>
+      <div class="trust-ico"><svg viewBox="0 0 20 20"><path d="M3 10h14M11 5l6 5-6 5"/></svg></div>
       <div><div class="trust-t">Disposable email aliases</div><div class="trust-s">Delete any time. No spam.</div></div>
+    </div>
+    <div class="trust-item">
+      <div class="trust-ico"><svg viewBox="0 0 20 20"><circle cx="9" cy="9" r="5"/><path d="M15 15l-3.5-3.5"/></svg></div>
+      <div><div class="trust-t">Identity Monitoring</div><div class="trust-s">Breach &amp; leak alerts</div></div>
     </div>
   </div>
 </div>
@@ -535,9 +540,6 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
 
       <!-- Hero card — unified forwarding -->
       <div class="bento-card b-hero reveal reveal-d1">
-        <div class="bento-icon">
-          <svg width="24" height="24" viewBox="0 0 20 20" fill="none" stroke="#fff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="16" height="13" rx="2"/><path d="M2 7l8 5 8-5"/></svg>
-        </div>
         <h3>Everything forwards to your real inbox</h3>
         <p>Texts to your private number, emails to your aliases — all of it arrives in your existing inbox, clearly labelled. Gmail, Outlook, Apple Mail, anything works. No separate app required.</p>
         <div class="b-mini-preview">
@@ -586,6 +588,13 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
         <h3>Voicemail to email</h3>
         <p>Callers hear voicemail as normal. You get the recording as an audio file forwarded to your inbox. Transcription to text is included on the Premium plan.</p>
         <span class="bento-tag">Recording by email</span>
+      </div>
+
+      <!-- Identity Monitor card -->
+      <div class="bento-card b-small reveal">
+        <h3>Identity Monitor</h3>
+        <p>We monitor known data breaches and leaks. If your email address appears in a breach, you get an instant alert so you can act before the damage is done.</p>
+        <span class="bento-tag">Instant breach alerts</span>
       </div>
 
       <!-- Wide card — inbox -->
@@ -836,66 +845,65 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
   <div class="wrap">
     <div style="text-align:center;max-width:600px;margin:0 auto 3.5rem" class="reveal">
       <div class="tag">Pricing</div>
-      <h2>Simple, honest pricing.</h2>
-      <p class="sec-sub" style="margin:0 auto">No hidden fees. The setup fee covers your number activation. Cancel monthly, no contracts.</p>
+      <h2>Simple, transparent pricing.</h2>
+      <p class="sec-sub" style="margin:0 auto">Every plan starts with a 7-day free trial. No charge today.</p>
     </div>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:960px;margin:0 auto" class="reveal price-grid">
 
-      <!-- Email only -->
+      <!-- Starter -->
       <div style="background:var(--white);border:2px solid var(--border);border-radius:20px;padding:2rem;display:flex;flex-direction:column">
-        <div style="font-size:.7rem;font-weight:700;color:var(--ink3);letter-spacing:.12em;text-transform:uppercase;font-family:var(--mono);margin-bottom:1rem">Email only</div>
-        <div style="font-size:2.5rem;font-weight:800;letter-spacing:-0.04em;line-height:1;color:var(--ink);margin-bottom:.25rem"><sup style="font-size:1rem;vertical-align:top;margin-top:.4rem">£</sup>1.99</div>
+        <div style="font-size:.7rem;font-weight:700;color:var(--ink3);letter-spacing:.12em;text-transform:uppercase;font-family:var(--mono);margin-bottom:1rem">Starter</div>
+        <div style="font-size:2.5rem;font-weight:800;letter-spacing:-0.04em;line-height:1;color:var(--ink);margin-bottom:.25rem"><sup style="font-size:1rem;vertical-align:top;margin-top:.4rem">£</sup>2</div>
         <div style="font-size:.82rem;color:var(--ink3);margin-bottom:.25rem;font-family:var(--mono)">per month</div>
-        <div style="font-size:.78rem;color:var(--ink3);margin-bottom:1.5rem;min-height:1.2rem">No setup fee</div>
+        <div style="font-size:.78rem;color:var(--green);font-weight:600;margin-bottom:1.5rem;min-height:1.2rem">7-day free trial</div>
         <hr style="border:none;border-top:1px solid var(--border);margin-bottom:1.5rem"/>
         <div style="display:flex;flex-direction:column;gap:.65rem;flex:1">
-          <div class="pf-item"><div class="pf-ico"><svg viewBox="0 0 12 12"><polyline points="1 6 4 9 11 2"/></svg></div>10 email aliases</div>
-          <div class="pf-item"><div class="pf-ico"><svg viewBox="0 0 12 12"><polyline points="1 6 4 9 11 2"/></svg></div>Up to 200 emails forwarded a month</div>
-          <div class="pf-item"><div class="pf-ico"><svg viewBox="0 0 12 12"><polyline points="1 6 4 9 11 2"/></svg></div>Randomly generated addresses</div>
-          <div class="pf-item"><div class="pf-ico"><svg viewBox="0 0 12 12"><polyline points="1 6 4 9 11 2"/></svg></div>Alias management portal</div>
+          <div class="pf-item"><div class="pf-ico"><svg viewBox="0 0 12 12"><polyline points="1 6 4 9 11 2"/></svg></div>1 genuine UK mobile number</div>
+          <div class="pf-item"><div class="pf-ico"><svg viewBox="0 0 12 12"><polyline points="1 6 4 9 11 2"/></svg></div>Instant SMS to email forwarding</div>
+          <div class="pf-item"><div class="pf-ico"><svg viewBox="0 0 12 12"><polyline points="1 6 4 9 11 2"/></svg></div>Voicemail + transcription</div>
+          <div class="pf-item"><div class="pf-ico"><svg viewBox="0 0 12 12"><polyline points="1 6 4 9 11 2"/></svg></div>50 forwarded emails/month</div>
+          <div class="pf-item"><div class="pf-ico"><svg viewBox="0 0 12 12"><polyline points="1 6 4 9 11 2"/></svg></div>1 private email alias</div>
+          <div class="pf-item"><div class="pf-ico"><svg viewBox="0 0 12 12"><polyline points="1 6 4 9 11 2"/></svg></div>Identity Monitor (breach alerts)</div>
+          <div class="pf-item"><div class="pf-ico"><svg viewBox="0 0 12 12"><polyline points="1 6 4 9 11 2"/></svg></div>EU hosted &amp; GDPR compliant</div>
         </div>
-        <p style="text-align:center;font-size:.75rem;color:var(--ink3);margin-top:auto;padding-top:1.5rem">No setup fee</p>
-        <a href="https://app.privify.co.uk/sign-up" style="display:flex;justify-content:center;margin-top:.75rem;background:var(--white);color:var(--ink);padding:.85rem;border-radius:10px;font-weight:600;font-size:.9rem;border:1.5px solid var(--border);transition:all .15s" class="btn-o">Get started</a>
+        <a href="https://app.privify.co.uk/sign-up" style="display:flex;justify-content:center;margin-top:1.5rem;background:var(--white);color:var(--ink);padding:.85rem;border-radius:10px;font-weight:600;font-size:.9rem;border:1.5px solid var(--border);transition:all .15s" class="btn-o">Start free trial →</a>
       </div>
 
-      <!-- SMS & Voicemail -->
-      <div style="background:var(--white);border:2px solid var(--border);border-radius:20px;padding:2rem;display:flex;flex-direction:column">
-        <div style="font-size:.7rem;font-weight:700;color:var(--ink3);letter-spacing:.12em;text-transform:uppercase;font-family:var(--mono);margin-bottom:1rem">SMS &amp; Voicemail</div>
-        <div style="font-size:2.5rem;font-weight:800;letter-spacing:-0.04em;line-height:1;color:var(--ink);margin-bottom:.25rem"><sup style="font-size:1rem;vertical-align:top;margin-top:.4rem">£</sup>5.99</div>
-        <div style="font-size:.82rem;color:var(--ink3);margin-bottom:.25rem;font-family:var(--mono)">per month</div>
-        <div style="font-size:.78rem;color:var(--ink3);margin-bottom:1.5rem">+ £12 one-off setup fee</div>
-        <hr style="border:none;border-top:1px solid var(--border);margin-bottom:1.5rem"/>
-        <div style="display:flex;flex-direction:column;gap:.65rem;flex:1">
-          <div class="pf-item"><div class="pf-ico"><svg viewBox="0 0 12 12"><polyline points="1 6 4 9 11 2"/></svg></div>Private UK mobile number</div>
-          <div class="pf-item"><div class="pf-ico"><svg viewBox="0 0 12 12"><polyline points="1 6 4 9 11 2"/></svg></div>Unlimited SMS forwarding</div>
-          <div class="pf-item"><div class="pf-ico"><svg viewBox="0 0 12 12"><polyline points="1 6 4 9 11 2"/></svg></div>Voicemail recording to email</div>
-          <div class="pf-item"><div class="pf-ico"><svg viewBox="0 0 12 12"><polyline points="1 6 4 9 11 2"/></svg></div>Message history &amp; 90-day log</div>
-        </div>
-        <p style="text-align:center;font-size:.75rem;color:var(--ink3);margin-top:auto;padding-top:1.5rem">£17.99 on day one, then £5.99/month</p>
-        <a href="https://app.privify.co.uk/sign-up" style="display:flex;justify-content:center;margin-top:.75rem;background:var(--white);color:var(--ink);padding:.85rem;border-radius:10px;font-weight:600;font-size:.9rem;border:1.5px solid var(--border);transition:all .15s" class="btn-o">Get started</a>
-      </div>
-
-      <!-- Premium — featured -->
+      <!-- Plus — featured -->
       <div style="background:var(--white);border:2px solid var(--green);border-radius:20px;padding:2rem;display:flex;flex-direction:column;position:relative;box-shadow:var(--shadow-green)">
         <div style="position:absolute;top:-1px;left:50%;transform:translateX(-50%);background:var(--green);color:#fff;font-size:.65rem;font-weight:700;padding:.28rem .85rem;border-radius:0 0 8px 8px;white-space:nowrap;letter-spacing:.05em;text-transform:uppercase;font-family:var(--mono)">Most popular</div>
-        <div style="font-size:.7rem;font-weight:700;color:var(--ink3);letter-spacing:.12em;text-transform:uppercase;font-family:var(--mono);margin-bottom:1rem">Premium</div>
-        <div style="font-size:2.5rem;font-weight:800;letter-spacing:-0.04em;line-height:1;color:var(--ink);margin-bottom:.25rem"><sup style="font-size:1rem;vertical-align:top;margin-top:.4rem">£</sup>9.99</div>
+        <div style="font-size:.7rem;font-weight:700;color:var(--ink3);letter-spacing:.12em;text-transform:uppercase;font-family:var(--mono);margin-bottom:1rem">Plus</div>
+        <div style="font-size:2.5rem;font-weight:800;letter-spacing:-0.04em;line-height:1;color:var(--ink);margin-bottom:.25rem"><sup style="font-size:1rem;vertical-align:top;margin-top:.4rem">£</sup>6.99</div>
         <div style="font-size:.82rem;color:var(--ink3);margin-bottom:.25rem;font-family:var(--mono)">per month</div>
-        <div style="font-size:.78rem;color:var(--ink3);margin-bottom:1.5rem">+ £12 one-off setup fee</div>
+        <div style="font-size:.78rem;color:var(--green);font-weight:600;margin-bottom:1.5rem">7-day free trial</div>
         <hr style="border:none;border-top:1px solid var(--border);margin-bottom:1rem"/>
-        <div style="font-size:.72rem;color:var(--ink2);margin-bottom:1rem;padding:.5rem .65rem;background:var(--green-tint);border:1px solid var(--green-tint2);border-radius:7px">Everything in the previous plans, plus:</div>
+        <div style="font-size:.72rem;color:var(--ink2);margin-bottom:1rem;padding:.5rem .65rem;background:var(--green-tint);border:1px solid var(--green-tint2);border-radius:7px">Everything in Starter, plus:</div>
         <div style="display:flex;flex-direction:column;gap:.65rem;flex:1">
-          <div class="pf-item"><div class="pf-ico"><svg viewBox="0 0 12 12"><polyline points="1 6 4 9 11 2"/></svg></div>500 email aliases</div>
-          <div class="pf-item"><div class="pf-ico"><svg viewBox="0 0 12 12"><polyline points="1 6 4 9 11 2"/></svg></div>Up to 5,000 emails forwarded a month</div>
-          <div class="pf-item"><div class="pf-ico"><svg viewBox="0 0 12 12"><polyline points="1 6 4 9 11 2"/></svg></div>Voicemail transcription</div>
-          <div class="pf-item"><div class="pf-ico"><svg viewBox="0 0 12 12"><polyline points="1 6 4 9 11 2"/></svg></div>1-year message history</div>
+          <div class="pf-item"><div class="pf-ico"><svg viewBox="0 0 12 12"><polyline points="1 6 4 9 11 2"/></svg></div>500 forwarded emails/month</div>
+          <div class="pf-item"><div class="pf-ico"><svg viewBox="0 0 12 12"><polyline points="1 6 4 9 11 2"/></svg></div>Unlimited email aliases</div>
+          <div class="pf-item"><div class="pf-ico"><svg viewBox="0 0 12 12"><polyline points="1 6 4 9 11 2"/></svg></div>Priority email support</div>
+        </div>
+        <a href="https://app.privify.co.uk/sign-up" class="btn-g" style="display:flex;justify-content:center;margin-top:1.5rem;border-radius:10px;padding:.85rem;font-size:.9rem">Start free trial →</a>
+      </div>
+
+      <!-- Premium -->
+      <div style="background:var(--white);border:2px solid var(--border);border-radius:20px;padding:2rem;display:flex;flex-direction:column">
+        <div style="font-size:.7rem;font-weight:700;color:var(--ink3);letter-spacing:.12em;text-transform:uppercase;font-family:var(--mono);margin-bottom:1rem">Premium</div>
+        <div style="font-size:2.5rem;font-weight:800;letter-spacing:-0.04em;line-height:1;color:var(--ink);margin-bottom:.25rem"><sup style="font-size:1rem;vertical-align:top;margin-top:.4rem">£</sup>10.99</div>
+        <div style="font-size:.82rem;color:var(--ink3);margin-bottom:.25rem;font-family:var(--mono)">per month</div>
+        <div style="font-size:.78rem;color:var(--green);font-weight:600;margin-bottom:1.5rem;min-height:1.2rem">7-day free trial</div>
+        <hr style="border:none;border-top:1px solid var(--border);margin-bottom:1rem"/>
+        <div style="font-size:.72rem;color:var(--ink2);margin-bottom:1rem;padding:.5rem .65rem;background:var(--green-tint);border:1px solid var(--green-tint2);border-radius:7px">Everything in Plus, plus:</div>
+        <div style="display:flex;flex-direction:column;gap:.65rem;flex:1">
+          <div class="pf-item"><div class="pf-ico"><svg viewBox="0 0 12 12"><polyline points="1 6 4 9 11 2"/></svg></div>Unlimited email forwarding</div>
+          <div class="pf-item"><div class="pf-ico"><svg viewBox="0 0 12 12"><polyline points="1 6 4 9 11 2"/></svg></div>Unlimited email aliases</div>
           <div class="pf-item"><div class="pf-ico"><svg viewBox="0 0 12 12"><polyline points="1 6 4 9 11 2"/></svg></div>Priority support</div>
         </div>
-        <p style="text-align:center;font-size:.75rem;color:var(--ink3);margin-top:auto;padding-top:1.5rem">£21.99 on day one, then £9.99/month</p>
-        <a href="https://app.privify.co.uk/sign-up" class="btn-g" style="display:flex;justify-content:center;margin-top:.75rem;border-radius:10px;padding:.85rem;font-size:.9rem">Get everything →</a>
+        <a href="https://app.privify.co.uk/sign-up" style="display:flex;justify-content:center;margin-top:1.5rem;background:var(--white);color:var(--ink);padding:.85rem;border-radius:10px;font-weight:600;font-size:.9rem;border:1.5px solid var(--border);transition:all .15s" class="btn-o">Start free trial →</a>
       </div>
 
     </div>
+    <p style="text-align:center;font-size:.8rem;color:var(--ink3);margin-top:1.5rem">No charge today. Cancel any time. Card required to start trial.</p>
   </div>
 </section>
 
@@ -960,6 +968,14 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
           <summary class="faq-q">Can I reply from an alias? <span class="faq-icon">+</span></summary>
           <div class="faq-a">Not currently. Aliases are for receiving only — the same as the phone numbers. Outbound reply support is on the roadmap. If this matters to you, let us know when you sign up.</div>
         </details>
+        <details class="faq-item">
+          <summary class="faq-q">What is the identity monitor? <span class="faq-icon">+</span></summary>
+          <div class="faq-a">We monitor known data breaches and credential leaks. If your email address appears in a breach, you get an immediate alert so you can change your passwords before attackers exploit them.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">How does the free trial work? <span class="faq-icon">+</span></summary>
+          <div class="faq-a">Every plan starts with a 7-day free trial. You won't be charged a penny during the trial. After 7 days, your chosen plan begins at the regular monthly price. You can cancel any time before the trial ends and you won't be billed.</div>
+        </details>
       </div>
     </div>
   </div>
@@ -970,11 +986,11 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
   <div class="cta-inner">
     <div>
       <h2>Your number. Your email.<br/><em>Private.</em></h2>
-      <p>Email aliases from £1.99/month. Private UK numbers from £5.99/month. No contracts, cancel any time.</p>
+      <p>Start your 7-day free trial — no charge today. Then from £2/month.</p>
     </div>
     <div class="cta-r">
-      <a href="https://app.privify.co.uk/sign-up" class="btn-w">Get started →</a>
-      <span class="cta-note">Takes 2 minutes. Numbers live within 24 hours.</span>
+      <a href="https://app.privify.co.uk/sign-up" class="btn-w">Start your free trial →</a>
+      <span class="cta-note">7 days free. No charge today. Cancel any time.</span>
     </div>
   </div>
 </section>

@@ -46,7 +46,7 @@ footer a{color:var(--accent);text-decoration:none}
 
 <div class="wrap">
   <h1>Terms &amp; Conditions</h1>
-  <p class="updated">Last updated: 18 April 2026</p>
+  <p class="updated">Last updated: 17 May 2026</p>
 
   <div class="sections">
 
@@ -78,6 +78,8 @@ footer a{color:var(--accent);text-decoration:none}
           <li>Email forwarding of incoming SMS messages</li>
           <li>Voicemail recording and audio storage</li>
           <li>90 days of message history</li>
+          <li>Private email aliases that forward to your real inbox</li>
+          <li>An identity monitor that alerts you if your email address appears in a known data breach</li>
         </ul>
         <p>3.2. Numbers are allocated from our available pool. You do not own the number — it is licensed to you for the duration of your active subscription. Numbers may not be ported to another provider.</p>
         <p>3.3. Number provisioning is a manual process. We will use reasonable efforts to complete provisioning within 24 hours of payment. Any timescale we communicate to you is an estimate.</p>
@@ -142,10 +144,11 @@ footer a{color:var(--accent);text-decoration:none}
       <div class="prose">
         <p>8.1. Privify is offered on the following plans:</p>
         <ul>
-          <li><strong>Free</strong> — no charge;</li>
-          <li><strong>Plus</strong> — <strong>£6.99 per month</strong>, subject to a 3-month minimum commitment (see clause 4.2); and</li>
-          <li><strong>Premium</strong> — <strong>£10.99 per month</strong>, subject to a 3-month minimum commitment (see clause 4.2).</li>
+          <li><strong>Starter</strong> — <strong>£2.00 per month</strong> after trial;</li>
+          <li><strong>Plus</strong> — <strong>£6.99 per month</strong> after trial, subject to a 3-month minimum commitment (see clause 4.2); and</li>
+          <li><strong>Premium</strong> — <strong>£10.99 per month</strong> after trial, subject to a 3-month minimum commitment (see clause 4.2).</li>
         </ul>
+        <p>8.1a. A valid payment method is required to start a free trial. No charge is made during the 7-day trial period. After the trial, your chosen plan's monthly fee is charged automatically unless you cancel before the trial expires.</p>
         <p>8.2. There are no setup fees. Monthly fees are billed in advance on the same date each month.</p>
         <p>8.3. All fees are inclusive of VAT where applicable. Payments are processed securely by Stripe. We do not store your card details.</p>
         <p>8.4. Payment is due at the start of each billing period. If we do not receive payment in full by the due date, we may restrict or suspend the service.</p>
@@ -162,6 +165,7 @@ footer a{color:var(--accent);text-decoration:none}
         <p>9.3. By proceeding with number provisioning or using the service during the 14-day cooling-off period, you expressly request that we begin the service immediately and acknowledge that your right to a full refund may be reduced proportionately to reflect the service provided up to the point of cancellation.</p>
         <p>9.4. The 14-day cooling-off period applies to your first subscription only. It does not apply to renewals or plan upgrades.</p>
         <p>9.5. If we are unable to provision a number within a reasonable time, you will receive a full refund of all amounts paid.</p>
+        <p>9.6. You may cancel at any time during the 7-day free trial without charge. Cancellation during the trial takes effect immediately and no payment will be taken.</p>
       </div>
     </section>
 
@@ -184,65 +188,85 @@ footer a{color:var(--accent);text-decoration:none}
     </section>
 
     <section>
-      <h2>11. Data Retention</h2>
+      <h2>11. Email Aliases</h2>
       <div class="prose">
-        <p>11.1. SMS messages and voicemails are stored for 90 days from the date of receipt, after which they are automatically deleted.</p>
-        <p>11.2. Voicemail audio files are stored in Cloudflare R2 object storage and accessible via time-limited secure links.</p>
-        <p>11.3. You may delete individual messages and voicemails at any time via your account.</p>
-        <p>11.4. You may permanently delete your account and all associated data via the Settings section of your account. Account deletion is immediate and irreversible.</p>
+        <p>11.1. Email aliases are tied to your account and are deactivated upon cancellation or termination of your subscription.</p>
+        <p>11.2. Monthly forwarding limits apply per plan. Messages that exceed the plan limit are dropped silently and are not delivered or stored.</p>
+        <p>11.3. Aliases must not be used in breach of the Acceptable Use Policy.</p>
       </div>
     </section>
 
     <section>
-      <h2>12. Data Protection</h2>
+      <h2>12. Identity Monitor</h2>
       <div class="prose">
-        <p>12.1. We process your personal data in accordance with UK GDPR and the Data Protection Act 2018. References to a "Regulation" in this clause are to UK GDPR as incorporated into English law.</p>
-        <p>12.2. We act as a Data Controller in respect of your account information and message data. We use your data solely to provide the service and send transactional communications related to your account.</p>
-        <p>12.3. We will never sell your personal data to third parties.</p>
-        <p>12.4. We will notify you without undue delay if we become aware of a personal data breach that is likely to result in a risk to your rights and freedoms.</p>
-        <p>12.5. You are responsible for ensuring that your use of the service complies with your own obligations under data protection law.</p>
+        <p>12.1. The identity monitor is provided as a supplementary feature and does not constitute a security guarantee.</p>
+        <p>12.2. We cannot guarantee that all data breaches are detected or that alerts are delivered in real time. Coverage depends on the third-party breach data sources we use.</p>
+        <p>12.3. Breach alerts are informational only. You remain solely responsible for the security of your accounts and credentials.</p>
+        <p>12.4. We accept no liability for any loss arising from a data breach or from reliance on an identity monitor alert.</p>
+        <p>12.5. To provide breach alerts, your account email address is shared with third-party breach data sources. By enabling or using the identity monitor feature, you consent to your email address being used for this purpose.</p>
       </div>
     </section>
 
     <section>
-      <h2>13. Complaints</h2>
+      <h2>13. Data Retention</h2>
       <div class="prose">
-        <p>13.1. If you wish to make a complaint, please contact us at <a href="mailto:support@privify.co.uk">support@privify.co.uk</a>. We will acknowledge your complaint within 2 business days and aim to resolve it within 14 days.</p>
-        <p>13.2. If we are unable to resolve your complaint, you may refer it to an alternative dispute resolution (ADR) scheme. Details will be provided at that stage.</p>
+        <p>13.1. SMS messages and voicemails are stored for 90 days from the date of receipt, after which they are automatically deleted.</p>
+        <p>13.2. Voicemail audio files are stored in Cloudflare R2 object storage and accessible via time-limited secure links.</p>
+        <p>13.3. You may delete individual messages and voicemails at any time via your account.</p>
+        <p>13.4. You may permanently delete your account and all associated data via the Settings section of your account. Account deletion is immediate and irreversible.</p>
       </div>
     </section>
 
     <section>
-      <h2>14. Limitation of Liability</h2>
+      <h2>14. Data Protection</h2>
       <div class="prose">
-        <p>14.1. Our total liability to you in respect of all breaches of this agreement is limited to the lesser of:</p>
+        <p>14.1. We process your personal data in accordance with UK GDPR and the Data Protection Act 2018. References to a "Regulation" in this clause are to UK GDPR as incorporated into English law.</p>
+        <p>14.2. We act as a Data Controller in respect of your account information and message data. We use your data solely to provide the service and send transactional communications related to your account.</p>
+        <p>14.3. We will never sell your personal data to third parties.</p>
+        <p>14.4. We will notify you without undue delay if we become aware of a personal data breach that is likely to result in a risk to your rights and freedoms.</p>
+        <p>14.5. You are responsible for ensuring that your use of the service complies with your own obligations under data protection law.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>15. Complaints</h2>
+      <div class="prose">
+        <p>15.1. If you wish to make a complaint, please contact us at <a href="mailto:support@privify.co.uk">support@privify.co.uk</a>. We will acknowledge your complaint within 2 business days and aim to resolve it within 14 days.</p>
+        <p>15.2. If we are unable to resolve your complaint, you may refer it to an alternative dispute resolution (ADR) scheme. Details will be provided at that stage.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>16. Limitation of Liability</h2>
+      <div class="prose">
+        <p>16.1. Our total liability to you in respect of all breaches of this agreement is limited to the lesser of:</p>
         <ul>
           <li>a pro-rata sum of the price you paid for the service for the period in which we were in breach; and</li>
           <li>the amount you paid for the service in the month in which you notified us of the breach, excluding any one-time or non-recurring charges.</li>
         </ul>
-        <p>14.2. We are not liable for any indirect, consequential, or special losses, including but not limited to loss of profits, missed messages, or loss of data.</p>
-        <p>14.3. Nothing in these terms limits our liability for death or personal injury caused by negligence, fraud, or any other liability that cannot be excluded by law.</p>
+        <p>16.2. We are not liable for any indirect, consequential, or special losses, including but not limited to loss of profits, missed messages, or loss of data.</p>
+        <p>16.3. Nothing in these terms limits our liability for death or personal injury caused by negligence, fraud, or any other liability that cannot be excluded by law.</p>
       </div>
     </section>
 
     <section>
-      <h2>15. Varying This Agreement</h2>
+      <h2>17. Varying This Agreement</h2>
       <div class="prose">
-        <p>15.1. We will give you at least one month's notice by email if we increase the price of the monthly subscription. If you do not accept the change, you may cancel your subscription before the new price takes effect.</p>
-        <p>15.2. We may update these terms from time to time. We will notify you by email at least 14 days before any material changes take effect. Continued use of the service after that date constitutes acceptance of the updated terms.</p>
-        <p>15.3. We will post a notification in your account or by email if we make material changes to the functionality of the service or withdraw the service.</p>
+        <p>17.1. We will give you at least one month's notice by email if we increase the price of the monthly subscription. If you do not accept the change, you may cancel your subscription before the new price takes effect.</p>
+        <p>17.2. We may update these terms from time to time. We will notify you by email at least 14 days before any material changes take effect. Continued use of the service after that date constitutes acceptance of the updated terms.</p>
+        <p>17.3. We will post a notification in your account or by email if we make material changes to the functionality of the service or withdraw the service.</p>
       </div>
     </section>
 
     <section>
-      <h2>16. Governing Law</h2>
+      <h2>18. Governing Law</h2>
       <div class="prose">
-        <p>16.1. These terms are governed by the laws of England and Wales. Any disputes arising from or in connection with these terms shall be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
+        <p>18.1. These terms are governed by the laws of England and Wales. Any disputes arising from or in connection with these terms shall be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
       </div>
     </section>
 
     <section>
-      <h2>17. Contact</h2>
+      <h2>19. Contact</h2>
       <div class="prose">
         <p>1st Soft Limited</p>
         <p>Email: <a href="mailto:support@privify.co.uk">support@privify.co.uk</a></p>
