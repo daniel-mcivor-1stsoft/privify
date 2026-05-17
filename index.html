@@ -161,18 +161,16 @@ h2 em{font-style:normal;color:var(--green)}
 
 /* PRIVACY — EDITORIAL */
 .privacy-first{background:var(--green-tint);position:relative;overflow:hidden}
-.privacy-first::before{content:'';position:absolute;top:50%;right:-200px;width:500px;height:500px;background:radial-gradient(circle,rgba(26,107,74,.08),transparent 70%);transform:translateY(-50%);pointer-events:none}
-.priv-split{display:grid;grid-template-columns:.9fr 1.1fr;gap:5rem;align-items:start;position:relative;z-index:1}
-.priv-l{position:sticky;top:100px}
-.priv-shield{width:64px;height:64px;background:linear-gradient(135deg,var(--green),var(--green-light));border-radius:18px;display:flex;align-items:center;justify-content:center;margin-bottom:1.75rem;box-shadow:var(--shadow-green)}
-.priv-shield svg{width:30px;height:30px;stroke:#fff;stroke-width:1.75;fill:none;stroke-linecap:round;stroke-linejoin:round}
-.priv-l h2{color:var(--ink)}
-.priv-l p{color:var(--ink2);font-size:1rem;line-height:1.85;margin-bottom:2rem}
-.priv-badges{display:flex;flex-direction:column;gap:.65rem}
-.priv-badge{display:inline-flex;align-items:center;gap:.65rem;background:var(--white);border:1px solid var(--green-tint2);padding:.7rem 1rem;border-radius:12px;font-size:.82rem;color:var(--ink);font-weight:600;width:100%;box-shadow:var(--shadow-sm)}
-.priv-badge svg{width:15px;height:15px;stroke:var(--green);stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
-.priv-grid{display:flex;flex-direction:column;gap:1rem}
-.priv-card{background:var(--white);border-radius:16px;padding:1.4rem 1.5rem;border:1px solid var(--green-tint2);display:flex;align-items:flex-start;gap:1.1rem;transition:all .2s;box-shadow:var(--shadow-sm)}
+.privacy-first::before{content:'';position:absolute;top:50%;left:50%;width:600px;height:600px;background:radial-gradient(circle,rgba(26,107,74,.07),transparent 70%);transform:translate(-50%,-50%);pointer-events:none}
+.priv-inner{display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:1}
+.priv-heading{max-width:560px;margin-bottom:2.5rem}
+.priv-heading h2{color:var(--ink)}
+.priv-heading p{color:var(--ink2);font-size:1rem;line-height:1.85;margin-top:.75rem;margin-bottom:0}
+.priv-badges{display:flex;flex-wrap:wrap;justify-content:center;gap:.55rem;margin-bottom:3rem}
+.priv-badge{display:inline-flex;align-items:center;gap:.55rem;background:var(--white);border:1px solid var(--green-tint2);padding:.55rem 1rem;border-radius:100px;font-size:.8rem;color:var(--ink);font-weight:600;box-shadow:var(--shadow-sm)}
+.priv-badge svg{width:14px;height:14px;stroke:var(--green);stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.priv-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;width:100%;max-width:860px}
+.priv-card{background:var(--white);border-radius:16px;padding:1.5rem 1.6rem;border:1px solid var(--green-tint2);display:flex;align-items:flex-start;gap:1rem;transition:all .2s;box-shadow:var(--shadow-sm);text-align:left}
 .priv-card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
 .priv-icon{width:40px;height:40px;background:var(--green-tint);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid var(--green-tint2)}
 .priv-icon svg{width:18px;height:18px;stroke:var(--green);stroke-width:1.75;fill:none;stroke-linecap:round;stroke-linejoin:round}
@@ -327,10 +325,9 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
 
 /* RESPONSIVE */
 @media(max-width:1000px){
-  .hero-inner,.priv-split,.pricing-wrap,.cta-inner{grid-template-columns:1fr;gap:3rem}
+  .hero-inner,.pricing-wrap,.cta-inner{grid-template-columns:1fr;gap:3rem}
   [style*="grid-template-columns:repeat(3,1fr)"]{grid-template-columns:1fr!important}
   [style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important}
-  .priv-l{position:static}
   .hero-r{max-width:480px;margin:0 auto;width:100%}
   .bento{grid-template-columns:repeat(2,1fr);grid-auto-rows:auto}
   .b-hero,.b-wide,.b-small,.b-med,.b-full{grid-column:span 2;grid-row:auto}
@@ -372,7 +369,7 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
   .bento-card{padding:1.25rem}
   .price-card{padding:1.5rem}
   .use-highlight{padding:1.25rem 1.25rem}
-  .priv-split{gap:1.75rem}
+  .priv-grid{grid-template-columns:1fr}
   .pricing-wrap{gap:1.75rem}
   h2{font-size:1.6rem}
   .pill{font-size:.72rem;padding:.35rem .85rem}
@@ -646,49 +643,61 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
   </div>
 </section>
 
-<!-- PRIVACY — EDITORIAL SPLIT -->
+<!-- PRIVACY — CENTRED LAYOUT -->
 <section class="privacy-first" id="privacy">
   <div class="wrap">
-    <div class="priv-split">
-      <div class="priv-l reveal reveal-l">
+    <div class="priv-inner reveal">
+      <div class="priv-heading">
         <div class="tag">Privacy &amp; data</div>
         <h2>Private by design.<br/>Hosted in the <em>EU.</em></h2>
         <p>Every message, voicemail, and transcription is stored on servers inside the European Union. That won't change — it's built into how we operate.</p>
-        <div class="priv-badges">
-          <div class="priv-badge">
-            <svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>
-            UK &amp; EU GDPR compliant
-          </div>
-          <div class="priv-badge">
-            <svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>
-            EU-only data storage — never transferred outside
-          </div>
-          <div class="priv-badge">
-            <svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>
-            No advertising. No profiling. No data sales.
-          </div>
+      </div>
+      <div class="priv-badges">
+        <div class="priv-badge">
+          <svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>
+          UK &amp; EU GDPR compliant
+        </div>
+        <div class="priv-badge">
+          <svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>
+          EU-only storage — never transferred outside
+        </div>
+        <div class="priv-badge">
+          <svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>
+          No advertising. No profiling. No data sales.
         </div>
       </div>
-      <div class="priv-grid reveal reveal-r">
+      <div class="priv-grid">
         <div class="priv-card">
+          <div class="priv-icon">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
           <div>
             <h3>EU-only infrastructure</h3>
             <p>Messages, voicemails, and transcriptions stored exclusively on servers within the European Union.</p>
           </div>
         </div>
         <div class="priv-card">
+          <div class="priv-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+          </div>
           <div>
             <h3>No tracking. No ads.</h3>
             <p>We have no advertising model. We don't profile you, track you, or sell your data — ever.</p>
           </div>
         </div>
         <div class="priv-card">
+          <div class="priv-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
           <div>
             <h3>Identity stays separate</h3>
             <p>Your number and aliases can't be traced back to you. We apply the same thinking to your account data.</p>
           </div>
         </div>
         <div class="priv-card">
+          <div class="priv-icon">
+            <svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/></svg>
+          </div>
           <div>
             <h3>Delete anytime</h3>
             <p>Cancel and everything is deleted. Individual messages too, whenever you like.</p>
