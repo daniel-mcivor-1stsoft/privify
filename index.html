@@ -128,37 +128,20 @@ h2{font-size:clamp(1.85rem,3.2vw,2.6rem);font-weight:700;letter-spacing:-0.035em
 h2 em{font-style:normal;color:var(--green)}
 .sec-sub{font-size:1.05rem;color:var(--ink2);max-width:560px;line-height:1.75}
 
-/* FEATURES — BENTO */
+/* FEATURES — UNIFORM GRID */
 .features{background:var(--white)}
 .feat-head{text-align:center;max-width:640px;margin:0 auto 3.5rem}
 .feat-head .sec-sub{margin:0 auto}
-.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:1.25rem}
-.bento-card{background:var(--off);border:1px solid var(--border);border-radius:20px;padding:2rem;transition:all .25s;display:flex;flex-direction:column;position:relative;overflow:hidden}
-.bento-card:hover{box-shadow:var(--shadow);transform:translateY(-3px);border-color:#cbd5e1}
-.b-hero{grid-column:span 4;background:linear-gradient(135deg,var(--green-tint) 0%,var(--white) 70%);border-color:var(--green-tint2)}
-.b-small{grid-column:span 2}
-.b-half{grid-column:span 3}
-.b-wide{grid-column:span 4}
-.b-med{grid-column:span 2}
-.b-full{grid-column:span 6}
-.bento-icon{width:48px;height:48px;background:var(--white);border:1px solid var(--border);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;box-shadow:var(--shadow-sm)}
-.b-hero .bento-icon{width:56px;height:56px;background:linear-gradient(135deg,var(--green),var(--green-light));border-color:transparent}
-.b-hero .bento-icon svg{stroke:#fff}
-.bento-card h3{font-size:1.2rem;font-weight:800;margin-bottom:.55rem;letter-spacing:-0.025em;color:var(--ink)}
-.b-hero h3{font-size:1.6rem}
-.bento-card p{font-size:.9rem;color:var(--ink2);line-height:1.7}
-.b-hero p{font-size:1rem;max-width:380px}
-.bento-tag{display:inline-block;font-size:.7rem;color:var(--green);background:var(--green-tint);border:1px solid var(--green-tint2);padding:.2rem .6rem;border-radius:100px;margin-top:auto;align-self:flex-start;font-weight:600;font-family:var(--mono)}
-.b-mini-preview{margin-top:1.25rem;background:var(--white);border:1px solid var(--border);border-radius:10px;overflow:hidden}
-.b-mp-row{display:flex;align-items:center;gap:.6rem;padding:.55rem .85rem;border-bottom:1px solid #f3f4f6}
-.b-mp-row:last-child{border-bottom:none}
-.b-mp-badge{font-size:.56rem;font-weight:700;padding:1px 5px;border-radius:3px;white-space:nowrap;flex-shrink:0;font-family:var(--mono)}
-.b-mp-badge.sms{background:#f0fdf4;color:#1a6b4a}
-.b-mp-badge.alias{background:#eff6ff;color:#1d4ed8}
-.b-mp-badge.vm{background:#faf5ff;color:#7c3aed}
-.b-mp-text{font-size:.72rem;color:var(--ink);flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.b-mp-text strong{color:var(--green)}
-.b-mp-time{font-size:.6rem;color:var(--ink3);font-family:var(--mono);flex-shrink:0}
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.feat-card{background:var(--off);border:1px solid var(--border);border-radius:20px;padding:2rem;transition:all .25s;display:flex;flex-direction:column}
+.feat-card:hover{box-shadow:var(--shadow);transform:translateY(-3px);border-color:#cbd5e1}
+.feat-icon{width:46px;height:46px;background:var(--white);border:1px solid var(--border);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;box-shadow:var(--shadow-sm);flex-shrink:0}
+.feat-icon svg{width:20px;height:20px;stroke:var(--green);stroke-width:1.75;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.feat-card h3{font-size:1.05rem;font-weight:800;margin-bottom:.5rem;letter-spacing:-0.025em;color:var(--ink)}
+.feat-card p{font-size:.9rem;color:var(--ink2);line-height:1.7;flex:1}
+.feat-tag{display:inline-block;font-size:.7rem;color:var(--green);background:var(--green-tint);border:1px solid var(--green-tint2);padding:.2rem .6rem;border-radius:100px;margin-top:1rem;align-self:flex-start;font-weight:600;font-family:var(--mono)}
+@media(max-width:900px){.feat-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.feat-grid{grid-template-columns:1fr}}
 
 /* PRIVACY — EDITORIAL */
 .privacy-first{background:var(--green-tint);position:relative;overflow:hidden}
@@ -528,74 +511,61 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
       <h2>One place. Two layers<br/>of <em>privacy.</em></h2>
       <p class="sec-sub">A private UK number for texts and calls. Disposable email addresses for everything else. Both land in your real inbox. Nothing else changes.</p>
     </div>
-    <div class="bento">
+    <div class="feat-grid reveal">
 
-      <!-- Hero card — unified forwarding -->
-      <div class="bento-card b-hero reveal reveal-d1">
-        <h3>Everything lands in your real inbox</h3>
-        <p>Texts to your private number, emails to your aliases. All of it arrives in your existing inbox, clearly labelled. Works with Gmail, Outlook, Apple Mail. No separate app.</p>
-        <div class="b-mini-preview">
-          <div class="b-mp-row">
-            <span class="b-mp-badge sms">SMS</span>
-            <span class="b-mp-text">Monzo — Your code is <strong>847 291</strong>. Valid 10 mins.</span>
-            <span class="b-mp-time">2m</span>
-          </div>
-          <div class="b-mp-row">
-            <span class="b-mp-badge alias">alias</span>
-            <span class="b-mp-text">Amazon — Your order has been dispatched</span>
-            <span class="b-mp-time">9m</span>
-          </div>
-          <div class="b-mp-row">
-            <span class="b-mp-badge vm">VM</span>
-            <span class="b-mp-text">New voicemail · 0:32 · "Hi, calling about your quote…"</span>
-            <span class="b-mp-time">1h</span>
-          </div>
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
         </div>
-        <span class="bento-tag">Works with any email app</span>
+        <h3>SMS forwarding</h3>
+        <p>Every text that hits your private UK number is forwarded to your email instantly. Works with banks, HMRC, delivery services — anything that sends to a mobile.</p>
+        <span class="feat-tag">Instant delivery</span>
       </div>
 
-      <!-- Small card — number porting -->
-      <div class="bento-card b-small reveal reveal-d2">
-        <h3>Bring your existing number</h3>
-        <p>Already have a number tied to your bank, HMRC, or Amazon? Port it straight in. Every text still arrives — forwarded to your inbox — and nothing breaks.</p>
-        <ul style="list-style:none;padding:0;margin:.9rem 0 1rem;display:flex;flex-direction:column;gap:.55rem">
-          <li style="display:flex;align-items:flex-start;gap:.55rem;font-size:.82rem;color:var(--ink2);line-height:1.5">
-            <svg style="width:14px;height:14px;stroke:var(--green);stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:1px" viewBox="0 0 14 14"><polyline points="1 7 5 11 13 2"/></svg>
-            Text PAC to 65075 — networks must provide it within 2 hours
-          </li>
-          <li style="display:flex;align-items:flex-start;gap:.55rem;font-size:.82rem;color:var(--ink2);line-height:1.5">
-            <svg style="width:14px;height:14px;stroke:var(--green);stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:1px" viewBox="0 0 14 14"><polyline points="1 7 5 11 13 2"/></svg>
-            Ports typically complete within one working day
-          </li>
-          <li style="display:flex;align-items:flex-start;gap:.55rem;font-size:.82rem;color:var(--ink2);line-height:1.5">
-            <svg style="width:14px;height:14px;stroke:var(--green);stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:1px" viewBox="0 0 14 14"><polyline points="1 7 5 11 13 2"/></svg>
-            Keep receiving texts on it forever — one-time £12 setup fee
-          </li>
-        </ul>
-        <span class="bento-tag">Number porting available</span>
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <h3>Email aliases</h3>
+        <p>Create a disposable address for any service. Emails land in your real inbox with a label showing which alias they came in on. Delete the alias any time and the emails stop.</p>
+        <span class="feat-tag">Unlimited on Premium</span>
       </div>
 
-      <!-- Half card — voicemail -->
-      <div class="bento-card b-half reveal reveal-d3">
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.92 1.18 2 2 0 012.92 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+        </div>
         <h3>Voicemail to email</h3>
-        <p>Callers hear voicemail as normal. You get the recording as an audio file forwarded to your inbox. Transcription to text is included on the Premium plan.</p>
-        <span class="bento-tag">Recording by email</span>
+        <p>Callers hear a voicemail greeting as normal. You get the recording as an audio file in your inbox. Automatic transcription to text is included on the Premium plan.</p>
+        <span class="feat-tag">Transcription on Premium</span>
       </div>
 
-      <!-- Half card — identity monitor -->
-      <div class="bento-card b-half reveal">
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
         <h3>Identity Monitor</h3>
-        <p>We monitor known data breaches and leaks. If your email turns up in one, you get an alert straight away so you can act before any damage is done.</p>
-        <span class="bento-tag">Instant breach alerts</span>
+        <p>We check your email addresses against known data breaches. If your details turn up in a leak, you get an alert straight away so you can act before any damage is done.</p>
+        <span class="feat-tag">Breach alerts</span>
       </div>
 
-      <!-- Full card — inbox -->
-      <div class="bento-card b-full reveal reveal-d4">
-        <h3>One dashboard for everything</h3>
-        <p>All your SMS messages, email aliases, and voicemails in one place. Search 90 days of history, manage forwarding destinations, and see exactly which alias or number each message came in on.</p>
-        <span class="bento-tag">90 days of history</span>
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        </div>
+        <h3>One dashboard</h3>
+        <p>All your messages, aliases, and voicemails in one place. See exactly which alias or number each message came in on. Search up to 90 days of history.</p>
+        <span class="feat-tag">90 days of history</span>
       </div>
 
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg viewBox="0 0 24 24"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg>
+        </div>
+        <h3>Bring your existing number</h3>
+        <p>Already have a number tied to your bank or HMRC? Port it in on the Premium plan. Texts keep arriving as normal and nothing breaks. One-time £12 setup fee.</p>
+        <span class="feat-tag">Number porting</span>
+      </div>
 
     </div>
   </div>
