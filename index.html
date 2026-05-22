@@ -133,49 +133,53 @@ h2 em{font-style:normal;color:var(--green)}
 .feat-head{text-align:center;max-width:640px;margin:0 auto 3.5rem}
 .feat-head .sec-sub{margin:0 auto}
 
-/* Email alias hero showcase */
-.alias-hero{background:linear-gradient(135deg,var(--green-tint) 0%,var(--white) 100%);border:1px solid var(--green-tint2);border-radius:24px;padding:3rem;margin-bottom:1.25rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;position:relative;overflow:hidden}
-.alias-hero::before{content:'';position:absolute;top:-40%;right:-15%;width:55%;height:160%;background:radial-gradient(ellipse at center,rgba(26,107,74,.08),transparent 60%);pointer-events:none}
-.alias-hero-l{position:relative;z-index:1}
-.alias-kicker{display:inline-flex;align-items:center;gap:6px;font-size:.7rem;font-weight:700;color:var(--green);letter-spacing:.12em;text-transform:uppercase;font-family:var(--mono);background:var(--white);border:1px solid var(--green-tint2);padding:.25rem .7rem;border-radius:100px;margin-bottom:1rem}
-.alias-hero h3{font-size:1.65rem;font-weight:800;letter-spacing:-0.03em;line-height:1.15;color:var(--ink);margin-bottom:.8rem}
-.alias-hero h3 em{font-style:normal;color:var(--green)}
-.alias-hero-l>p{font-size:.95rem;color:var(--ink2);line-height:1.7;margin-bottom:1.5rem;max-width:420px}
-.alias-bullets{display:flex;flex-direction:column;gap:.65rem;margin-bottom:0}
-.alias-bullet{display:flex;align-items:flex-start;gap:.6rem;font-size:.88rem;color:var(--ink);line-height:1.5}
-.alias-bullet svg{width:16px;height:16px;stroke:var(--green);stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:3px}
-.alias-bullet strong{font-weight:700;color:var(--ink)}
+/* Two pillar hero blocks */
+.pillars{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.25rem}
+.pillar{background:linear-gradient(160deg,var(--green-tint) 0%,var(--white) 70%);border:1px solid var(--green-tint2);border-radius:24px;padding:2.25rem;display:flex;flex-direction:column;gap:1.25rem;position:relative;overflow:hidden}
+.pillar::before{content:'';position:absolute;top:-40%;right:-20%;width:60%;height:140%;background:radial-gradient(ellipse at center,rgba(26,107,74,.08),transparent 60%);pointer-events:none}
+.pillar>*{position:relative;z-index:1}
+.pillar-kicker{display:inline-flex;align-items:center;gap:6px;font-size:.68rem;font-weight:700;color:var(--green);letter-spacing:.12em;text-transform:uppercase;font-family:var(--mono);background:var(--white);border:1px solid var(--green-tint2);padding:.28rem .75rem;border-radius:100px;align-self:flex-start}
+.pillar h3{font-size:1.4rem;font-weight:800;letter-spacing:-0.025em;line-height:1.2;color:var(--ink);margin:0}
+.pillar h3 em{font-style:normal;color:var(--green)}
+.pillar>p{font-size:.92rem;color:var(--ink2);line-height:1.65;margin:0}
+.pillar-bullets{display:flex;flex-direction:column;gap:.55rem}
+.pillar-bullet{display:flex;align-items:flex-start;gap:.55rem;font-size:.85rem;color:var(--ink);line-height:1.5}
+.pillar-bullet svg{width:15px;height:15px;stroke:var(--green);stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:3px}
+.pillar-bullet strong{font-weight:700;color:var(--ink)}
 
-/* Visual: alias flow demo */
-.alias-flow{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:1.4rem;box-shadow:var(--shadow-lg);position:relative;z-index:1}
-.alias-flow-row{display:flex;align-items:center;gap:.65rem;padding:.65rem .8rem;background:var(--off);border:1px solid var(--border);border-radius:10px;margin-bottom:.55rem;transition:all .3s}
-.alias-flow-row:hover{border-color:var(--green-tint2);background:var(--green-tint)}
-.alias-flow-svc{font-size:.65rem;font-weight:700;font-family:var(--mono);color:var(--green);background:var(--green-tint);border:1px solid var(--green-tint2);padding:2px 7px;border-radius:4px;flex-shrink:0}
-.alias-flow-addr{font-size:.78rem;font-family:var(--mono);color:var(--ink2);flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.alias-flow-arrow{display:flex;justify-content:center;padding:.4rem 0;color:var(--green)}
-.alias-flow-inbox{display:flex;align-items:center;gap:.65rem;padding:.85rem 1rem;background:linear-gradient(135deg,var(--green),var(--green-light));color:#fff;border-radius:10px;box-shadow:var(--shadow-green)}
-.alias-flow-inbox svg{width:18px;height:18px;stroke:#fff;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
-.alias-flow-inbox-l{display:flex;flex-direction:column;line-height:1.25}
-.alias-flow-inbox-t{font-size:.78rem;font-weight:700}
-.alias-flow-inbox-s{font-size:.66rem;opacity:.85;font-family:var(--mono)}
+/* Pillar visuals */
+.pillar-visual{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:1rem;box-shadow:var(--shadow);margin-top:auto}
+.pv-row{display:flex;align-items:center;gap:.6rem;padding:.55rem .7rem;background:var(--off);border:1px solid var(--border);border-radius:9px;margin-bottom:.45rem}
+.pv-row:last-of-type{margin-bottom:0}
+.pv-badge{font-size:.58rem;font-weight:700;font-family:var(--mono);padding:2px 6px;border-radius:4px;flex-shrink:0;letter-spacing:.04em}
+.pv-badge.sms{background:#f0fdf4;color:#1a6b4a;border:1px solid var(--green-tint2)}
+.pv-badge.vm{background:#faf5ff;color:#7c3aed;border:1px solid #e9d5ff}
+.pv-badge.svc{background:var(--green-tint);color:var(--green);border:1px solid var(--green-tint2)}
+.pv-text{font-size:.74rem;color:var(--ink);flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pv-text-mono{font-family:var(--mono);color:var(--ink2)}
+.pv-time{font-size:.6rem;color:var(--ink3);font-family:var(--mono);flex-shrink:0}
+.pv-arrow{display:flex;justify-content:center;padding:.3rem 0;color:var(--green)}
+.pv-inbox{display:flex;align-items:center;gap:.6rem;padding:.7rem .85rem;background:linear-gradient(135deg,var(--green),var(--green-light));color:#fff;border-radius:9px;box-shadow:var(--shadow-green)}
+.pv-inbox svg{width:16px;height:16px;stroke:#fff;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.pv-inbox-t{font-size:.74rem;font-weight:700;line-height:1.2}
+.pv-inbox-s{font-size:.63rem;opacity:.85;font-family:var(--mono);line-height:1.2}
 
 /* Secondary feature grid */
-.feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
-.feat-card{background:var(--off);border:1px solid var(--border);border-radius:18px;padding:1.6rem;transition:all .25s;display:flex;flex-direction:column}
+.feat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem}
+.feat-card{background:var(--off);border:1px solid var(--border);border-radius:18px;padding:1.75rem;transition:all .25s;display:flex;align-items:flex-start;gap:1rem}
 .feat-card:hover{box-shadow:var(--shadow);transform:translateY(-3px);border-color:#cbd5e1}
-.feat-icon{width:42px;height:42px;background:var(--white);border:1px solid var(--border);border-radius:11px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;box-shadow:var(--shadow-sm);flex-shrink:0}
-.feat-icon svg{width:18px;height:18px;stroke:var(--green);stroke-width:1.75;fill:none;stroke-linecap:round;stroke-linejoin:round}
-.feat-card h3{font-size:.95rem;font-weight:800;margin-bottom:.35rem;letter-spacing:-0.02em;color:var(--ink)}
-.feat-card p{font-size:.83rem;color:var(--ink2);line-height:1.65;flex:1}
+.feat-icon{width:44px;height:44px;background:var(--white);border:1px solid var(--border);border-radius:11px;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-sm);flex-shrink:0}
+.feat-icon svg{width:19px;height:19px;stroke:var(--green);stroke-width:1.75;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.feat-card h3{font-size:1rem;font-weight:800;margin-bottom:.3rem;letter-spacing:-0.02em;color:var(--ink)}
+.feat-card p{font-size:.86rem;color:var(--ink2);line-height:1.65;margin:0}
 
 @media(max-width:1000px){
-  .alias-hero{grid-template-columns:1fr;gap:2rem;padding:2rem}
-  .feat-grid{grid-template-columns:repeat(2,1fr)}
+  .pillars{grid-template-columns:1fr;gap:1rem}
+  .feat-grid{grid-template-columns:1fr}
 }
 @media(max-width:560px){
-  .alias-hero{padding:1.5rem}
-  .alias-hero h3{font-size:1.35rem}
-  .feat-grid{grid-template-columns:1fr}
+  .pillar{padding:1.75rem}
+  .pillar h3{font-size:1.2rem}
 }
 
 /* PRIVACY — EDITORIAL */
@@ -312,22 +316,6 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
 @media(max-width:860px){.price-grid{grid-template-columns:1fr!important;max-width:480px!important}}
 @media(min-width:861px) and (max-width:1060px){.price-grid{grid-template-columns:repeat(3,1fr)!important;gap:1rem!important}}
 
-/* DIGITAL IDENTITY */
-.digital-id{background:var(--off);position:relative}
-.did-inner{display:grid;grid-template-columns:1fr 1.1fr;gap:5rem;align-items:start}
-.digital-id p{font-size:.97rem;color:var(--ink2);line-height:1.8;margin-bottom:1.25rem}
-.did-intro{display:flex;align-items:flex-start;gap:.75rem;background:var(--green-tint);border:1px solid var(--green-tint2);border-radius:12px;padding:1rem 1.25rem;margin-bottom:2rem}
-.did-intro svg{width:18px;height:18px;stroke:var(--green);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;margin-top:2px}
-.did-intro p{font-size:.85rem;color:var(--ink2);margin:0;line-height:1.6}
-.did-cards{display:flex;flex-direction:column;gap:1rem}
-.did-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:1.5rem;transition:all .2s;box-shadow:var(--shadow-sm)}
-.did-card:hover{box-shadow:var(--shadow);transform:translateY(-2px);border-color:var(--green-tint2)}
-.did-card h3{font-size:.97rem;font-weight:700;color:var(--ink);margin-bottom:.35rem;letter-spacing:-0.02em}
-.did-card p{font-size:.86rem;color:var(--ink2);line-height:1.7;margin:0}
-.did-cta-row{display:flex;align-items:center;gap:1rem;margin-top:2rem;flex-wrap:wrap}
-.did-link{font-size:.85rem;color:var(--ink3);display:inline-flex;align-items:center;gap:.4rem;transition:color .15s}
-.did-link:hover{color:var(--green)}
-@media(max-width:1000px){.did-inner{grid-template-columns:1fr;gap:3rem}}
 
 /* SCROLL REVEAL */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .6s cubic-bezier(.4,0,.2,1),transform .6s cubic-bezier(.4,0,.2,1)}
@@ -409,7 +397,6 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
   </a>
   <div class="nav-r">
     <a href="#features">Features</a>
-    <a href="#digital-identity">Digital Identity</a>
     <a href="#uses">Use cases</a>
     <a href="#pricing">Pricing</a>
     <a href="#faq">FAQ</a>
@@ -423,12 +410,12 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-l">
-      <div class="pill"><span class="pill-dot"></span>UK Digital Identity Act · Own yours before it owns you</div>
+      <div class="pill"><span class="pill-dot"></span>Private UK numbers and disposable email aliases</div>
       <h1>Your digital identity.<br/><span class="hi">Your terms.</span></h1>
       <p class="sub">Your phone number and email get handed to hundreds of services, tracked, leaked, and sold. Privify gives you a private number and disposable aliases so your real details stay hidden.</p>
       <div class="btns">
         <a href="https://app.privify.co.uk/sign-up" class="btn-g">Start free trial →</a>
-        <a href="#digital-identity" class="btn-o">Why it matters now</a>
+        <a href="#features" class="btn-o">See how it works</a>
       </div>
       <div class="checks">
         <span class="check"><svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>Private email aliases</span>
@@ -547,90 +534,125 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
       <p class="sec-sub">Disposable email aliases for everything online. A private UK number for texts and calls. Everything lands in your real inbox.</p>
     </div>
 
-    <!-- Aliases hero showcase -->
-    <div class="alias-hero reveal">
-      <div class="alias-hero-l">
-        <span class="alias-kicker">Email aliases</span>
-        <h3>A throwaway address for <em>every service.</em></h3>
-        <p>Use a fresh alias for each company you sign up to. Mail still reaches you. Your real address never leaves your laptop.</p>
-        <div class="alias-bullets">
-          <div class="alias-bullet">
+    <!-- Two pillars: Number + Aliases -->
+    <div class="pillars reveal">
+
+      <!-- Private UK number -->
+      <div class="pillar">
+        <span class="pillar-kicker">Private UK number</span>
+        <h3>A real UK mobile, <em>routed to email.</em></h3>
+        <p>Hand it out instead of your real number. Texts, OTP codes, and voicemails all arrive in your inbox.</p>
+        <div class="pillar-bullets">
+          <div class="pillar-bullet">
             <svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>
-            <div><strong>One alias per service.</strong> If spam arrives, you know exactly who sold or leaked your address.</div>
+            <div><strong>SMS to inbox.</strong> Bank codes, deliveries, HMRC. Instant delivery.</div>
           </div>
-          <div class="alias-bullet">
+          <div class="pillar-bullet">
             <svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>
-            <div><strong>Delete to silence.</strong> No bounce, no unsubscribe, no signal back to the sender.</div>
+            <div><strong>Voicemail by email.</strong> Audio recording in your inbox. Transcript on Premium.</div>
           </div>
-          <div class="alias-bullet">
+          <div class="pillar-bullet">
             <svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>
-            <div><strong>Up to 500 aliases on Premium.</strong> Plus and Starter plans include aliases too.</div>
+            <div><strong>Port an existing number.</strong> Included on the Premium plan.</div>
           </div>
         </div>
-      </div>
-      <div class="alias-hero-r">
-        <div class="alias-flow">
-          <div class="alias-flow-row">
-            <span class="alias-flow-svc">Amazon</span>
-            <span class="alias-flow-addr">shop.k82f@privify.co.uk</span>
+        <div class="pillar-visual">
+          <div class="pv-row">
+            <span class="pv-badge sms">SMS</span>
+            <span class="pv-text">Monzo · Your code is <strong>847 291</strong></span>
+            <span class="pv-time">2m</span>
           </div>
-          <div class="alias-flow-row">
-            <span class="alias-flow-svc">Vinted</span>
-            <span class="alias-flow-addr">market.x91q@privify.co.uk</span>
+          <div class="pv-row">
+            <span class="pv-badge sms">SMS</span>
+            <span class="pv-text">DPD · Parcel arriving today</span>
+            <span class="pv-time">9m</span>
           </div>
-          <div class="alias-flow-row">
-            <span class="alias-flow-svc">Rightmove</span>
-            <span class="alias-flow-addr">homes.b4ev@privify.co.uk</span>
+          <div class="pv-row">
+            <span class="pv-badge vm">VM</span>
+            <span class="pv-text">Voicemail · 0:32 · "Hi, calling about…"</span>
+            <span class="pv-time">1h</span>
           </div>
-          <div class="alias-flow-arrow">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="5 12 12 19 19 12"/></svg>
+          <div class="pv-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="5 12 12 19 19 12"/></svg>
           </div>
-          <div class="alias-flow-inbox">
+          <div class="pv-inbox">
             <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            <div class="alias-flow-inbox-l">
-              <span class="alias-flow-inbox-t">Your real inbox</span>
-              <span class="alias-flow-inbox-s">labelled by alias</span>
+            <div>
+              <div class="pv-inbox-t">Your real inbox</div>
+              <div class="pv-inbox-s">labelled by number</div>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Email aliases -->
+      <div class="pillar">
+        <span class="pillar-kicker">Email aliases</span>
+        <h3>A throwaway address for <em>every service.</em></h3>
+        <p>Use a fresh alias per company. Mail still reaches you. Your real address never leaves your laptop.</p>
+        <div class="pillar-bullets">
+          <div class="pillar-bullet">
+            <svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>
+            <div><strong>One per service.</strong> Spot exactly who sold or leaked your address.</div>
+          </div>
+          <div class="pillar-bullet">
+            <svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>
+            <div><strong>Delete to silence.</strong> No bounce, no unsubscribe, no signal back.</div>
+          </div>
+          <div class="pillar-bullet">
+            <svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>
+            <div><strong>Up to 500 aliases.</strong> Plus and Starter plans include aliases too.</div>
+          </div>
+        </div>
+        <div class="pillar-visual">
+          <div class="pv-row">
+            <span class="pv-badge svc">Amazon</span>
+            <span class="pv-text pv-text-mono">shop.k82f@privify.co.uk</span>
+          </div>
+          <div class="pv-row">
+            <span class="pv-badge svc">Vinted</span>
+            <span class="pv-text pv-text-mono">market.x91q@privify.co.uk</span>
+          </div>
+          <div class="pv-row">
+            <span class="pv-badge svc">Rightmove</span>
+            <span class="pv-text pv-text-mono">homes.b4ev@privify.co.uk</span>
+          </div>
+          <div class="pv-arrow">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="5 12 12 19 19 12"/></svg>
+          </div>
+          <div class="pv-inbox">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <div>
+              <div class="pv-inbox-t">Your real inbox</div>
+              <div class="pv-inbox-s">labelled by alias</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <!-- Secondary features -->
+    <!-- Platform-level features -->
     <div class="feat-grid reveal">
-
-      <div class="feat-card">
-        <div class="feat-icon">
-          <svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg>
-        </div>
-        <h3>SMS forwarding</h3>
-        <p>Every text to your private UK number lands in your email instantly. Banks, HMRC, deliveries, OTP codes.</p>
-      </div>
-
-      <div class="feat-card">
-        <div class="feat-icon">
-          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.92 1.18 2 2 0 012.92 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L7.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
-        </div>
-        <h3>Voicemail to email</h3>
-        <p>Callers hear a normal voicemail greeting. The recording arrives in your inbox. Transcription on Premium.</p>
-      </div>
-
       <div class="feat-card">
         <div class="feat-icon">
           <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
-        <h3>Identity Monitor</h3>
-        <p>We check your addresses against known breaches. If something leaks, you get an alert straight away.</p>
+        <div>
+          <h3>Identity Monitor</h3>
+          <p>We check your addresses against known breaches. If something leaks, you get an alert straight away.</p>
+        </div>
       </div>
 
       <div class="feat-card">
         <div class="feat-icon">
-          <svg viewBox="0 0 24 24"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg>
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
         </div>
-        <h3>Number porting</h3>
-        <p>Already use a number with your bank or HMRC? Port it straight in. Texts keep arriving. Included on Premium.</p>
+        <div>
+          <h3>One dashboard</h3>
+          <p>Messages, aliases, and voicemails in one place. See which alias or number each one came in on.</p>
+        </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -713,41 +735,6 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
             <h3>Passkeys supported</h3>
             <p>Sign in with a passkey — no password to leak, phish, or reuse.</p>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- DIGITAL IDENTITY -->
-<section class="digital-id" id="digital-identity">
-  <div class="wrap">
-    <div class="did-inner">
-      <div class="reveal reveal-l">
-        <div class="tag">UK Digital Identity</div>
-        <h2>The UK is building a<br/>digital identity system.<br/><em>Are you in control?</em></h2>
-        <p>The Digital Identity and Attributes Trust Framework (DIATF) is live. Banks, landlords, and public services are tying verified identity checks to your mobile number and email. Once those details get out, they follow you permanently.</p>
-        <div class="did-cta-row">
-          <a href="https://app.privify.co.uk/sign-up" class="btn-g">Take control →</a>
-          <a href="/blog" class="did-link">Read our privacy guides <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
-        </div>
-      </div>
-      <div class="did-cards reveal reveal-r">
-        <div class="did-card">
-          <h3>Your number is your identity</h3>
-          <p>Banks, HMRC and the NHS verify you by mobile number. It's now inseparable from who you are.</p>
-        </div>
-        <div class="did-card">
-          <h3>Your email is a data trail</h3>
-          <p>Every service you sign up to with your real email builds a permanent profile that follows you across the internet.</p>
-        </div>
-        <div class="did-card">
-          <h3>Privify adds a private layer</h3>
-          <p>Use a Privify alias or number anywhere your real details aren't strictly needed. Mail still reaches you — your real address never leaves.</p>
-        </div>
-        <div class="did-card">
-          <h3>Stay in control as the rules change</h3>
-          <p>As more services adopt verified digital identity, keeping your real details off the record becomes essential.</p>
         </div>
       </div>
     </div>
