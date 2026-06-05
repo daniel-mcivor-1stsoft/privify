@@ -61,7 +61,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;height:68px;display:flex;ali
 .hero::before{content:'';position:absolute;top:-20%;left:-10%;width:60%;height:80%;background:radial-gradient(ellipse at center,rgba(26,107,74,.08),transparent 60%);pointer-events:none}
 .hero::after{content:'';position:absolute;top:-10%;right:-20%;width:70%;height:90%;background:radial-gradient(ellipse at center,rgba(34,135,94,.06),transparent 60%);pointer-events:none}
 .hero-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;z-index:1}
-.hero-l .pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.75);backdrop-filter:blur(10px);border:1px solid var(--green-tint2);color:var(--green);font-size:.78rem;font-weight:600;padding:.4rem 1rem;border-radius:100px;margin-bottom:1.75rem}
+.hero-l .pill-row{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin-bottom:1.75rem}
+.hero-l .pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.75);backdrop-filter:blur(10px);border:1px solid var(--green-tint2);color:var(--green);font-size:.78rem;font-weight:600;padding:.4rem 1rem;border-radius:100px}
+.chrome-badge{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--border);color:var(--ink);font-size:.78rem;font-weight:600;padding:.38rem .85rem .38rem .7rem;border-radius:100px;box-shadow:var(--shadow-sm);transition:all .15s}
+.chrome-badge:hover{border-color:#cbd5e1;box-shadow:var(--shadow);transform:translateY(-1px)}
+.chrome-badge svg{width:15px;height:15px;flex-shrink:0}
 .pill-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.8)}}
 h1{font-size:clamp(2.4rem,4.5vw,3.6rem);font-weight:700;line-height:1.06;letter-spacing:-0.04em;color:var(--ink);margin-bottom:1.4rem}
@@ -401,7 +405,13 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-l">
-      <div class="pill"><span class="pill-dot"></span>Private UK numbers and disposable email aliases</div>
+      <div class="pill-row">
+        <div class="pill"><span class="pill-dot"></span>Private UK numbers and disposable email aliases</div>
+        <a class="chrome-badge" href="https://chromewebstore.google.com/detail/privify/pnbdbklojkcdinhpdkekacnkpfelnnjn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="22" fill="#fff"/><path fill="#4caf50" d="M24 16h19.6A24 24 0 0 0 4.6 12.3L14.4 29A12 12 0 0 1 24 16z"/><path fill="#ffc107" d="M44.6 16H24a12 12 0 0 1 10.4 18l-9.8 17A24 24 0 0 0 44.6 16z"/><path fill="#f44336" d="M14.4 29 4.6 12.3A24 24 0 0 0 14.8 51l9.8-17a12 12 0 0 1-10.2-5z"/><circle cx="24" cy="24" r="9" fill="#fff"/><circle cx="24" cy="24" r="7" fill="#2196f3"/></svg>
+          Now on Chrome
+        </a>
+      </div>
       <h1>Your digital identity.<br/><span class="hi">Your terms.</span></h1>
       <p class="sub">Your phone number and email get handed to hundreds of services, tracked, leaked, and sold. Privify gives you a private number and disposable aliases so your real details stay hidden.</p>
       <div class="btns">
