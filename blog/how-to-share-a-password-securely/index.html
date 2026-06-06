@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>How to share a password securely — Privify</title>
+<meta name="description" content="Sending a password over text or email leaves it sitting in someone's inbox forever. Here's how to share a password securely with a link that self-destructs after it's read."/>
+<link rel="canonical" href="https://privify.co.uk/blog/how-to-share-a-password-securely"/>
+<meta property="og:title" content="How to share a password securely"/>
+<meta property="og:description" content="Sending a password over text or email leaves it sitting in someone's inbox forever. Here's how to share a password securely with a link that self-destructs after it's read."/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://privify.co.uk/blog/how-to-share-a-password-securely"/>
+<meta property="og:image" content="https://privify.co.uk/og.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://privify.co.uk/og.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --white:#ffffff;--off:#f9fafb;--surface:#f3f4f6;
+  --ink:#0f172a;--ink2:#475569;--ink3:#94a3b8;
+  --green:#1a6b4a;--green-dark:#145539;--green-light:#22875e;
+  --green-tint:#f0fdf4;--green-tint2:#dcfce7;--green-border:#86efac;
+  --border:#e5e7eb;
+  --shadow-sm:0 1px 3px rgba(15,23,42,.06),0 1px 2px rgba(15,23,42,.04);
+  --shadow:0 4px 6px rgba(15,23,42,.04),0 10px 20px rgba(15,23,42,.05);
+  --shadow-green:0 10px 30px rgba(26,107,74,.15);
+  --font:'Inter',sans-serif;--mono:'DM Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--white);color:var(--ink);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;background:rgba(255,255,255,.85);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid rgba(15,23,42,.06)}
+.logo{display:flex;align-items:center;gap:10px;font-size:1.1rem;font-weight:800;color:var(--ink);letter-spacing:-0.055em}
+.logo-mark{width:32px;height:32px;background:linear-gradient(135deg,var(--green),var(--green-light));border-radius:9px;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-green)}
+.logo-mark svg{display:block;width:22px;height:22px}
+.nav-r{display:flex;align-items:center;gap:.25rem}
+.nav-r a{font-size:.875rem;font-weight:500;color:var(--ink2);padding:.5rem .9rem;border-radius:8px;transition:all .15s}
+.nav-r a:hover{background:var(--off);color:var(--ink)}
+.nav-btn{background:var(--green)!important;color:#fff!important;font-weight:600!important;margin-left:.5rem;box-shadow:var(--shadow-green)!important}
+.nav-btn:hover{background:var(--green-dark)!important;transform:translateY(-1px)}
+.article-hero{padding:7.5rem 2.5rem 3rem;max-width:740px;margin:0 auto}
+.breadcrumb{display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;color:var(--ink3);font-family:var(--mono);margin-bottom:1.5rem}
+.breadcrumb a{color:var(--green)}
+.breadcrumb span{color:var(--border)}
+.article-cat{font-size:0.65rem;font-weight:700;color:var(--green);letter-spacing:.12em;text-transform:uppercase;font-family:var(--mono);margin-bottom:0.85rem}
+.article-hero h1{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:900;letter-spacing:-0.04em;line-height:1.1;margin-bottom:1rem}
+.article-meta{display:flex;align-items:center;gap:1rem;font-size:0.78rem;color:var(--ink3);font-family:var(--mono);padding-top:1rem;border-top:1px solid var(--border)}
+.article-body{max-width:740px;margin:0 auto;padding:2.5rem 2.5rem 5rem}
+.article-body h2{font-size:1.35rem;font-weight:800;letter-spacing:-0.03em;margin:2.25rem 0 0.75rem;color:var(--ink)}
+.article-body h3{font-size:1.05rem;font-weight:700;margin:1.75rem 0 0.5rem;color:var(--ink)}
+.article-body p{font-size:0.95rem;color:var(--ink2);line-height:1.85;margin-bottom:1rem}
+.article-body ul,.article-body ol{margin:0.5rem 0 1rem 1.5rem;display:flex;flex-direction:column;gap:0.4rem}
+.article-body li{font-size:0.95rem;color:var(--ink2);line-height:1.75}
+.article-body strong{color:var(--ink);font-weight:600}
+.article-body a{color:var(--green);text-decoration:underline;text-underline-offset:3px}
+.callout{background:var(--green-tint);border:1px solid var(--green-border);border-radius:10px;padding:1.25rem 1.5rem;margin:1.75rem 0}
+.callout p{color:var(--ink);margin:0;font-size:0.9rem;line-height:1.75}
+.callout strong{color:var(--green)}
+.article-cta{background:var(--green);border-radius:14px;padding:2.5rem;margin:3rem 0 0;text-align:center}
+.article-cta h2{font-size:1.5rem;font-weight:800;color:#fff;letter-spacing:-0.03em;margin-bottom:0.5rem}
+.article-cta p{color:rgba(255,255,255,.7);font-size:0.9rem;margin-bottom:1.5rem}
+.btn-w{display:inline-block;background:#fff;color:var(--green);padding:0.8rem 1.9rem;border-radius:8px;font-weight:700;font-size:0.9rem;transition:opacity .12s}
+.btn-w:hover{opacity:.9}
+footer{background:#0d3d29;padding:3rem 2.5rem 2.25rem;color:#fff}
+.foot-inner{max-width:1060px;margin:0 auto}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.foot-bottom p{font-size:.77rem;color:rgba(255,255,255,.35)}
+.foot-legal{display:flex;gap:1.75rem}
+.foot-legal a{font-size:.77rem;color:rgba(255,255,255,.35);transition:color .15s}
+.foot-legal a:hover{color:rgba(255,255,255,.75)}
+@media(max-width:700px){
+  nav{padding:0 1.25rem}
+  .nav-r a:not(.nav-btn){display:none}
+  .article-hero,.article-body{padding-left:1.25rem;padding-right:1.25rem}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to share a password securely",
+  "description": "Sending a password over text or email leaves it sitting in someone's inbox forever. Here's how to share a password securely with a link that self-destructs after it's read.",
+  "url": "https://privify.co.uk/blog/how-to-share-a-password-securely",
+  "datePublished": "2026-06-05",
+  "dateModified": "2026-06-05",
+  "author": {"@type": "Organization", "name": "Privify", "url": "https://privify.co.uk"},
+  "publisher": {"@type": "Organization", "name": "Privify", "url": "https://privify.co.uk", "logo": {"@type": "ImageObject", "url": "https://privify.co.uk/favicon.svg"}},
+  "image": "https://privify.co.uk/og.png"
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is it safe to send a password by text?","acceptedAnswer":{"@type":"Answer","text":"Not really. A texted password stays in the message history indefinitely, gets backed up to the cloud, and can be forwarded or searched later. A self-destructing link is safer because it stops working once it has been read."}},{"@type":"Question","name":"How do you share a password without sending the password itself?","acceptedAnswer":{"@type":"Answer","text":"You put the password into a service that encrypts it and returns a one-time link. You send the link instead of the password. The recipient opens it once, reads the password, and the link self-destructs so no copy is left behind."}},{"@type":"Question","name":"What is the most secure way to share a password?","acceptedAnswer":{"@type":"Answer","text":"Use an encrypted, self-destructing link with a passcode, and send the link and the passcode through two different channels \u2014 for example, email the link and text the passcode."}}]}
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">
+    <div class="logo-mark">
+      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="7" width="10" height="10" rx="2.5" fill="white" fill-opacity=".35"/>
+        <rect x="9" y="3" width="10" height="10" rx="2.5" fill="white"/>
+      </svg>
+    </div>
+    privify
+  </a>
+  <div class="nav-r">
+    <a href="/#features">Features</a>
+    <a href="/#privacy">Privacy</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/#faq">FAQ</a>
+    <a href="/blog">Blog</a>
+    <a href="https://app.privify.co.uk/sign-in">Log in</a>
+    <a href="https://app.privify.co.uk/sign-up" class="nav-btn">Get started →</a>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="breadcrumb">
+    <a href="/blog">Blog</a>
+    <span>/</span>
+    <span>Security</span>
+  </div>
+  <div class="article-cat">Security</div>
+  <h1>How to share a password securely</h1>
+  <div class="article-meta">
+    <span>June 2026</span>
+    <span>·</span>
+    <span>5 min read</span>
+  </div>
+</div>
+
+<div class="article-body">
+
+  <p>At some point everyone has to share a password. The Wi-Fi code for the flat. A streaming login with family. A work account handed to a colleague. The bank details for a one-off payment.</p>
+
+  <p>And almost everyone does it the same way: they text it, email it, or drop it into a chat. It works, but it leaves a copy of that password sitting in someone else's inbox or message history, indefinitely.</p>
+
+  <h2>Why texting or emailing a password is risky</h2>
+
+  <p>The problem isn't the moment you send it. It's everything that happens afterwards.</p>
+
+  <ul>
+    <li><strong>It never goes away.</strong> A password in a text thread or email stays there for years. If that phone or account is ever lost, sold, or breached, the password goes with it.</li>
+    <li><strong>It gets forwarded.</strong> People copy and paste. A password you sent to one person can end up in three other places without you ever knowing.</li>
+    <li><strong>It's searchable.</strong> Anyone with access to the inbox can search "password" or "login" and pull up everything you've ever shared.</li>
+    <li><strong>It's backed up.</strong> Most messages and emails are synced to the cloud automatically. Your password is now sitting on a server too.</li>
+  </ul>
+
+  <p>None of this matters until it does. The point of sharing a password securely is that you stop having to trust every future event you can't control.</p>
+
+  <h2>The secure way: a link that self-destructs</h2>
+
+  <p>The better approach is to never send the password itself. Instead, you send a link to it — and that link stops working once it's been opened.</p>
+
+  <p>Here's how it works in practice:</p>
+
+  <ol>
+    <li>You put the password into a service that encrypts it and gives you back a one-time link.</li>
+    <li>You send the person the link, the same way you'd send anything else.</li>
+    <li>They open it once and read the password.</li>
+    <li>The link self-destructs. Anyone who finds it later — in the message history, in a backup, over their shoulder — sees nothing.</li>
+  </ol>
+
+  <div class="callout">
+    <p><strong>The key difference:</strong> a texted password is permanent. A self-destructing link exists only for the few seconds it takes the right person to read it, then it's gone for good.</p>
+  </div>
+
+  <h2>Add a passcode for anything really sensitive</h2>
+
+  <p>For most things, a one-time link is enough. For genuinely sensitive credentials — a bank login, a work admin account — you can add a second layer: a passcode on the link itself.</p>
+
+  <p>The trick is to send the link and the passcode through two different channels. Email the link, then text the passcode. Now even if one channel is compromised, the password stays safe — whoever intercepts the link still can't open it.</p>
+
+  <h2>What to look for in a secure sharing tool</h2>
+
+  <ul>
+    <li><strong>Encryption at rest</strong> — the password should be encrypted on the server, not stored in plain text.</li>
+    <li><strong>One-time or expiring links</strong> — the link should stop working after it's read, or after a time limit you set.</li>
+    <li><strong>Optional passcode</strong> — a second factor for the things that matter most.</li>
+    <li><strong>A read notification</strong> — so you know the right person opened it, and roughly when.</li>
+    <li><strong>No account required for the recipient</strong> — they shouldn't have to sign up to anything just to read what you sent.</li>
+  </ul>
+
+  <h2>A simple rule to follow</h2>
+
+  <p>If you wouldn't be comfortable with a password appearing on a billboard in five years, don't put it somewhere permanent today. A text thread is permanent. A self-destructing link isn't.</p>
+
+  <div class="callout">
+    <p><strong>Privify Send</strong> creates an encrypted, self-destructing link for any password or private note. Set it to delete after one read or after a time limit, lock it with a passcode, and get an email when it's opened. It's included with every Privify plan. <a href="https://app.privify.co.uk/sign-up">Get started from £1.99/month →</a></p>
+  </div>
+
+  <h2>The bottom line</h2>
+
+  <p>Sharing a password is unavoidable. Leaving a permanent copy of it in someone's inbox isn't. A link that self-destructs after it's read gives you the convenience of sending a message with none of the long tail of risk — the password is seen once by the person who needs it, and then it simply stops existing.</p>
+
+  <div class="article-cta">
+    <h2>Share it with Privify Send</h2>
+    <p>Create an encrypted link that deletes itself once it's been read. Add a passcode, set an expiry, and get notified when it's opened.</p>
+    <a href="https://app.privify.co.uk/sign-up" class="btn-w">Get started — from £1.99/month →</a>
+  </div>
+
+</div>
+
+<p class="related-note" style="font-size:0.875rem;color:var(--ink2);margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border)">Related: <a href="/blog/send-sensitive-information-securely">how to send sensitive information securely</a> and <a href="/blog/self-destructing-messages-explained">self-destructing messages explained</a>.</p>
+<footer>
+  <div class="foot-inner">
+    <div class="foot-bottom">
+      <p>© 2026 1st Soft Limited. Registered in England &amp; Wales.</p>
+      <div class="foot-legal">
+        <a href="/terms">Terms</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/acceptable-use">Acceptable Use</a>
+        <a href="/cookies">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

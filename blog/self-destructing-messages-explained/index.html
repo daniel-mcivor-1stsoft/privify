@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Self-destructing messages: what they are and when to use one — Privify</title>
+<meta name="description" content="A self-destructing message disappears after it is read or after a set time. Here is how they work, what makes them secure, and when reaching for one beats a normal text or email."/>
+<link rel="canonical" href="https://privify.co.uk/blog/self-destructing-messages-explained"/>
+<meta property="og:title" content="Self-destructing messages: what they are and when to use one"/>
+<meta property="og:description" content="A self-destructing message disappears after it is read or after a set time. Here is how they work, what makes them secure, and when reaching for one beats a normal text or email."/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://privify.co.uk/blog/self-destructing-messages-explained"/>
+<meta property="og:image" content="https://privify.co.uk/og.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://privify.co.uk/og.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --white:#ffffff;--off:#f9fafb;--surface:#f3f4f6;
+  --ink:#0f172a;--ink2:#475569;--ink3:#94a3b8;
+  --green:#1a6b4a;--green-dark:#145539;--green-light:#22875e;
+  --green-tint:#f0fdf4;--green-tint2:#dcfce7;--green-border:#86efac;
+  --border:#e5e7eb;
+  --shadow-sm:0 1px 3px rgba(15,23,42,.06),0 1px 2px rgba(15,23,42,.04);
+  --shadow:0 4px 6px rgba(15,23,42,.04),0 10px 20px rgba(15,23,42,.05);
+  --shadow-green:0 10px 30px rgba(26,107,74,.15);
+  --font:'Inter',sans-serif;--mono:'DM Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--white);color:var(--ink);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;background:rgba(255,255,255,.85);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid rgba(15,23,42,.06)}
+.logo{display:flex;align-items:center;gap:10px;font-size:1.1rem;font-weight:800;color:var(--ink);letter-spacing:-0.055em}
+.logo-mark{width:32px;height:32px;background:linear-gradient(135deg,var(--green),var(--green-light));border-radius:9px;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-green)}
+.logo-mark svg{display:block;width:22px;height:22px}
+.nav-r{display:flex;align-items:center;gap:.25rem}
+.nav-r a{font-size:.875rem;font-weight:500;color:var(--ink2);padding:.5rem .9rem;border-radius:8px;transition:all .15s}
+.nav-r a:hover{background:var(--off);color:var(--ink)}
+.nav-btn{background:var(--green)!important;color:#fff!important;font-weight:600!important;margin-left:.5rem;box-shadow:var(--shadow-green)!important}
+.nav-btn:hover{background:var(--green-dark)!important;transform:translateY(-1px)}
+.article-hero{padding:7.5rem 2.5rem 3rem;max-width:740px;margin:0 auto}
+.breadcrumb{display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;color:var(--ink3);font-family:var(--mono);margin-bottom:1.5rem}
+.breadcrumb a{color:var(--green)}
+.breadcrumb span{color:var(--border)}
+.article-cat{font-size:0.65rem;font-weight:700;color:var(--green);letter-spacing:.12em;text-transform:uppercase;font-family:var(--mono);margin-bottom:0.85rem}
+.article-hero h1{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:900;letter-spacing:-0.04em;line-height:1.1;margin-bottom:1rem}
+.article-meta{display:flex;align-items:center;gap:1rem;font-size:0.78rem;color:var(--ink3);font-family:var(--mono);padding-top:1rem;border-top:1px solid var(--border)}
+.article-body{max-width:740px;margin:0 auto;padding:2.5rem 2.5rem 5rem}
+.article-body h2{font-size:1.35rem;font-weight:800;letter-spacing:-0.03em;margin:2.25rem 0 0.75rem;color:var(--ink)}
+.article-body h3{font-size:1.05rem;font-weight:700;margin:1.75rem 0 0.5rem;color:var(--ink)}
+.article-body p{font-size:0.95rem;color:var(--ink2);line-height:1.85;margin-bottom:1rem}
+.article-body ul,.article-body ol{margin:0.5rem 0 1rem 1.5rem;display:flex;flex-direction:column;gap:0.4rem}
+.article-body li{font-size:0.95rem;color:var(--ink2);line-height:1.75}
+.article-body strong{color:var(--ink);font-weight:600}
+.article-body a{color:var(--green);text-decoration:underline;text-underline-offset:3px}
+.callout{background:var(--green-tint);border:1px solid var(--green-border);border-radius:10px;padding:1.25rem 1.5rem;margin:1.75rem 0}
+.callout p{color:var(--ink);margin:0;font-size:0.9rem;line-height:1.75}
+.callout strong{color:var(--green)}
+.article-cta{background:var(--green);border-radius:14px;padding:2.5rem;margin:3rem 0 0;text-align:center}
+.article-cta h2{font-size:1.5rem;font-weight:800;color:#fff;letter-spacing:-0.03em;margin-bottom:0.5rem}
+.article-cta p{color:rgba(255,255,255,.7);font-size:0.9rem;margin-bottom:1.5rem}
+.btn-w{display:inline-block;background:#fff;color:var(--green);padding:0.8rem 1.9rem;border-radius:8px;font-weight:700;font-size:0.9rem;transition:opacity .12s}
+.btn-w:hover{opacity:.9}
+footer{background:#0d3d29;padding:3rem 2.5rem 2.25rem;color:#fff}
+.foot-inner{max-width:1060px;margin:0 auto}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.foot-bottom p{font-size:.77rem;color:rgba(255,255,255,.35)}
+.foot-legal{display:flex;gap:1.75rem}
+.foot-legal a{font-size:.77rem;color:rgba(255,255,255,.35);transition:color .15s}
+.foot-legal a:hover{color:rgba(255,255,255,.75)}
+@media(max-width:700px){
+  nav{padding:0 1.25rem}
+  .nav-r a:not(.nav-btn){display:none}
+  .article-hero,.article-body{padding-left:1.25rem;padding-right:1.25rem}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Self-destructing messages: what they are and when to use one",
+  "description": "A self-destructing message disappears after it is read or after a set time. Here is how they work, what makes them secure, and when reaching for one beats a normal text or email.",
+  "url": "https://privify.co.uk/blog/self-destructing-messages-explained",
+  "datePublished": "2026-06-05",
+  "dateModified": "2026-06-05",
+  "author": {"@type": "Organization", "name": "Privify", "url": "https://privify.co.uk"},
+  "publisher": {"@type": "Organization", "name": "Privify", "url": "https://privify.co.uk", "logo": {"@type": "ImageObject", "url": "https://privify.co.uk/favicon.svg"}},
+  "image": "https://privify.co.uk/og.png"
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a self-destructing message?","acceptedAnswer":{"@type":"Answer","text":"A self-destructing message is a message that deletes itself after it has been read once or after a set time limit. Once it is gone, it cannot be opened again by anyone, including the sender."}},{"@type":"Question","name":"Are self-destructing messages actually secure?","acceptedAnswer":{"@type":"Answer","text":"The trustworthy ones encrypt the content while it is stored, genuinely delete it after a single read rather than just hiding it, expire after a set time even if unopened, and offer an optional passcode for a second layer of protection."}},{"@type":"Question","name":"When should you use a self-destructing message?","acceptedAnswer":{"@type":"Answer","text":"Use one for sharing passwords or logins, sending sensitive personal details like bank information or ID, and private notes you do not want left on record. For everyday conversation or anything you want to keep, a normal message is better."}}]}
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">
+    <div class="logo-mark">
+      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="7" width="10" height="10" rx="2.5" fill="white" fill-opacity=".35"/>
+        <rect x="9" y="3" width="10" height="10" rx="2.5" fill="white"/>
+      </svg>
+    </div>
+    privify
+  </a>
+  <div class="nav-r">
+    <a href="/#features">Features</a>
+    <a href="/#privacy">Privacy</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/#faq">FAQ</a>
+    <a href="/blog">Blog</a>
+    <a href="https://app.privify.co.uk/sign-in">Log in</a>
+    <a href="https://app.privify.co.uk/sign-up" class="nav-btn">Get started →</a>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="breadcrumb">
+    <a href="/blog">Blog</a>
+    <span>/</span>
+    <span>Privacy</span>
+  </div>
+  <div class="article-cat">Privacy</div>
+  <h1>Self-destructing messages: what they are and when to use one</h1>
+  <div class="article-meta">
+    <span>June 2026</span>
+    <span>·</span>
+    <span>5 min read</span>
+  </div>
+</div>
+
+<div class="article-body">
+
+  <p>A self-destructing message is exactly what it sounds like: a message that deletes itself once it's been read, or once a time limit runs out. After that, it can't be opened again by anyone — not the recipient, not you, not someone who finds the link later.</p>
+
+  <p>The idea isn't new, but it's quietly become one of the most practical privacy tools around. Here's how it works and when it's the right thing to reach for.</p>
+
+  <h2>How a self-destructing message works</h2>
+
+  <p>Behind the scenes, the message is stored encrypted and tied to a single link. The mechanics are simple:</p>
+
+  <ol>
+    <li>You write the message and the service encrypts it.</li>
+    <li>You get back a link — that link is the only way to open it.</li>
+    <li>You share the link however you like.</li>
+    <li>The recipient opens it and reads the message.</li>
+    <li>The content is destroyed. Open the link again and there's nothing there.</li>
+  </ol>
+
+  <p>The message never lives in a chat thread or an inbox. It lives behind the link, briefly, and then it's gone.</p>
+
+  <h2>What makes them secure</h2>
+
+  <p>Not all "disappearing" messages are equal. The ones worth trusting share a few traits:</p>
+
+  <ul>
+    <li><strong>Encryption</strong> — the content is encrypted while it's stored, not sitting in plain text on a server.</li>
+    <li><strong>A genuine one-time read</strong> — once opened, it's actually deleted, not just hidden.</li>
+    <li><strong>An expiry</strong> — even if it's never opened, it disappears after a set time so it can't linger.</li>
+    <li><strong>Optional passcode</strong> — a second layer so the link alone isn't enough to read it.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Disappearing chat messages vs a self-destructing link:</strong> in-app disappearing messages still rely on you trusting that app's servers and the recipient's device. A self-destructing link is self-contained — it works no matter what app or inbox the person uses, and there's no copy left in a conversation.</p>
+  </div>
+
+  <h2>When to use one</h2>
+
+  <h3>Sharing a password or login</h3>
+
+  <p>The classic case. You need to give someone a password but you don't want it sitting in their messages forever. A self-destructing link lets them read it once and leaves nothing behind.</p>
+
+  <h3>Sending sensitive personal details</h3>
+
+  <p>Bank details for a one-off transfer, a copy of an ID, a recovery code. Information you need to hand over once but that shouldn't become a permanent record in someone's inbox.</p>
+
+  <h3>Private notes you don't want on record</h3>
+
+  <p>Sometimes you just want to tell someone something privately, without it being logged, backed up, and searchable for years. A self-destructing message is the digital equivalent of saying it out loud and then it being gone.</p>
+
+  <h3>Anything you'd want to "unsend"</h3>
+
+  <p>Normal messages can't be taken back. A self-destructing message is designed around the opposite assumption — that the sensible default is for information to disappear once it has served its purpose.</p>
+
+  <h2>When a normal message is fine</h2>
+
+  <p>Self-destructing messages aren't for everything. Day-to-day conversation, things you want to keep, anything you'll need to refer back to — a normal message is the right tool. The point of a disappearing message is precisely that you don't want a record. If you do want one, don't use it.</p>
+
+  <div class="callout">
+    <p><strong>Privify Send</strong> creates encrypted, self-destructing links for passwords, sensitive details, or private notes. Choose one-time read or a time limit, add a passcode, and get an email when it's opened. Included with every Privify plan. <a href="https://app.privify.co.uk/sign-up">Get started from £1.99/month →</a></p>
+  </div>
+
+  <h2>The bottom line</h2>
+
+  <p>A self-destructing message changes the default. Instead of every sensitive thing you send becoming a permanent record, it becomes a one-time exchange that cleans up after itself. For passwords, private details, and anything you'd rather not leave lying around, it's the difference between trusting the future and not having to.</p>
+
+  <div class="article-cta">
+    <h2>Share it with Privify Send</h2>
+    <p>Create an encrypted link that deletes itself once it's been read. Add a passcode, set an expiry, and get notified when it's opened.</p>
+    <a href="https://app.privify.co.uk/sign-up" class="btn-w">Get started — from £1.99/month →</a>
+  </div>
+
+</div>
+
+<p class="related-note" style="font-size:0.875rem;color:var(--ink2);margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border)">Related: <a href="/blog/how-to-share-a-password-securely">how to share a password securely</a> and <a href="/blog/send-sensitive-information-securely">how to send sensitive information securely</a>.</p>
+<footer>
+  <div class="foot-inner">
+    <div class="foot-bottom">
+      <p>© 2026 1st Soft Limited. Registered in England &amp; Wales.</p>
+      <div class="foot-legal">
+        <a href="/terms">Terms</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/acceptable-use">Acceptable Use</a>
+        <a href="/cookies">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
