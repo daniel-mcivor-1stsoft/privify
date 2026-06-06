@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Privify — Own Your Digital Identity</title>
-<meta name="description" content="Your phone number and email are your digital identity. Privify gives you private email aliases and a real UK number so your actual details stay hidden — on your terms."/>
+<meta name="description" content="Your phone number and email are your digital identity. Privify gives you private email aliases and a real UK number so your actual details stay hidden, on your terms."/>
 <link rel="canonical" href="https://privify.co.uk/"/>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
 <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
@@ -19,7 +19,7 @@
   --surface:#f3f4f6;
   --ink:#0f172a;
   --ink2:#475569;
-  --ink3:#94a3b8;
+  --ink3:#5f6b7a;
   --green:#1a6b4a;
   --green-dark:#145539;
   --green-light:#22875e;
@@ -45,7 +45,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;height:68px;display:flex;ali
 .logo-mark{width:32px;height:32px;background:linear-gradient(135deg,var(--green),var(--green-light));border-radius:9px;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-green)}
 .logo-mark svg{width:22px;height:22px;display:block}
 .nav-r{display:flex;align-items:center;gap:.25rem}
-.nav-r a{font-size:.875rem;font-weight:500;color:var(--ink2);padding:.5rem .9rem;border-radius:8px;transition:all .15s}
+.nav-r a{font-size:.875rem;font-weight:500;color:var(--ink2);padding:.6rem .9rem;border-radius:8px;transition:all .15s}
 .nav-r a:hover{background:var(--off);color:var(--ink)}
 .nav-btn{background:var(--green)!important;color:#fff!important;font-weight:600!important;margin-left:.5rem;box-shadow:var(--shadow-green)!important}
 .nav-btn:hover{background:var(--green-dark)!important;transform:translateY(-1px)}
@@ -235,7 +235,7 @@ h2 em{font-style:normal;color:var(--green)}
 .tl-card h3{font-size:1.05rem;font-weight:700;margin-bottom:.4rem;letter-spacing:-0.02em;color:var(--ink)}
 .tl-card p{font-size:.9rem;color:var(--ink2);line-height:1.75}
 .tl-aside{display:inline-block;margin-top:.7rem;font-size:.72rem;color:var(--green);background:var(--green-tint);border:1px solid var(--green-tint2);border-radius:100px;padding:3px 11px;font-family:var(--mono);font-weight:600}
-.tl-callout{margin-top:.7rem;padding:.75rem 1rem;background:var(--green-tint);border-left:3px solid var(--green);font-size:.82rem;color:var(--ink2);line-height:1.65;border-radius:0 8px 8px 0}
+.tl-callout{margin-top:.7rem;padding:.75rem 1rem;background:var(--green-tint);border:1px solid var(--green-tint2);font-size:.82rem;color:var(--ink2);line-height:1.65;border-radius:10px}
 
 /* PRICING */
 .pricing{background:var(--white);position:relative}
@@ -313,12 +313,15 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
 
 
 /* SCROLL REVEAL */
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .6s cubic-bezier(.4,0,.2,1),transform .6s cubic-bezier(.4,0,.2,1)}
+.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .6s cubic-bezier(.4,0,.2,1),transform .6s cubic-bezier(.4,0,.2,1)}
 .reveal.in{opacity:1;transform:none}
-.reveal-l{opacity:0;transform:translateX(-28px);transition:opacity .6s cubic-bezier(.4,0,.2,1),transform .6s cubic-bezier(.4,0,.2,1)}
+.js .reveal-l{opacity:0;transform:translateX(-28px);transition:opacity .6s cubic-bezier(.4,0,.2,1),transform .6s cubic-bezier(.4,0,.2,1)}
 .reveal-l.in{opacity:1;transform:none}
-.reveal-r{opacity:0;transform:translateX(28px);transition:opacity .6s cubic-bezier(.4,0,.2,1),transform .6s cubic-bezier(.4,0,.2,1)}
+.js .reveal-r{opacity:0;transform:translateX(28px);transition:opacity .6s cubic-bezier(.4,0,.2,1),transform .6s cubic-bezier(.4,0,.2,1)}
 .reveal-r.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  .reveal,.reveal-l,.reveal-r{opacity:1 !important;transform:none !important;transition:none !important}
+}
 .reveal-d1{transition-delay:.1s}
 .reveal-d2{transition-delay:.2s}
 .reveal-d3{transition-delay:.3s}
@@ -384,6 +387,7 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
 </style>
 </head>
 <body>
+<script>document.documentElement.classList.add('js')</script>
 
 <!-- NAV -->
 <nav>
@@ -532,7 +536,7 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
     <div class="feat-head reveal">
       <div class="tag">What you get</div>
       <h2>Four ways<br/>to stay <em>private.</em></h2>
-      <p class="sec-sub">Private numbers, disposable aliases, breach monitoring, and encrypted secure sharing. Everything you need — nothing you don't.</p>
+      <p class="sec-sub">Private numbers, disposable aliases, breach monitoring, and encrypted secure sharing. Everything you need, nothing you don't.</p>
     </div>
 
     <div class="feature-route reveal">
@@ -612,8 +616,7 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
   <div class="wrap">
     <div class="priv-inner reveal">
       <div class="priv-heading">
-        <div class="tag">Privacy &amp; data</div>
-        <h2>Private by design.<br/>Hosted in the <em>EU.</em></h2>
+                <h2>Private by design.<br/>Hosted in the <em>EU.</em></h2>
         <p>Every message, voicemail, and transcription is stored on servers inside the European Union. That is not going to change.</p>
       </div>
       <div class="priv-badges">
@@ -623,7 +626,7 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
         </div>
         <div class="priv-badge">
           <svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>
-          EU-only storage — never transferred outside
+          EU-only storage, never transferred outside
         </div>
         <div class="priv-badge">
           <svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>
@@ -646,7 +649,7 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
           </div>
           <div>
             <h3>No tracking. No ads.</h3>
-            <p>We have no advertising model. We don't profile you, track you, or sell your data — ever.</p>
+            <p>We have no advertising model. We don't profile you, track you, or sell your data, ever.</p>
           </div>
         </div>
         <div class="priv-card">
@@ -682,7 +685,7 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
           </div>
           <div>
             <h3>Passkeys supported</h3>
-            <p>Sign in with a passkey — no password to leak, phish, or reuse.</p>
+            <p>Sign in with a passkey, so there's no password to leak, phish, or reuse.</p>
           </div>
         </div>
       </div>
@@ -694,8 +697,7 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
 <section class="uses" id="uses">
   <div class="wrap">
     <div class="uses-head reveal">
-      <div class="tag">Use cases</div>
-      <h2>Every time you share your details,<br/>you lose a little <em>control.</em></h2>
+            <h2>Every time you share your details,<br/>you lose a little <em>control.</em></h2>
       <p class="sec-sub">Privify gives you a number and an email to hand out instead, wherever you'd rather not give out the real ones.</p>
     </div>
     <!-- use case grid -->
@@ -711,7 +713,7 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
       </div>
       <div class="use-card">
         <h3>Free trials &amp; sign-ups</h3>
-        <p>Give an alias email and Privify number when signing up for trials. Cancel the service — or just delete the alias — and the emails and texts stop dead.</p>
+        <p>Give an alias email and Privify number when signing up for trials. Cancel the service (or just delete the alias) and the emails and texts stop dead.</p>
         <div class="use-tags">
           <span class="use-tag">No real email needed</span>
           <span class="use-tag">No spam afterwards</span>
@@ -719,7 +721,7 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
       </div>
       <div class="use-card">
         <h3>Data breach protection</h3>
-        <p>If a service you use gets hacked, your alias takes the hit — not your real email. Delete the alias, get a new one, done. Your real address is never at risk.</p>
+        <p>If a service you use gets hacked, your alias takes the hit, not your real email. Delete the alias, get a new one, done. Your real address is never at risk.</p>
         <div class="use-tags">
           <span class="use-tag">Breach isolation</span>
           <span class="use-tag">No credential stuffing</span>
@@ -740,8 +742,7 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
 <!-- HOW — TIMELINE -->
 <section class="how" id="how">
   <div class="wrap-sm">
-    <div class="tag">How it works</div>
-    <h2>Up and running<br/>in minutes.</h2>
+        <h2>Up and running<br/>in minutes.</h2>
     <p class="sec-sub">No app to install. Most people are up and running within 24 hours.</p>
     <div class="timeline reveal">
       <div class="tl-step">
@@ -755,7 +756,7 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
         <div class="tl-num">02</div>
         <div class="tl-card">
           <h3>Get email aliases instantly</h3>
-          <p>Email aliases are available the moment you sign up. Request one for any service — you get a randomly generated alias that forwards straight to your inbox.</p>
+          <p>Email aliases are available the moment you sign up. Request one for any service, and you get a randomly generated alias that forwards straight to your inbox.</p>
           <span class="tl-aside">Available immediately</span>
         </div>
       </div>
@@ -771,7 +772,7 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
         <div class="tl-num">04</div>
         <div class="tl-card">
           <h3>Hand out your private details freely</h3>
-          <p>Every text, email, and voicemail arrives in your inbox — clearly labelled with which alias or number it came in on. Your real details stay completely hidden.</p>
+          <p>Every text, email, and voicemail arrives in your inbox, clearly labelled with which alias or number it came in on. Your real details stay completely hidden.</p>
           <div class="tl-callout">Privify is built for receiving. You can't make outbound calls or send SMS from the number.</div>
         </div>
       </div>
@@ -856,8 +857,7 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
 <section class="faq" id="faq">
   <div class="wrap">
     <div class="faq-head">
-      <div class="tag">Questions</div>
-      <h2>Things people ask<br/>before signing up.</h2>
+            <h2>Things people ask<br/>before signing up.</h2>
     </div>
     <div class="faq-grid reveal">
       <div>
@@ -867,7 +867,7 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
         </details>
         <details class="faq-item">
           <summary class="faq-q">Can I change the forwarding email? <span class="faq-icon">+</span></summary>
-          <div class="faq-a">Yes — update it any time from account settings. Changes take effect immediately.</div>
+          <div class="faq-a">Yes. Update it any time from account settings. Changes take effect immediately.</div>
         </details>
         <details class="faq-item">
           <summary class="faq-q">How quickly will I get my number? <span class="faq-icon">+</span></summary>
@@ -883,11 +883,11 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
         </details>
         <details class="faq-item">
           <summary class="faq-q">How do email aliases work? <span class="faq-icon">+</span></summary>
-          <div class="faq-a">You request an alias and get a randomly generated address to give out instead of your real address. Any email sent to it is forwarded to your real inbox with a label showing which alias it arrived on. Delete the alias any time — the sender gets a bounce and nothing more reaches you.</div>
+          <div class="faq-a">You request an alias and get a randomly generated address to give out instead of your real address. Any email sent to it is forwarded to your real inbox with a label showing which alias it arrived on. Delete the alias any time, and the sender gets a bounce and nothing more reaches you.</div>
         </details>
         <details class="faq-item">
           <summary class="faq-q">Can I reply from an alias? <span class="faq-icon">+</span></summary>
-          <div class="faq-a">Yes — when an email is forwarded to your inbox from an alias, you can reply directly and it'll arrive to the sender from your alias address. Your real email stays hidden throughout.</div>
+          <div class="faq-a">Yes. When an email is forwarded to your inbox from an alias, you can reply directly and it'll arrive to the sender from your alias address. Your real email stays hidden throughout.</div>
         </details>
       </div>
       <div>
@@ -905,7 +905,7 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
         </details>
         <details class="faq-item">
           <summary class="faq-q">Can I port my existing number? <span class="faq-icon">+</span></summary>
-          <div class="faq-a">Yes — number porting is available on the Premium plan. If your number is still active, you can port it to Privify and keep receiving texts on it indefinitely. Text PAC to 65075 to get your PAC code. Networks are legally required to provide it within 2 hours, free of charge. Ports typically complete within one working day.</div>
+          <div class="faq-a">Yes. Number porting is available on the Premium plan. If your number is still active, you can port it to Privify and keep receiving texts on it indefinitely. Text PAC to 65075 to get your PAC code. Networks are legally required to provide it within 2 hours, free of charge. Ports typically complete within one working day.</div>
         </details>
         <details class="faq-item">
           <summary class="faq-q">What is the identity monitor? <span class="faq-icon">+</span></summary>
@@ -917,7 +917,7 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
         </details>
         <details class="faq-item">
           <summary class="faq-q">Is there a browser extension? <span class="faq-icon">+</span></summary>
-          <div class="faq-a">Yes — the <a href="https://chromewebstore.google.com/detail/privify/pnbdbklojkcdinhpdkekacnkpfelnnjn" target="_blank" rel="noopener">Privify extension for Chrome</a> detects email and phone fields as you browse and lets you drop in an alias or your Privify number with one click — no copying and pasting from the dashboard. It's free with every plan and only activates on forms you choose to fill.</div>
+          <div class="faq-a">Yes. The <a href="https://chromewebstore.google.com/detail/privify/pnbdbklojkcdinhpdkekacnkpfelnnjn" target="_blank" rel="noopener">Privify extension for Chrome</a> detects email and phone fields as you browse and lets you drop in an alias or your Privify number with one click, with no copying and pasting from the dashboard. It's free with every plan and only activates on forms you choose to fill.</div>
         </details>
       </div>
     </div>
@@ -946,7 +946,7 @@ footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height
         <a href="/" class="logo">
           privify
         </a>
-        <p>Private UK numbers and disposable email aliases. Every text and forwarded email lands in your inbox — nothing tied back to you.</p>
+        <p>Private UK numbers and disposable email aliases. Every text and forwarded email lands in your inbox, nothing tied back to you.</p>
         <div class="eu-badge">🇪🇺 EU data storage. GDPR compliant.</div>
       </div>
       <div class="foot-col">
