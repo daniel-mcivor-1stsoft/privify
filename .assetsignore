@@ -1,0 +1,13 @@
+.git
+.gitignore
+.wranglerignore
+.assetsignore
+wrangler.jsonc
+.dev.vars
+.dev.vars.*
+.env
+.env.*
+.stitch
+.claude
+node_modules
+.DS_Store
