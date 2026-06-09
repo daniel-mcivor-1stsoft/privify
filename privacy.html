@@ -46,7 +46,7 @@ footer a{color:var(--accent);text-decoration:none}
 
 <div class="wrap">
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 5 June 2026</p>
+  <p class="updated">Last updated: 9 June 2026</p>
 
   <div class="sections">
 
@@ -71,6 +71,7 @@ footer a{color:var(--accent);text-decoration:none}
         <p>2.8. <strong>Identity monitor data:</strong> your account email address is used to check against known breach records. We store check results and any alerts generated. We never store passwords or credentials of any kind.</p>
         <p>2.9. <strong>Privify Send:</strong> when you create a secure share ("Send"), we store the content you enter in encrypted form (encrypted at rest), an optional label, and any settings you choose such as expiry and view limits. If you set a passcode, we store only a hashed version of it, never the passcode itself. We also record basic access events (such as when a Send is opened) to operate view limits, read receipts, and abuse prevention; any IP address or browser information in these events is stored only as a one-way hash, not in readable form.</p>
         <p>2.10. <strong>Send recipient data:</strong> if you restrict a Send to specific people by email, we store those email addresses in order to verify the recipient and send them a one-time access code. Where you do not restrict access by email, we do not collect any personal data about the recipient beyond the hashed access events described in 2.9. Recipients are not required to hold a Privify account to open a Send.</p>
+        <p>2.11. <strong>Free breach check tool:</strong> if you use our public breach-checking tool at <a href="/breach-check">privify.co.uk/breach-check</a>, we process the email address you enter in order to check it against known breach records and email the resulting report to that address. You do not need a Privify account to use the tool. We store only a one-way hash (SHA-256) of the address to operate the tool's result cache and rate limiting &mdash; we do not retain the plaintext address from a check itself. We store your plaintext email address only where you explicitly opt in to receive privacy tips and product updates.</p>
       </div>
     </section>
 
@@ -91,6 +92,7 @@ footer a{color:var(--accent);text-decoration:none}
         </ul>
         <p>3.2. We do not use your data for marketing purposes, advertising, or profiling. We will never sell your personal data to third parties.</p>
         <p>3.3. Our legal basis for processing is the performance of our contract with you (Article 6(1)(b) UK GDPR) and, where relevant, compliance with a legal obligation (Article 6(1)(c)).</p>
+        <p>3.4. Where you use the free breach check tool at <a href="/breach-check">privify.co.uk/breach-check</a>, our legal basis is your consent (Article 6(1)(a) UK GDPR), given when you submit your address. Where you also opt in to marketing emails, that processing is based on your consent, which you can withdraw at any time using the unsubscribe link in any email or by emailing us.</p>
       </div>
     </section>
 
@@ -112,6 +114,7 @@ footer a{color:var(--accent);text-decoration:none}
         <p>5.3. Where any provider is based outside the UK, we ensure appropriate safeguards are in place, such as Standard Contractual Clauses, to protect your data in accordance with UK GDPR.</p>
         <p>5.4. We will never share your personal data with any third party for marketing or commercial purposes.</p>
         <p>5.5. To provide breach alerts, your account email address is checked against third-party breach data sources. Only your email address is shared for this purpose, solely to determine whether it appears in known breach records.</p>
+        <p>5.6. Our breach-checking features (the identity monitor and the free breach check tool) use <a href="https://haveibeenpwned.com" target="_blank" rel="noopener noreferrer">Have I Been Pwned</a>, a breach-notification service based outside the UK, to determine whether an address appears in known data breaches. Only the email address being checked is shared with Have I Been Pwned for this purpose. The free breach check tool additionally uses Cloudflare Turnstile to prevent automated abuse, and Amazon Web Services to deliver the report email. Where any provider is based outside the UK, the safeguards described in 5.3 apply.</p>
       </div>
     </section>
 
@@ -144,7 +147,7 @@ footer a{color:var(--accent);text-decoration:none}
       <h2>8. Cookies</h2>
       <div class="prose">
         <p>8.1. The Privify app uses strictly necessary session cookies to keep you logged in. We do not use advertising cookies, tracking cookies, or analytics cookies.</p>
-        <p>8.2. The Privify marketing website (privify.co.uk) does not use cookies beyond those set by your browser for basic functionality.</p>
+        <p>8.2. The Privify marketing website (privify.co.uk) does not use advertising, tracking, or analytics cookies. The free breach check page loads Cloudflare Turnstile, a bot-prevention tool that may set a strictly necessary cookie or token to confirm you are human; this is required for the tool to work and is not used to track you.</p>
         <p>8.3. For full details of every cookie we set, who sets it, and how long it lasts, please see our <a href="/cookies">Cookie Policy</a>.</p>
       </div>
     </section>
