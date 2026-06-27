@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+<title>Netflix now wants a unique email for every profile. Use an alias, Privify</title>
+<meta name="description" content="Netflix is requiring a unique email address for every profile. Email aliases let you give each profile its own real address that all forward to your one inbox, no throwaway accounts needed."/>
+<link rel="canonical" href="https://privify.co.uk/blog/netflix-unique-email-per-profile"/>
+<meta property="og:title" content="Netflix now wants a unique email for every profile. Use an alias"/>
+<meta property="og:description" content="Netflix is requiring a unique email address for every profile. Email aliases let you give each profile its own real address that all forward to your one inbox, no throwaway accounts needed."/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://privify.co.uk/blog/netflix-unique-email-per-profile"/>
+<meta property="og:image" content="https://privify.co.uk/og.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://privify.co.uk/og.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --white:#ffffff;--paper:#f6f8f6;--off:#f9fafb;--surface:#f3f4f6;
+  --ink:#0f172a;--ink2:#475569;--ink3:#5f6b7a;
+  --green:#1a6b4a;--green-dark:#145539;--green-light:#22875e;
+  --green-tint:#f0fdf4;--green-tint2:#dcfce7;--green-border:#86efac;
+  --border:#e6eae6;
+  --shadow-sm:0 1px 3px rgba(15,23,42,.06),0 1px 2px rgba(15,23,42,.04);
+  --shadow:0 4px 6px rgba(15,23,42,.04),0 10px 20px rgba(15,23,42,.05);
+  --shadow-green:0 10px 30px rgba(26,107,74,.15);
+  --font:'Inter',sans-serif;--mono:'DM Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--paper);color:var(--ink);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;background:rgba(246,248,246,.85);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid rgba(15,23,42,.06)}
+.logo{display:flex;align-items:center;gap:10px;font-size:1.1rem;font-weight:800;color:var(--ink);letter-spacing:-0.055em}
+.logo-mark{width:32px;height:32px;background:linear-gradient(135deg,var(--green),var(--green-light));border-radius:9px;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-green)}
+.logo-mark svg{display:block;width:22px;height:22px}
+.nav-r{display:flex;align-items:center;gap:.25rem}
+.nav-r a{font-size:.875rem;font-weight:500;color:var(--ink2);padding:.5rem .9rem;border-radius:8px;transition:all .15s}
+.nav-r a:hover{background:var(--off);color:var(--ink)}
+.nav-btn{background:var(--green)!important;color:#fff!important;font-weight:600!important;margin-left:.5rem;box-shadow:var(--shadow-green)!important}
+.nav-btn:hover{background:var(--green-dark)!important;transform:translateY(-1px)}
+.article-hero{padding:7.5rem 2.5rem 3rem;max-width:740px;margin:0 auto}
+.breadcrumb{display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;color:var(--ink3);font-family:var(--mono);margin-bottom:1.5rem}
+.breadcrumb a{color:var(--green)}
+.breadcrumb span{color:var(--border)}
+.article-cat{font-size:0.65rem;font-weight:700;color:var(--green);letter-spacing:.12em;text-transform:uppercase;font-family:var(--mono);margin-bottom:0.85rem}
+.article-hero h1{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:700;letter-spacing:-0.035em;line-height:1.1;margin-bottom:1rem}
+.article-meta{display:flex;align-items:center;gap:1rem;font-size:0.78rem;color:var(--ink3);font-family:var(--mono);padding-top:1rem;border-top:1px solid var(--border)}
+.article-body{max-width:740px;margin:0 auto;padding:2.5rem 2.5rem 5rem}
+.article-body h2{font-size:1.35rem;font-weight:700;letter-spacing:-0.03em;margin:2.25rem 0 0.75rem;color:var(--ink)}
+.article-body h3{font-size:1.05rem;font-weight:700;margin:1.75rem 0 0.5rem;color:var(--ink)}
+.article-body p{font-size:0.95rem;color:var(--ink2);line-height:1.85;margin-bottom:1rem}
+.article-body ul,.article-body ol{margin:0.5rem 0 1rem 1.5rem;display:flex;flex-direction:column;gap:0.4rem}
+.article-body li{font-size:0.95rem;color:var(--ink2);line-height:1.75}
+.article-body strong{color:var(--ink);font-weight:600}
+.article-body a{color:var(--green);text-decoration:underline;text-underline-offset:3px}
+.callout{background:var(--green-tint);border:1px solid var(--green-border);border-radius:10px;padding:1.25rem 1.5rem;margin:1.75rem 0}
+.callout p{color:var(--ink);margin:0;font-size:0.9rem;line-height:1.75}
+.callout strong{color:var(--green)}
+.article-cta{background:var(--green);border-radius:14px;padding:2.5rem;margin:3rem 0 0;text-align:center}
+.article-cta h2{font-size:1.5rem;font-weight:800;color:#fff;letter-spacing:-0.03em;margin-bottom:0.5rem}
+.article-cta p{color:rgba(255,255,255,.7);font-size:0.9rem;margin-bottom:1.5rem}
+.btn-w{display:inline-block;background:#fff;color:var(--green);padding:0.8rem 1.9rem;border-radius:8px;font-weight:700;font-size:0.9rem;transition:opacity .12s}
+.btn-w:hover{opacity:.9}
+footer{background:#0d3d29;padding:3rem 2.5rem 2.25rem;color:#fff}
+.foot-inner{max-width:1060px;margin:0 auto}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.foot-bottom p{font-size:.77rem;color:rgba(255,255,255,.35)}
+.foot-legal{display:flex;gap:1.75rem}
+.foot-legal a{font-size:.77rem;color:rgba(255,255,255,.35);transition:color .15s}
+.foot-legal a:hover{color:rgba(255,255,255,.75)}
+@media(max-width:700px){
+  nav{padding:0 1.25rem}
+  .nav-r a:not(.nav-btn){display:none}
+  .article-hero,.article-body{padding-left:1.25rem;padding-right:1.25rem}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Netflix now wants a unique email for every profile. Use an alias",
+  "description": "Netflix is requiring a unique email address for every profile. Email aliases let you give each profile its own real address that all forward to your one inbox, no throwaway accounts needed.",
+  "url": "https://privify.co.uk/blog/netflix-unique-email-per-profile",
+  "datePublished": "2026-06-25",
+  "dateModified": "2026-06-25",
+  "author": {
+    "@type": "Organization",
+    "name": "Privify",
+    "url": "https://privify.co.uk"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Privify",
+    "url": "https://privify.co.uk",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://privify.co.uk/favicon.svg"
+    }
+  },
+  "image": "https://privify.co.uk/og.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Can I use the same email for two Netflix profiles?","acceptedAnswer":{"@type":"Answer","text":"No. Netflix now requires each profile to have its own unique email address. Email aliases solve this neatly: you generate a separate, unique alias for each profile, and they all forward to your single existing inbox."}},
+    {"@type":"Question","name":"Is using an email alias for a Netflix profile allowed?","acceptedAnswer":{"@type":"Answer","text":"Yes. An alias is a real, working email address, not a fake one. Netflix simply asks for a unique, deliverable email per profile, and an alias meets that. Verification codes and account-recovery emails arrive normally because everything forwards to your real inbox."}},
+    {"@type":"Question","name":"Do Netflix sign-in codes work with an alias?","acceptedAnswer":{"@type":"Answer","text":"Yes. When Netflix sends a verification or sign-in code to the alias, it forwards straight to your real inbox, where you confirm it as usual."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">
+    <div class="logo-mark">
+            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="7" width="10" height="10" rx="2.5" fill="white" fill-opacity=".35"/>
+        <rect x="9" y="3" width="10" height="10" rx="2.5" fill="white"/>
+      </svg>
+    </div>
+    privify
+  </a>
+  <div class="nav-r">
+    <a href="/#features">Features</a>
+    <a href="/#privacy">Privacy</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/#faq">FAQ</a>
+    <a href="/blog">Blog</a>
+    <a href="https://app.privify.co.uk/sign-in">Log in</a>
+    <a href="https://app.privify.co.uk/sign-up?plan=starter" class="nav-btn">Get started →</a>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="breadcrumb">
+    <a href="/blog">Blog</a>
+    <span>/</span>
+    <span>Privacy</span>
+  </div>
+  <div class="article-cat">Privacy</div>
+  <h1>Netflix now wants a unique email for every profile. Use an alias.</h1>
+  <div class="article-meta">
+    <span>June 2026</span>
+    <span>·</span>
+    <span>4 min read</span>
+  </div>
+</div>
+
+<div class="article-body">
+
+  <p>Netflix has started showing some subscribers an unskippable prompt: every profile on your account now needs its own unique email address. The message reads, <em>"Add an email to your profile for easier sign-in access, to recover your account, get personalized suggestions, and more."</em> It has been rolling out over the past month, and there's no official way to opt out.</p>
+
+  <p>The reason behind it: each profile becomes its own login. Once a profile has an email attached, that person can sign in independently and receive their own verification codes, rather than going through the main account holder. It's part of Netflix tightening up who's actually on an account.</p>
+
+  <h2>The problem this creates at home</h2>
+
+  <p>If you share your Netflix with a partner, your kids, or your parents, every one of their profiles now needs a <em>different</em> email address. That leaves you with two awkward options:</p>
+
+  <ul>
+    <li>Ask everyone to hand over their personal email, which they may not want tied to a streaming service, and which younger or older family members might not even have.</li>
+    <li>Spin up a throwaway Gmail or Outlook account for each profile, which means more accounts to create, more passwords to remember, and more inboxes nobody ever checks.</li>
+  </ul>
+
+  <p>Neither is appealing. You just wanted to watch something.</p>
+
+  <h2>The simple fix: one alias per profile</h2>
+
+  <p>An <a href="/blog/what-is-an-email-alias">email alias</a> is a unique, real, working email address that quietly forwards everything to an inbox you already use. Nothing new to log into, no separate account to check.</p>
+
+  <p>So instead of creating a junk account for each profile, you generate <strong>one alias per profile</strong>. Each profile gets its own genuine, unique address, which is all Netflix is asking for, and every sign-in code or notification lands in <strong>your</strong> inbox, neatly labelled by which alias it came through. One inbox, many addresses.</p>
+
+  <div class="callout">
+    <p><strong>To be clear, this isn't a trick.</strong> An alias is a real, deliverable email address, not a fake one. It satisfies Netflix's requirement properly, verification and recovery emails arrive fine. It just lets you give the people in your household their own clean login without forcing throwaway accounts or exposing personal addresses.</p>
+  </div>
+
+  <h2>How to do it</h2>
+
+  <ol>
+    <li>Generate an alias for each profile, for example <span style="font-family:var(--mono);font-size:0.85rem">netflix-mum.x7k2@privify.me</span>.</li>
+    <li>In Netflix, open the profile and add that alias as its email address.</li>
+    <li>Netflix sends a verification code to the alias, which forwards straight to your inbox. Confirm it.</li>
+    <li>Done. That profile can now sign in independently, and any codes route through you.</li>
+  </ol>
+
+  <h2>Why an alias beats a real email here</h2>
+
+  <h3>Breach protection</h3>
+  <p>Netflix, like almost every large service, has been caught up in data leaks before. If an alias you used for a profile ever leaks, your real address, the one tied to your bank, your identity, your password manager, stays hidden. Delete the alias and the exposure ends instantly.</p>
+
+  <h3>You'll spot data-selling</h3>
+  <p>Because each profile uses its own unique alias, if marketing spam ever starts arriving on one of them, you know exactly where it came from. A unique address per service turns "who sold my email?" into a question you can actually answer.</p>
+
+  <h3>A clean exit</h3>
+  <p>Someone leaves the household? Delete their alias. That login's email simply stops working, no awkward password resets, no loose ends.</p>
+
+  <h2>This won't stop at Netflix</h2>
+
+  <p>Tying individual identities to individual profiles is the direction every big streaming and subscription service is heading. Getting into the habit of using a unique alias per service, per profile, future-proofs you for whatever the next platform decides to require, and protects your real inbox along the way.</p>
+
+  <div class="callout">
+    <p><strong>Privify</strong> generates randomly-assigned email aliases that forward straight to your existing inbox. Create one for each Netflix profile in seconds, and delete any of them the moment you want to. <a href="https://app.privify.co.uk/sign-up?plan=starter">Get started from £1.99/month →</a></p>
+  </div>
+
+  <h2>The bottom line</h2>
+
+  <p>Netflix's new rule sounds like a hassle, and if your only tools are personal emails and throwaway accounts, it is. With aliases it's a non-event: each profile gets its own unique, legitimate address, you manage all of them from the single inbox you already use, and you get breach protection and spam tracing thrown in for free.</p>
+
+  <div class="article-cta">
+    <h2>Give every profile its own address</h2>
+    <p>Get randomly generated email aliases that forward to your existing inbox. One per Netflix profile, all in one place, delete any of them anytime.</p>
+    <a href="https://app.privify.co.uk/sign-up?plan=starter" class="btn-w">Get started, from £1.99/month →</a>
+  </div>
+
+</div>
+
+
+<p class="related-note" style="font-size:0.875rem;color:var(--ink2);margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border)">Related: Read more about <a href="/blog/what-is-an-email-alias">what an email alias is</a> and <a href="/blog/how-to-stop-spam-emails-uk">how to stop spam emails</a>.</p>
+<footer>
+  <div class="foot-inner">
+    <div class="foot-bottom">
+      <p>© 2026 1st Soft Limited. Registered in England &amp; Wales.</p>
+      <div class="foot-legal">
+        <a href="/terms">Terms</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/acceptable-use">Acceptable Use</a>
+        <a href="/cookies">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
