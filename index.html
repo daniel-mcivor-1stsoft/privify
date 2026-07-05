@@ -61,6 +61,13 @@ nav.scrolled{border-bottom-color:var(--border);background:rgba(246,248,246,.95)}
 .nav-r a:hover{color:var(--ink);background:rgba(15,23,42,.04)}
 .nav-btn{background:var(--green)!important;color:#fff!important;font-weight:600!important;margin-left:.4rem;padding:.6rem 1.1rem!important}
 .nav-btn:hover{background:var(--green-dark)!important}
+.hamburger{display:none;align-items:center;justify-content:center;background:none;border:none;cursor:pointer;padding:.5rem;margin-left:.35rem;color:var(--ink);border-radius:8px}
+.hamburger:hover{background:rgba(15,23,42,.04)}
+.hamburger svg{width:22px;height:22px;display:block}
+.hamburger .icon-close{display:none}
+.hamburger[aria-expanded="true"] .icon-menu{display:none}
+.hamburger[aria-expanded="true"] .icon-close{display:block}
+.mobile-menu{display:none}
 
 /* BUTTONS */
 .btn{display:inline-flex;align-items:center;gap:.45rem;font-weight:700;font-size:.95rem;border-radius:11px;padding:.9rem 1.6rem;transition:transform .2s var(--ease),background .2s var(--ease),box-shadow .2s var(--ease),border-color .2s var(--ease);cursor:pointer;border:none;white-space:nowrap}
@@ -264,6 +271,12 @@ footer{background:#0d3d29;color:#fff;padding:clamp(3rem,6vw,4.5rem) 0 2.25rem;ma
 }
 @media(max-width:680px){
   .nav-r a:not(.nav-btn){display:none}
+  .hamburger{display:inline-flex}
+  .mobile-menu{display:block;position:fixed;top:64px;left:0;right:0;z-index:99;max-height:0;overflow:hidden;background:var(--white);border-bottom:1px solid var(--border);box-shadow:var(--shadow-lg);transition:max-height .28s var(--ease)}
+  .mobile-menu.open{max-height:420px}
+  .mobile-menu a{display:block;padding:.9rem var(--gut);font-size:.95rem;font-weight:500;color:var(--ink2);border-bottom:1px solid var(--border)}
+  .mobile-menu a:last-child{border-bottom:none}
+  .mobile-menu a:hover,.mobile-menu a:active{background:rgba(15,23,42,.03);color:var(--ink)}
   .bento{gap:.8rem}
   .c3,.c4,.c5,.c6,.c7,.c8,.c12{grid-column:span 12}
   .r2{grid-row:auto}
@@ -284,8 +297,21 @@ footer{background:#0d3d29;color:#fff;padding:clamp(3rem,6vw,4.5rem) 0 2.25rem;ma
     <a href="#features">Features</a><a href="#privacy">Privacy</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="/blog">Blog</a><a href="https://status.privify.co.uk/status/privify">Status</a>
     <a href="https://app.privify.co.uk/sign-in">Log in</a>
     <a href="https://app.privify.co.uk/sign-up?plan=starter" class="btn nav-btn">Start free trial</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
   </div>
 </nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#features">Features</a>
+  <a href="#privacy">Privacy</a>
+  <a href="#pricing">Pricing</a>
+  <a href="#faq">FAQ</a>
+  <a href="/blog">Blog</a>
+  <a href="https://status.privify.co.uk/status/privify">Status</a>
+  <a href="https://app.privify.co.uk/sign-in">Log in</a>
+</div>
 
 <!-- HERO -->
 <header class="hero">
@@ -603,6 +629,18 @@ footer{background:#0d3d29;color:#fff;padding:clamp(3rem,6vw,4.5rem) 0 2.25rem;ma
 
 <script>
 (function(){var n=document.getElementById('nav');var f=function(){n.classList.toggle('scrolled',scrollY>8)};f();addEventListener('scroll',f,{passive:true})})();
+(function(){
+  var btn=document.getElementById('hamburgerBtn');
+  var menu=document.getElementById('mobileMenu');
+  if(!btn||!menu)return;
+  function close(){menu.classList.remove('open');btn.setAttribute('aria-expanded','false')}
+  function open(){menu.classList.add('open');btn.setAttribute('aria-expanded','true')}
+  btn.addEventListener('click',function(){menu.classList.contains('open')?close():open()});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+  document.addEventListener('click',function(e){if(menu.classList.contains('open')&&!menu.contains(e.target)&&!btn.contains(e.target))close()});
+  addEventListener('resize',function(){if(innerWidth>680)close()});
+})();
 (function(){var els=document.querySelectorAll('.reveal');if(!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('in')});return}var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -6% 0px'});els.forEach(function(e){io.observe(e)})})();
 (function(){var inc=[{f:'DPD',p:'Your parcel arrives today'},{f:'Natwest',p:'Statement now available'},{f:'eBay',p:'Item dispatched, est. Fri'},{f:'Booking.com',p:'Your stay is confirmed'}];var i=0;function tick(){var list=document.getElementById('mockList');if(!list)return;var m=inc[i%inc.length];i++;list.querySelectorAll('.mock-msg.on').forEach(function(el){el.classList.remove('on')});var el=document.createElement('div');el.className='mock-msg on';el.innerHTML='<div class="mock-from">'+m.f+'</div><div class="mock-prev">'+m.p+'</div><div class="mock-time">now</div>';var hd=list.querySelector('.mock-hd');list.insertBefore(el,hd.nextSibling);var all=list.querySelectorAll('.mock-msg');if(all.length>4)all[all.length-1].remove()}if(!matchMedia('(prefers-reduced-motion: reduce)').matches){setTimeout(function(){tick();setInterval(tick,3200)},2600)}})();
 </script>
