@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>WhatsApp vs Signal vs Telegram: which is actually private? Privify</title>
+<meta name="description" content="WhatsApp, Signal and Telegram all get called 'the private messaging app'. They're not equal. Here's how their encryption, metadata handling and ownership actually compare."/>
+<link rel="canonical" href="https://privify.co.uk/blog/whatsapp-vs-signal-vs-telegram-privacy"/>
+<meta property="og:title" content="WhatsApp vs Signal vs Telegram: which is actually private?"/>
+<meta property="og:description" content="WhatsApp, Signal and Telegram all get called 'the private messaging app'. They're not equal. Here's how their encryption, metadata handling and ownership actually compare."/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://privify.co.uk/blog/whatsapp-vs-signal-vs-telegram-privacy"/>
+<meta property="og:image" content="https://privify.co.uk/og.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://privify.co.uk/og.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --white:#ffffff;--paper:#f6f8f6;--off:#f9fafb;--surface:#f3f4f6;
+  --ink:#0f172a;--ink2:#475569;--ink3:#5f6b7a;
+  --green:#1a6b4a;--green-dark:#145539;--green-light:#22875e;
+  --green-tint:#f0fdf4;--green-tint2:#dcfce7;--green-border:#86efac;
+  --border:#e6eae6;
+  --shadow-sm:0 1px 3px rgba(15,23,42,.06),0 1px 2px rgba(15,23,42,.04);
+  --shadow:0 4px 6px rgba(15,23,42,.04),0 10px 20px rgba(15,23,42,.05);
+  --shadow-green:0 10px 30px rgba(26,107,74,.15);
+  --font:'Inter',sans-serif;--mono:'DM Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--paper);color:var(--ink);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;background:rgba(246,248,246,.85);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid rgba(15,23,42,.06)}
+.logo{display:flex;align-items:center;gap:10px;font-size:1.1rem;font-weight:800;color:var(--ink);letter-spacing:-0.055em}
+.logo-mark{width:32px;height:32px;background:linear-gradient(135deg,var(--green),var(--green-light));border-radius:9px;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-green)}
+.logo-mark svg{display:block;width:22px;height:22px}
+.nav-r{display:flex;align-items:center;gap:.25rem}
+.nav-r a{font-size:.875rem;font-weight:500;color:var(--ink2);padding:.5rem .9rem;border-radius:8px;transition:all .15s}
+.nav-r a:hover{background:var(--off);color:var(--ink)}
+.nav-btn{background:var(--green)!important;color:#fff!important;font-weight:600!important;margin-left:.5rem;box-shadow:var(--shadow-green)!important}
+.nav-btn:hover{background:var(--green-dark)!important;transform:translateY(-1px)}
+.article-hero{padding:7.5rem 2.5rem 3rem;max-width:740px;margin:0 auto}
+.breadcrumb{display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;color:var(--ink3);font-family:var(--mono);margin-bottom:1.5rem}
+.breadcrumb a{color:var(--green)}
+.breadcrumb span{color:var(--border)}
+.article-cat{font-size:0.65rem;font-weight:700;color:var(--green);letter-spacing:.12em;text-transform:uppercase;font-family:var(--mono);margin-bottom:0.85rem}
+.article-hero h1{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:700;letter-spacing:-0.035em;line-height:1.1;margin-bottom:1rem}
+.article-meta{display:flex;align-items:center;gap:1rem;font-size:0.78rem;color:var(--ink3);font-family:var(--mono);padding-top:1rem;border-top:1px solid var(--border)}
+.article-body{max-width:740px;margin:0 auto;padding:2.5rem 2.5rem 5rem}
+.article-body h2{font-size:1.35rem;font-weight:700;letter-spacing:-0.03em;margin:2.25rem 0 0.75rem;color:var(--ink)}
+.article-body h3{font-size:1.05rem;font-weight:700;margin:1.75rem 0 0.5rem;color:var(--ink)}
+.article-body p{font-size:0.95rem;color:var(--ink2);line-height:1.85;margin-bottom:1rem}
+.article-body ul,.article-body ol{margin:0.5rem 0 1rem 1.5rem;display:flex;flex-direction:column;gap:0.4rem}
+.article-body li{font-size:0.95rem;color:var(--ink2);line-height:1.75}
+.article-body strong{color:var(--ink);font-weight:600}
+.article-body a{color:var(--green);text-decoration:underline;text-underline-offset:3px}
+.callout{background:var(--green-tint);border:1px solid var(--green-border);border-radius:10px;padding:1.25rem 1.5rem;margin:1.75rem 0}
+.callout p{color:var(--ink);margin:0;font-size:0.9rem;line-height:1.75}
+.callout strong{color:var(--green)}
+.compare-table{width:100%;border-collapse:collapse;margin:1.5rem 0 2rem;font-size:0.85rem}
+.compare-table th,.compare-table td{padding:0.7rem 0.8rem;text-align:left;border-bottom:1px solid var(--border);vertical-align:top}
+.compare-table th{font-size:0.7rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--ink3);font-family:var(--mono);font-weight:700;border-bottom:2px solid var(--border)}
+.compare-table td:first-child,.compare-table th:first-child{color:var(--ink3);font-weight:600;white-space:nowrap}
+.compare-table tr:last-child td{border-bottom:none}
+.good{color:var(--green);font-weight:600}
+.bad{color:#c0392b;font-weight:600}
+.mid{color:#b4791a;font-weight:600}
+.scenario{border:1px solid var(--border);border-radius:10px;padding:1.5rem;margin:1rem 0;background:var(--off)}
+.scenario h3{font-size:0.9rem;font-weight:700;color:var(--ink);margin:0 0 0.4rem}
+.scenario p{font-size:0.875rem;color:var(--ink2);margin:0;line-height:1.72}
+.article-cta{background:var(--green);border-radius:14px;padding:2.5rem;margin:3rem 0 0;text-align:center}
+.article-cta h2{font-size:1.5rem;font-weight:800;color:#fff;letter-spacing:-0.03em;margin-bottom:0.5rem}
+.article-cta p{color:rgba(255,255,255,.7);font-size:0.9rem;margin-bottom:1.5rem}
+.btn-w{display:inline-block;background:#fff;color:var(--green);padding:0.8rem 1.9rem;border-radius:8px;font-weight:700;font-size:0.9rem;transition:opacity .12s}
+.btn-w:hover{opacity:.9}
+footer{background:#0d3d29;padding:3rem 2.5rem 2.25rem;color:#fff;position:relative;overflow:hidden}
+footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height:200%;background:radial-gradient(ellipse at center,rgba(34,135,94,.15),transparent 60%);pointer-events:none}
+.foot-inner{max-width:1060px;margin:0 auto;position:relative;z-index:1}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.foot-bottom p{font-size:.77rem;color:rgba(255,255,255,.35)}
+.foot-legal{display:flex;gap:1.75rem}
+.foot-legal a{font-size:.77rem;color:rgba(255,255,255,.35);transition:color .15s}
+.foot-legal a:hover{color:rgba(255,255,255,.75)}
+@media(max-width:700px){
+  nav{padding:0 1.25rem}
+  .nav-r a:not(.nav-btn){display:none}
+  .article-hero,.article-body{padding-left:1.25rem;padding-right:1.25rem}
+  .compare-table{font-size:0.78rem}
+  .compare-table th,.compare-table td{padding:0.5rem 0.4rem}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "WhatsApp vs Signal vs Telegram: which is actually private?",
+  "description": "WhatsApp, Signal and Telegram all get called 'the private messaging app'. They're not equal. Here's how their encryption, metadata handling and ownership actually compare.",
+  "url": "https://privify.co.uk/blog/whatsapp-vs-signal-vs-telegram-privacy",
+  "datePublished": "2026-07-06",
+  "dateModified": "2026-07-06",
+  "author": { "@type": "Organization", "name": "Privify", "url": "https://privify.co.uk" },
+  "publisher": {
+    "@type": "Organization", "name": "Privify", "url": "https://privify.co.uk",
+    "logo": { "@type": "ImageObject", "url": "https://privify.co.uk/favicon.svg" }
+  },
+  "image": "https://privify.co.uk/og.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Is Telegram end-to-end encrypted by default?","acceptedAnswer":{"@type":"Answer","text":"No. Regular Telegram chats and all group chats are not end-to-end encrypted by default — they are stored on Telegram's servers, encrypted only in transit and at rest with keys Telegram holds. Only one-to-one 'Secret Chats', a separate opt-in mode, are end-to-end encrypted, and they don't sync across devices."}},
+    {"@type":"Question","name":"Is Signal more private than WhatsApp?","acceptedAnswer":{"@type":"Answer","text":"On the metrics that matter most, yes. Both use the same Signal Protocol for end-to-end encryption, but Signal is a non-profit with no advertising business model, collects far less metadata, and is fully open source, including its servers. WhatsApp is owned by Meta and, unlike Signal, does not encrypt chat backups by default."}},
+    {"@type":"Question","name":"Do WhatsApp, Signal and Telegram all require a phone number?","acceptedAnswer":{"@type":"Answer","text":"Yes, all three require a phone number to register an account, though all three now let you hide that number behind a username for people who don't already have it saved. The number itself remains the account's foundation and what the provider holds against you."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">
+    <div class="logo-mark">
+            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="7" width="10" height="10" rx="2.5" fill="white" fill-opacity=".35"/>
+        <rect x="9" y="3" width="10" height="10" rx="2.5" fill="white"/>
+      </svg>
+    </div>
+    privify
+  </a>
+  <div class="nav-r">
+    <a href="/#features">Features</a>
+    <a href="/#privacy">Privacy</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/#faq">FAQ</a>
+    <a href="/blog">Blog</a>
+    <a href="https://app.privify.co.uk/sign-in">Log in</a>
+    <a href="https://app.privify.co.uk/sign-up?plan=plus" class="nav-btn">Get started →</a>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="breadcrumb">
+    <a href="/blog">Blog</a>
+    <span>/</span>
+    <span>Privacy</span>
+  </div>
+  <div class="article-cat">Privacy</div>
+  <h1>WhatsApp vs Signal vs Telegram: which is actually private?</h1>
+  <div class="article-meta">
+    <span>July 2026</span>
+    <span>·</span>
+    <span>7 min read</span>
+  </div>
+</div>
+
+<div class="article-body">
+
+  <p>Ask most people which chat app is "the private one" and you'll get three different, confidently wrong answers. All three get lumped together as alternatives to standard SMS, and all three get called secure by someone in every group chat. In reality, they take genuinely different approaches to privacy, and the differences aren't subtle.</p>
+
+  <p>Here's what's actually true about each, as of 2026.</p>
+
+  <h2>The quick verdict</h2>
+
+  <table class="compare-table">
+    <tr><th></th><th>WhatsApp</th><th>Signal</th><th>Telegram</th></tr>
+    <tr><td>Encrypted by default</td><td class="good">Yes, all chats</td><td class="good">Yes, everything</td><td class="bad">No, only opt-in "Secret Chats"</td></tr>
+    <tr><td>Group chats encrypted</td><td class="good">Yes</td><td class="good">Yes</td><td class="bad">No</td></tr>
+    <tr><td>Encryption protocol</td><td>Signal Protocol</td><td>Signal Protocol</td><td class="mid">Custom (MTProto)</td></tr>
+    <tr><td>Open source</td><td class="mid">Client only</td><td class="good">Client and server</td><td class="mid">Client only</td></tr>
+    <tr><td>Backups encrypted</td><td class="mid">Opt-in, off by default</td><td class="good">On-device, passphrase protected</td><td class="bad">Not for cloud chats</td></tr>
+    <tr><td>Owner</td><td>Meta</td><td>Signal Foundation (non-profit)</td><td>Telegram FZ-LLC</td></tr>
+    <tr><td>Business model</td><td class="mid">Ads/data across Meta</td><td class="good">Donations, no ads</td><td class="mid">Ads, Premium subscriptions</td></tr>
+    <tr><td>Hide number behind username</td><td class="good">Yes (2026)</td><td class="good">Yes</td><td class="good">Yes, longest-standing</td></tr>
+  </table>
+
+  <p>If you read one sentence from this article: <strong>Telegram is the one most people wrongly assume is the private option.</strong> It isn't, by default. Signal is the actual gold standard. WhatsApp sits in the middle, genuinely encrypted but run by an advertising company.</p>
+
+  <h2>WhatsApp: properly encrypted, run by Meta</h2>
+
+  <p>WhatsApp's messages, calls and group chats are end-to-end encrypted by default, using the Signal Protocol, the same underlying encryption Signal itself uses. On the core "can someone reading the wire see my messages" question, WhatsApp does the job properly.</p>
+
+  <p>Where it gets weaker:</p>
+
+  <ul>
+    <li><strong>Backups aren't encrypted by default.</strong> Your chat history backed up to iCloud or Google Drive is only end-to-end encrypted if you turn that on yourself, in settings, as an extra step. Most people never do.</li>
+    <li><strong>Metadata is Meta's business.</strong> The message content is encrypted, but who you talk to, when, and how often is visible to WhatsApp, and Meta's whole business is built on exactly that kind of signal, even where message content stays out of reach.</li>
+    <li><strong>Not independently auditable.</strong> The client is open enough to inspect, but the server side isn't, so outside researchers can't fully verify what happens to your data once it leaves your phone.</li>
+  </ul>
+
+  <h2>Signal: the actual gold standard</h2>
+
+  <p>Signal is the reference point every other "secure messenger" gets compared to, and for good reason. Every message, call and group chat is end-to-end encrypted, with no setting to turn it off and no exceptions.</p>
+
+  <ul>
+    <li><strong>Fully open source</strong>, client and server. Security researchers can, and do, verify exactly what Signal's infrastructure does.</li>
+    <li><strong>Minimal metadata.</strong> Signal's "sealed sender" design means even Signal's own servers don't reliably know who is messaging whom.</li>
+    <li><strong>No ads, no data business.</strong> Signal is run by a non-profit foundation funded by donations and grants. There's no commercial incentive to harvest anything.</li>
+    <li><strong>Backups are locally encrypted</strong> with a passphrase you control.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>The trade-off is reach, not privacy.</strong> Signal has a fraction of WhatsApp's user base, so the honest limitation isn't the app, it's whether the people you need to talk to are actually on it.</p>
+  </div>
+
+  <h2>Telegram: the one people get wrong</h2>
+
+  <p>This is the one worth slowing down on, because the gap between Telegram's reputation and its actual defaults is the biggest of the three.</p>
+
+  <p><strong>Regular Telegram chats, including every group chat and channel, are not end-to-end encrypted.</strong> They're stored on Telegram's servers, encrypted in transit and at rest, but with keys Telegram itself holds. That's a meaningfully different, weaker guarantee than WhatsApp or Signal's default.</p>
+
+  <p>Telegram does offer <strong>Secret Chats</strong>, a genuinely end-to-end encrypted mode. But it's opt-in, buried a couple of taps deep, one-to-one only, and doesn't sync to your other devices. Almost nobody uses it for their day-to-day conversations, which means almost nobody's day-to-day Telegram conversations are end-to-end encrypted.</p>
+
+  <p>Telegram also rolled its own encryption protocol, MTProto, rather than using the well-studied Signal Protocol. Cryptographers have repeatedly raised concerns about design choices in MTProto over the years.</p>
+
+  <div class="callout">
+    <p><strong>Why the reputation, then?</strong> Telegram built its name on large public channels, bold content moderation stances, and being the app authoritarian governments try to block, which reads as "privacy-coded" even though the actual chat encryption underneath is the weakest of the three by default.</p>
+  </div>
+
+  <h2>The one thing all three still have in common</h2>
+
+  <p>Whichever you pick, there's a detail that doesn't change: <strong>all three still require a phone number to create an account.</strong> Usernames now let you hide that number from people you talk to, WhatsApp added this in 2026, Signal has offered it since 2024, and Telegram longer still, but the number remains the account's actual foundation. It's still what the provider holds against you, still what a data breach or subpoena would expose, and still the thing tying your "private" messaging account back to your real identity.</p>
+
+  <p>We wrote about this in more detail when <a href="/blog/whatsapp-username-vs-phone-number">WhatsApp rolled out usernames</a>: a username is a new front door, but the number is still the foundation the whole house sits on.</p>
+
+  <div class="scenario">
+    <h3>Signal, minus the phone number problem</h3>
+    <p>You pick Signal for its encryption, correctly. You still register it with your real mobile number, the one your bank and your contacts have. If that number ever leaks, or a contact you'd rather forget has it saved, it can still be used to find or message you, regardless of how good Signal's encryption is.</p>
+  </div>
+
+  <h2>The practical fix, whichever app you choose</h2>
+
+  <p>The encryption comparison above genuinely matters, and if you can get the people you talk to onto Signal, do it. But no chat app's encryption protects the one identifier all three still demand at sign-up. For that, the fix is the same regardless of which app wins the privacy argument: <a href="/blog/second-uk-mobile-number">register with a private secondary number</a> instead of your real one.</p>
+
+  <div class="callout">
+    <p><strong>Privify</strong> gives you a genuine UK number that works exactly like a normal mobile, register WhatsApp, Signal or Telegram with it, and every call or text still reaches you, forwarded straight to your inbox. Your real number stays reserved for people who already have it. <a href="https://app.privify.co.uk/sign-up?plan=plus">Get your number from £6.99/month →</a></p>
+  </div>
+
+  <h2>The bottom line</h2>
+
+  <p>Signal is the clear privacy winner: encrypted by default, minimal metadata, open source, no data business model. WhatsApp is genuinely encrypted but run by an advertising company, with unencrypted backups unless you switch that on yourself. Telegram's privacy reputation outruns its defaults by the widest margin of the three, your regular chats there are not end-to-end encrypted unless you specifically go looking for Secret Chats.</p>
+
+  <p>Whichever you land on, the number you register it with is still worth protecting separately from the app itself.</p>
+
+  <div class="article-cta">
+    <h2>Keep your number out of it</h2>
+    <p>Register any messaging app with a private UK number instead of your real one. Calls and texts forwarded straight to your inbox.</p>
+    <a href="https://app.privify.co.uk/sign-up?plan=plus" class="btn-w">Get your Privify number →</a>
+  </div>
+
+</div>
+
+
+<p class="related-note" style="font-size:0.875rem;color:var(--ink2);margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border)">Related: Read more about <a href="/blog/whatsapp-username-vs-phone-number">WhatsApp usernames vs your phone number</a> and <a href="/blog/second-uk-mobile-number">getting a second UK mobile number</a>.</p>
+<footer>
+  <div class="foot-inner">
+    <div class="foot-bottom">
+      <p>&copy; 2026 Privify. All rights reserved.</p>
+      <div class="foot-legal">
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/blog">Blog</a>
+        <a href="mailto:support@privify.co.uk">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
