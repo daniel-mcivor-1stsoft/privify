@@ -1,10 +1,2 @@
-# Canonicalize on the non-trailing-slash form everywhere. Every canonical
-# tag and internal link on the site uses the non-slash form, but Cloudflare
-# Pages' default asset routing serves directory-style pages (slug/index.html)
-# at the trailing-slash URL and only 307s the non-slash request onward —
-# the opposite direction. That left every blog post's canonical tag pointing
-# at a URL that immediately redirected away from itself, splitting ranking
-# signal across two URLs for the same page. This rule takes precedence over
-# that default (redirects are always followed ahead of asset matching) and
-# forces the single direction the rest of the site already assumes.
-/*/ /:splat 301
+# No redirect rules needed — Cloudflare Workers serves index.html
+# automatically for all subdirectory requests.
