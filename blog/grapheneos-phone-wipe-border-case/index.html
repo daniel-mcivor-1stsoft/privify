@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>When wiping your own phone becomes a crime: the GrapheneOS border case, Privify</title>
+<meta name="description" content="A US traveller faces federal charges after his GrapheneOS phone wiped itself during an airport search. What happened, why it matters for device privacy, and the real lesson for the rest of us."/>
+<link rel="canonical" href="https://privify.co.uk/blog/grapheneos-phone-wipe-border-case/"/>
+<meta property="og:title" content="When wiping your own phone becomes a crime: the GrapheneOS border case"/>
+<meta property="og:description" content="A US traveller faces federal charges after his GrapheneOS phone wiped itself during an airport search. What happened, why it matters, and the real lesson for the rest of us."/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://privify.co.uk/blog/grapheneos-phone-wipe-border-case/"/>
+<meta property="og:image" content="https://privify.co.uk/og.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://privify.co.uk/og.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --white:#ffffff;--paper:#f6f8f6;--off:#f9fafb;--surface:#f3f4f6;
+  --ink:#0f172a;--ink2:#475569;--ink3:#5f6b7a;
+  --green:#1a6b4a;--green-dark:#145539;--green-light:#22875e;
+  --green-tint:#f0fdf4;--green-tint2:#dcfce7;--green-border:#86efac;
+  --border:#e6eae6;
+  --shadow-sm:0 1px 3px rgba(15,23,42,.06),0 1px 2px rgba(15,23,42,.04);
+  --shadow:0 4px 6px rgba(15,23,42,.04),0 10px 20px rgba(15,23,42,.05);
+  --shadow-green:0 10px 30px rgba(26,107,74,.15);
+  --font:'Inter',sans-serif;--mono:'DM Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--paper);color:var(--ink);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;background:rgba(246,248,246,.85);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid rgba(15,23,42,.06)}
+.logo{display:flex;align-items:center;gap:10px;font-size:1.1rem;font-weight:800;color:var(--ink);letter-spacing:-0.055em}
+.logo-mark{width:32px;height:32px;background:linear-gradient(135deg,var(--green),var(--green-light));border-radius:9px;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-green)}
+.logo-mark svg{display:block;width:22px;height:22px}
+.nav-r{display:flex;align-items:center;gap:.25rem}
+.nav-r a{font-size:.875rem;font-weight:500;color:var(--ink2);padding:.5rem .9rem;border-radius:8px;transition:all .15s}
+.nav-r a:hover{background:var(--off);color:var(--ink)}
+.nav-btn{background:var(--green)!important;color:#fff!important;font-weight:600!important;margin-left:.5rem;box-shadow:var(--shadow-green)!important}
+.nav-btn:hover{background:var(--green-dark)!important;transform:translateY(-1px)}
+.article-hero{padding:7.5rem 2.5rem 3rem;max-width:740px;margin:0 auto}
+.breadcrumb{display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;color:var(--ink3);font-family:var(--mono);margin-bottom:1.5rem}
+.breadcrumb a{color:var(--green)}
+.breadcrumb span{color:var(--border)}
+.article-cat{font-size:0.65rem;font-weight:700;color:var(--green);letter-spacing:.12em;text-transform:uppercase;font-family:var(--mono);margin-bottom:0.85rem}
+.article-hero h1{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:700;letter-spacing:-0.035em;line-height:1.1;margin-bottom:1rem}
+.article-meta{display:flex;align-items:center;gap:1rem;font-size:0.78rem;color:var(--ink3);font-family:var(--mono);padding-top:1rem;border-top:1px solid var(--border)}
+.article-body{max-width:740px;margin:0 auto;padding:2.5rem 2.5rem 5rem}
+.article-body h2{font-size:1.35rem;font-weight:700;letter-spacing:-0.03em;margin:2.25rem 0 0.75rem;color:var(--ink)}
+.article-body h3{font-size:1.05rem;font-weight:700;margin:1.75rem 0 0.5rem;color:var(--ink)}
+.article-body p{font-size:0.95rem;color:var(--ink2);line-height:1.85;margin-bottom:1rem}
+.article-body ul,.article-body ol{margin:0.5rem 0 1rem 1.5rem;display:flex;flex-direction:column;gap:0.4rem}
+.article-body li{font-size:0.95rem;color:var(--ink2);line-height:1.75}
+.article-body strong{color:var(--ink);font-weight:600}
+.article-body a{color:var(--green);text-decoration:underline;text-underline-offset:3px}
+.callout{background:var(--green-tint);border:1px solid var(--green-border);border-radius:10px;padding:1.25rem 1.5rem;margin:1.75rem 0}
+.callout p{color:var(--ink);margin:0;font-size:0.9rem;line-height:1.75}
+.callout strong{color:var(--green)}
+.compare-table{width:100%;border-collapse:collapse;margin:1.5rem 0 2rem;font-size:0.85rem}
+.compare-table th,.compare-table td{padding:0.7rem 0.8rem;text-align:left;border-bottom:1px solid var(--border);vertical-align:top}
+.compare-table th{font-size:0.7rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--ink3);font-family:var(--mono);font-weight:700;border-bottom:2px solid var(--border)}
+.compare-table td:first-child,.compare-table th:first-child{color:var(--ink3);font-weight:600;white-space:nowrap}
+.compare-table tr:last-child td{border-bottom:none}
+.good{color:var(--green);font-weight:600}
+.bad{color:#c0392b;font-weight:600}
+.mid{color:#b4791a;font-weight:600}
+.scenario{border:1px solid var(--border);border-radius:10px;padding:1.5rem;margin:1rem 0;background:var(--off)}
+.scenario h3{font-size:0.9rem;font-weight:700;color:var(--ink);margin:0 0 0.4rem}
+.scenario p{font-size:0.875rem;color:var(--ink2);margin:0;line-height:1.72}
+.article-cta{background:var(--green);border-radius:14px;padding:2.5rem;margin:3rem 0 0;text-align:center}
+.article-cta h2{font-size:1.5rem;font-weight:800;color:#fff;letter-spacing:-0.03em;margin-bottom:0.5rem}
+.article-cta p{color:rgba(255,255,255,.7);font-size:0.9rem;margin-bottom:1.5rem}
+.btn-w{display:inline-block;background:#fff;color:var(--green);padding:0.8rem 1.9rem;border-radius:8px;font-weight:700;font-size:0.9rem;transition:opacity .12s}
+.btn-w:hover{opacity:.9}
+footer{background:#0d3d29;padding:3rem 2.5rem 2.25rem;color:#fff;position:relative;overflow:hidden}
+footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height:200%;background:radial-gradient(ellipse at center,rgba(34,135,94,.15),transparent 60%);pointer-events:none}
+.foot-inner{max-width:1060px;margin:0 auto;position:relative;z-index:1}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.foot-bottom p{font-size:.77rem;color:rgba(255,255,255,.35)}
+.foot-legal{display:flex;gap:1.75rem}
+.foot-legal a{font-size:.77rem;color:rgba(255,255,255,.35);transition:color .15s}
+.foot-legal a:hover{color:rgba(255,255,255,.75)}
+@media(max-width:700px){
+  nav{padding:0 1.25rem}
+  .nav-r a:not(.nav-btn){display:none}
+  .article-hero,.article-body{padding-left:1.25rem;padding-right:1.25rem}
+  .compare-table{font-size:0.78rem}
+  .compare-table th,.compare-table td{padding:0.5rem 0.4rem}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "When wiping your own phone becomes a crime: the GrapheneOS border case",
+  "description": "A US traveller faces federal charges after his GrapheneOS phone wiped itself during an airport search. What happened, why it matters for device privacy, and the real lesson for the rest of us.",
+  "url": "https://privify.co.uk/blog/grapheneos-phone-wipe-border-case/",
+  "datePublished": "2026-08-20",
+  "dateModified": "2026-08-20",
+  "author": { "@type": "Organization", "name": "Privify", "url": "https://privify.co.uk" },
+  "publisher": {
+    "@type": "Organization", "name": "Privify", "url": "https://privify.co.uk",
+    "logo": { "@type": "ImageObject", "url": "https://privify.co.uk/favicon.svg" }
+  },
+  "image": "https://privify.co.uk/og.png"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"What is a GrapheneOS duress PIN?","acceptedAnswer":{"@type":"Answer","text":"GrapheneOS is a privacy-focused version of Android. Its duress feature lets you set a second, decoy passcode that looks normal but triggers an immediate, irreversible wipe of the device when entered. There is no warning or confirmation. It is designed for people who could be physically coerced into unlocking a phone, such as journalists, activists and abuse survivors."}},
+    {"@type":"Question","name":"Can border officers search your phone without a warrant?","acceptedAnswer":{"@type":"Answer","text":"At many international borders the usual warrant protections are weaker than they are inland. In the United States, agents have historically claimed the authority to inspect devices at the border without a warrant. In the UK, Schedule 7 of the Terrorism Act lets officers demand a device password at a port or airport, and refusing is itself a criminal offence. The exact powers vary by country, and this is not legal advice."}},
+    {"@type":"Question","name":"Is it illegal to wipe your phone before handing it over?","acceptedAnswer":{"@type":"Answer","text":"It depends entirely on jurisdiction and circumstances, and it is legally untested in most places. In the US case of Samuel Tunick, prosecutors are treating a device wipe during a border search as destroying property to prevent its seizure. That case is unresolved. Deliberately obstructing or destroying evidence during a lawful search can carry serious consequences, so this should not be read as a recommendation to do it."}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">
+    <div class="logo-mark">
+            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="7" width="10" height="10" rx="2.5" fill="white" fill-opacity=".35"/>
+        <rect x="9" y="3" width="10" height="10" rx="2.5" fill="white"/>
+      </svg>
+    </div>
+    privify
+  </a>
+  <div class="nav-r">
+    <a href="/#features">Features</a>
+    <a href="/#privacy">Privacy</a>
+    <a href="/#pricing">Pricing</a>
+    <a href="/#faq">FAQ</a>
+    <a href="/blog/">Blog</a>
+    <a href="https://app.privify.co.uk/sign-in">Log in</a>
+    <a href="https://app.privify.co.uk/sign-up?plan=plus" class="nav-btn">Get started →</a>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="breadcrumb">
+    <a href="/blog/">Blog</a>
+    <span>/</span>
+    <span>Privacy</span>
+  </div>
+  <div class="article-cat">Privacy</div>
+  <h1>When wiping your own phone becomes a crime</h1>
+  <div class="article-meta">
+    <span>August 2026</span>
+    <span>·</span>
+    <span>6 min read</span>
+  </div>
+</div>
+
+<div class="article-body">
+
+  <p>A man lands back home from holiday, is pulled aside at his own city's airport, and hands over his phone. He enters a passcode. The screen flickers, blanks, and restarts, and the phone is now empty. Months later, he isn't just on a watch list, he's facing federal charges, accused of destroying evidence. The twist is that he didn't smash the phone or throw it in a bin. He typed in a passcode, and the phone did exactly what its privacy software was designed to do.</p>
+
+  <p>This is the case of Samuel Tunick, and it has become a flashpoint for a question most of us never think about: <strong>who does the data on your phone actually belong to when someone in authority wants it?</strong></p>
+
+  <h2>What happened</h2>
+
+  <p>In January 2025, Tunick, a resident of Atlanta, was returning to the United States from the Dominican Republic and passed through Atlanta's Hartsfield-Jackson International Airport. According to reporting on the case, border agents demanded access to his phone without a warrant. He entered a passcode, and the device wiped itself.</p>
+
+  <p>His phone was running <strong>GrapheneOS</strong>, a privacy-hardened version of Android. GrapheneOS includes a feature called a <strong>duress passcode</strong>: a second, decoy PIN you can set that looks and behaves like a normal unlock code, right up until you enter it, at which point it triggers an immediate and irreversible wipe of the device. There's no confirmation dialog and no visible sign of what it's doing. It exists for exactly the scenario where someone is being physically pressured to unlock a phone.</p>
+
+  <p>Prosecutors have since indicted Tunick under a federal law covering the destruction of property to prevent its seizure, alleging he knowingly deleted the phone's contents to stop the government taking control of it. His lawyers argue the encounter was mishandled from the start: that he was questioned without being read his rights, that repeated requests for a lawyer were denied, that the search was an unreasonable seizure, and that questions about illegal imagery were a pretext to probe his alleged links to protests against Atlanta's "Cop City" police training facility. As of writing, a judge is not expected to rule on the defence's motion until at least the end of October.</p>
+
+  <div class="callout">
+    <p><strong>To be clear about what this article is and isn't.</strong> This is a look at a live legal case and what it says about device privacy. It is not legal advice, and it is not a suggestion that you should wipe a phone during a search. Obstructing or destroying evidence during a lawful search can carry serious consequences. The point here is the bigger picture, not a how-to.</p>
+  </div>
+
+  <h2>Why this one hit a nerve</h2>
+
+  <p>The reason this case travelled so far beyond privacy circles is the uncomfortable line it draws. A duress passcode is a legitimate, built-in safety feature. The people who rely on it most are journalists protecting sources, activists in hostile environments, and domestic-abuse survivors who could be forced to unlock a device by the very person they're escaping. Using a security feature that ships with the operating system is not most people's idea of a crime.</p>
+
+  <p>And yet the prosecution's framing is that entering that passcode was an act of destruction aimed at the state. Strip away the specifics and you're left with a genuinely hard question: is protecting your own data the same thing as obstructing an investigation? The law doesn't have a settled answer, which is precisely why this case is being watched so closely.</p>
+
+  <h2>The border is a legal grey zone</h2>
+
+  <p>Part of what makes this possible is that borders are where digital-privacy protections are at their thinnest. Inland, searching someone's phone typically needs a warrant. At many international borders, that bar drops sharply.</p>
+
+  <p>It isn't a US-only quirk, either. In the UK the mechanism is different but no friendlier: under <strong>Schedule 7 of the Terrorism Act</strong>, officers at a port or airport can demand that you hand over a device password, and refusing to comply is itself a criminal offence, with no requirement that you're actually suspected of anything. Different country, different statute, same underlying reality: the moment you're at a border, the device in your pocket is far more exposed than you might assume.</p>
+
+  <div class="scenario">
+    <h3>The thing people underestimate</h3>
+    <p>Your phone isn't a phone. It's your email, your banking, your photos, your location history, your saved passwords, every account you've ever signed into, and a contact book that maps your entire social and professional life. Handing it over isn't handing over a device. It's handing over the master key to your identity, all in one place.</p>
+  </div>
+
+  <h2>The lesson isn't "wipe your phone"</h2>
+
+  <p>It's tempting to read a story like this and conclude the answer is a cleverer wipe trick. It isn't, and going down that road is how you end up as the test case. The more useful takeaway is quieter and applies to everyone, whether or not you ever go near a border: <strong>the risk comes from how much is concentrated on one device, and how much of it points straight back to the real you.</strong></p>
+
+  <p>Every account wired to your real phone number and primary email address is another thread tying your whole digital life together. A single search, a single data breach, or a single leaked database can pull on one of those threads and unravel the rest, because they all trace back to the same two or three identifiers. The defence against that isn't a dramatic self-destruct button. It's <strong>data minimisation</strong>, spreading your identity out so that no single point of failure exposes all of it.</p>
+
+  <p>In practice that means a few unglamorous habits:</p>
+
+  <ul>
+    <li><strong>Stop using one email for everything.</strong> A unique <a href="/blog/what-is-an-email-alias/">email alias</a> per service means a leak from one site can't be matched to your logins everywhere else.</li>
+    <li><strong>Keep your real mobile number off sign-up forms.</strong> Your number is a permanent, cross-referenceable identifier. A <a href="/blog/second-uk-mobile-number/">separate number</a> for accounts and sellers keeps your real one out of databases you'll never control.</li>
+    <li><strong>Carry less.</strong> If a device doesn't need your entire life on it to be useful, don't put your entire life on it.</li>
+    <li><strong>Know the rules where you're going.</strong> Border and device-search powers vary enormously by country. It's worth understanding them before you travel, not at the desk.</li>
+  </ul>
+
+  <div class="callout">
+    <p><strong>Privify</strong> is built around exactly this idea. It gives you unlimited email aliases and a private UK number, so the accounts and services on your phone aren't all hard-wired to your real identity. It won't change what happens at a border, but it means that far less of "you" is sitting in any one place, or behind any one screen, to begin with.</p>
+  </div>
+
+  <h2>The bottom line</h2>
+
+  <p>Samuel Tunick's case will be argued on its own facts, and whatever a judge decides won't settle the broader question overnight. But it's a useful jolt. It shows how aggressively device data is now pursued, how thin the protections are at the exact moments you're most exposed, and how a routine airport stop can turn a privacy feature into a criminal charge.</p>
+
+  <p>You can't control every rule you'll run into. What you can control is how much of your identity is bundled into a single device and a single real-world number and email. The less concentrated it is, the less any one search, breach or leak can ever take.</p>
+
+  <div class="article-cta">
+    <h2>Spread your identity out</h2>
+    <p>Email aliases and a private UK number, so your accounts aren't all wired back to the real you.</p>
+    <a href="https://app.privify.co.uk/sign-up?plan=plus" class="btn-w">Get started with Privify →</a>
+  </div>
+
+</div>
+
+
+<p class="related-note" style="font-size:0.875rem;color:var(--ink2);margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border)">Related: Read more about <a href="/blog/what-is-an-email-alias/">what an email alias is and why it matters</a> and <a href="/blog/second-uk-mobile-number/">getting a second UK mobile number</a>. Reporting on the case: <a href="https://www.androidauthority.com/grapheneos-duress-pin-us-prosecution-3691271/" rel="nofollow noopener" target="_blank">Android Authority</a> and <a href="https://www.schneier.com/blog/archives/2026/07/american-being-prosecuted-for-wiping-his-phone-before-handing-it-over-to-border-officials.html" rel="nofollow noopener" target="_blank">Schneier on Security</a>.</p>
+<footer>
+  <div class="foot-inner">
+    <div class="foot-bottom">
+      <p>&copy; 2026 Privify. All rights reserved.</p>
+      <div class="foot-legal">
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/blog/">Blog</a>
+        <a href="mailto:support@privify.co.uk">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
