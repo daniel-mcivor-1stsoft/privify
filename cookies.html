@@ -62,7 +62,7 @@ footer a{color:var(--accent);text-decoration:none}
       <div class="prose">
         <p>1.1. Privify is built on a privacy-first philosophy. We use the absolute minimum number of cookies necessary to make the service work.</p>
         <p>1.2. We do <strong>not</strong> use advertising cookies, tracking cookies, or behavioural profiling of any kind.</p>
-        <p>1.3. Our marketing website (privify.co.uk) uses <strong>Cloudflare Web Analytics</strong> — a cookieless, privacy-preserving analytics tool that does not set any cookies or fingerprint your device.</p>
+        <p>1.3. Our marketing website (privify.co.uk) does not use any analytics service, and loads no third-party analytics or tracking scripts.</p>
       </div>
     </section>
 
@@ -91,17 +91,17 @@ footer a{color:var(--accent);text-decoration:none}
           </thead>
           <tbody>
             <tr>
-              <td><code>__session</code></td>
-              <td>Clerk (authentication)</td>
-              <td>Keeps you signed in to your Privify account. Without this cookie you would be logged out on every page load.</td>
-              <td>Session / up to 7 days</td>
+              <td><code>hanko</code></td>
+              <td>Privify (sign-in, run on our own servers)</td>
+              <td>Holds your login session so you stay signed in to your Privify account. Without it you would be signed out on every page load.</td>
+              <td>Until you sign out or your session expires</td>
               <td><span class="tag tag-necessary">Strictly necessary</span></td>
             </tr>
             <tr>
-              <td><code>__client_uat</code></td>
-              <td>Clerk (authentication)</td>
-              <td>Verifies your session is still valid and refreshes your login token silently in the background.</td>
-              <td>Session</td>
+              <td>Browser storage entries beginning <code>hanko</code></td>
+              <td>Privify (sign-in, run on our own servers)</td>
+              <td>Keep track of your sign-in state in the browser. These are not cookies and are never sent to anyone else; they are removed when you sign out.</td>
+              <td>Until you sign out or your session expires</td>
               <td><span class="tag tag-necessary">Strictly necessary</span></td>
             </tr>
             <tr>
@@ -114,7 +114,7 @@ footer a{color:var(--accent);text-decoration:none}
           </tbody>
         </table>
 
-        <p>3.2. The Privify marketing website (privify.co.uk) sets <strong>no cookies</strong> of its own, and Cloudflare Web Analytics operates entirely without cookies. The one exception is our free breach check page (<a href="/breach-check">privify.co.uk/breach-check</a>), which loads <strong>Cloudflare Turnstile</strong> — a bot-protection tool that may set a strictly necessary cookie or token to confirm you are human and block automated abuse. It is required for the tool to work and is never used to track you or for advertising.</p>
+        <p>3.2. The Privify marketing website (privify.co.uk) sets <strong>no cookies</strong> of its own. The one exception is our free breach check page (<a href="/breach-check">privify.co.uk/breach-check</a>), which loads <strong>Cloudflare Turnstile</strong> — a bot-protection tool that may set a strictly necessary cookie or token to confirm you are human and block automated abuse. It is required for the tool to work and is never used to track you or for advertising.</p>
         <p>3.3. When you arrive on privify.co.uk from another website, our pages add a short tag to their own links (for example <code>?src=google</code>) noting the referring site's name and the first page you visited. This is carried in the page address only &mdash; nothing is stored on your device. If you go on to sign up, the sign-up page keeps the tag in your browser's session storage for that tab only, until your account is created, so it can be saved as described in section 2.12 of our <a href="/privacy">Privacy Policy</a>. It is cleared when the tab is closed.</p>
       </div>
     </section>
@@ -122,7 +122,7 @@ footer a{color:var(--accent);text-decoration:none}
     <section>
       <h2>4. Third-Party Services</h2>
       <div class="prose">
-        <p>4.1. <strong>Clerk</strong> — our authentication provider — may set additional cookies for security purposes such as cross-site request forgery (CSRF) protection. These are strictly necessary for secure login. You can read Clerk's cookie policy at <a href="https://clerk.com/privacy" target="_blank" rel="noopener">clerk.com/privacy</a>.</p>
+        <p>4.1. Sign-in to Privify is handled by <strong>Hanko</strong>, open-source login software that we run on our own servers (auth.privify.co.uk). No third-party authentication company receives your login data or sets cookies for sign-in.</p>
         <p>4.2. <strong>Stripe</strong> — our payment processor — sets cookies during the checkout process to detect fraud and maintain payment session state. You can read Stripe's cookie policy at <a href="https://stripe.com/cookies-policy/legal" target="_blank" rel="noopener">stripe.com/cookies-policy/legal</a>.</p>
         <p>4.3. <strong>Cloudflare Turnstile</strong> — used on our free breach check page to block automated abuse — may set a strictly necessary cookie or token to verify you are human. It does not track you across sites or build a profile. You can read Cloudflare's privacy policy at <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">cloudflare.com/privacypolicy</a>.</p>
         <p>4.4. We do not embed any social media widgets, advertising networks, or analytics scripts that set third-party cookies.</p>
