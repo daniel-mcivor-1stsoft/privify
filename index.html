@@ -322,6 +322,13 @@ footer{background:#0d3d29;color:#fff;padding:clamp(3rem,6vw,4.5rem) 0 2.25rem;ma
 .cmp .plan-name{margin-bottom:.4rem}
 .cmp h3{font-size:1.35rem;margin-bottom:.6rem}
 .cmp .btn{margin-top:1.4rem;align-self:flex-start}
+.uc-link{display:inline-block;margin-top:.8rem;font-size:.92rem;font-weight:600;color:var(--green)}
+.uc-link:hover{text-decoration:underline;text-underline-offset:3px}
+.biz-band{display:flex;align-items:center;gap:.9rem;background:var(--green-tint);border:1px solid var(--green-tint2);border-radius:14px;padding:.95rem 1.2rem;margin-bottom:clamp(2rem,4vw,3rem);font-size:.92rem;color:var(--ink2);line-height:1.5;transition:border-color .2s var(--ease),transform .2s var(--ease)}
+.biz-band:hover{border-color:var(--green-border);transform:translateY(-1px)}
+.biz-band b{color:var(--ink);font-weight:600}
+.biz-band-txt{flex:1}
+.biz-band-arr{color:var(--green);font-weight:700;font-family:var(--mono)}
 .home-biz{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 @media(max-width:680px){
   .plan-feats.two{grid-template-columns:1fr}
@@ -515,6 +522,10 @@ footer{background:#0d3d29;color:#fff;padding:clamp(3rem,6vw,4.5rem) 0 2.25rem;ma
         <div class="uc-l"><h3>2FA &amp; account security</h3><div class="uc-tags"><span class="uc-tag">Banking OTPs</span><span class="uc-tag">Account recovery</span></div></div>
         <div class="uc-r"><p>Use your Privify number for SMS two-factor authentication on accounts where you don't want to use your real phone. Codes land in your email instantly, so your personal number never gets exposed.</p></div>
       </div>
+      <div class="uc-row">
+        <div class="uc-l"><h3>Running a small business</h3><div class="uc-tags"><span class="uc-tag">Sole traders</span><span class="uc-tag">Small teams</span></div></div>
+        <div class="uc-r"><p>Keep your personal mobile off invoices and listings, and share login codes with your team instead of passing your phone around.</p><a href="/business/" class="uc-link">See Privify for Business →</a></div>
+      </div>
     </div>
   </div>
 </section>
@@ -551,6 +562,11 @@ footer{background:#0d3d29;color:#fff;padding:clamp(3rem,6vw,4.5rem) 0 2.25rem;ma
 <!-- PRICING -->
 <section class="alt" id="pricing">
   <div class="wrap">
+    <a href="#pricing-business" data-plan-tab="business" class="biz-band reveal">
+      <span class="biz-tag">Business</span>
+      <span class="biz-band-txt"><b>Using your number for work?</b> Privify for Business adds team logins, your own voicemail greeting and VAT invoices. From £14.99 + VAT.</span>
+      <span class="biz-band-arr">→</span>
+    </a>
     <div class="sec-head reveal" style="max-width:640px">
       <span class="kick">Pricing</span>
       <h2>Everything you need<br/>to stay <em>private.</em></h2>
