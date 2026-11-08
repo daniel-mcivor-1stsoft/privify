@@ -90,7 +90,15 @@
       "name": "Is there a free trial?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. Business starts billing when you sign up. There's a 3-month minimum, then it rolls monthly and you can cancel any time."
+        "text": "No. Business starts billing when you sign up. Monthly plans have a 3-month minimum, then roll monthly and you can cancel any time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can we pay yearly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Pay yearly and you get two months free: £149.90 + VAT a year instead of £179.88. Team members on a yearly plan are £79.90 or £29.90 a year. Yearly plans are paid up front and run to the end of the year. Extra text replies are still billed monthly."
       }
     },
     {
@@ -386,6 +394,7 @@ footer{background:#0d3d29;color:#fff;padding:clamp(3rem,6vw,4.5rem) 0 2.25rem;ma
 .seg button{font-family:var(--mono);font-size:.74rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:var(--ink2);background:none;border:none;border-radius:100px;padding:.6rem 1.3rem;cursor:pointer;transition:background .2s var(--ease),color .2s var(--ease)}
 .seg button:hover{color:var(--ink)}
 .seg button[aria-selected="true"]{background:var(--green);color:#fff;box-shadow:0 4px 12px rgba(26,107,74,.25)}
+.seg button[aria-pressed="true"]{background:var(--green);color:#fff;box-shadow:0 4px 12px rgba(26,107,74,.25)}
 .price-panel[hidden]{display:none}
 .plan-feats.two{display:grid;grid-template-columns:1fr 1fr;gap:.65rem 1.6rem;flex:none}
 .plan .btn-row{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.4rem}
@@ -618,38 +627,45 @@ footer{background:#0d3d29;color:#fff;padding:clamp(3rem,6vw,4.5rem) 0 2.25rem;ma
     <div class="sec-head reveal">
       <span class="kick">Pricing</span>
       <h2>One plan. Add people<br/>as you <em>grow.</em></h2>
-      <p>Prices exclude VAT, which is added at 20%. No free trial. 3-month minimum, then monthly rolling.</p>
+      <p>Prices exclude VAT, which is added at 20%. No free trial. Pay monthly with a 3-month minimum, or yearly and get two months free.</p>
+    </div>
+    <div class="seg-wrap reveal">
+      <div class="seg" role="group" aria-label="Billing period">
+        <button type="button" data-bill="m" aria-pressed="true">Monthly</button>
+        <button type="button" data-bill="y" aria-pressed="false">Yearly · 2 months free</button>
+      </div>
     </div>
     <div class="bento reveal">
       <div class="tile plan feat c7">
         <div class="plan-tag">For business</div>
         <div class="plan-name">Business</div>
-        <div class="plan-price"><sup>£</sup>14.99</div>
-        <div class="plan-per">per month + VAT · 3-month minimum</div>
+        <div class="plan-price"><sup>£</sup><span data-m="14.99" data-y="149.90">14.99</span></div>
+        <div class="plan-per" data-m="per month + VAT · 3-month minimum" data-y="per year + VAT · works out at £12.49 a month">per month + VAT · 3-month minimum</div>
+        <div class="plan-trial" data-m="Or £149.90 a year + VAT: two months free" data-y="Two months free compared with monthly">Or £149.90 a year + VAT: two months free</div>
         <hr/>
         <div class="plan-incl">Everything in Premium, plus:</div>
         <div class="plan-feats two">
           <div class="pf">A genuine UK 07 number for the business</div>
           <div class="pf">Team inbox and logins for your team</div>
-          <div class="pf"><div>200 text replies a month<span class="sub">Shared across the team, then 6p each after your first renewal</span></div></div>
+          <div class="pf"><div>200 text replies a month<span class="sub" data-m="Shared across the team, then 6p each after your first renewal" data-y="Shared across the team, then 6p each after your first 60 days">Shared across the team, then 6p each after your first renewal</span></div></div>
           <div class="pf">Voicemail with your own recorded greeting</div>
           <div class="pf"><div>Forward texts and voicemail<span class="sub">Up to 10 email addresses</span></div></div>
           <div class="pf">VAT invoices with your company details</div>
           <div class="pf">Keep your existing number with porting</div>
           <div class="pf">Priority support</div>
         </div>
-        <a href="https://app.privify.co.uk/sign-up?plan=business" class="btn btn-g">Get Business →</a>
+        <a href="https://app.privify.co.uk/sign-up?plan=business" id="bizCta" data-m-href="https://app.privify.co.uk/sign-up?plan=business" data-y-href="https://app.privify.co.uk/sign-up?plan=business&amp;billing=yearly" class="btn btn-g">Get Business →</a>
       </div>
       <div class="tile c5">
         <div class="plan-name">Add your team</div>
-        <div class="addon"><div>Team member with their own number<small>Their own 07 number and login</small></div><b>£7.99 <span class="per">/mo</span></b></div>
-        <div class="addon"><div>Team member sharing a number<small>A login to the business number</small></div><b>£2.99 <span class="per">/mo</span></b></div>
-        <div class="addon"><div>Extra text replies<small>After the 200 included each month</small></div><b>6p <span class="per">each</span></b></div>
+        <div class="addon"><div>Team member with their own number<small>Their own 07 number and login</small></div><b>£<span data-m="7.99" data-y="79.90">7.99</span> <span class="per" data-m="/mo" data-y="/yr">/mo</span></b></div>
+        <div class="addon"><div>Team member sharing a number<small>A login to the business number</small></div><b>£<span data-m="2.99" data-y="29.90">2.99</span> <span class="per" data-m="/mo" data-y="/yr">/mo</span></b></div>
+        <div class="addon"><div>Extra text replies<small>After the 200 included each month, billed monthly</small></div><b>6p <span class="per">each</span></b></div>
         <div class="calc" id="calc">
           <h4>Work out your price</h4>
           <div class="calc-row"><span>People with their own number</span><span class="step"><button type="button" data-k="own" data-d="-1" aria-label="Fewer people with their own number">−</button><output id="own">4</output><button type="button" data-k="own" data-d="1" aria-label="More people with their own number">+</button></span></div>
           <div class="calc-row"><span>People sharing a number</span><span class="step"><button type="button" data-k="shared" data-d="-1" aria-label="Fewer people sharing a number">−</button><output id="shared">0</output><button type="button" data-k="shared" data-d="1" aria-label="More people sharing a number">+</button></span></div>
-          <div class="calc-total"><b id="calcTotal">£46.95</b><span>a month + VAT<br/><span id="calcInc">£56.34 including VAT</span></span></div>
+          <div class="calc-total"><b id="calcTotal">£46.95</b><span><span id="calcPer">a month + VAT</span><br/><span id="calcInc">£56.34 including VAT</span></span></div>
         </div>
         <noscript><div class="example">A team of five, each with their own number: £46.95 a month + VAT.</div></noscript>
       </div>
@@ -706,7 +722,8 @@ footer{background:#0d3d29;color:#fff;padding:clamp(3rem,6vw,4.5rem) 0 2.25rem;ma
         <details class="faq-item"><summary class="faq-q">Can we keep our existing number? <span class="faq-ic">+</span></summary><div class="faq-a">Yes. Porting is included, so you can move an existing UK mobile number to Privify with a PAC code. Ports usually complete within one working day.</div></details>
         <details class="faq-item"><summary class="faq-q">Can we make calls from the number? <span class="faq-ic">+</span></summary><div class="faq-a">No. Callers hear your greeting and leave a voicemail, which arrives as an audio file with a transcript. You can reply to texts, but you can't make calls.</div></details>
         <details class="faq-item"><summary class="faq-q">Can we send marketing texts? <span class="faq-ic">+</span></summary><div class="faq-a">No. Replies are for answering people who have texted you. Marketing, bulk and unsolicited messages aren't allowed, and sending limits apply. See our <a href="/acceptable-use">Acceptable Use Policy</a>.</div></details>
-        <details class="faq-item"><summary class="faq-q">Is there a free trial? <span class="faq-ic">+</span></summary><div class="faq-a">No. Business starts billing when you sign up. There's a 3-month minimum, then it rolls monthly and you can cancel any time.</div></details>
+        <details class="faq-item"><summary class="faq-q">Is there a free trial? <span class="faq-ic">+</span></summary><div class="faq-a">No. Business starts billing when you sign up. Monthly plans have a 3-month minimum, then roll monthly and you can cancel any time.</div></details>
+        <details class="faq-item"><summary class="faq-q">Can we pay yearly? <span class="faq-ic">+</span></summary><div class="faq-a">Yes. Pay yearly and you get two months free: £149.90 + VAT a year instead of £179.88. Team members on a yearly plan are £79.90 or £29.90 a year. Yearly plans are paid up front and run to the end of the year. Extra text replies are still billed monthly.</div></details>
         <details class="faq-item"><summary class="faq-q">Where is our data stored? <span class="faq-ic">+</span></summary><div class="faq-a">All messages and voicemails are stored on servers within the European Union. We comply with UK and EU GDPR, don't sell data and don't serve ads. See our <a href="/privacy">Privacy Policy</a>.</div></details>
       </div>
     </div>
@@ -718,9 +735,9 @@ footer{background:#0d3d29;color:#fff;padding:clamp(3rem,6vw,4.5rem) 0 2.25rem;ma
   <div class="wrap">
     <div class="tile cta-tile reveal">
       <h2>Keep your personal number <em>personal.</em></h2>
-      <p>A genuine UK 07 number for your business, usually ready the moment you pay. From £14.99 a month + VAT.</p>
+      <p>A genuine UK 07 number for your business, usually ready the moment you pay. From £14.99 a month + VAT, or two months free when you pay yearly.</p>
       <a href="https://app.privify.co.uk/sign-up?plan=business" class="btn btn-g">Get Business →</a>
-      <span class="cta-note">No free trial. 3-month minimum, then monthly rolling.</span>
+      <span class="cta-note">No free trial. Monthly with a 3-month minimum, or yearly.</span>
     </div>
   </div>
 </section>
@@ -764,7 +781,7 @@ footer{background:#0d3d29;color:#fff;padding:clamp(3rem,6vw,4.5rem) 0 2.25rem;ma
 <script src="/src.js" defer></script>
 <script>
 (function(){var inc=[{f:'Courier portal',w:'Accounts',p:'Your sign-in code is 309114'},{f:'07700 900789',w:'Sam',p:'Is the quote still valid?'},{f:'Card terminal',w:'Owner',p:'Your security code is 6620'},{f:'Wholesaler',w:'Orders',p:'Order 2231 is ready to collect'}];var i=0;function tick(){var list=document.getElementById('mockList');if(!list)return;var m=inc[i%inc.length];i++;list.querySelectorAll('.mock-msg.on').forEach(function(el){el.classList.remove('on')});var el=document.createElement('div');el.className='mock-msg on';el.innerHTML='<div class="mock-from">'+m.f+'<span class="mock-who">'+m.w+'</span></div><div class="mock-prev">'+m.p+'</div><div class="mock-time">now</div>';var hd=list.querySelector('.mock-hd');list.insertBefore(el,hd.nextSibling);var all=list.querySelectorAll('.mock-msg');if(all.length>4)all[all.length-1].remove()}if(!matchMedia('(prefers-reduced-motion: reduce)').matches){setTimeout(function(){tick();setInterval(tick,3200)},2600)}})();
-(function(){var c=document.getElementById('calc');if(!c)return;var v={own:4,shared:0};var BASE=14.99,OWN=7.99,SH=2.99;function f(n){return '£'+n.toFixed(2)}function r(){document.getElementById('own').textContent=v.own;document.getElementById('shared').textContent=v.shared;var t=BASE+v.own*OWN+v.shared*SH;document.getElementById('calcTotal').textContent=f(t);document.getElementById('calcInc').textContent=f(Math.round(t*1.2*100)/100)+' including VAT'}c.addEventListener('click',function(e){var b=e.target.closest('button[data-k]');if(!b)return;var k=b.dataset.k;v[k]=Math.max(0,Math.min(50,v[k]+Number(b.dataset.d)));r()});r()})();
+(function(){var bill='m';var P={m:{base:14.99,own:7.99,sh:2.99,per:'a month + VAT'},y:{base:149.90,own:79.90,sh:29.90,per:'a year + VAT'}};var v={own:4,shared:0};function f(n){return '£'+n.toFixed(2)}function r(){var c=document.getElementById('calc');if(!c)return;var p=P[bill];document.getElementById('own').textContent=v.own;document.getElementById('shared').textContent=v.shared;var tot=p.base+v.own*p.own+v.shared*p.sh;document.getElementById('calcTotal').textContent=f(tot);document.getElementById('calcPer').textContent=p.per;document.getElementById('calcInc').textContent=f(Math.round(tot*1.2*100)/100)+' including VAT'}var c=document.getElementById('calc');if(c)c.addEventListener('click',function(e){var b=e.target.closest('button[data-k]');if(!b)return;var k=b.dataset.k;v[k]=Math.max(0,Math.min(50,v[k]+Number(b.dataset.d)));r()});function setBill(b){bill=b;document.querySelectorAll('button[data-bill]').forEach(function(x){x.setAttribute('aria-pressed',x.dataset.bill===b?'true':'false')});document.querySelectorAll('[data-m][data-y]').forEach(function(el){el.textContent=el.getAttribute('data-'+b)});var cta=document.getElementById('bizCta');if(cta)cta.href=cta.getAttribute('data-'+b+'-href');r()}document.querySelectorAll('button[data-bill]').forEach(function(x){x.addEventListener('click',function(){setBill(x.dataset.bill)})});r()})();
 </script>
 </body>
 </html>
