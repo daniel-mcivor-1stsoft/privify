@@ -286,6 +286,47 @@ footer{background:#0d3d29;color:#fff;padding:clamp(3rem,6vw,4.5rem) 0 2.25rem;ma
   .trust-strip .it{flex-basis:50%;border-left:none!important;border-top:1px solid var(--border);padding-left:0!important}
   .foot-top{grid-template-columns:1fr 1fr;gap:2rem}.foot-brand{grid-column:1/-1}
 }
+
+/* ── BUSINESS ADDITIONS ── */
+.biz-tag{display:inline-block;font-family:var(--mono);font-size:.6rem;font-weight:500;color:var(--green);background:var(--green-tint);border:1px solid var(--green-tint2);border-radius:4px;padding:.12rem .45rem;text-transform:uppercase;letter-spacing:.06em;vertical-align:middle}
+.seg-wrap{display:flex;justify-content:center;margin-bottom:1.6rem}
+.seg{display:inline-flex;background:var(--surface);border:1px solid var(--border);border-radius:100px;padding:4px;gap:2px}
+.seg button{font-family:var(--mono);font-size:.74rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:var(--ink2);background:none;border:none;border-radius:100px;padding:.6rem 1.3rem;cursor:pointer;transition:background .2s var(--ease),color .2s var(--ease)}
+.seg button:hover{color:var(--ink)}
+.seg button[aria-selected="true"]{background:var(--green);color:#fff;box-shadow:0 4px 12px rgba(26,107,74,.25)}
+.price-panel[hidden]{display:none}
+.plan-feats.two{display:grid;grid-template-columns:1fr 1fr;gap:.65rem 1.6rem;flex:none}
+.plan .btn-row{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.4rem}
+.plan .btn-row .btn{margin-top:0;width:auto;flex:1}
+.addon{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--border);font-size:.92rem}
+.addon:last-of-type{border-bottom:none}
+.addon b{font-weight:700;white-space:nowrap;letter-spacing:-0.02em}
+.addon small{display:block;color:var(--ink3);font-size:.76rem;margin-top:.15rem}
+.addon .per{font-family:var(--mono);font-size:.66rem;color:var(--ink3);font-weight:400}
+.example{margin-top:1rem;font-size:.84rem;color:var(--green-dark);background:var(--green-tint);border:1px solid var(--green-tint2);border-radius:10px;padding:.75rem .9rem;line-height:1.5}
+.calc{margin-top:1.2rem;border-top:1px solid var(--border);padding-top:1.2rem}
+.calc h4{font-family:var(--mono);font-size:.68rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);margin-bottom:.8rem}
+.calc-row{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.45rem 0;font-size:.88rem}
+.step{display:inline-flex;align-items:center;border:1px solid var(--border2);border-radius:10px;overflow:hidden;background:var(--white)}
+.step button{width:34px;height:34px;border:none;background:none;font-size:1.05rem;color:var(--ink);cursor:pointer}
+.step button:hover{background:var(--surface)}
+.step output{min-width:30px;text-align:center;font-family:var(--mono);font-size:.85rem}
+.calc-total{display:flex;justify-content:space-between;align-items:baseline;margin-top:.8rem;padding-top:.8rem;border-top:1px dashed var(--border2)}
+.calc-total b{font-size:1.6rem;font-weight:700;letter-spacing:-0.04em}
+.calc-total span{font-family:var(--mono);font-size:.7rem;color:var(--ink3);text-align:right}
+.mock-who{display:inline-block;font-family:var(--mono);font-size:.5rem;color:var(--ink2);background:var(--surface);border:1px solid var(--border);border-radius:3px;padding:.02rem .3rem;margin-left:.35rem;vertical-align:middle;text-transform:uppercase;letter-spacing:.04em}
+.mock-num{font-family:var(--mono);font-size:.6rem;color:var(--ink3);font-weight:400;margin-left:.35rem}
+.prob h3{font-size:1.05rem}
+.prob p{font-size:.88rem}
+.cmp{display:flex;flex-direction:column}
+.cmp .plan-name{margin-bottom:.4rem}
+.cmp h3{font-size:1.35rem;margin-bottom:.6rem}
+.cmp .btn{margin-top:1.4rem;align-self:flex-start}
+.home-biz{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+@media(max-width:680px){
+  .plan-feats.two{grid-template-columns:1fr}
+  .seg button{padding:.55rem .95rem}
+}
 </style>
 </head>
 <body>
@@ -294,7 +335,7 @@ footer{background:#0d3d29;color:#fff;padding:clamp(3rem,6vw,4.5rem) 0 2.25rem;ma
 <nav id="nav">
   <a href="/" class="logo"><span class="logo-mark"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="7" width="10" height="10" rx="2.5" fill="white" fill-opacity=".4"/><rect x="9" y="3" width="10" height="10" rx="2.5" fill="white"/></svg></span>privify</a>
   <div class="nav-r">
-    <a href="#features">Features</a><a href="#privacy">Privacy</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="/blog/">Blog</a><a href="https://status.privify.co.uk/status/privify">Status</a>
+    <a href="#features">Features</a><a href="#privacy">Privacy</a><a href="#pricing">Pricing</a><a href="/business/">Business</a><a href="#faq">FAQ</a><a href="/blog/">Blog</a><a href="https://status.privify.co.uk/status/privify">Status</a>
     <a href="https://app.privify.co.uk/sign-in">Log in</a>
     <a href="https://app.privify.co.uk/sign-up?plan=starter" class="btn nav-btn">Start free trial</a>
     <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
@@ -307,6 +348,7 @@ footer{background:#0d3d29;color:#fff;padding:clamp(3rem,6vw,4.5rem) 0 2.25rem;ma
   <a href="#features">Features</a>
   <a href="#privacy">Privacy</a>
   <a href="#pricing">Pricing</a>
+  <a href="/business/">Business</a>
   <a href="#faq">FAQ</a>
   <a href="/blog/">Blog</a>
   <a href="https://status.privify.co.uk/status/privify">Status</a>
@@ -514,6 +556,13 @@ footer{background:#0d3d29;color:#fff;padding:clamp(3rem,6vw,4.5rem) 0 2.25rem;ma
       <h2>Everything you need<br/>to stay <em>private.</em></h2>
       <p>Every plan includes email aliases, identity monitoring, and Privify Send. Add a private UK number when you need one.</p>
     </div>
+    <div class="seg-wrap reveal">
+      <div class="seg" role="tablist" aria-label="Plan type">
+        <button type="button" role="tab" id="tab-personal" aria-controls="plans-personal" aria-selected="true">Personal</button>
+        <button type="button" role="tab" id="tab-business" aria-controls="plans-business" aria-selected="false">Business</button>
+      </div>
+    </div>
+    <div class="price-panel" id="plans-personal" role="tabpanel" aria-labelledby="tab-personal">
     <div class="bento reveal">
       <div class="tile plan c4">
         <div class="plan-name">Starter</div>
@@ -565,7 +614,40 @@ footer{background:#0d3d29;color:#fff;padding:clamp(3rem,6vw,4.5rem) 0 2.25rem;ma
         <a href="https://app.privify.co.uk/sign-up?plan=premium" class="btn btn-g">Get started →</a>
       </div>
     </div>
-    <p class="price-foot">Starter: 7 days free, then £1.99/month. Card required. Cancel any time. Plus and Premium: 3-month minimum, then monthly rolling.</p>
+    <p class="price-foot">Starter: 7 days free, then £1.99/month. Card required. Cancel any time. Plus and Premium: 3-month minimum, then monthly rolling.<br/>Plus and Premium are for personal use. Using your number for work? <a href="#pricing-business" data-plan-tab="business" style="color:var(--green);text-decoration:underline">See Business</a>.</p>
+    </div>
+    <div class="price-panel" id="plans-business" role="tabpanel" aria-labelledby="tab-business">
+    <div class="bento">
+      <div class="tile plan feat c8">
+        <div class="plan-tag">For sole traders and small teams</div>
+        <div class="plan-name">Business</div>
+        <div class="plan-price"><sup>£</sup>14.99</div>
+        <div class="plan-per">per month + VAT · 3-month minimum</div>
+        <hr/>
+        <div class="plan-incl">Everything in Premium, plus:</div>
+        <div class="plan-feats two">
+          <div class="pf">A genuine UK 07 number for the business</div>
+          <div class="pf">Team inbox and logins for your team</div>
+          <div class="pf"><div>200 text replies a month<span class="sub">Shared across the team</span></div></div>
+          <div class="pf">Voicemail with your own recorded greeting</div>
+          <div class="pf"><div>Forward texts and voicemail<span class="sub">Up to 10 email addresses</span></div></div>
+          <div class="pf">VAT invoices with your company details</div>
+        </div>
+        <div class="btn-row">
+          <a href="https://app.privify.co.uk/sign-up?plan=business" class="btn btn-g">Get Business →</a>
+          <a href="/business/" class="btn btn-o">See everything in Business</a>
+        </div>
+      </div>
+      <div class="tile c4">
+        <div class="plan-name">Add your team</div>
+        <div class="addon"><div>Team member with their own number<small>Their own 07 number and login</small></div><b>£7.99 <span class="per">/mo</span></b></div>
+        <div class="addon"><div>Team member sharing a number<small>A login to the business number</small></div><b>£2.99 <span class="per">/mo</span></b></div>
+        <div class="addon"><div>Extra text replies<small>After the 200 included</small></div><b>6p <span class="per">each</span></b></div>
+        <div class="example">A team of five, each with their own number: £46.95 a month + VAT.</div>
+      </div>
+    </div>
+    <p class="price-foot">Business prices exclude VAT at 20%. No free trial. 3-month minimum, then monthly rolling.</p>
+    </div>
   </div>
 </section>
 
@@ -590,6 +672,7 @@ footer{background:#0d3d29;color:#fff;padding:clamp(3rem,6vw,4.5rem) 0 2.25rem;ma
         <details class="faq-item"><summary class="faq-q">Can I port my existing number? <span class="faq-ic">+</span></summary><div class="faq-a">Yes. Number porting is available on the Premium plan. If your number is still active, you can port it to Privify and keep receiving texts on it indefinitely. Text PAC to 65075 to get your PAC code. Networks are legally required to provide it within 2 hours, free of charge. Ports typically complete within one working day.</div></details>
         <details class="faq-item"><summary class="faq-q">What is the identity monitor? <span class="faq-ic">+</span></summary><div class="faq-a">We monitor known data breaches and credential leaks. If your email turns up in one, you get an alert straight away so you can change your passwords before anyone uses them.</div></details>
         <details class="faq-item"><summary class="faq-q">How does the free trial work? <span class="faq-ic">+</span></summary><div class="faq-a">The Starter plan comes with a 7-day free trial. Nothing is charged during the trial. After 7 days, billing starts at £1.99/month. Cancel any time before that and you pay nothing. Plus and Premium plans start billing immediately, no trial period.</div></details>
+        <details class="faq-item"><summary class="faq-q">Do you have a plan for businesses? <span class="faq-ic">+</span></summary><div class="faq-a">Yes. Privify Business gives sole traders and small teams a private UK work number with team logins, your own voicemail greeting, 200 text replies a month and VAT invoices, from £14.99 a month + VAT. <a href="/business/">See Privify for Business</a>.</div></details>
         <details class="faq-item"><summary class="faq-q">Is there a browser extension? <span class="faq-ic">+</span></summary><div class="faq-a">Yes. The <a href="https://chromewebstore.google.com/detail/privify/pnbdbklojkcdinhpdkekacnkpfelnnjn" target="_blank" rel="noopener">Privify extension for Chrome</a> detects email and phone fields as you browse and lets you drop in an alias or your Privify number with one click, with no copying and pasting from the dashboard. It's free with every plan and only activates on forms you choose to fill.</div></details>
       </div>
     </div>
@@ -617,7 +700,7 @@ footer{background:#0d3d29;color:#fff;padding:clamp(3rem,6vw,4.5rem) 0 2.25rem;ma
         <p>Private UK numbers and disposable email aliases. Every text and forwarded email lands in your inbox, nothing tied back to you.</p>
         <div class="eu-badge">🇪🇺 EU data storage. GDPR compliant.</div>
       </div>
-      <div class="foot-col"><h4>Product</h4><ul><li><a href="#features">Features</a></li><li><a href="#privacy">Privacy &amp; EU hosting</a></li><li><a href="#pricing">Pricing</a></li><li><a href="/breach-check">Free breach check</a></li></ul></div>
+      <div class="foot-col"><h4>Product</h4><ul><li><a href="#features">Features</a></li><li><a href="#privacy">Privacy &amp; EU hosting</a></li><li><a href="#pricing">Pricing</a></li><li><a href="/business/">Privify for Business</a></li><li><a href="/breach-check">Free breach check</a></li></ul></div>
       <div class="foot-col"><h4>Learn</h4><ul><li><a href="/blog/">Blog</a></li><li><a href="/blog/uk-virtual-mobile-number-no-sim/">Virtual numbers</a></li><li><a href="/blog/how-to-get-pac-code-uk/">PAC codes</a></li><li><a href="https://app.privify.co.uk/sign-in">Log in</a></li></ul></div>
       <div class="foot-col"><h4>Legal</h4><ul><li><a href="/privacy">Privacy Policy</a></li><li><a href="/terms">Terms &amp; Conditions</a></li><li><a href="/acceptable-use">Acceptable Use</a></li><li><a href="/cookies">Cookie Policy</a></li></ul></div>
     </div>
@@ -644,6 +727,9 @@ footer{background:#0d3d29;color:#fff;padding:clamp(3rem,6vw,4.5rem) 0 2.25rem;ma
 })();
 (function(){var els=document.querySelectorAll('.reveal');if(!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('in')});return}var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -6% 0px'});els.forEach(function(e){io.observe(e)})})();
 (function(){var inc=[{f:'DPD',p:'Your parcel arrives today'},{f:'Natwest',p:'Statement now available'},{f:'eBay',p:'Item dispatched, est. Fri'},{f:'Booking.com',p:'Your stay is confirmed'}];var i=0;function tick(){var list=document.getElementById('mockList');if(!list)return;var m=inc[i%inc.length];i++;list.querySelectorAll('.mock-msg.on').forEach(function(el){el.classList.remove('on')});var el=document.createElement('div');el.className='mock-msg on';el.innerHTML='<div class="mock-from">'+m.f+'</div><div class="mock-prev">'+m.p+'</div><div class="mock-time">now</div>';var hd=list.querySelector('.mock-hd');list.insertBefore(el,hd.nextSibling);var all=list.querySelectorAll('.mock-msg');if(all.length>4)all[all.length-1].remove()}if(!matchMedia('(prefers-reduced-motion: reduce)').matches){setTimeout(function(){tick();setInterval(tick,3200)},2600)}})();
+</script>
+<script>
+(function(){var tabs={personal:document.getElementById('tab-personal'),business:document.getElementById('tab-business')};var panels={personal:document.getElementById('plans-personal'),business:document.getElementById('plans-business')};if(!tabs.personal||!panels.business)return;function show(k,focus){['personal','business'].forEach(function(x){var on=x===k;tabs[x].setAttribute('aria-selected',on?'true':'false');tabs[x].tabIndex=on?0:-1;panels[x].hidden=!on});if(focus)tabs[k].focus()}tabs.personal.addEventListener('click',function(){show('personal')});tabs.business.addEventListener('click',function(){show('business')});document.querySelector('.seg').addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key==='ArrowLeft'){show(tabs.personal.getAttribute('aria-selected')==='true'?'business':'personal',true);e.preventDefault()}});document.querySelectorAll('[data-plan-tab]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();show(a.dataset.planTab);document.getElementById('pricing').scrollIntoView({behavior:'smooth'})})});function fromHash(){if(location.hash==='#pricing-business'){show('business');document.getElementById('pricing').scrollIntoView()}}show('personal');fromHash();addEventListener('hashchange',fromHash)})();
 </script>
 <script src="/src.js" defer></script>
 </body>

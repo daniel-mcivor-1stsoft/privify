@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Privify for Business — A private UK work number for your team</title>
+<meta name="description" content="A genuine UK 07 number for sole traders and small teams. Login codes, texts and voicemail reach the right people, with team logins and VAT invoices. From £14.99 a month + VAT."/>
+<link rel="canonical" href="https://privify.co.uk/business/"/>
+<meta property="og:title" content="Privify for Business"/>
+<meta property="og:description" content="A private UK work number your whole team can use. From £14.99 a month + VAT."/>
+<meta property="og:url" content="https://privify.co.uk/business/"/>
+<meta property="og:image" content="https://privify.co.uk/og.png"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can sole traders use Business?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Business is for anyone using their number for work, whether you work on your own or with a team. You don't need a limited company."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a company number?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only if you're a limited company or LLP. We check it with Companies House when you sign up. Sole traders and partnerships just give a trading name and address."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you provide VAT invoices?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every invoice shows our VAT number, and yours if you add it at checkout. Business prices are shown without VAT, which is added at 20%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can my team have their own logins?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Invite people by email and they sign in with their own account. Give them their own number or access to the business number, and choose who sees what."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens when someone leaves?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Remove them in your dashboard. Their access ends straight away, and anything sent to the business number keeps reaching the rest of the team."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can we keep our existing number?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Porting is included, so you can move an existing UK mobile number to Privify with a PAC code. Ports usually complete within one working day."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can we make calls from the number?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Callers hear your greeting and leave a voicemail, which arrives as an audio file with a transcript. You can reply to texts, but you can't make calls."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can we send marketing texts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Replies are for answering people who have texted you. Marketing, bulk and unsolicited messages aren't allowed, and sending limits apply. See our Acceptable Use Policy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a free trial?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Business starts billing when you sign up. There's a 3-month minimum, then it rolls monthly and you can cancel any time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is our data stored?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All messages and voicemails are stored on servers within the European Union. We comply with UK and EU GDPR, don't sell data and don't serve ads. See our Privacy Policy."
+      }
+    }
+  ]
+}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --white:#ffffff;
+  --paper:#f6f8f6;
+  --surface:#eef1ee;
+  --ink:#0f172a;
+  --ink2:#475569;
+  --ink3:#5f6b7a;
+  --green:#1a6b4a;
+  --green-dark:#145539;
+  --green-light:#22875e;
+  --green-tint:#f0fdf4;
+  --green-tint2:#dcfce7;
+  --green-border:#86efac;
+  --border:#e6eae6;
+  --border2:#d6ddd6;
+  --shadow-sm:0 1px 2px rgba(15,40,28,.05);
+  --shadow:0 6px 20px rgba(15,40,28,.06);
+  --shadow-lg:0 24px 50px rgba(15,40,28,.10);
+  --font:'Inter',sans-serif;
+  --mono:'DM Mono',monospace;
+  --ease:cubic-bezier(.2,.8,.2,1);
+  --maxw:1180px;
+  --gut:clamp(1.25rem,4vw,2.75rem);
+  --r:18px;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--font);background:var(--paper);color:var(--ink);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img,svg{display:block}
+::selection{background:var(--green-tint2)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-inline:var(--gut)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--green);outline-offset:3px;border-radius:6px}
+
+h1,h2,h3{letter-spacing:-0.035em;line-height:1.04;text-wrap:balance}
+.mono{font-family:var(--mono)}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 var(--gut);background:rgba(246,248,246,.82);backdrop-filter:blur(16px) saturate(180%);border-bottom:1px solid transparent;transition:border-color .2s,background .2s}
+nav.scrolled{border-bottom-color:var(--border);background:rgba(246,248,246,.95)}
+.logo{display:flex;align-items:center;gap:9px;font-size:1.15rem;font-weight:800;letter-spacing:-0.04em;color:var(--ink)}
+.logo-mark{width:30px;height:30px;background:var(--green);border-radius:8px;display:flex;align-items:center;justify-content:center}
+.logo-mark svg{width:19px;height:19px}
+.nav-r{display:flex;align-items:center;gap:.1rem}
+.nav-r a{font-size:.9rem;font-weight:500;color:var(--ink2);padding:.6rem .85rem;border-radius:8px;transition:color .15s,background .15s}
+.nav-r a:hover{color:var(--ink);background:rgba(15,23,42,.04)}
+.nav-btn{background:var(--green)!important;color:#fff!important;font-weight:600!important;margin-left:.4rem;padding:.6rem 1.1rem!important}
+.nav-btn:hover{background:var(--green-dark)!important}
+.hamburger{display:none;align-items:center;justify-content:center;background:none;border:none;cursor:pointer;padding:.5rem;margin-left:.35rem;color:var(--ink);border-radius:8px}
+.hamburger:hover{background:rgba(15,23,42,.04)}
+.hamburger svg{width:22px;height:22px;display:block}
+.hamburger .icon-close{display:none}
+.hamburger[aria-expanded="true"] .icon-menu{display:none}
+.hamburger[aria-expanded="true"] .icon-close{display:block}
+.mobile-menu{display:none}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:.45rem;font-weight:700;font-size:.95rem;border-radius:11px;padding:.9rem 1.6rem;transition:transform .2s var(--ease),background .2s var(--ease),box-shadow .2s var(--ease),border-color .2s var(--ease);cursor:pointer;border:none;white-space:nowrap}
+.btn-g{background:var(--green);color:#fff;box-shadow:0 6px 18px rgba(26,107,74,.2)}
+.btn-g:hover{background:var(--green-dark);transform:translateY(-2px);box-shadow:0 10px 26px rgba(26,107,74,.28)}
+.btn-o{background:var(--white);color:var(--ink);border:1.5px solid var(--border2)}
+.btn-o:hover{border-color:var(--ink);transform:translateY(-2px)}
+.arrow{transition:transform .2s var(--ease)}
+.btn:hover .arrow{transform:translateX(3px)}
+
+/* ── BENTO PRIMITIVES ── */
+.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(.8rem,1.4vw,1.1rem)}
+.tile{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:clamp(1.4rem,2.2vw,2rem);transition:transform .25s var(--ease),box-shadow .25s var(--ease),border-color .25s var(--ease);position:relative;overflow:hidden}
+.tile.hover:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--border2)}
+.tile.green{background:var(--green-tint);border-color:var(--green-tint2)}
+.tile-ico{width:42px;height:42px;border-radius:11px;background:var(--green-tint);border:1px solid var(--green-tint2);display:flex;align-items:center;justify-content:center;margin-bottom:1.1rem}
+.tile.green .tile-ico{background:var(--white);border-color:var(--green-tint2)}
+.tile-ico svg{width:20px;height:20px;stroke:var(--green);stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.tile h3{font-size:1.16rem;font-weight:700;letter-spacing:-0.02em;margin-bottom:.45rem}
+.tile p{font-size:.93rem;color:var(--ink2);line-height:1.6}
+.tile-list{list-style:none;display:flex;flex-direction:column;gap:.5rem;margin-top:1rem}
+.tile-list li{display:flex;gap:.55rem;align-items:flex-start;font-size:.86rem;color:var(--ink);line-height:1.4}
+.tile-list li::before{content:'';width:16px;height:16px;flex-shrink:0;margin-top:.08rem;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 12 12' fill='none' stroke='%231a6b4a' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='2 6 5 9 10 3'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center}
+
+/* spans */
+.c3{grid-column:span 3}.c4{grid-column:span 4}.c5{grid-column:span 5}.c6{grid-column:span 6}.c7{grid-column:span 7}.c8{grid-column:span 8}.c12{grid-column:span 12}
+.r2{grid-row:span 2}
+
+/* ── HERO ── */
+.hero{padding:7.5rem 0 0}
+.hero-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.hero-checks{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;margin-top:.5rem}
+.hero-check{display:inline-flex;align-items:center;gap:.5rem;font-size:.85rem;color:var(--ink2);font-weight:500}
+.hero-check svg{width:15px;height:15px;stroke:var(--green);stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.trust-strip{border-top:1px solid var(--border);margin-top:clamp(2.5rem,5vw,4rem)}
+.trust-strip .row{display:flex;flex-wrap:wrap}
+.trust-strip .it{flex:1 1 0;min-width:170px;display:flex;align-items:center;gap:.65rem;padding:1.25rem var(--gut);border-left:1px solid var(--border)}
+.trust-strip .it:first-child{border-left:none;padding-left:0}
+.trust-strip .it svg{width:18px;height:18px;stroke:var(--green);stroke-width:2.1;fill:none;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.trust-strip .it b{font-size:.9rem;font-weight:600;letter-spacing:-0.01em}
+.pill-row{display:flex;flex-wrap:wrap;gap:.55rem;align-items:center;margin-bottom:1.5rem}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--white);border:1px solid var(--border);color:var(--ink2);font-size:.8rem;font-weight:500;padding:.42rem 1rem;border-radius:100px;box-shadow:var(--shadow-sm)}
+.pill-dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(26,107,74,.4);animation:ping 2.4s var(--ease) infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(26,107,74,.4)}70%,100%{box-shadow:0 0 0 7px rgba(26,107,74,0)}}
+.chrome-badge{display:inline-flex;align-items:center;gap:7px;background:var(--white);border:1px solid var(--border);color:var(--ink);font-size:.8rem;font-weight:600;padding:.4rem .9rem .4rem .72rem;border-radius:100px;box-shadow:var(--shadow-sm);transition:transform .15s,box-shadow .15s}
+.chrome-badge:hover{transform:translateY(-1px);box-shadow:var(--shadow)}
+.chrome-badge svg{width:15px;height:15px}
+.hero h1{font-size:clamp(2.5rem,5.2vw,4.2rem);font-weight:600;color:var(--ink);letter-spacing:-0.035em;line-height:1.08;margin-bottom:1.3rem;max-width:15ch}
+.hero h1 .hl{color:var(--green);position:relative}
+.hero h1 .hl::after{content:'';position:absolute;left:.02em;right:.02em;bottom:.05em;height:.12em;background:var(--green);opacity:.16;border-radius:2px}
+.hero .lede{font-size:clamp(1.05rem,1.5vw,1.2rem);color:var(--ink2);line-height:1.6;max-width:48ch;margin-bottom:1.8rem}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.7rem;margin-bottom:1.4rem}
+.mock{padding:0;overflow:hidden}
+.mock-bar{display:flex;align-items:center;gap:.6rem;padding:.55rem .85rem;border-bottom:1px solid var(--border);background:var(--paper)}
+.mock-dots{display:flex;gap:5px}.mock-dots span{width:9px;height:9px;border-radius:50%;background:var(--border2)}
+.mock-url{flex:1;text-align:center;font-family:var(--mono);font-size:.62rem;color:var(--ink3);background:var(--white);border:1px solid var(--border);border-radius:5px;padding:.18rem .6rem}
+.mock-body{display:grid;grid-template-columns:130px 1fr;min-height:300px}
+.mock-side{border-right:1px solid var(--border);padding:.8rem .6rem;display:flex;flex-direction:column;gap:.1rem}
+.mock-brand{display:flex;align-items:center;gap:.4rem;margin-bottom:.7rem;padding:0 .2rem}
+.mock-brand b{font-size:.78rem;font-weight:800;letter-spacing:-0.03em}
+.mock-tier{font-family:var(--mono);font-size:.5rem;color:var(--green);background:var(--green-tint);border:1px solid var(--green-tint2);border-radius:3px;padding:.05rem .3rem;text-transform:uppercase}
+.mock-nav{display:flex;align-items:center;gap:.45rem;padding:.4rem .55rem;border-radius:7px;font-size:.72rem;color:var(--ink2);font-weight:500;position:relative}
+.mock-nav svg{width:13px;height:13px;stroke:currentColor;stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.mock-nav.on{background:var(--green-tint);color:var(--green);font-weight:600}
+.mock-nav .nd{position:absolute;right:.5rem;width:6px;height:6px;border-radius:50%;background:var(--green);animation:ping 2s infinite}
+.mock-list{display:flex;flex-direction:column}
+.mock-hd{font-size:.7rem;font-weight:700;padding:.55rem .85rem;border-bottom:1px solid var(--border)}
+.mock-msg{padding:.5rem .85rem;border-bottom:1px solid var(--paper);position:relative}
+.mock-msg.on{background:var(--green-tint)}
+.mock-from{font-size:.7rem;font-weight:700;margin-bottom:.05rem}
+.mock-prev{font-size:.63rem;color:var(--ink3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:78%}
+.mock-time{position:absolute;top:.5rem;right:.85rem;font-family:var(--mono);font-size:.55rem;color:var(--ink3)}
+.trust-tile{display:flex;flex-direction:column;justify-content:center;gap:.35rem}
+.trust-tile .ti{width:34px;height:34px;border-radius:9px;background:var(--green-tint);border:1px solid var(--green-tint2);display:flex;align-items:center;justify-content:center;margin-bottom:.3rem}
+.trust-tile .ti svg{width:17px;height:17px;stroke:var(--green);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.trust-tile b{font-size:.95rem;font-weight:700;letter-spacing:-0.02em}
+.trust-tile span{font-size:.78rem;color:var(--ink3);line-height:1.4}
+
+/* ── SECTION HEADS ── */
+section{padding:clamp(3.5rem,7vw,6rem) 0}
+.alt{background:var(--white)}
+.sec-head{max-width:640px;margin-bottom:clamp(2rem,4vw,3rem)}
+.sec-head .kick{font-family:var(--mono);font-size:.72rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--green);display:inline-flex;align-items:center;gap:.6rem;margin-bottom:1.1rem}
+.sec-head .kick::before{content:'';width:22px;height:1px;background:var(--green)}
+.sec-head h2{font-size:clamp(1.9rem,4vw,3rem);font-weight:600;color:var(--ink);margin-bottom:.9rem;letter-spacing:-0.035em;line-height:1.08}
+.sec-head h2 em{font-style:normal;color:var(--green)}
+.sec-head p{font-size:1.05rem;color:var(--ink2);line-height:1.65;max-width:58ch}
+
+/* feature highlight tile */
+.tile.feature-lg{display:flex;flex-direction:column;justify-content:space-between}
+.tile.feature-lg .big-ico{width:54px;height:54px;border-radius:14px}
+.tile.feature-lg .big-ico svg{width:26px;height:26px}
+.tile.feature-lg h3{font-size:clamp(1.4rem,2.2vw,1.9rem)}
+.tile.feature-lg p{font-size:1rem;max-width:34ch}
+
+/* flow chips inside a wide tile */
+.flow-tile{display:flex;flex-direction:column;justify-content:center;gap:1.1rem}
+.flow-chips{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
+.flow-chip{background:var(--paper);border:1px solid var(--border);border-radius:11px;padding:.7rem .85rem;flex:1;min-width:90px}
+.flow-chip b{display:block;font-size:.9rem;font-weight:700}
+.flow-chip span{font-size:.68rem;color:var(--ink3)}
+.flow-arr{color:var(--green);font-weight:700;font-family:var(--mono)}
+
+/* privacy points */
+.pp h4{font-size:1rem;font-weight:700;margin-bottom:.35rem;display:flex;align-items:center;gap:.5rem}
+.pp h4 svg{width:18px;height:18px;stroke:var(--green);stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.pp p{font-size:.88rem;color:var(--ink2);line-height:1.55}
+.privacy-statement .badges{display:flex;flex-direction:column;gap:.6rem;margin-top:1.2rem}
+.privacy-statement .badges div{display:flex;align-items:center;gap:.55rem;font-size:.9rem;color:var(--ink)}
+.privacy-statement .badges svg{width:16px;height:16px;stroke:var(--green);stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+
+/* use case tiles */
+.uc-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem}
+.uc-tag{font-family:var(--mono);font-size:.66rem;color:var(--ink3);border:1px solid var(--border2);border-radius:100px;padding:.22rem .65rem}
+
+/* steps */
+.step-n{font-family:var(--mono);font-size:.78rem;color:var(--green);margin-bottom:.7rem;font-weight:500}
+.step-aside{display:inline-block;margin-top:.7rem;font-family:var(--mono);font-size:.68rem;color:var(--green);background:var(--green-tint);border:1px solid var(--green-tint2);border-radius:100px;padding:.22rem .7rem}
+.step-note{margin-top:.7rem;font-size:.82rem;color:var(--green-dark);background:var(--green-tint);border:1px solid var(--green-tint2);border-radius:9px;padding:.6rem .8rem;line-height:1.5}
+
+/* ── HOW: timeline (old style) ── */
+.timeline{max-width:760px;position:relative}
+.tl-step{display:grid;grid-template-columns:auto 1fr;gap:1.5rem;padding-bottom:2.2rem;position:relative}
+.tl-step:not(:last-child)::before{content:'';position:absolute;left:26px;top:58px;bottom:.2rem;width:2px;background:linear-gradient(var(--green-border),var(--border2))}
+.tl-step:last-child{padding-bottom:0}
+.tl-num{width:54px;height:54px;border-radius:50%;background:var(--white);border:2px solid var(--green);color:var(--green);font-family:var(--mono);font-size:.95rem;display:flex;align-items:center;justify-content:center;position:relative;z-index:1}
+.tl-step:last-child .tl-num{background:var(--green);color:#fff;border-color:var(--green)}
+.tl-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:1.4rem 1.6rem;flex:1}
+.tl-card h3{font-size:1.15rem;font-weight:700;letter-spacing:-0.02em;margin-bottom:.4rem}
+.tl-card p{font-size:.95rem;color:var(--ink2);line-height:1.6}
+
+/* ── USE CASES: editorial list ── */
+.uc-list{border-top:1px solid var(--border2)}
+.uc-row{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(1.5rem,4vw,3.5rem);padding:clamp(1.7rem,3.2vw,2.6rem) 0;border-bottom:1px solid var(--border2);align-items:start}
+.uc-row h3{font-size:clamp(1.3rem,2.3vw,1.75rem);font-weight:600;letter-spacing:-0.025em;line-height:1.1;margin-bottom:.9rem}
+.uc-row .uc-r p{font-size:1.02rem;color:var(--ink2);line-height:1.65;max-width:52ch}
+
+/* ── PRICING ── */
+.plan{display:flex;flex-direction:column}
+.plan.feat{border:2px solid var(--green);box-shadow:0 16px 40px rgba(26,107,74,.13)}
+.plan-tag{position:absolute;top:0;left:0;right:0;background:var(--green);color:#fff;font-family:var(--mono);font-size:.6rem;text-transform:uppercase;letter-spacing:.08em;text-align:center;padding:.32rem}
+.plan.feat .plan-name{margin-top:1.1rem}
+.plan-name{font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink3);margin-bottom:.6rem}
+.plan-price{font-size:2.7rem;font-weight:700;letter-spacing:-0.045em;line-height:1;display:flex;align-items:flex-start;gap:.05rem}
+.plan-price sup{font-size:1rem;font-weight:700;margin-top:.4rem}
+.plan-per{font-family:var(--mono);font-size:.74rem;color:var(--ink3);margin-top:.3rem}
+.plan-trial{font-size:.8rem;color:var(--green);font-weight:600;margin-top:.35rem}
+.plan hr{border:none;border-top:1px solid var(--border);margin:1.3rem 0}
+.plan-incl{font-size:.74rem;color:var(--ink2);background:var(--green-tint);border:1px solid var(--green-tint2);border-radius:8px;padding:.5rem .7rem;margin-bottom:1rem}
+.plan-feats{display:flex;flex-direction:column;gap:.65rem;flex:1}
+.pf{display:flex;gap:.55rem;align-items:flex-start;font-size:.9rem;line-height:1.4}
+.pf::before{content:'';width:15px;height:15px;flex-shrink:0;margin-top:.12rem;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 12 12' fill='none' stroke='%231a6b4a' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='2 6 5 9 10 3'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center}
+.pf .sub{display:block;font-size:.78rem;color:var(--ink3);margin-top:.2rem;line-height:1.35}
+.plan .btn{margin-top:1.4rem;justify-content:center;width:100%}
+.price-foot{text-align:center;font-family:var(--mono);font-size:.74rem;color:var(--ink3);margin-top:1.4rem;line-height:1.7}
+
+/* ── FAQ ── */
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 3rem}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-q{padding:1.2rem 0;font-size:1rem;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;list-style:none;color:var(--ink)}
+.faq-q::-webkit-details-marker{display:none}
+.faq-ic{width:26px;height:26px;flex-shrink:0;border-radius:50%;border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--ink3);transition:.25s var(--ease)}
+details[open] .faq-ic{background:var(--green);border-color:var(--green);color:#fff;transform:rotate(45deg)}
+details[open] .faq-q{color:var(--green)}
+.faq-a{padding:0 2.5rem 1.25rem 0;font-size:.92rem;color:var(--ink2);line-height:1.8}
+.faq-a a{color:var(--green);text-decoration:underline;text-underline-offset:3px}
+
+/* ── CTA (light green-tint tile) ── */
+.cta-tile{text-align:center;padding:clamp(2.5rem,5vw,4rem);background:var(--green-tint);border:1px solid var(--green-tint2)}
+.cta-tile h2{font-size:clamp(1.9rem,4vw,3rem);font-weight:600;letter-spacing:-0.035em;line-height:1.08;margin-bottom:.7rem}
+.cta-tile h2 em{font-style:normal;color:var(--green)}
+.cta-tile p{font-size:1rem;color:var(--ink2);max-width:48ch;margin:0 auto 1.6rem}
+.cta-note{display:block;margin-top:.9rem;font-family:var(--mono);font-size:.72rem;color:var(--ink3)}
+
+/* ── FOOTER ── */
+footer{background:#0d3d29;color:#fff;padding:clamp(3rem,6vw,4.5rem) 0 2.25rem;margin-top:clamp(2rem,4vw,3rem)}
+.foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+.foot-brand .logo{color:#fff;margin-bottom:1.1rem}.foot-brand .logo-mark{background:rgba(255,255,255,.12)}
+.foot-brand p{font-size:.86rem;color:rgba(255,255,255,.5);line-height:1.75;max-width:280px;margin-bottom:1.2rem}
+.eu-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:.45rem .85rem;border-radius:100px;font-size:.74rem;color:rgba(255,255,255,.75)}
+.foot-col h4{font-family:var(--mono);font-size:.68rem;font-weight:500;color:rgba(255,255,255,.45);margin-bottom:1.1rem;letter-spacing:.1em;text-transform:uppercase}
+.foot-col ul{list-style:none;display:flex;flex-direction:column;gap:.65rem}
+.foot-col a{font-size:.88rem;color:rgba(255,255,255,.62);transition:color .15s}.foot-col a:hover{color:#fff}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:1.6rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.foot-bottom p{font-family:var(--mono);font-size:.72rem;color:rgba(255,255,255,.4)}
+.foot-legal{display:flex;gap:1.5rem}.foot-legal a{font-size:.72rem;color:rgba(255,255,255,.4)}.foot-legal a:hover{color:rgba(255,255,255,.8)}
+
+/* ── MOTION ── */
+.js .reveal{opacity:0;transform:translateY(20px)}
+.reveal.in{opacity:1;transform:none;transition:opacity .6s var(--ease),transform .6s var(--ease)}
+@media(prefers-reduced-motion:reduce){.reveal,.reveal.in,.mock-anim{opacity:1!important;transform:none!important;transition:none!important;animation:none!important}}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:2.5rem}
+  .hero h1{max-width:none}
+  .c3,.c4,.c5{grid-column:span 6}
+  .c6{grid-column:span 6}.c7,.c8{grid-column:span 12}
+  .trust-strip .it{flex-basis:33%;padding-inline:1rem}
+  .trust-strip .it:first-child{padding-left:1rem;border-left:1px solid var(--border)}
+}
+@media(max-width:680px){
+  .nav-r a:not(.nav-btn){display:none}
+  .hamburger{display:inline-flex}
+  .mobile-menu{display:block;position:fixed;top:64px;left:0;right:0;z-index:99;max-height:0;overflow:hidden;background:var(--white);border-bottom:1px solid var(--border);box-shadow:var(--shadow-lg);transition:max-height .28s var(--ease)}
+  .mobile-menu.open{max-height:420px}
+  .mobile-menu a{display:block;padding:.9rem var(--gut);font-size:.95rem;font-weight:500;color:var(--ink2);border-bottom:1px solid var(--border)}
+  .mobile-menu a:last-child{border-bottom:none}
+  .mobile-menu a:hover,.mobile-menu a:active{background:rgba(15,23,42,.03);color:var(--ink)}
+  .bento{gap:.8rem}
+  .c3,.c4,.c5,.c6,.c7,.c8,.c12{grid-column:span 12}
+  .r2{grid-row:auto}
+  .mock-body{grid-template-columns:118px 1fr}
+  .uc-row{grid-template-columns:1fr;gap:.7rem}
+  .faq-grid{grid-template-columns:1fr;gap:0}
+  .trust-strip .it{flex-basis:50%;border-left:none!important;border-top:1px solid var(--border);padding-left:0!important}
+  .foot-top{grid-template-columns:1fr 1fr;gap:2rem}.foot-brand{grid-column:1/-1}
+}
+
+/* ── BUSINESS ADDITIONS ── */
+.biz-tag{display:inline-block;font-family:var(--mono);font-size:.6rem;font-weight:500;color:var(--green);background:var(--green-tint);border:1px solid var(--green-tint2);border-radius:4px;padding:.12rem .45rem;text-transform:uppercase;letter-spacing:.06em;vertical-align:middle}
+.seg-wrap{display:flex;justify-content:center;margin-bottom:1.6rem}
+.seg{display:inline-flex;background:var(--surface);border:1px solid var(--border);border-radius:100px;padding:4px;gap:2px}
+.seg button{font-family:var(--mono);font-size:.74rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:var(--ink2);background:none;border:none;border-radius:100px;padding:.6rem 1.3rem;cursor:pointer;transition:background .2s var(--ease),color .2s var(--ease)}
+.seg button:hover{color:var(--ink)}
+.seg button[aria-selected="true"]{background:var(--green);color:#fff;box-shadow:0 4px 12px rgba(26,107,74,.25)}
+.price-panel[hidden]{display:none}
+.plan-feats.two{display:grid;grid-template-columns:1fr 1fr;gap:.65rem 1.6rem;flex:none}
+.plan .btn-row{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.4rem}
+.plan .btn-row .btn{margin-top:0;width:auto;flex:1}
+.addon{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--border);font-size:.92rem}
+.addon:last-of-type{border-bottom:none}
+.addon b{font-weight:700;white-space:nowrap;letter-spacing:-0.02em}
+.addon small{display:block;color:var(--ink3);font-size:.76rem;margin-top:.15rem}
+.addon .per{font-family:var(--mono);font-size:.66rem;color:var(--ink3);font-weight:400}
+.example{margin-top:1rem;font-size:.84rem;color:var(--green-dark);background:var(--green-tint);border:1px solid var(--green-tint2);border-radius:10px;padding:.75rem .9rem;line-height:1.5}
+.calc{margin-top:1.2rem;border-top:1px solid var(--border);padding-top:1.2rem}
+.calc h4{font-family:var(--mono);font-size:.68rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);margin-bottom:.8rem}
+.calc-row{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.45rem 0;font-size:.88rem}
+.step{display:inline-flex;align-items:center;border:1px solid var(--border2);border-radius:10px;overflow:hidden;background:var(--white)}
+.step button{width:34px;height:34px;border:none;background:none;font-size:1.05rem;color:var(--ink);cursor:pointer}
+.step button:hover{background:var(--surface)}
+.step output{min-width:30px;text-align:center;font-family:var(--mono);font-size:.85rem}
+.calc-total{display:flex;justify-content:space-between;align-items:baseline;margin-top:.8rem;padding-top:.8rem;border-top:1px dashed var(--border2)}
+.calc-total b{font-size:1.6rem;font-weight:700;letter-spacing:-0.04em}
+.calc-total span{font-family:var(--mono);font-size:.7rem;color:var(--ink3);text-align:right}
+.mock-who{display:inline-block;font-family:var(--mono);font-size:.5rem;color:var(--ink2);background:var(--surface);border:1px solid var(--border);border-radius:3px;padding:.02rem .3rem;margin-left:.35rem;vertical-align:middle;text-transform:uppercase;letter-spacing:.04em}
+.mock-num{font-family:var(--mono);font-size:.6rem;color:var(--ink3);font-weight:400;margin-left:.35rem}
+.prob h3{font-size:1.05rem}
+.prob p{font-size:.88rem}
+.cmp{display:flex;flex-direction:column}
+.cmp .plan-name{margin-bottom:.4rem}
+.cmp h3{font-size:1.35rem;margin-bottom:.6rem}
+.cmp .btn{margin-top:1.4rem;align-self:flex-start}
+.home-biz{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+@media(max-width:680px){
+  .plan-feats.two{grid-template-columns:1fr}
+  .seg button{padding:.55rem .95rem}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.classList.add('js')</script>
+
+<nav id="nav">
+  <a href="/" class="logo"><span class="logo-mark"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="7" width="10" height="10" rx="2.5" fill="white" fill-opacity=".4"/><rect x="9" y="3" width="10" height="10" rx="2.5" fill="white"/></svg></span>privify</a>
+  <div class="nav-r">
+    <a href="#features">Features</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="/">Personal</a><a href="/blog/">Blog</a>
+    <a href="https://app.privify.co.uk/sign-in">Log in</a>
+    <a href="https://app.privify.co.uk/sign-up?plan=business" class="btn nav-btn">Get Business</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#features">Features</a>
+  <a href="#how">How it works</a>
+  <a href="#pricing">Pricing</a>
+  <a href="#faq">FAQ</a>
+  <a href="/">Personal plans</a>
+  <a href="/blog/">Blog</a>
+  <a href="https://app.privify.co.uk/sign-in">Log in</a>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-l">
+        <div class="pill-row">
+          <span class="pill"><span class="pill-dot"></span>Privify for Business · sole traders and small teams</span>
+        </div>
+        <h1>A private work number <span class="hl">your whole team</span> can use.</h1>
+        <p class="lede">A genuine UK 07 number for your business. Texts, login codes and voicemail reach the right people, and everyone's personal mobile stays private.</p>
+        <div class="hero-cta">
+          <a href="https://app.privify.co.uk/sign-up?plan=business" class="btn btn-g">Get Business <span class="arrow">→</span></a>
+          <a href="#pricing" class="btn btn-o">See pricing</a>
+        </div>
+        <div class="hero-checks">
+          <span class="hero-check"><svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>Genuine UK 07 number</span>
+          <span class="hero-check"><svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>Add your team</span>
+          <span class="hero-check"><svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>VAT invoices</span>
+          <span class="hero-check"><svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>Usually ready instantly</span>
+        </div>
+      </div>
+      <div class="hero-r">
+        <div class="tile mock">
+          <div class="mock-bar"><div class="mock-dots"><span></span><span></span><span></span></div><div class="mock-url">app.privify.co.uk</div></div>
+          <div class="mock-body">
+            <div class="mock-side">
+              <div class="mock-brand"><svg viewBox="0 0 20 20" fill="none" style="width:14px;height:14px"><rect x="1" y="7" width="9" height="9" rx="2" fill="#1a6b4a" fill-opacity=".4"/><rect x="8" y="3" width="9" height="9" rx="2" fill="#1a6b4a"/></svg><b>privify</b><span class="mock-tier">Business</span></div>
+              <div class="mock-nav on"><svg viewBox="0 0 14 14"><path d="M1 1h12a1 1 0 011 1v7a1 1 0 01-1 1H8l-2.5 2V10H1a1 1 0 01-1-1V2a1 1 0 011-1z"/></svg>Team inbox<span class="nd"></span></div>
+              <div class="mock-nav"><svg viewBox="0 0 14 14"><path d="M3 3a5 5 0 000 8"/><path d="M1 1a9 9 0 000 12"/><circle cx="10.5" cy="10.5" r="3"/></svg>Voicemail</div>
+              <div class="mock-nav"><svg viewBox="0 0 14 14"><circle cx="5" cy="4.5" r="2.2"/><path d="M1 12c0-2.2 1.8-4 4-4s4 1.8 4 4"/><circle cx="10.5" cy="5" r="1.8"/><path d="M10 8.2c1.9 0 3.2 1.4 3.2 3.3"/></svg>Team</div>
+              <div class="mock-nav"><svg viewBox="0 0 14 14"><rect x="3.5" y="1" width="7" height="12" rx="2"/><circle cx="7" cy="10.5" r=".8"/></svg>Numbers</div>
+            </div>
+            <div class="mock-list" id="mockList">
+              <div class="mock-hd">Team inbox <span class="mock-num">07700 900123</span></div>
+              <div class="mock-msg on"><div class="mock-from">Supplier portal<span class="mock-who">Accounts</span></div><div class="mock-prev">Your login code is 482913</div><div class="mock-time">now</div></div>
+              <div class="mock-msg"><div class="mock-from">07700 900456<span class="mock-who">Jo</span></div><div class="mock-prev">Can you come Thursday instead?</div><div class="mock-time">12m</div></div>
+              <div class="mock-msg"><div class="mock-from">Business bank<span class="mock-who">Owner</span></div><div class="mock-prev">Approve payment with code 7731</div><div class="mock-time">1h</div></div>
+              <div class="mock-msg"><div class="mock-from">Ads account<span class="mock-who">Marketing</span></div><div class="mock-prev">Verification code: 551204</div><div class="mock-time">Yest</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="trust-strip">
+      <div class="row">
+        <div class="it"><svg viewBox="0 0 20 20"><rect x="6" y="2" width="8" height="16" rx="2"/><circle cx="10" cy="14.5" r=".6"/></svg><b>Genuine UK 07 numbers</b></div>
+        <div class="it"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="7"/><polyline points="7 10 9 12 13 8"/></svg><b>EU data storage</b></div>
+        <div class="it"><svg viewBox="0 0 20 20"><polyline points="3 10 8 15 17 5"/></svg><b>UK &amp; EU GDPR</b></div>
+        <div class="it"><svg viewBox="0 0 20 20"><rect x="3" y="2" width="14" height="16" rx="2"/><path d="M7 7h6M7 10h6M7 13h3"/></svg><b>VAT invoices</b></div>
+        <div class="it"><svg viewBox="0 0 20 20"><path d="M10 2l2.4 5 5.6.6-4.2 3.8 1.2 5.6L10 14.2 5 17l1.2-5.6L2 7.6 7.6 7z"/></svg><b>Priority support</b></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- PROBLEMS -->
+<section class="alt" id="problems">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kick">Sound familiar?</span>
+      <h2>Your business runs on your<br/><em>personal</em> phone.</h2>
+      <p>Most small businesses start with the owner's mobile. It works, until it doesn't.</p>
+    </div>
+    <div class="bento reveal">
+      <div class="tile prob c3 hover">
+        <div class="tile-ico"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg></div>
+        <h3>The code went to someone's phone</h3>
+        <p>Shared accounts send login codes to whoever set them up. When they're off, nobody can get in.</p>
+      </div>
+      <div class="tile prob c3 hover">
+        <div class="tile-ico"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
+        <h3>Your mobile is on every invoice</h3>
+        <p>Quotes, listings, vans and directories. Your personal number is everywhere, and the calls never stop.</p>
+      </div>
+      <div class="tile prob c3 hover">
+        <div class="tile-ico"><svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4"/><path d="M10 17l5-5-5-5"/><path d="M15 12H3"/></svg></div>
+        <h3>Staff leave with the number</h3>
+        <p>Customers keep texting a phone that walked out of the door with the person who held it.</p>
+      </div>
+      <div class="tile prob c3 hover">
+        <div class="tile-ico"><svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z"/></svg></div>
+        <h3>Customers text you at 10pm</h3>
+        <p>Work messages land on the same phone as family, so you're never quite off the clock.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kick">Features</span>
+      <h2>Everything a small team needs<br/>from <em>one number.</em></h2>
+      <p>Business includes everything in Premium, plus the tools to share a number safely with the people you work with.</p>
+    </div>
+    <div class="bento reveal">
+      <div class="tile green feature-lg c7 r2">
+        <div>
+          <div class="tile-ico big-ico"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/><circle cx="12" cy="16" r="1.4"/></svg></div>
+          <h3>Login codes the whole team can reach</h3>
+          <p>Put your company accounts on a Privify number. Every code arrives in the team inbox and by email, so whoever needs it can log in. Nobody hands over their own mobile.</p>
+        </div>
+        <ul class="tile-list">
+          <li>Codes delivered from every service we've tested</li>
+          <li>Shown only to the people you choose</li>
+          <li>Keeps working when staff change</li>
+        </ul>
+      </div>
+      <div class="tile c5 hover">
+        <div class="tile-ico"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2 20c0-3.9 3.1-7 7-7s7 3.1 7 7"/><circle cx="17.5" cy="8.5" r="2.5"/><path d="M17 13c2.8 0 5 2.2 5 5"/></svg></div>
+        <h3>Your team, your way</h3>
+        <p>Give each person their own 07 number, or let them share the main one. Everyone gets their own login and sees only what you allow.</p>
+      </div>
+      <div class="tile c5 hover">
+        <div class="tile-ico"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/><path d="M9 10l-2-2 2-2"/><path d="M7 8h7a3 3 0 010 6h-1"/></svg></div>
+        <h3>Reply to customers</h3>
+        <p>Answer texts from the business number, not your own. 200 replies a month, shared across the team.</p>
+      </div>
+      <div class="tile c4 hover">
+        <div class="tile-ico"><svg viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v1a7 7 0 0014 0v-1"/><path d="M12 18v4"/></svg></div>
+        <h3>Voicemail with your greeting</h3>
+        <p>Record your own greeting in the dashboard. Messages arrive as audio files with a written transcript.</p>
+      </div>
+      <div class="tile c4 hover">
+        <div class="tile-ico"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="13" height="10" rx="2"/><path d="M2 7l6.5 4L15 7"/><path d="M18 9h4M18 13h4M18 17h4"/></svg></div>
+        <h3>Forward to up to 10 inboxes</h3>
+        <p>Send texts and voicemail to the office, the owner and accounts at the same time.</p>
+      </div>
+      <div class="tile c4 hover">
+        <div class="tile-ico"><svg viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 7h8M8 11h8M8 15h4"/><path d="M14 17.5l1.5 1.5 3-3"/></svg></div>
+        <h3>One bill, proper VAT invoices</h3>
+        <p>Monthly invoices with your company name and VAT number. Add or remove people whenever you need to.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section class="alt" id="how">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kick">How it works</span>
+      <h2>Set up before your<br/>next <em>tea break.</em></h2>
+    </div>
+    <div class="timeline reveal">
+      <div class="tl-step">
+        <div class="tl-num">01</div>
+        <div class="tl-card"><h3>Tell us about your business</h3><p>Your trading name and address. Limited companies add their company number, which we check with Companies House. Sole traders don't need one.</p><span class="step-aside">About 2 minutes</span></div>
+      </div>
+      <div class="tl-step">
+        <div class="tl-num">02</div>
+        <div class="tl-card"><h3>Get your business number</h3><p>A genuine UK 07 number, usually ready the moment you pay. Or bring your existing number across with a PAC code.</p><span class="step-aside">Usually instant</span></div>
+      </div>
+      <div class="tl-step">
+        <div class="tl-num">03</div>
+        <div class="tl-card"><h3>Invite your team</h3><p>Add people by email. They sign in with their own login, with their own number or access to the main one.</p></div>
+      </div>
+      <div class="tl-step">
+        <div class="tl-num">04</div>
+        <div class="tl-card"><h3>Messages reach the right people</h3><p>Codes, texts and voicemail land in the team inbox and in the email inboxes you choose.</p><div class="step-note">Privify is built for receiving. Replies are for answering people who text you, not for marketing or bulk messages. You can't make calls from the number.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kick">Pricing</span>
+      <h2>One plan. Add people<br/>as you <em>grow.</em></h2>
+      <p>Prices exclude VAT, which is added at 20%. No free trial. 3-month minimum, then monthly rolling.</p>
+    </div>
+    <div class="bento reveal">
+      <div class="tile plan feat c7">
+        <div class="plan-tag">For business</div>
+        <div class="plan-name">Business</div>
+        <div class="plan-price"><sup>£</sup>14.99</div>
+        <div class="plan-per">per month + VAT · 3-month minimum</div>
+        <hr/>
+        <div class="plan-incl">Everything in Premium, plus:</div>
+        <div class="plan-feats two">
+          <div class="pf">A genuine UK 07 number for the business</div>
+          <div class="pf">Team inbox and logins for your team</div>
+          <div class="pf"><div>200 text replies a month<span class="sub">Shared across the team, then 6p each after your first renewal</span></div></div>
+          <div class="pf">Voicemail with your own recorded greeting</div>
+          <div class="pf"><div>Forward texts and voicemail<span class="sub">Up to 10 email addresses</span></div></div>
+          <div class="pf">VAT invoices with your company details</div>
+          <div class="pf">Keep your existing number with porting</div>
+          <div class="pf">Priority support</div>
+        </div>
+        <a href="https://app.privify.co.uk/sign-up?plan=business" class="btn btn-g">Get Business →</a>
+      </div>
+      <div class="tile c5">
+        <div class="plan-name">Add your team</div>
+        <div class="addon"><div>Team member with their own number<small>Their own 07 number and login</small></div><b>£7.99 <span class="per">/mo</span></b></div>
+        <div class="addon"><div>Team member sharing a number<small>A login to the business number</small></div><b>£2.99 <span class="per">/mo</span></b></div>
+        <div class="addon"><div>Extra text replies<small>After the 200 included each month</small></div><b>6p <span class="per">each</span></b></div>
+        <div class="calc" id="calc">
+          <h4>Work out your price</h4>
+          <div class="calc-row"><span>People with their own number</span><span class="step"><button type="button" data-k="own" data-d="-1" aria-label="Fewer people with their own number">−</button><output id="own">4</output><button type="button" data-k="own" data-d="1" aria-label="More people with their own number">+</button></span></div>
+          <div class="calc-row"><span>People sharing a number</span><span class="step"><button type="button" data-k="shared" data-d="-1" aria-label="Fewer people sharing a number">−</button><output id="shared">0</output><button type="button" data-k="shared" data-d="1" aria-label="More people sharing a number">+</button></span></div>
+          <div class="calc-total"><b id="calcTotal">£46.95</b><span>a month + VAT<br/><span id="calcInc">£56.34 including VAT</span></span></div>
+        </div>
+        <noscript><div class="example">A team of five, each with their own number: £46.95 a month + VAT.</div></noscript>
+      </div>
+    </div>
+    <p class="price-foot">All prices exclude VAT at 20%. Business is for work use, including sole traders.<br/>Just for you, personally? <a href="/#pricing" style="color:var(--green);text-decoration:underline">See Plus and Premium</a>.</p>
+  </div>
+</section>
+
+<!-- COMPARE -->
+<section class="alt" id="compare">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kick">Premium or Business?</span>
+      <h2>Personal life or work?<br/>That's the <em>difference.</em></h2>
+    </div>
+    <div class="bento reveal">
+      <div class="tile cmp c6">
+        <div class="plan-name">Premium · £10.99 a month</div>
+        <h3>Just you, for your personal life</h3>
+        <ul class="tile-list">
+          <li>A private number for sign-ups, deliveries and dating apps</li>
+          <li>50 text replies a month</li>
+          <li>Porting, transcription and priority support</li>
+        </ul>
+        <a href="/#pricing" class="btn btn-o">See personal plans</a>
+      </div>
+      <div class="tile green cmp c6">
+        <div class="plan-name">Business · £14.99 a month + VAT</div>
+        <h3>Your work, on your own or with a team</h3>
+        <ul class="tile-list">
+          <li>Everything in Premium, for business use</li>
+          <li>Team logins, your own greeting and 200 replies</li>
+          <li>VAT invoices with your company details</li>
+        </ul>
+        <a href="https://app.privify.co.uk/sign-up?plan=business" class="btn btn-g">Get Business →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kick">Questions</span><h2>Things businesses ask<br/>before signing up.</h2></div>
+    <div class="faq-grid reveal">
+      <div>
+        <details class="faq-item"><summary class="faq-q">Can sole traders use Business? <span class="faq-ic">+</span></summary><div class="faq-a">Yes. Business is for anyone using their number for work, whether you work on your own or with a team. You don't need a limited company.</div></details>
+        <details class="faq-item"><summary class="faq-q">Do I need a company number? <span class="faq-ic">+</span></summary><div class="faq-a">Only if you're a limited company or LLP. We check it with Companies House when you sign up. Sole traders and partnerships just give a trading name and address.</div></details>
+        <details class="faq-item"><summary class="faq-q">Do you provide VAT invoices? <span class="faq-ic">+</span></summary><div class="faq-a">Yes. Every invoice shows our VAT number, and yours if you add it at checkout. Business prices are shown without VAT, which is added at 20%.</div></details>
+        <details class="faq-item"><summary class="faq-q">Can my team have their own logins? <span class="faq-ic">+</span></summary><div class="faq-a">Yes. Invite people by email and they sign in with their own account. Give them their own number or access to the business number, and choose who sees what.</div></details>
+        <details class="faq-item"><summary class="faq-q">What happens when someone leaves? <span class="faq-ic">+</span></summary><div class="faq-a">Remove them in your dashboard. Their access ends straight away, and anything sent to the business number keeps reaching the rest of the team.</div></details>
+      </div>
+      <div>
+        <details class="faq-item"><summary class="faq-q">Can we keep our existing number? <span class="faq-ic">+</span></summary><div class="faq-a">Yes. Porting is included, so you can move an existing UK mobile number to Privify with a PAC code. Ports usually complete within one working day.</div></details>
+        <details class="faq-item"><summary class="faq-q">Can we make calls from the number? <span class="faq-ic">+</span></summary><div class="faq-a">No. Callers hear your greeting and leave a voicemail, which arrives as an audio file with a transcript. You can reply to texts, but you can't make calls.</div></details>
+        <details class="faq-item"><summary class="faq-q">Can we send marketing texts? <span class="faq-ic">+</span></summary><div class="faq-a">No. Replies are for answering people who have texted you. Marketing, bulk and unsolicited messages aren't allowed, and sending limits apply. See our <a href="/acceptable-use">Acceptable Use Policy</a>.</div></details>
+        <details class="faq-item"><summary class="faq-q">Is there a free trial? <span class="faq-ic">+</span></summary><div class="faq-a">No. Business starts billing when you sign up. There's a 3-month minimum, then it rolls monthly and you can cancel any time.</div></details>
+        <details class="faq-item"><summary class="faq-q">Where is our data stored? <span class="faq-ic">+</span></summary><div class="faq-a">All messages and voicemails are stored on servers within the European Union. We comply with UK and EU GDPR, don't sell data and don't serve ads. See our <a href="/privacy">Privacy Policy</a>.</div></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="tile cta-tile reveal">
+      <h2>Keep your personal number <em>personal.</em></h2>
+      <p>A genuine UK 07 number for your business, usually ready the moment you pay. From £14.99 a month + VAT.</p>
+      <a href="https://app.privify.co.uk/sign-up?plan=business" class="btn btn-g">Get Business →</a>
+      <span class="cta-note">No free trial. 3-month minimum, then monthly rolling.</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="/" class="logo"><span class="logo-mark"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1" y="7" width="10" height="10" rx="2.5" fill="white" fill-opacity=".4"/><rect x="9" y="3" width="10" height="10" rx="2.5" fill="white"/></svg></span>privify</a>
+        <p>Private UK numbers for people and small businesses. Every text, code and voicemail lands in your inbox, nothing tied back to you.</p>
+        <div class="eu-badge">🇪🇺 EU data storage. GDPR compliant.</div>
+      </div>
+      <div class="foot-col"><h4>Product</h4><ul><li><a href="/#features">Features</a></li><li><a href="/#privacy">Privacy &amp; EU hosting</a></li><li><a href="/#pricing">Pricing</a></li><li><a href="/business/">Privify for Business</a></li><li><a href="/breach-check">Free breach check</a></li></ul></div>
+      <div class="foot-col"><h4>Learn</h4><ul><li><a href="/blog/">Blog</a></li><li><a href="/blog/uk-virtual-mobile-number-no-sim/">Virtual numbers</a></li><li><a href="/blog/how-to-get-pac-code-uk/">PAC codes</a></li><li><a href="https://app.privify.co.uk/sign-in">Log in</a></li></ul></div>
+      <div class="foot-col"><h4>Legal</h4><ul><li><a href="/privacy">Privacy Policy</a></li><li><a href="/terms">Terms &amp; Conditions</a></li><li><a href="/acceptable-use">Acceptable Use</a></li><li><a href="/cookies">Cookie Policy</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <p>© 2026 1st Soft Limited. Registered in England &amp; Wales.</p>
+      <div class="foot-legal"><a href="/terms">Terms</a><a href="/privacy">Privacy</a><a href="/acceptable-use">Acceptable Use</a><a href="/cookies">Cookies</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){var n=document.getElementById('nav');var f=function(){n.classList.toggle('scrolled',scrollY>8)};f();addEventListener('scroll',f,{passive:true})})();
+(function(){
+  var btn=document.getElementById('hamburgerBtn');
+  var menu=document.getElementById('mobileMenu');
+  if(!btn||!menu)return;
+  function close(){menu.classList.remove('open');btn.setAttribute('aria-expanded','false')}
+  function open(){menu.classList.add('open');btn.setAttribute('aria-expanded','true')}
+  btn.addEventListener('click',function(){menu.classList.contains('open')?close():open()});
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+  document.addEventListener('click',function(e){if(menu.classList.contains('open')&&!menu.contains(e.target)&&!btn.contains(e.target))close()});
+  addEventListener('resize',function(){if(innerWidth>680)close()});
+})();
+(function(){var els=document.querySelectorAll('.reveal');if(!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('in')});return}var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -6% 0px'});els.forEach(function(e){io.observe(e)})})();
+</script>
+<script src="/src.js" defer></script>
+<script>
+(function(){var inc=[{f:'Courier portal',w:'Accounts',p:'Your sign-in code is 309114'},{f:'07700 900789',w:'Sam',p:'Is the quote still valid?'},{f:'Card terminal',w:'Owner',p:'Your security code is 6620'},{f:'Wholesaler',w:'Orders',p:'Order 2231 is ready to collect'}];var i=0;function tick(){var list=document.getElementById('mockList');if(!list)return;var m=inc[i%inc.length];i++;list.querySelectorAll('.mock-msg.on').forEach(function(el){el.classList.remove('on')});var el=document.createElement('div');el.className='mock-msg on';el.innerHTML='<div class="mock-from">'+m.f+'<span class="mock-who">'+m.w+'</span></div><div class="mock-prev">'+m.p+'</div><div class="mock-time">now</div>';var hd=list.querySelector('.mock-hd');list.insertBefore(el,hd.nextSibling);var all=list.querySelectorAll('.mock-msg');if(all.length>4)all[all.length-1].remove()}if(!matchMedia('(prefers-reduced-motion: reduce)').matches){setTimeout(function(){tick();setInterval(tick,3200)},2600)}})();
+(function(){var c=document.getElementById('calc');if(!c)return;var v={own:4,shared:0};var BASE=14.99,OWN=7.99,SH=2.99;function f(n){return '£'+n.toFixed(2)}function r(){document.getElementById('own').textContent=v.own;document.getElementById('shared').textContent=v.shared;var t=BASE+v.own*OWN+v.shared*SH;document.getElementById('calcTotal').textContent=f(t);document.getElementById('calcInc').textContent=f(Math.round(t*1.2*100)/100)+' including VAT'}c.addEventListener('click',function(e){var b=e.target.closest('button[data-k]');if(!b)return;var k=b.dataset.k;v[k]=Math.max(0,Math.min(50,v[k]+Number(b.dataset.d)));r()});r()})();
+</script>
+</body>
+</html>
