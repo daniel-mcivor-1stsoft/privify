@@ -64,7 +64,7 @@ footer a{color:var(--accent);text-decoration:none}
         <p>2.1. <strong>Account information:</strong> your email address, collected when you register. We use this to provide the service and send transactional communications.</p>
         <p>2.2. <strong>Payment information:</strong> payment details are entered directly into our payment processor's secure form. We never see or store your card number. We hold a customer reference and subscription ID so we can manage your account.</p>
         <p>2.3. <strong>Your Privify number:</strong> the UK mobile number assigned to your account, where your plan includes one (Plus and Premium plans only).</p>
-        <p>2.4. <strong>Incoming messages:</strong> SMS messages received on your Privify number are stored in your account for 30 days on the Plus plan and 1 year on the Premium plan. Voicemail recordings are stored as audio files and linked to your account (Plus and Premium plans). Voicemail transcriptions are generated and stored on Premium plans only.</p>
+        <p>2.4. <strong>Incoming messages:</strong> SMS messages received on your Privify number are stored in your account for 30 days on the Plus plan and 1 year on the Premium and Business plans. Voicemail recordings are stored as audio files and linked to your account (Plus and Premium plans). Voicemail transcriptions are generated and stored on Premium plans only.</p>
         <p>2.5. <strong>Forwarding email address:</strong> the email address you want messages forwarded to (defaults to your account email, can be changed in settings).</p>
         <p>2.6. <strong>Usage data:</strong> basic server logs including IP addresses and request timestamps, retained for up to 30 days for security and debugging purposes.</p>
         <p>2.7. <strong>Email aliases:</strong> aliases you create and the forwarding addresses associated with them.</p>
@@ -74,6 +74,9 @@ footer a{color:var(--accent);text-decoration:none}
         <p>2.11. <strong>Free breach check tool:</strong> if you use our public breach-checking tool at <a href="/breach-check">privify.co.uk/breach-check</a>, we process the email address you enter in order to check it against known breach records and email the resulting report to that address. You do not need a Privify account to use the tool. We store only a one-way hash (SHA-256) of the address to operate the tool's result cache and rate limiting &mdash; we do not retain the plaintext address from a check itself. We store your plaintext email address only where you explicitly opt in to receive privacy tips and product updates.</p>
         <p>2.12. <strong>How you found us:</strong> when you create an account, we record how you arrived: the name of the website that referred you to privify.co.uk (for example &ldquo;google&rdquo;, never the full address of the page you were on), the first page of our website you visited, and any campaign tag on the link you followed. We use this only to understand which of our pages and channels bring in customers. It is stored with your account and deleted with it. We do not record this for visitors who do not sign up, and it is never shared with advertisers or other third parties.</p>
         <p>2.13. <strong>Text replies:</strong> on plans that include replies, the replies you send are stored in your account alongside the messages they answer, with the number they were sent to. If someone texts STOP to your number, we keep a record of their number so no further replies are sent to them from it.</p>
+        <p>2.14. <strong>Business details:</strong> on the Business plan we collect your trading name, business address and, where you give them, your company number and VAT number. We check company numbers against the public Companies House register and keep the result.</p>
+        <p>2.15. <strong>Team members:</strong> when a Business account owner invites someone, we store the invited email address and, once they accept, their account, role and which numbers they can see. The account owner and their admins can see the messages and voicemails on the numbers they have access to.</p>
+        <p>2.16. <strong>Voicemail greetings:</strong> if you record or upload a voicemail greeting, we store the recording and apply it to your number.</p>
       </div>
     </section>
 
@@ -92,6 +95,7 @@ footer a{color:var(--accent);text-decoration:none}
           <li>monitoring known data breach records and sending you identity monitor alerts;</li>
           <li>creating, storing, and delivering Privify Send secure shares, including verifying recipients and sending read receipts where enabled.</li>
         </ul>
+        <p>3.1a. On the Business plan we also use your business details to check that the business exists, to issue VAT invoices and to help prevent misuse of text replies.</p>
         <p>3.2. We do not use your data for marketing purposes, advertising, or profiling. We will never sell your personal data to third parties.</p>
         <p>3.3. Our legal basis for processing is the performance of our contract with you (Article 6(1)(b) UK GDPR) and, where relevant, compliance with a legal obligation (Article 6(1)(c)).</p>
         <p>3.4. Where you use the free breach check tool at <a href="/breach-check">privify.co.uk/breach-check</a>, our legal basis is your consent (Article 6(1)(a) UK GDPR), given when you submit your address. Where you also opt in to marketing emails, that processing is based on your consent, which you can withdraw at any time using the unsubscribe link in any email or by emailing us.</p>
@@ -101,9 +105,10 @@ footer a{color:var(--accent);text-decoration:none}
     <section>
       <h2>4. Data Retention</h2>
       <div class="prose">
-        <p>4.1. SMS messages and voicemails are kept for 30 days on the Plus plan and 1 year on the Premium plan, then deleted automatically.</p>
+        <p>4.1. SMS messages and voicemails are kept for 30 days on the Plus plan and 1 year on the Premium and Business plans, then deleted automatically.</p>
         <p>4.2. When you delete your account, all messages, voicemails, and account data are deleted immediately. Your subscription is cancelled at the same time.</p>
         <p>4.3. Privify Send shares are deleted automatically when they expire or, for one-time shares, once they have been read. The encrypted content is destroyed at that point and cannot be recovered. Any recipient email addresses and one-time access codes stored for a Send are deleted with it. Hashed access events may be retained for a short period for security and abuse-prevention purposes.</p>
+        <p>4.3a. Voicemail greetings are kept until you replace them or your account is deleted. When a team member is removed from a Business account, their access ends immediately. Their number is taken out of use, and its messages and voicemails are deleted before the number is given to anyone else.</p>
         <p>4.4. We may retain certain records for longer where required to comply with a legal obligation (for example, financial records for tax purposes).</p>
       </div>
     </section>
@@ -114,6 +119,7 @@ footer a{color:var(--accent);text-decoration:none}
         <p>5.1. We use a small number of trusted third-party services to operate Privify. These cover areas including authentication, payment processing, voicemail storage, telecoms, and email delivery.</p>
         <p>5.2. Each provider is selected on the basis of their security and privacy standards. We share only the minimum data required for each service to function and do not permit any provider to use your data for their own purposes.</p>
         <p>5.3. Where any provider is based outside the UK, we ensure appropriate safeguards are in place, such as Standard Contractual Clauses, to protect your data in accordance with UK GDPR.</p>
+        <p>5.3a. For Business accounts, we send the company number you give us to Companies House to look it up on the public register. Your VAT number is shared with our payment processor so it can appear on your invoices.</p>
         <p>5.4. We will never share your personal data with any third party for marketing or commercial purposes.</p>
         <p>5.5. To provide breach alerts, your account email address is checked against third-party breach data sources. Only your email address is shared for this purpose, solely to determine whether it appears in known breach records.</p>
         <p>5.6. Our breach-checking features (the identity monitor and the free breach check tool) use <a href="https://haveibeenpwned.com" target="_blank" rel="noopener noreferrer">Have I Been Pwned</a>, a breach-notification service based outside the UK, to determine whether an address appears in known data breaches. Only the email address being checked is shared with Have I Been Pwned for this purpose. The free breach check tool additionally uses Cloudflare Turnstile to prevent automated abuse, and Amazon Web Services to deliver the report email. Where any provider is based outside the UK, the safeguards described in 5.3 apply.</p>
