@@ -1,9 +1,9 @@
 // First-party sign-up attribution, with nothing stored on the visitor's device.
 //
 // On arrival from another site we note only that site's name (e.g. "google")
-// and the page they landed on, then add them to this page's own links as
-// ?src=&lp=. They travel with the visitor through the site in the URL and reach
-// the app only if they click through to sign up. No cookies, no localStorage,
+// and the page they landed on. When a visitor follows one of our links they're
+// added to it as ?src=&lp=, then removed from the address bar on the next page,
+// so they reach the app only if the visitor clicks through to sign up. No cookies, no localStorage,
 // no third parties, nothing sent anywhere by this script.
 (function () {
   try {
@@ -32,18 +32,31 @@
     var keys = Object.keys(carry);
     if (!keys.length) return;
 
-    var links = document.querySelectorAll('a[href]');
-    for (var i = 0; i < links.length; i++) {
-      var a = links[i];
+    // Tidy the address bar: the values now live in this page's memory only,
+    // so the visible URL stays clean and anything copied or shared is plain.
+    if (keys.some(function (k) { return here.has(k); })) {
+      keys.forEach(function (k) { here.delete(k); });
+      var qs = here.toString();
+      try { history.replaceState(history.state, '', location.pathname + (qs ? '?' + qs : '') + location.hash); } catch (e) {}
+    }
+
+    // Add the values to a link only at the moment it's followed, so search
+    // engines and the page source only ever see clean URLs.
+    function decorate(ev) {
+      var a = ev.target && ev.target.closest ? ev.target.closest('a[href]') : null;
+      if (!a) return;
       var raw = a.getAttribute('href');
-      if (!raw || raw.charAt(0) === '#' || /^(mailto|tel|javascript):/i.test(raw)) continue;
+      if (!raw || raw.charAt(0) === '#' || /^(mailto|tel|javascript):/i.test(raw)) return;
       var u;
-      try { u = new URL(raw, location.href); } catch (e) { continue; }
-      if (u.hostname !== HOST && u.hostname !== 'app.' + HOST) continue;
+      try { u = new URL(raw, location.href); } catch (e) { return; }
+      if (u.hostname !== HOST && u.hostname !== 'app.' + HOST) return;
+      if (u.pathname === location.pathname && u.hostname === location.hostname && u.hash) return; // same-page anchor
       for (var j = 0; j < keys.length; j++) {
         if (!u.searchParams.has(keys[j])) u.searchParams.set(keys[j], carry[keys[j]]);
       }
       a.setAttribute('href', u.toString());
     }
+    document.addEventListener('click', decorate, true);
+    document.addEventListener('auxclick', decorate, true);
   } catch (e) { /* never break the page */ }
 })();
