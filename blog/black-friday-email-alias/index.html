@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Black Friday spam: use a different email address for every shop, Privify</title>
+<meta name="description" content="Every Black Friday sign-up means years of marketing emails and more scam lookalikes. How to get the deals without giving shops your real email address."/>
+<link rel="canonical" href="https://privify.co.uk/blog/black-friday-email-alias/"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --white:#ffffff;--paper:#f6f8f6;--off:#f9fafb;--surface:#f3f4f6;
+  --ink:#0f172a;--ink2:#475569;--ink3:#5f6b7a;
+  --green:#1a6b4a;--green-dark:#145539;--green-light:#22875e;
+  --green-tint:#f0fdf4;--green-tint2:#dcfce7;--green-border:#86efac;
+  --border:#e6eae6;
+  --shadow-sm:0 1px 3px rgba(15,23,42,.06),0 1px 2px rgba(15,23,42,.04);
+  --shadow:0 4px 6px rgba(15,23,42,.04),0 10px 20px rgba(15,23,42,.05);
+  --shadow-green:0 10px 30px rgba(26,107,74,.15);
+  --font:'Inter',sans-serif;--mono:'DM Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--paper);color:var(--ink);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;background:rgba(246,248,246,.85);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid rgba(15,23,42,.06)}
+.logo{display:flex;align-items:center;gap:10px;font-size:1.1rem;font-weight:800;color:var(--ink);letter-spacing:-0.055em}
+.logo-mark{width:32px;height:32px;background:linear-gradient(135deg,var(--green),var(--green-light));border-radius:9px;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-green)}
+.logo-mark svg{display:block;width:22px;height:22px}
+.nav-r{display:flex;align-items:center;gap:.25rem}
+.nav-r a{font-size:.875rem;font-weight:500;color:var(--ink2);padding:.5rem .9rem;border-radius:8px;transition:all .15s}
+.nav-r a:hover{background:var(--off);color:var(--ink)}
+.nav-btn{background:var(--green)!important;color:#fff!important;font-weight:600!important;margin-left:.5rem;box-shadow:var(--shadow-green)!important}
+.nav-btn:hover{background:var(--green-dark)!important;transform:translateY(-1px)}
+.article-hero{padding:7.5rem 2.5rem 3rem;max-width:740px;margin:0 auto}
+.breadcrumb{display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;color:var(--ink3);font-family:var(--mono);margin-bottom:1.5rem}
+.breadcrumb a{color:var(--green)}
+.breadcrumb span{color:var(--border)}
+.article-cat{font-size:0.65rem;font-weight:700;color:var(--green);letter-spacing:.12em;text-transform:uppercase;font-family:var(--mono);margin-bottom:0.85rem}
+.article-hero h1{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:700;letter-spacing:-0.035em;line-height:1.1;margin-bottom:1rem}
+.article-meta{display:flex;align-items:center;gap:1rem;font-size:0.78rem;color:var(--ink3);font-family:var(--mono);padding-top:1rem;border-top:1px solid var(--border)}
+.article-body{max-width:740px;margin:0 auto;padding:2.5rem 2.5rem 5rem}
+.article-body h2{font-size:1.35rem;font-weight:700;letter-spacing:-0.03em;margin:2.25rem 0 0.75rem;color:var(--ink)}
+.article-body h3{font-size:1.05rem;font-weight:700;margin:1.75rem 0 0.5rem;color:var(--ink)}
+.article-body p{font-size:0.95rem;color:var(--ink2);line-height:1.85;margin-bottom:1rem}
+.article-body ul,.article-body ol{margin:0.5rem 0 1rem 1.5rem;display:flex;flex-direction:column;gap:0.4rem}
+.article-body li{font-size:0.95rem;color:var(--ink2);line-height:1.75}
+.article-body strong{color:var(--ink);font-weight:600}
+.article-body a{color:var(--green);text-decoration:underline;text-underline-offset:3px}
+.callout{background:var(--green-tint);border:1px solid var(--green-border);border-radius:10px;padding:1.25rem 1.5rem;margin:1.75rem 0}
+.callout p{color:var(--ink);margin:0;font-size:0.9rem;line-height:1.75}
+.callout strong{color:var(--green)}
+.warning{background:#fff8f0;border:1px solid #f5c89a;border-radius:10px;padding:1.25rem 1.5rem;margin:1.75rem 0}
+.warning p{color:#7c4a03;margin:0;font-size:0.9rem;line-height:1.75}
+.scenario{border:1px solid var(--border);border-radius:10px;padding:1.5rem;margin:1rem 0;background:var(--off)}
+.scenario h3{font-size:0.9rem;font-weight:700;color:var(--ink);margin:0 0 0.4rem}
+.scenario p{font-size:0.875rem;color:var(--ink2);margin:0;line-height:1.72}
+.article-cta{background:var(--green);border-radius:14px;padding:2.5rem;margin:3rem 0 0;text-align:center}
+.article-cta h2{font-size:1.5rem;font-weight:800;color:#fff;letter-spacing:-0.03em;margin-bottom:0.5rem}
+.article-cta p{color:rgba(255,255,255,.7);font-size:0.9rem;margin-bottom:1.5rem}
+.btn-w{display:inline-block;background:#fff;color:var(--green);padding:0.8rem 1.9rem;border-radius:8px;font-weight:700;font-size:0.9rem;transition:opacity .12s}
+.btn-w:hover{opacity:.9}
+footer{background:#0d3d29;padding:3rem 2.5rem 2.25rem;color:#fff;position:relative;overflow:hidden}
+footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height:200%;background:radial-gradient(ellipse at center,rgba(34,135,94,.15),transparent 60%);pointer-events:none}
+.foot-inner{max-width:1060px;margin:0 auto;position:relative;z-index:1}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.foot-bottom p{font-size:.77rem;color:rgba(255,255,255,.35)}
+.foot-legal{display:flex;gap:1.75rem}
+.foot-legal a{font-size:.77rem;color:rgba(255,255,255,.35);transition:color .15s}
+.foot-legal a:hover{color:rgba(255,255,255,.75)}
+@media(max-width:700px){
+  nav{padding:0 1.25rem}
+  .nav-r a:not(.nav-btn){display:none}
+  .article-hero,.article-body{padding-left:1.25rem;padding-right:1.25rem}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Black Friday spam: use a different email address for every shop",
+  "description": "Every Black Friday sign-up means years of marketing emails and more scam lookalikes. How to get the deals without giving shops your real email address.",
+  "url": "https://privify.co.uk/blog/black-friday-email-alias/",
+  "datePublished": "2026-11-14",
+  "dateModified": "2026-11-14",
+  "author": {
+    "@type": "Organization",
+    "name": "Privify",
+    "url": "https://privify.co.uk"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Privify",
+    "url": "https://privify.co.uk",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://privify.co.uk/favicon.svg"
+    }
+  },
+  "image": "https://privify.co.uk/og.png"
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">
+    <div class="logo-mark">
+            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="7" width="10" height="10" rx="2.5" fill="white" fill-opacity=".35"/>
+        <rect x="9" y="3" width="10" height="10" rx="2.5" fill="white"/>
+      </svg>
+    </div>
+    privify
+  </a>
+  <div class="nav-r">
+    <a href="/#features">Features</a>
+    <a href="/#privacy">Privacy</a>
+    <a href="/#pricing">Pricing</a><a href="/business/">Business</a>
+    <a href="/#faq">FAQ</a>
+    <a href="/blog/">Blog</a>
+    <a href="https://app.privify.co.uk/sign-in">Log in</a>
+    <a href="https://app.privify.co.uk/sign-up" class="nav-btn">Get started →</a>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="breadcrumb">
+    <a href="/blog/">Blog</a>
+    <span>/</span>
+    <span>Email</span>
+  </div>
+  <div class="article-cat">Email</div>
+  <h1>Black Friday spam: use a different email address for every shop</h1>
+  <div class="article-meta">
+    <span>November 2026</span>
+    <span>·</span>
+    <span>5 min read</span>
+  </div>
+</div>
+
+<div class="article-body">
+
+  <p>Black Friday is on 27 November this year, with Cyber Monday following on 30 November. For about a week, nearly every shop wants your email address in return for a discount code, early access or an "exclusive" deal.</p>
+
+  <p>The discount lasts a day. The emails keep coming for years. Here's a simple way to get the deals without handing your real inbox to every shop.</p>
+
+  <h2>Why Black Friday fills your inbox</h2>
+
+  <p>Signing up to a shop for 10% off doesn't just get you a code. You've usually agreed to:</p>
+
+  <ul>
+    <li><strong>Marketing emails</strong>, often several a day in the run-up to Christmas.</li>
+    <li><strong>"Abandoned basket" reminders</strong> every time you look at something and don't buy it.</li>
+    <li><strong>Your address being shared</strong> with "carefully selected partners", depending on what you ticked.</li>
+    <li><strong>A copy of your details in their customer database</strong>, which is only as safe as their security.</li>
+  </ul>
+
+  <p>Multiply that by the ten or twenty shops you sign up with over Black Friday week, and January brings an inbox you don't recognise.</p>
+
+  <h2>It's also peak season for scam emails</h2>
+
+  <p>Scammers know everyone is expecting order confirmations, delivery updates and "last chance" offers. Fake ones blend in easily:</p>
+
+  <ul>
+    <li>"Your order couldn't be delivered, pay £1.45 to rebook."</li>
+    <li>"Problem with your payment, update your card details."</li>
+    <li>Fake versions of real shops offering impossible discounts.</li>
+  </ul>
+
+  <p>When every shop emails the same address, it's hard to tell a real email from a fake one.</p>
+
+  <h2>The fix: a different email address for every shop</h2>
+
+  <p>An <a href="/blog/what-is-an-email-alias/">email alias</a> is an extra address that forwards to your real inbox. You create one for each shop, for example <strong>tech-shop@…</strong> or <strong>trainers-shop@…</strong>, and use it when you sign up.</p>
+
+  <p>Everything still arrives in your normal inbox, but each shop only ever sees its own address. That gives you three things your real address can't:</p>
+
+  <h3>1. You can switch a shop off completely</h3>
+  <p>Unsubscribe links don't always work, and some shops keep emailing regardless. With an alias you just turn it off, and that shop's emails stop arriving, whatever they do on their side.</p>
+
+  <h3>2. You can see who leaked or sold your address</h3>
+  <p>If spam starts arriving at the address you only gave one shop, you know exactly where it came from. With your real address you'd never know.</p>
+
+  <h3>3. You can spot fakes instantly</h3>
+  <p>If a "delivery problem" email arrives at an address you never gave to that shop, it's fake. Each alias works like a built-in check on who the email is really from.</p>
+
+  <div class="callout">
+    <p><strong>Your real address stays out of breaches.</strong> If a shop's customer database is stolen, the criminals get an alias you can turn off, not the address you use for your bank, your GP and everything else. Check whether your address has already been exposed with our free <a href="/breach-check">breach check</a>.</p>
+  </div>
+
+  <h2>A Black Friday plan that takes five minutes</h2>
+
+  <ol>
+    <li><strong>Before the sales start</strong>, list the shops you're actually planning to buy from.</li>
+    <li><strong>Create an alias for each</strong> as you sign up, or set up one "deals" alias for shops you're only browsing.</li>
+    <li><strong>Use the alias at checkout too</strong>, so order confirmations and delivery updates go to the same address.</li>
+    <li><strong>Be suspicious of any email at the wrong address.</strong> A "courier" email sent to your shoe-shop alias is a scam.</li>
+    <li><strong>In January, tidy up.</strong> Turn off the aliases for shops you won't use again. Keep the ones you like.</li>
+  </ol>
+
+  <h2>What about returns and receipts?</h2>
+
+  <p>Nothing changes. Emails sent to your alias arrive in your normal inbox like any other email, so your receipts, returns labels and warranty details are all where you'd expect. Keep an alias switched on for as long as you might need to return something, then turn it off.</p>
+
+  <p>If you reply to a shop from your alias, the reply goes out from the alias address, so your real address still isn't revealed.</p>
+
+  <h2>The short version</h2>
+
+  <p>Black Friday deals are worth having. Giving every shop your real email address isn't. Use a different alias for each shop, and you can get the discounts, keep your receipts, and turn off the emails whenever you want.</p>
+
+  <div class="article-cta">
+    <h2>An email address for every shop</h2>
+    <p>Create private email aliases in seconds. Everything arrives in your inbox, and you can turn any alias off at any time.</p>
+    <a href="https://app.privify.co.uk/sign-up" class="btn-w">Get started with Privify →</a>
+  </div>
+
+</div>
+
+
+<p class="related-note" style="font-size:0.875rem;color:var(--ink2);margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border)">Related: Read more about <a href="/blog/what-is-an-email-alias/">what an email alias is</a>, <a href="/blog/how-to-stop-spam-emails-uk/">stopping spam emails</a> and <a href="/blog/netflix-unique-email-per-profile/">using a unique email for every account</a>.</p>
+<footer>
+  <div class="foot-inner">
+    <div class="foot-bottom">
+      <p>&copy; 2026 Privify. All rights reserved.</p>
+      <div class="foot-legal">
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/blog/">Blog</a>
+        <a href="mailto:support@privify.co.uk">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/src.js" defer></script>
+</body>
+</html>
