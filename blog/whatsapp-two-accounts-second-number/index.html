@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>WhatsApp now supports two accounts on one phone. Here's how to get the second number, Privify</title>
+<meta name="description" content="WhatsApp lets you run two accounts in one app on Android and iPhone, but each needs its own number. How to set it up without a second SIM."/>
+<link rel="canonical" href="https://privify.co.uk/blog/whatsapp-two-accounts-second-number/"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --white:#ffffff;--paper:#f6f8f6;--off:#f9fafb;--surface:#f3f4f6;
+  --ink:#0f172a;--ink2:#475569;--ink3:#5f6b7a;
+  --green:#1a6b4a;--green-dark:#145539;--green-light:#22875e;
+  --green-tint:#f0fdf4;--green-tint2:#dcfce7;--green-border:#86efac;
+  --border:#e6eae6;
+  --shadow-sm:0 1px 3px rgba(15,23,42,.06),0 1px 2px rgba(15,23,42,.04);
+  --shadow:0 4px 6px rgba(15,23,42,.04),0 10px 20px rgba(15,23,42,.05);
+  --shadow-green:0 10px 30px rgba(26,107,74,.15);
+  --font:'Inter',sans-serif;--mono:'DM Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--paper);color:var(--ink);font-size:16px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;background:rgba(246,248,246,.85);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid rgba(15,23,42,.06)}
+.logo{display:flex;align-items:center;gap:10px;font-size:1.1rem;font-weight:800;color:var(--ink);letter-spacing:-0.055em}
+.logo-mark{width:32px;height:32px;background:linear-gradient(135deg,var(--green),var(--green-light));border-radius:9px;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-green)}
+.logo-mark svg{display:block;width:22px;height:22px}
+.nav-r{display:flex;align-items:center;gap:.25rem}
+.nav-r a{font-size:.875rem;font-weight:500;color:var(--ink2);padding:.5rem .9rem;border-radius:8px;transition:all .15s}
+.nav-r a:hover{background:var(--off);color:var(--ink)}
+.nav-btn{background:var(--green)!important;color:#fff!important;font-weight:600!important;margin-left:.5rem;box-shadow:var(--shadow-green)!important}
+.nav-btn:hover{background:var(--green-dark)!important;transform:translateY(-1px)}
+.article-hero{padding:7.5rem 2.5rem 3rem;max-width:740px;margin:0 auto}
+.breadcrumb{display:flex;align-items:center;gap:0.5rem;font-size:0.75rem;color:var(--ink3);font-family:var(--mono);margin-bottom:1.5rem}
+.breadcrumb a{color:var(--green)}
+.breadcrumb span{color:var(--border)}
+.article-cat{font-size:0.65rem;font-weight:700;color:var(--green);letter-spacing:.12em;text-transform:uppercase;font-family:var(--mono);margin-bottom:0.85rem}
+.article-hero h1{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:700;letter-spacing:-0.035em;line-height:1.1;margin-bottom:1rem}
+.article-meta{display:flex;align-items:center;gap:1rem;font-size:0.78rem;color:var(--ink3);font-family:var(--mono);padding-top:1rem;border-top:1px solid var(--border)}
+.article-body{max-width:740px;margin:0 auto;padding:2.5rem 2.5rem 5rem}
+.article-body h2{font-size:1.35rem;font-weight:700;letter-spacing:-0.03em;margin:2.25rem 0 0.75rem;color:var(--ink)}
+.article-body h3{font-size:1.05rem;font-weight:700;margin:1.75rem 0 0.5rem;color:var(--ink)}
+.article-body p{font-size:0.95rem;color:var(--ink2);line-height:1.85;margin-bottom:1rem}
+.article-body ul,.article-body ol{margin:0.5rem 0 1rem 1.5rem;display:flex;flex-direction:column;gap:0.4rem}
+.article-body li{font-size:0.95rem;color:var(--ink2);line-height:1.75}
+.article-body strong{color:var(--ink);font-weight:600}
+.article-body a{color:var(--green);text-decoration:underline;text-underline-offset:3px}
+.callout{background:var(--green-tint);border:1px solid var(--green-border);border-radius:10px;padding:1.25rem 1.5rem;margin:1.75rem 0}
+.callout p{color:var(--ink);margin:0;font-size:0.9rem;line-height:1.75}
+.callout strong{color:var(--green)}
+.warning{background:#fff8f0;border:1px solid #f5c89a;border-radius:10px;padding:1.25rem 1.5rem;margin:1.75rem 0}
+.warning p{color:#7c4a03;margin:0;font-size:0.9rem;line-height:1.75}
+.scenario{border:1px solid var(--border);border-radius:10px;padding:1.5rem;margin:1rem 0;background:var(--off)}
+.scenario h3{font-size:0.9rem;font-weight:700;color:var(--ink);margin:0 0 0.4rem}
+.scenario p{font-size:0.875rem;color:var(--ink2);margin:0;line-height:1.72}
+.article-cta{background:var(--green);border-radius:14px;padding:2.5rem;margin:3rem 0 0;text-align:center}
+.article-cta h2{font-size:1.5rem;font-weight:800;color:#fff;letter-spacing:-0.03em;margin-bottom:0.5rem}
+.article-cta p{color:rgba(255,255,255,.7);font-size:0.9rem;margin-bottom:1.5rem}
+.btn-w{display:inline-block;background:#fff;color:var(--green);padding:0.8rem 1.9rem;border-radius:8px;font-weight:700;font-size:0.9rem;transition:opacity .12s}
+.btn-w:hover{opacity:.9}
+footer{background:#0d3d29;padding:3rem 2.5rem 2.25rem;color:#fff;position:relative;overflow:hidden}
+footer::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height:200%;background:radial-gradient(ellipse at center,rgba(34,135,94,.15),transparent 60%);pointer-events:none}
+.foot-inner{max-width:1060px;margin:0 auto;position:relative;z-index:1}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.foot-bottom p{font-size:.77rem;color:rgba(255,255,255,.35)}
+.foot-legal{display:flex;gap:1.75rem}
+.foot-legal a{font-size:.77rem;color:rgba(255,255,255,.35);transition:color .15s}
+.foot-legal a:hover{color:rgba(255,255,255,.75)}
+@media(max-width:700px){
+  nav{padding:0 1.25rem}
+  .nav-r a:not(.nav-btn){display:none}
+  .article-hero,.article-body{padding-left:1.25rem;padding-right:1.25rem}
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "WhatsApp now supports two accounts on one phone. Here's how to get the second number",
+  "description": "WhatsApp lets you run two accounts in one app on Android and iPhone, but each needs its own number. How to set it up without a second SIM.",
+  "url": "https://privify.co.uk/blog/whatsapp-two-accounts-second-number/",
+  "datePublished": "2026-11-14",
+  "dateModified": "2026-11-14",
+  "author": {
+    "@type": "Organization",
+    "name": "Privify",
+    "url": "https://privify.co.uk"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Privify",
+    "url": "https://privify.co.uk",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://privify.co.uk/favicon.svg"
+    }
+  },
+  "image": "https://privify.co.uk/og.png"
+}
+</script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">
+    <div class="logo-mark">
+            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="7" width="10" height="10" rx="2.5" fill="white" fill-opacity=".35"/>
+        <rect x="9" y="3" width="10" height="10" rx="2.5" fill="white"/>
+      </svg>
+    </div>
+    privify
+  </a>
+  <div class="nav-r">
+    <a href="/#features">Features</a>
+    <a href="/#privacy">Privacy</a>
+    <a href="/#pricing">Pricing</a><a href="/business/">Business</a>
+    <a href="/#faq">FAQ</a>
+    <a href="/blog/">Blog</a>
+    <a href="https://app.privify.co.uk/sign-in">Log in</a>
+    <a href="https://app.privify.co.uk/sign-up" class="nav-btn">Get started →</a>
+  </div>
+</nav>
+
+<div class="article-hero">
+  <div class="breadcrumb">
+    <a href="/blog/">Blog</a>
+    <span>/</span>
+    <span>Guide</span>
+  </div>
+  <div class="article-cat">Guide</div>
+  <h1>WhatsApp now supports two accounts on one phone. Here's how to get the second number</h1>
+  <div class="article-meta">
+    <span>November 2026</span>
+    <span>·</span>
+    <span>5 min read</span>
+  </div>
+</div>
+
+<div class="article-body">
+
+  <p>WhatsApp now lets you run two accounts in the same app on one phone. Android users have had it since 2023, and in 2026 it finally reached the iPhone. You can switch between a personal account and a work or side-hustle account without a second phone or a separate app.</p>
+
+  <p>There's one catch: every WhatsApp account needs its own phone number. Here's how the feature works, and how to get that second number without buying a second SIM.</p>
+
+  <h2>What the multi-account feature does</h2>
+
+  <ul>
+    <li><strong>Two accounts, one app.</strong> Each account has its own chats, groups, profile photo and status.</li>
+    <li><strong>Quick switching.</strong> You swap between them from the settings menu, rather than logging out and back in.</li>
+    <li><strong>Labelled notifications.</strong> Notifications show which account a message arrived on, so you know whether it's a friend or a customer before you open it.</li>
+    <li><strong>Separate privacy settings.</strong> Each account has its own settings for profile photo, last seen and who can add you to groups.</li>
+  </ul>
+
+  <h2>How to add a second account</h2>
+
+  <ol>
+    <li>Update WhatsApp to the latest version from the App Store or Google Play.</li>
+    <li>Open <strong>Settings</strong>. On iPhone, look under <strong>Account</strong>; on Android, tap the arrow next to your name.</li>
+    <li>Choose <strong>Add account</strong>.</li>
+    <li>Enter the second phone number and type in the verification code WhatsApp sends to it.</li>
+    <li>Set up the profile for the new account. You'll then see a switcher to move between the two.</li>
+  </ol>
+
+  <p>The rollout has been gradual, especially on iPhone. If you don't see <strong>Add account</strong> yet, update the app and check again in a few days.</p>
+
+  <h2>The catch: you need a second number</h2>
+
+  <p>WhatsApp identifies every account by its phone number and verifies it by sending a code. So the second account needs a number that is:</p>
+
+  <ul>
+    <li><strong>Yours</strong>, not one shared with other people online.</li>
+    <li><strong>Able to receive texts</strong>, so the verification code arrives.</li>
+    <li><strong>Kept long term</strong>. WhatsApp can ask you to verify again later, for example when you get a new phone. If you no longer have the number, you lose the account.</li>
+  </ul>
+
+  <p>The usual answer is a second SIM or eSIM. That means another contract or pay-as-you-go top-ups, a phone that supports dual SIM, and another number to keep active. There's a simpler option.</p>
+
+  <div class="warning">
+    <p><strong>Don't use free "receive SMS online" sites.</strong> The numbers on those sites are public, so anyone can read the codes. Someone else could take over your WhatsApp account by asking for a new code to the same number. We explain why in <a href="/blog/receive-sms-online-uk/">receiving SMS online in the UK</a>.</p>
+  </div>
+
+  <h2>Using a Privify number for your second account</h2>
+
+  <p>A Privify number is a genuine UK 07 mobile number that's private to you. It doesn't need a SIM, so it works on any phone, including iPhones without a spare eSIM slot.</p>
+
+  <ol>
+    <li>Get your Privify number. It's usually ready straight away.</li>
+    <li>In WhatsApp, choose <strong>Add account</strong> and enter your Privify number.</li>
+    <li>The verification code arrives in your Privify inbox and by email. Type it into WhatsApp.</li>
+    <li>That's it. Your second account runs inside WhatsApp like any other.</li>
+  </ol>
+
+  <div class="callout">
+    <p><strong>Your chats stay in WhatsApp.</strong> Privify supplies the number and receives its codes. Messages, voice calls and video calls with your contacts all happen inside WhatsApp over the internet, as they do on your main account.</p>
+  </div>
+
+  <p>Keep your Privify plan active for as long as you use the WhatsApp account, so you can receive a new code if WhatsApp asks you to verify again.</p>
+
+  <h2>Who a second WhatsApp account suits</h2>
+
+  <div class="scenario">
+    <h3>Sole traders and freelancers</h3>
+    <p>Customers message your work account, friends message your personal one. You can mute work in the evening without missing family messages. Our guide on <a href="/blog/separate-business-mobile-number-sole-trader/">separate business numbers for sole traders</a> covers the wider picture.</p>
+  </div>
+
+  <div class="scenario">
+    <h3>Selling online</h3>
+    <p>Buyers on marketplaces often ask to "move this to WhatsApp". Give them your second account, and your personal profile, photo and number stay out of it. See <a href="/blog/protect-your-number-facebook-marketplace/">keeping your number off marketplace listings</a>.</p>
+  </div>
+
+  <div class="scenario">
+    <h3>Clubs, schools and community groups</h3>
+    <p>Large groups show your number to every member. Join them from a second account, and forty strangers don't end up with your personal number.</p>
+  </div>
+
+  <h2>Does it work with WhatsApp Business?</h2>
+
+  <p>Yes. The WhatsApp Business app also needs a phone number, and a Privify number can be used to register it in the same way. That gives you business features such as a catalogue, opening hours and quick replies, on a number that isn't your personal mobile.</p>
+
+  <p>If more than one person needs to see the login codes for your business accounts, <a href="/business/">Privify Business</a> puts them in a shared team inbox.</p>
+
+  <h2>The short version</h2>
+
+  <p>WhatsApp's multi-account feature makes it easy to keep work, selling or group chats separate from your personal life on one phone. The only thing you need is a second number that's private to you and can receive the verification code. A Privify number does that without a second SIM.</p>
+
+  <div class="article-cta">
+    <h2>A second number for WhatsApp</h2>
+    <p>Get a genuine UK 07 number to use for your second WhatsApp account. No second SIM needed.</p>
+    <a href="https://app.privify.co.uk/sign-up" class="btn-w">Get your Privify number →</a>
+  </div>
+
+</div>
+
+
+<p class="related-note" style="font-size:0.875rem;color:var(--ink2);margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border)">Related: Read more about <a href="/blog/whatsapp-username-vs-phone-number/">WhatsApp usernames</a>, <a href="/blog/second-uk-mobile-number/">a second UK mobile number</a> and <a href="/blog/virtual-number-vs-esim-vs-second-sim/">virtual numbers vs eSIM vs a second SIM</a>.</p>
+<footer>
+  <div class="foot-inner">
+    <div class="foot-bottom">
+      <p>&copy; 2026 Privify. All rights reserved.</p>
+      <div class="foot-legal">
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/blog/">Blog</a>
+        <a href="mailto:support@privify.co.uk">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/src.js" defer></script>
+</body>
+</html>
