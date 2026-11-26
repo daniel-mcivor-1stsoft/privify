@@ -334,9 +334,22 @@ footer{background:#0d3d29;color:#fff;padding:clamp(3rem,6vw,4.5rem) 0 2.25rem;ma
   .plan-feats.two{grid-template-columns:1fr}
   .seg button{padding:.55rem .95rem}
 }
+/* Black Friday 2026 bar: shown 27-30 Nov UK time by the script at the end of body */
+.bf-bar{position:fixed;top:0;left:0;right:0;z-index:101;height:40px;display:flex;align-items:center;justify-content:center;gap:.6rem;padding:0 1rem;background:#0f172a;color:#fff;font-size:.85rem;font-weight:500;text-decoration:none;white-space:nowrap;overflow:hidden}
+.bf-bar[hidden]{display:none}
+.bf-tag{background:#22c55e;color:#0f172a;font-size:.7rem;font-weight:800;letter-spacing:.06em;padding:.2rem .55rem;border-radius:999px}
+.bf-bar u{text-underline-offset:3px}
+html.bf-on body{padding-top:40px}
+html.bf-on nav{top:40px}
+html.bf-on .mobile-menu{top:104px}
+.bf-note{margin-top:.45rem;font-size:.8rem;font-weight:600;color:var(--green)}
+.bf-note[hidden]{display:none}
+.bf-note s{color:var(--ink3);font-weight:500}
+@media(max-width:560px){.bf-long{display:none}.bf-bar{font-size:.8rem}}
 </style>
 </head>
 <body>
+<a class="bf-bar" href="#pricing" hidden><span class="bf-tag">BLACK FRIDAY</span><span>20% off Plus &amp; Premium<span class="bf-long"> for your first 3 months · ends Monday</span></span><u>See prices →</u></a>
 <script>document.documentElement.classList.add('js')</script>
 
 <nav id="nav">
@@ -599,6 +612,7 @@ footer{background:#0d3d29;color:#fff;padding:clamp(3rem,6vw,4.5rem) 0 2.25rem;ma
         <div class="plan-name">Plus</div>
         <div class="plan-price"><sup>£</sup>6.99</div>
         <div class="plan-per">per month · 3-month minimum</div>
+        <div class="bf-note" hidden>Black Friday: £5.59/mo for your first 3 months</div>
         <hr/>
         <div class="plan-incl">Everything in Starter, plus:</div>
         <div class="plan-feats">
@@ -616,6 +630,7 @@ footer{background:#0d3d29;color:#fff;padding:clamp(3rem,6vw,4.5rem) 0 2.25rem;ma
         <div class="plan-name">Premium</div>
         <div class="plan-price"><sup>£</sup>10.99</div>
         <div class="plan-per">per month · 3-month minimum</div>
+        <div class="bf-note" hidden>Black Friday: £8.79/mo for your first 3 months</div>
         <hr/>
         <div class="plan-incl">Everything in Plus, plus:</div>
         <div class="plan-feats">
@@ -747,6 +762,13 @@ footer{background:#0d3d29;color:#fff;padding:clamp(3rem,6vw,4.5rem) 0 2.25rem;ma
 </script>
 <script>
 (function(){var tabs={personal:document.getElementById('tab-personal'),business:document.getElementById('tab-business')};var panels={personal:document.getElementById('plans-personal'),business:document.getElementById('plans-business')};if(!tabs.personal||!panels.business)return;function show(k,focus){['personal','business'].forEach(function(x){var on=x===k;tabs[x].setAttribute('aria-selected',on?'true':'false');tabs[x].tabIndex=on?0:-1;panels[x].hidden=!on});if(focus)tabs[k].focus()}tabs.personal.addEventListener('click',function(){show('personal')});tabs.business.addEventListener('click',function(){show('business')});document.querySelector('.seg').addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key==='ArrowLeft'){show(tabs.personal.getAttribute('aria-selected')==='true'?'business':'personal',true);e.preventDefault()}});document.querySelectorAll('[data-plan-tab]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();show(a.dataset.planTab);document.getElementById('pricing').scrollIntoView({behavior:'smooth'})})});function fromHash(){if(location.hash==='#pricing-business'){show('business');document.getElementById('pricing').scrollIntoView()}}show('personal');fromHash();addEventListener('hashchange',fromHash)})();
+</script>
+<script>
+// Black Friday 2026: 27 Nov 00:00 to 30 Nov 23:59 UK time. Add ?bf=preview to check it early.
+(function(){var n=Date.now(),p=/[?&]bf=preview/.test(location.search);
+if(!p&&(n<Date.parse('2026-11-27T00:00:00Z')||n>=Date.parse('2026-12-01T00:00:00Z')))return;
+document.documentElement.classList.add('bf-on');
+document.querySelectorAll('.bf-bar,.bf-note').forEach(function(e){e.hidden=false})})();
 </script>
 <script src="/src.js" defer></script>
 </body>
