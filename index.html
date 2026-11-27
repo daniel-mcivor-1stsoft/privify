@@ -339,19 +339,21 @@ footer{background:#0d3d29;color:#fff;padding:clamp(3rem,6vw,4.5rem) 0 2.25rem;ma
 .bf-bar[hidden]{display:none}
 .bf-tag{background:#22c55e;color:#0f172a;font-size:.7rem;font-weight:800;letter-spacing:.06em;padding:.2rem .55rem;border-radius:999px}
 .bf-bar u{text-underline-offset:3px}
+.bf-short{display:none}
 html.bf-on body{padding-top:40px}
 html.bf-on nav{top:40px}
 html.bf-on .mobile-menu{top:104px}
 .bf-note{margin-top:.45rem;font-size:.8rem;font-weight:600;color:var(--green)}
 .bf-note[hidden]{display:none}
+.bf-auto{display:block;font-weight:500;color:var(--ink3);font-size:.76rem}
 .bf-note s{color:var(--ink3);font-weight:500}
 html.bf-on{scroll-padding-top:120px}
 @media(max-width:560px){.bf-long{display:none}.bf-bar{font-size:.8rem;gap:.45rem;padding:0 .75rem}.bf-tag{font-size:.62rem;padding:.18rem .45rem}}
-@media(max-width:420px){.bf-more{display:none}.bf-bar::after{content:'→';margin-left:-.15rem}}
+@media(max-width:420px){.bf-wide{display:none}.bf-short{display:inline}.bf-more{display:none}.bf-bar::after{content:'→';margin-left:-.15rem}}
 </style>
 </head>
 <body>
-<a class="bf-bar" href="#pricing" hidden><span class="bf-tag">BLACK FRIDAY</span><span>20% off Plus &amp; Premium<span class="bf-long"> for your first 3 months · ends Monday</span></span><u class="bf-more">See prices →</u></a>
+<a class="bf-bar" href="#pricing" hidden><span class="bf-tag">BLACK FRIDAY</span><span><span class="bf-wide">20% off Plus &amp; Premium</span><span class="bf-short">20% off, no code needed</span><span class="bf-long"> for 3 months · applied automatically, no code needed · ends Monday</span></span><u class="bf-more">See prices →</u></a>
 <script>document.documentElement.classList.add('js')</script>
 
 <nav id="nav">
@@ -614,7 +616,7 @@ html.bf-on{scroll-padding-top:120px}
         <div class="plan-name">Plus</div>
         <div class="plan-price"><sup>£</sup>6.99</div>
         <div class="plan-per">per month · 3-month minimum</div>
-        <div class="bf-note" hidden>Black Friday: £5.59/mo for your first 3 months</div>
+        <div class="bf-note" hidden>Black Friday: £5.59/mo for your first 3 months<span class="bf-auto">Applied automatically at checkout. No code needed.</span></div>
         <hr/>
         <div class="plan-incl">Everything in Starter, plus:</div>
         <div class="plan-feats">
@@ -632,7 +634,7 @@ html.bf-on{scroll-padding-top:120px}
         <div class="plan-name">Premium</div>
         <div class="plan-price"><sup>£</sup>10.99</div>
         <div class="plan-per">per month · 3-month minimum</div>
-        <div class="bf-note" hidden>Black Friday: £8.79/mo for your first 3 months</div>
+        <div class="bf-note" hidden>Black Friday: £8.79/mo for your first 3 months<span class="bf-auto">Applied automatically at checkout. No code needed.</span></div>
         <hr/>
         <div class="plan-incl">Everything in Plus, plus:</div>
         <div class="plan-feats">
@@ -770,7 +772,12 @@ html.bf-on{scroll-padding-top:120px}
 (function(){var n=Date.now(),p=/[?&]bf=preview/.test(location.search);
 if(!p&&(n<Date.parse('2026-11-27T00:00:00Z')||n>=Date.parse('2026-12-01T00:00:00Z')))return;
 document.documentElement.classList.add('bf-on');
-document.querySelectorAll('.bf-bar,.bf-note').forEach(function(e){e.hidden=false})})();
+document.querySelectorAll('.bf-bar,.bf-note').forEach(function(e){e.hidden=false});
+// Scroll explicitly: some mobile browsers ignore a fixed bar's #pricing jump.
+var bar=document.querySelector('.bf-bar');if(bar)bar.addEventListener('click',function(ev){var t=document.getElementById('pricing');if(!t)return;ev.preventDefault();
+var tab=document.getElementById('tab-personal');if(tab&&tab.getAttribute('aria-selected')!=='true')tab.click();
+var y=t.getBoundingClientRect().top+window.pageYOffset-110;document.documentElement.style.scrollBehavior='auto';window.scrollTo(0,y);document.body.scrollTop=y;document.documentElement.style.scrollBehavior='';
+try{history.replaceState(history.state,'',location.pathname+location.search+'#pricing')}catch(e){}})})();
 </script>
 <script src="/src.js" defer></script>
 </body>
