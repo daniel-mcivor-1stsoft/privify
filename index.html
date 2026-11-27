@@ -347,7 +347,7 @@ html.bf-on .mobile-menu{top:104px}
 .bf-note[hidden]{display:none}
 .bf-auto{display:block;font-weight:500;color:var(--ink3);font-size:.76rem}
 .bf-note s{color:var(--ink3);font-weight:500}
-html.bf-on{scroll-padding-top:120px}
+html.bf-on{scroll-padding-top:40px}
 @media(max-width:560px){.bf-long{display:none}.bf-bar{font-size:.8rem;gap:.45rem;padding:0 .75rem}.bf-tag{font-size:.62rem;padding:.18rem .45rem}}
 @media(max-width:420px){.bf-wide{display:none}.bf-short{display:inline}.bf-more{display:none}.bf-bar::after{content:'→';margin-left:-.15rem}}
 </style>
@@ -776,7 +776,7 @@ document.querySelectorAll('.bf-bar,.bf-note').forEach(function(e){e.hidden=false
 // Scroll explicitly: some mobile browsers ignore a fixed bar's #pricing jump.
 var bar=document.querySelector('.bf-bar');if(bar)bar.addEventListener('click',function(ev){var t=document.getElementById('pricing');if(!t)return;ev.preventDefault();
 var tab=document.getElementById('tab-personal');if(tab&&tab.getAttribute('aria-selected')!=='true')tab.click();
-var y=t.getBoundingClientRect().top+window.pageYOffset-110;document.documentElement.style.scrollBehavior='auto';window.scrollTo(0,y);document.body.scrollTop=y;document.documentElement.style.scrollBehavior='';
+var c=t.querySelector('.wrap')||t,nv=document.querySelector('nav'),top=nv?nv.getBoundingClientRect().bottom:bar.offsetHeight;var y=Math.max(0,c.getBoundingClientRect().top+window.pageYOffset-top-16);document.documentElement.style.scrollBehavior='auto';window.scrollTo(0,y);document.body.scrollTop=y;document.documentElement.style.scrollBehavior='';
 try{history.replaceState(history.state,'',location.pathname+location.search+'#pricing')}catch(e){}})})();
 </script>
 <script src="/src.js" defer></script>
