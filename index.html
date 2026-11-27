@@ -90,7 +90,7 @@ nav.scrolled{border-bottom-color:var(--border);background:rgba(246,248,246,.95)}
 .tile p{font-size:.93rem;color:var(--ink2);line-height:1.6}
 .tile-list{list-style:none;display:flex;flex-direction:column;gap:.5rem;margin-top:1rem}
 .tile-list li{display:flex;gap:.55rem;align-items:flex-start;font-size:.86rem;color:var(--ink);line-height:1.4}
-.tile-list li::before{content:'';width:16px;height:16px;flex-shrink:0;margin-top:.08rem;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 12 12' fill='none' stroke='%231a6b4a' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='2 6 5 9 10 3'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center}
+.tile-list li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:.55em}
 
 /* spans */
 .c3{grid-column:span 3}.c4{grid-column:span 4}.c5{grid-column:span 5}.c6{grid-column:span 6}.c7{grid-column:span 7}.c8{grid-column:span 8}.c12{grid-column:span 12}
@@ -99,12 +99,12 @@ nav.scrolled{border-bottom-color:var(--border);background:rgba(246,248,246,.95)}
 /* ── HERO ── */
 .hero{padding:7.5rem 0 0}
 .hero-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:clamp(2rem,5vw,4rem);align-items:center}
-.hero-checks{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;margin-top:.5rem}
+.hero-note{margin-top:.75rem;font-size:.95rem;color:var(--ink2)}
 .hero-check{display:inline-flex;align-items:center;gap:.5rem;font-size:.85rem;color:var(--ink2);font-weight:500}
 .hero-check svg{width:15px;height:15px;stroke:var(--green);stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round}
 .trust-strip{border-top:1px solid var(--border);margin-top:clamp(2.5rem,5vw,4rem)}
 .trust-strip .row{display:flex;flex-wrap:wrap}
-.trust-strip .it{flex:1 1 0;min-width:170px;display:flex;align-items:center;gap:.65rem;padding:1.25rem var(--gut);border-left:1px solid var(--border)}
+.trust-strip .it{flex:1 1 0;min-width:170px;display:flex;align-items:center;gap:0;padding:1.25rem var(--gut);border-left:1px solid var(--border)}
 .trust-strip .it:first-child{border-left:none;padding-left:0}
 .trust-strip .it svg{width:18px;height:18px;stroke:var(--green);stroke-width:2.1;fill:none;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
 .trust-strip .it b{font-size:.9rem;font-weight:600;letter-spacing:-0.01em}
@@ -185,7 +185,7 @@ section{padding:clamp(3.5rem,7vw,6rem) 0}
 
 /* steps */
 .step-n{font-family:var(--mono);font-size:.78rem;color:var(--green);margin-bottom:.7rem;font-weight:500}
-.step-aside{display:inline-block;margin-top:.7rem;font-family:var(--mono);font-size:.68rem;color:var(--green);background:var(--green-tint);border:1px solid var(--green-tint2);border-radius:100px;padding:.22rem .7rem}
+.step-aside{display:block;margin-top:.6rem;font-size:.85rem;font-weight:600;color:var(--green)}
 .step-note{margin-top:.7rem;font-size:.82rem;color:var(--green-dark);background:var(--green-tint);border:1px solid var(--green-tint2);border-radius:9px;padding:.6rem .8rem;line-height:1.5}
 
 /* ── HOW: timeline (old style) ── */
@@ -219,7 +219,7 @@ section{padding:clamp(3.5rem,7vw,6rem) 0}
 .plan-incl{font-size:.74rem;color:var(--ink2);background:var(--green-tint);border:1px solid var(--green-tint2);border-radius:8px;padding:.5rem .7rem;margin-bottom:1rem}
 .plan-feats{display:flex;flex-direction:column;gap:.65rem;flex:1}
 .pf{display:flex;gap:.55rem;align-items:flex-start;font-size:.9rem;line-height:1.4}
-.pf::before{content:'';width:15px;height:15px;flex-shrink:0;margin-top:.12rem;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 12 12' fill='none' stroke='%231a6b4a' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='2 6 5 9 10 3'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center}
+.pf::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:.5em}
 .pf .sub{display:block;font-size:.78rem;color:var(--ink3);margin-top:.2rem;line-height:1.35}
 .plan .btn{margin-top:1.4rem;justify-content:center;width:100%}
 .price-foot{text-align:center;font-family:var(--mono);font-size:.74rem;color:var(--ink3);margin-top:1.4rem;line-height:1.7}
@@ -384,25 +384,13 @@ html.bf-on{scroll-padding-top:40px}
   <div class="wrap">
     <div class="hero-grid">
       <div class="hero-l">
-        <div class="pill-row">
-          <span class="pill"><span class="pill-dot"></span>Private UK numbers and disposable email aliases</span>
-          <a class="chrome-badge" href="https://chromewebstore.google.com/detail/privify/pnbdbklojkcdinhpdkekacnkpfelnnjn" target="_blank" rel="noopener">
-            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="22" fill="#fff"/><path fill="#4caf50" d="M24 16h19.6A24 24 0 0 0 4.6 12.3L14.4 29A12 12 0 0 1 24 16z"/><path fill="#ffc107" d="M44.6 16H24a12 12 0 0 1 10.4 18l-9.8 17A24 24 0 0 0 44.6 16z"/><path fill="#f44336" d="M14.4 29 4.6 12.3A24 24 0 0 0 14.8 51l9.8-17a12 12 0 0 1-10.2-5z"/><circle cx="24" cy="24" r="9" fill="#fff"/><circle cx="24" cy="24" r="7" fill="#2196f3"/></svg>
-            Chrome extension
-          </a>
-        </div>
         <h1>Your digital identity. <span class="hl">Your terms.</span></h1>
         <p class="lede">Your phone number and email get handed to hundreds of services, tracked, leaked, and sold. Privify gives you a private number and disposable aliases so your real details stay hidden.</p>
         <div class="hero-cta">
           <a href="https://app.privify.co.uk/sign-up?plan=starter" class="btn btn-g">Start free trial <span class="arrow">→</span></a>
           <a href="#how" class="btn btn-o">See how it works</a>
         </div>
-        <div class="hero-checks">
-          <span class="hero-check"><svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>Private email aliases</span>
-          <span class="hero-check"><svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>Real UK number</span>
-          <span class="hero-check"><svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>No contracts</span>
-          <span class="hero-check"><svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>7-day free trial</span>
-        </div>
+        <p class="hero-note">A real UK number and private email aliases. No contracts, and Starter is free for 7 days.</p>
       </div>
       <div class="hero-r">
         <div class="tile mock">
@@ -428,11 +416,11 @@ html.bf-on{scroll-padding-top:40px}
     </div>
     <div class="trust-strip">
       <div class="row">
-        <div class="it"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="7"/><polyline points="7 10 9 12 13 8"/></svg><b>EU data storage</b></div>
-        <div class="it"><svg viewBox="0 0 20 20"><polyline points="3 10 8 15 17 5"/></svg><b>UK &amp; EU GDPR</b></div>
-        <div class="it"><svg viewBox="0 0 20 20"><path d="M3 10h14M11 5l6 5-6 5"/></svg><b>SMS &amp; alias forwarding</b></div>
-        <div class="it"><svg viewBox="0 0 20 20"><rect x="2" y="4" width="16" height="12" rx="2"/><path d="M2 6l8 5 8-5"/></svg><b>Disposable aliases</b></div>
-        <div class="it"><svg viewBox="0 0 20 20"><circle cx="9" cy="9" r="5"/><path d="M15 15l-3.5-3.5"/></svg><b>Identity Monitor</b></div>
+        <div class="it"><b>EU data storage</b></div>
+        <div class="it"><b>UK &amp; EU GDPR</b></div>
+        <div class="it"><b>SMS &amp; alias forwarding</b></div>
+        <div class="it"><b>Disposable aliases</b></div>
+        <div class="it"><b>Identity Monitor</b></div>
       </div>
     </div>
   </div>
@@ -449,7 +437,6 @@ html.bf-on{scroll-padding-top:40px}
     <div class="bento reveal">
       <div class="tile hover feature-lg green c6 r2">
         <div>
-          <div class="tile-ico big-ico"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></div>
           <h3>Real UK mobile number</h3>
           <p>Use a private UK 07 number anywhere you don't want to hand out your real one. SMS and voicemail land in your inbox.</p>
         </div>
@@ -460,17 +447,14 @@ html.bf-on{scroll-padding-top:40px}
         </ul>
       </div>
       <div class="tile hover c6">
-        <div class="tile-ico"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 6 10-6"/></svg></div>
         <h3>Disposable email aliases</h3>
         <p>Create a different address for each site so your real inbox stays private. Delete any alias to stop the mail instantly.</p>
       </div>
       <div class="tile hover c3">
-        <div class="tile-ico"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
         <h3>Identity Monitor</h3>
         <p>We check your addresses against known breaches and alert you when something new appears.</p>
       </div>
       <div class="tile hover c3">
-        <div class="tile-ico"><svg viewBox="0 0 24 24"><path d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z"/><path d="M9 12h6M9 16h4"/></svg></div>
         <h3>Privify Send</h3>
         <p>Share passwords and sensitive text via encrypted links that self-destruct after being read.</p>
       </div>
@@ -501,15 +485,15 @@ html.bf-on{scroll-padding-top:40px}
         <h3 style="font-size:1.3rem;margin-bottom:.6rem">No advertising. No profiling.</h3>
         <p>We have no advertising model. We don't track you, profile you, or sell your data, and we never will.</p>
         <div class="badges">
-          <div><svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>UK &amp; EU GDPR compliant</div>
-          <div><svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>EU-only storage, never transferred outside</div>
-          <div><svg viewBox="0 0 16 16"><polyline points="2 8 6 12 14 4"/></svg>Delete your account and data any time</div>
+          <div>UK &amp; EU GDPR compliant</div>
+          <div>EU-only storage, never transferred outside</div>
+          <div>Delete your account and data any time</div>
         </div>
       </div>
-      <div class="tile pp hover c4"><h4><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/></svg>EU-only infrastructure</h4><p>Messages, voicemails, and transcriptions stored exclusively on servers within the European Union.</p></div>
-      <div class="tile pp hover c3"><h4><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Identity stays separate</h4><p>Your number and aliases can't be traced back to you.</p></div>
-      <div class="tile pp hover c4"><h4><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>Encrypted at rest</h4><p>Messages and voicemail metadata are encrypted at rest, and Privify Send content too.</p></div>
-      <div class="tile pp hover c3"><h4><svg viewBox="0 0 24 24"><circle cx="12" cy="16" r="1"/><rect x="3" y="10" width="18" height="12" rx="2"/><path d="M7 10V7a5 5 0 0110 0"/></svg>Passkeys supported</h4><p>Sign in with a passkey, with no password to leak or reuse.</p></div>
+      <div class="tile pp hover c4"><h4>EU-only infrastructure</h4><p>Messages, voicemails, and transcriptions stored exclusively on servers within the European Union.</p></div>
+      <div class="tile pp hover c3"><h4>Identity stays separate</h4><p>Your number and aliases can't be traced back to you.</p></div>
+      <div class="tile pp hover c4"><h4>Encrypted at rest</h4><p>Messages and voicemail metadata are encrypted at rest, and Privify Send content too.</p></div>
+      <div class="tile pp hover c3"><h4>Passkeys supported</h4><p>Sign in with a passkey, with no password to leak or reuse.</p></div>
     </div>
   </div>
 </section>
@@ -524,23 +508,23 @@ html.bf-on{scroll-padding-top:40px}
     </div>
     <div class="uc-list reveal">
       <div class="uc-row">
-        <div class="uc-l"><h3>Living abroad</h3><div class="uc-tags"><span class="uc-tag">UK bank accounts</span><span class="uc-tag">HMRC</span><span class="uc-tag">No SIM required</span></div></div>
+        <div class="uc-l"><h3>Living abroad</h3></div>
         <div class="uc-r"><p>Moved overseas but still need UK services? Keep a genuine UK number active without paying for a SIM you'll never use, so banks and government services that demand a UK mobile still reach you.</p></div>
       </div>
       <div class="uc-row">
-        <div class="uc-l"><h3>Free trials &amp; sign-ups</h3><div class="uc-tags"><span class="uc-tag">No real email</span><span class="uc-tag">No spam after</span></div></div>
+        <div class="uc-l"><h3>Free trials &amp; sign-ups</h3></div>
         <div class="uc-r"><p>Give an alias email and Privify number when signing up for trials. Cancel the service, or just delete the alias, and the emails and texts stop dead.</p></div>
       </div>
       <div class="uc-row">
-        <div class="uc-l"><h3>Data breach protection</h3><div class="uc-tags"><span class="uc-tag">Breach isolation</span><span class="uc-tag">No credential stuffing</span></div></div>
+        <div class="uc-l"><h3>Data breach protection</h3></div>
         <div class="uc-r"><p>If a service you use gets hacked, your alias takes the hit, not your real email. Delete the alias, get a new one, done. Your real address is never at risk.</p></div>
       </div>
       <div class="uc-row">
-        <div class="uc-l"><h3>2FA &amp; account security</h3><div class="uc-tags"><span class="uc-tag">Banking OTPs</span><span class="uc-tag">Account recovery</span></div></div>
+        <div class="uc-l"><h3>2FA &amp; account security</h3></div>
         <div class="uc-r"><p>Use your Privify number for SMS two-factor authentication on accounts where you don't want to use your real phone. Codes land in your email instantly, so your personal number never gets exposed.</p></div>
       </div>
       <div class="uc-row">
-        <div class="uc-l"><h3>Running a small business</h3><div class="uc-tags"><span class="uc-tag">Sole traders</span><span class="uc-tag">Small teams</span></div></div>
+        <div class="uc-l"><h3>Running a small business</h3></div>
         <div class="uc-r"><p>Keep your personal mobile off invoices and listings, and share login codes with your team instead of passing your phone around.</p><a href="/business/" class="uc-link">See Privify for Business →</a></div>
       </div>
     </div>
